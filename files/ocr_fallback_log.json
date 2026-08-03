@@ -1,0 +1,80 @@
+{
+  "docs": 9,
+  "total_pages": 63,
+  "fallback_pages": 9,
+  "fallback_rate": 0.1429,
+  "pages": [
+    {
+      "file": "PCM01_Customer_Satisfaction_Process_1.pdf",
+      "source_file": "P-CM-01 Customer Satisfaction Process (1).pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'PIL'"
+    },
+    {
+      "file": "PCM02_Branding_for_Construction_Sites_Process_1.pdf",
+      "source_file": "P-CM-02 Branding for Construction Sites Process (1).pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'PIL'"
+    },
+    {
+      "file": "PCN01_Subcontract_Agreement_Process_1.pdf",
+      "source_file": "P-CN-01 Subcontract Agreement Process (1).pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'PIL'"
+    },
+    {
+      "file": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+      "source_file": "P-QD-12 Quality Plan Inspection and Testing Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'PIL'"
+    },
+    {
+      "file": "PSE01_RME_SelfExecution_Process_1.pdf",
+      "source_file": "P-SE-01 RME Self-Execution Process (1).pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'PIL'"
+    },
+    {
+      "file": "PTN01_Project_Initiation_Process.pdf",
+      "source_file": "P-TN-01 Project Initiation Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'PIL'"
+    },
+    {
+      "file": "PTN02_Project_Launching_Process.pdf",
+      "source_file": "P-TN-02 Project Launching Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'PIL'"
+    },
+    {
+      "file": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+      "source_file": "P-VMO-01 Vendor selection and Bidding Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'PIL'"
+    },
+    {
+      "file": "PVMO02_Procurement_Process.pdf",
+      "source_file": "P-VMO-02 Procurement Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'PIL'"
+    }
+  ]
+}

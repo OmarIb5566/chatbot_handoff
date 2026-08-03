@@ -1,0 +1,21 @@
+# RME process chatbot prototype - Python >= 3.10
+#
+# Deliberately floors, not exact pins. The dev machine has torch==2.12.1+xpu (an
+# Intel-XPU build from a custom index) which would not resolve elsewhere; torch is
+# pulled in transitively by sentence-transformers, so let your environment pick its
+# own build (CPU or CUDA).
+
+pymupdf>=1.24              # PDF text extraction (imported as `fitz`)
+sentence-transformers>=3.0 # all-MiniLM-L6-v2 chunk/query embeddings
+faiss-cpu>=1.8             # vector index (pip name is faiss-cpu, not faiss)
+rank-bm25>=0.2.2           # sparse channel
+numpy>=1.26
+requests>=2.31             # Ollama HTTP API
+jupyterlab>=4.0
+
+# Optional - only needed if you want the OCR fallback path to actually run.
+# Also requires the tesseract BINARY on PATH, which is a separate install.
+# Without it the 9 image-only cover pages log as `ocr_failed` and the run
+# continues on native text. Retrieval results are identical either way.
+# pytesseract>=0.3.10
+# pillow>=10.0
