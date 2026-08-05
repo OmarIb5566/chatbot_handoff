@@ -3,3 +3,5 @@ processes_pdf/
 venv_chatbot/
 __pycache__/
 .embed_cache/
+demo_extracted_raw.json 
+demo_ocr_fallback_log.json
