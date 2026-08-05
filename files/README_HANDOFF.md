@@ -1,18 +1,24 @@
-# RME Process Chatbot — handoff
+# RME Process Chatbot
 
-Everything in this prototype runs **except** the three-model generation eval, which needs
-Ollama. Ollama could not be installed on the machine this was built on (`github.com` is
-blocked there, and the installer is GitHub-hosted). That is the only reason this is being
-handed over.
+A retrieval-augmented chatbot over RME's ISO process documents. Ask a question in **English or
+Arabic**, get an answer built only from the process PDFs, with the source documents cited and
+every form number it mentions checked against the corpus.
 
-**What you need to do: run the notebook, then send back two files.** Nothing needs editing.
+Everything runs locally — PDF extraction, retrieval, and generation through Ollama. Nothing
+leaves the machine.
+
+The model is **`qwen3:14b`**, chosen on a 36-question eval whose results are kept in
+`model_eval_results.json` (100% overall, 100% on the `unanswerable` category, no flagged
+citations). The eval harness that produced that file has been removed now that the decision is
+made, so treat the JSON as a record rather than something reproducible from this repo.
 
 ---
 
 ## 1. Layout
 
-Keep these two folders as siblings. `extract_pipeline.py` resolves its PDF source as
-`../processes_pdf`, so moving `files/` on its own will break extraction.
+Keep these two folders as siblings. `adaptive_chunker.py` and `extract_pipeline.py` both
+resolve their PDF source as `../processes_pdf`, so moving `files/` on its own will break
+chunking and extraction.
 
 ```
 RME Chatbot/
@@ -23,95 +29,151 @@ RME Chatbot/
 ## 2. Install
 
 ```bash
-cd "RME Chatbot/files"
 pip install -r requirements.txt
 ```
 
-Python **3.10+** required.
+Python **3.10+** required. No dependency is needed for the Arabic support — the same local
+model does the translating.
 
-First run downloads the `all-MiniLM-L6-v2` embedding model from HuggingFace (~90 MB). If
-the machine is offline, pre-fetch it — the retriever loads it unconditionally, because
-query encoding needs it even when the corpus embeddings are cached.
+First run downloads the `all-MiniLM-L6-v2` embedding model from HuggingFace (~90 MB). If the
+machine is offline, pre-fetch it — the retriever loads it unconditionally, because query
+encoding needs it even when the corpus embeddings are cached.
 
-## 3. Pull the models
+## 3. Pull the model
 
 ```bash
-ollama pull llama3.2:latest
-ollama pull gemma4:e4b
 ollama pull qwen3:14b
 ```
 
-~19.5 GB total (1.88 + 8.95 + 8.64). All three tags were verified against
-`registry.ollama.ai`.
-
-Then make sure the server is up:
+~8.6 GB. Then make sure the server is up:
 
 ```bash
 ollama serve
 ```
 
-## 4. (Optional) Re-run extraction
+## 4. (Optional) Rebuild the chunks
 
-The extracted artifacts ship prebuilt, so **you can skip this**. Run it only if you want to
-verify the PDF → text path end to end:
+`chunks.json` ships prebuilt, so **you can skip this**. The notebook re-chunks the PDFs anyway
+and checks the result matches. Run this only to rebuild the shipped artifacts themselves:
+
+```bash
+python adaptive_chunker.py                     # ../processes_pdf -> chunks.json
+python adaptive_chunker.py --audit audit.json  # ...and the full per-document report
+```
+
+Chunking reads the PDFs **directly**, not any intermediate JSON, because it detects section
+boundaries from font size and bold flags — layout that only exists in the PDF. So there is no
+required order here and no extraction step to run first. An audit summary prints on every run;
+the report file is opt-in.
+
+`extract_pipeline.py` is a separate, independent **OCR-health audit**:
 
 ```bash
 python extract_pipeline.py    # ../processes_pdf -> extracted_raw.json + ocr_fallback_log.json
-python chunker.py             # extracted_raw.json -> chunks.json
 ```
 
-That order matters, and it overwrites `extracted_raw.json` and `chunks.json`. It is
-reproducible — re-extracting reproduces the BM25 retrieval baseline exactly.
+It matters because the chunker has no OCR path, so a page with no embedded text is a page it
+cannot see. The chunker reports those as `pages with no text`; this log is the other half of
+the same picture. Neither output file is committed — the demo notebook runs this stage itself
+into its own `demo_*.json` files.
 
-**Expect 9 `ocr_failed` lines. This is not a broken handoff.** Page 1 of every document is
-a scanned signature/approval cover page with no embedded text, so it trips the OCR fallback.
-If `tesseract` is not installed those pages log as `ocr_failed` and the run continues on
-native text. No eval question touches cover-page content, and retrieval results are
-identical whether or not tesseract is present — so installing it is not recommended.
+**Expect 9 `ocr_failed` lines. This is not a broken run.** Page 1 of every document is a
+scanned signature/approval cover page with no embedded text, so it trips the OCR fallback. If
+`tesseract` is not installed those pages log as `ocr_failed` and the run continues on native
+text. No eval question touches cover-page content, and retrieval results are identical whether
+or not tesseract is present — so installing it is not recommended.
 
-## 5. Run the notebook
+## 5. Run it
 
 ```bash
-jupyter lab       # launch from inside files/
+jupyter lab
 ```
 
-Open `prototype.ipynb` → **Run All**.
+Open `demo_chatbot.ipynb` → **Run All**, then go to §5.2 or §5.3 and ask your own questions.
 
-- §1–3 reproduce extraction, retrieval and validator numbers. Fast, no model needed.
-- §4.1 records the hardware — **if the GPU is not auto-detected, please note manually what
-  you ran on** (`ollama ps` shows whether models are resident on GPU or CPU). The brief asks
-  for latency on real hardware, and that number can't be interpreted without it.
-- §5.1 runs 36 questions × 3 models against byte-identical frozen retrieval context.
+- **§1–§4** rebuild the pipeline from the PDFs: OCR-health check → chunk → hybrid BM25 +
+  MiniLM/FAISS index → form-number whitelist. Fast, and works with Ollama down.
+- **§5** is the chatbot. §5.1 worked examples, §5.2 a cell to edit, §5.3 an interactive REPL,
+  §5.4 a question the documents do not answer, §5.5 the Arabic path.
 
-Wall time: minutes on a CUDA GPU; well over an hour on CPU (`qwen3:14b` and `gemma4:e4b`
-dominate, and qwen3 spends extra tokens on reasoning).
+Generation is deterministic — `temperature=0`, `seed=0`, so a repeated question gives a
+repeated answer.
 
-Generation is deterministic — `temperature=0`, `seed=0`.
+`qwen3:14b` on CPU is roughly 20–30 s for a short English answer once warm (a form number, a
+deadline, a role), plus a one-off model load of up to a few minutes on the first call. Arabic
+questions cost 2–3× that; see below.
 
-## 6. Send back
+Answers are **not length-capped** (`num_predict: -1`), so an explanatory question — "explain the
+process operations in procurement" — legitimately takes several minutes on CPU rather than
+being cut off mid-sentence at 200 tokens, which is what it used to do. `num_ctx` is pinned at
+8192 so the context window cannot quietly reintroduce that ceiling. There is no upper bound on
+a vague question beyond the 1800 s HTTP timeout.
 
-- `prototype.ipynb` — executed, with outputs saved
-- `model_eval_results.json` — written by §5.2
+## 6. Arabic support
+
+`translate.py`. An Arabic question is translated to English *before* it is embedded, the whole
+existing pipeline runs on English, and the answer is translated back to Arabic *after* it has
+been validated. Detection is automatic — there is no flag to set, `ask()` checks the script.
+
+Two consequences worth knowing:
+
+- Retrieval, doc-code routing, BM25 and the form-number validator all keep operating on
+  English, so nothing about the measured retrieval accuracy changes. The translation prompts
+  pin form numbers, doc codes and filenames as verbatim Latin script, because a form number
+  re-rendered in Arabic-Indic digits is a citation nobody can look up.
+- An Arabic question makes three generation calls instead of one. The latency line breaks
+  translate-in / generation / translate-out out separately.
+
+Arabic answer quality is **unmeasured** — the eval set is English-only. The path works; that is
+a different claim from it being accurate, and an Arabic eval set is the obvious next step.
+
+Smoke-test the translation on its own, without Jupyter:
+
+```bash
+python translate.py
+```
 
 ---
 
 ## Notes on what the notebook does that isn't obvious
 
-**Reasoning traces are stripped before scoring.** Qwen 3 emits `<think>…</think>` blocks.
-Scoring is naive substring matching, so a trace musing *"it might be F-P-CM-01-01 or
-F-P-CN-01-11"* would count as correct **and** register a hallucinated form citation the
-model never actually made. Requests set `think: False`, and `strip_reasoning()` removes
-anything that slips through. The raw response is kept in the results for audit.
+**Reasoning traces are stripped before validation.** Qwen 3 emits `<think>…</think>` blocks. A
+trace musing *"it might be F-P-CM-01-01 or F-P-CN-01-11"* would register as a hallucinated form
+citation the model never actually made. Requests set `think: False`, and `strip_reasoning()`
+removes anything that slips through — including on translations. The raw response is kept in
+the returned record for audit.
 
-**Retrieval context is frozen once**, before any model runs, so the comparison measures the
-models rather than retrieval variance.
+**The validator is a hallucination proxy independent of the answer itself.** It extracts form
+numbers from each answer and checks them against the 67 that actually occur in the corpus. It
+*flags* rather than *blocks*, because at 9 documents the whitelist is incomplete — the corpus
+cites form families (FW, HR, OP, PU, QP) whose source documents aren't here yet, so "unknown"
+currently means *unverifiable*, not *fabricated*. `policy="block"` becomes safe once the full
+500–600 document corpus is indexed.
 
-**The validator is a hallucination proxy independent of the accuracy score.** It extracts
-form numbers from each answer and checks them against the 67 that actually occur in the
-corpus. It *flags* rather than *blocks*, because at 9 documents the whitelist is incomplete
-— the corpus cites form families (FW, HR, OP, PU, QP) whose source documents aren't here
-yet, so "unknown" currently means *unverifiable*, not *fabricated*.
+**Chunking is template-independent by design.** `adaptive_chunker.py` decides *where* a section
+starts from page layout (font size, bold flags, falling back to the `1. SOMETHING` numbering
+pattern) and *what* it is by comparing the heading to a canonical taxonomy — exact, then fuzzy,
+then MiniLM cosine. Those are two separate stages on purpose. The chunker it replaced did both
+with one literal string list, so a document written to a different template matched nothing and
+collapsed into a single chunk without reporting a problem.
 
-**§6 is intentionally blank.** The recommendation gets written from your numbers, against a
-decision rule fixed in advance (disqualify on the `unanswerable` category first, then on
-validator catch rate, then compare accuracy, latency as tiebreaker).
+Two measured caveats. The **font signal is nearly inert on this corpus** — headings are 12 pt
+against 11 pt body, under the 1.15 ratio, so `numbering` fires 103 times to `font_size`'s 3 and
+the layout half is largely untested here. And **every threshold is calibrated on 9 documents**
+(0.85 fuzzy, 0.45 cosine, 1.15 size ratio); the first real batch of non-ISO documents is the
+actual test.
+
+**Chunking audits itself.** Every run prints which detectors fired, how each section label was
+resolved, which documents fell back to windowed chunking, which headings matched no canonical
+bucket, and which pages yielded no text. `--audit PATH` writes the full per-document report.
+At 500–700 documents that report is the only practical way to notice a template outlier before
+it shows up as a bad answer.
+
+**Extending it to a new document family** is one string in `CANONICAL_SECTIONS`, not a regex.
+Headings that match nothing are labeled `UNMATCHED`, still chunked and still retrievable, and
+listed in the audit — a flag for a human, never a discard.
+
+**No chunk carries a step number.** Step-level splitting inside `PROCESS OPERATION` is not
+implemented — `step` is `None` on all 114 chunks. Harmless at 9 documents, where sections are
+small; at 500–600 it is what keeps a process step attached to its own form number, and it is
+the next thing to build.
