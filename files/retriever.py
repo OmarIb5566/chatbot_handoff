@@ -42,8 +42,15 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 from pathlib import Path
+
+# Use the embedding model already cached on this machine and never reach out to
+# the Hub. Set before sentence_transformers is imported (it reads these at
+# import time). `setdefault` so an explicit env var from the caller still wins.
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
+os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 import numpy as np
 from rank_bm25 import BM25Okapi
