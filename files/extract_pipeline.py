@@ -88,8 +88,9 @@ def process_pdf(path: Path, allow_ocr: bool = True) -> list[dict]:
     pages = []
     with fitz.open(path) as doc:
         for n, page in enumerate(doc, start=1):
-            # "text" preserves reading order well enough for the section/step
-            # regexes in chunker.py; "blocks"/"words" would need reassembly.
+            # "text" preserves reading order and is all this stage needs: it
+            # exists to report OCR health, not to feed chunking. The chunker
+            # reads the PDFs itself, because layout is not in extracted text.
             native = page.get_text("text")
 
             if text_quality_ok(native):
