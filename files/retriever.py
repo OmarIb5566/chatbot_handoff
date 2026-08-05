@@ -56,11 +56,55 @@ import numpy as np
 from rank_bm25 import BM25Okapi
 
 HERE = Path(__file__).resolve().parent
-CHUNKS_JSON = HERE / "chunks.json"
+CHUNKS_JSON = HERE / "chunks.json"   # written by adaptive_chunker.py
 CACHE_DIR = HERE / ".embed_cache"
 
 DEFAULT_MODEL = "all-MiniLM-L6-v2"
 RRF_K = 60  # standard RRF damping constant
+
+
+# --- doc-code prefix routing -------------------------------------------------
+# Pre-retrieval narrowing for the 500-600 doc corpus: if a query clearly names
+# a process family, search only that family instead of the whole index.
+#
+# This lived in chunker.py until that module was retired. It never belonged
+# there - routing is a retrieval-time decision about a *query*, not a chunking
+# decision about a document - so it moved here, to its only consumer.
+DOC_PREFIXES = ["PSE", "PQD", "PCM", "PTN", "PVMO", "PCN"]
+
+# Maps a doc-code prefix to the words that should route a query to it.
+PREFIX_HINTS = {
+    "PSE":  ["self-execution", "self execution", "sem", "selfexecution"],
+    "PQD":  ["quality", "inspection", "testing", "itp", "pqp", "qc", "hold point"],
+    "PCM":  ["customer", "satisfaction", "branding", "marketing", "survey", "commercial"],
+    "PTN":  ["tender", "tendering", "initiation", "launching", "bid submission", "loa", "handover"],
+    "PVMO": ["vendor", "procurement", "purchase", "rfq", "quotation", "sourcing", "supplier"],
+    "PCN":  ["subcontract", "subcontractor", "contract", "agreement", "btb", "back-to-back"],
+}
+
+
+def doc_code_prefix(chunk: dict) -> str | None:
+    """'P-VMO-01' -> 'PVMO'. Falls back to the filename when doc_code is missing."""
+    code = chunk.get("doc_code") or chunk.get("filename", "")
+    m = re.match(r"P-?([A-Z]{2,3})-?\d", code.upper())
+    return f"P{m.group(1)}" if m else None
+
+
+def route_prefixes(query: str) -> list[str]:
+    """Return the doc-code prefixes a query should be restricted to.
+
+    Empty list means "no confident route, search everything" - that is the
+    safe default, since a wrong route is an unrecoverable miss while a
+    missing route only costs latency.
+    """
+    q = query.lower()
+    # An explicit code in the query wins outright: "what is P-VMO-01" or "F-P-CN-01-11"
+    explicit = {f"P{m}" for m in re.findall(r"\bF?-?P-([A-Z]{2,3})-\d", query.upper())}
+    if explicit:
+        return sorted(explicit & set(DOC_PREFIXES))
+    hits = [p for p, words in PREFIX_HINTS.items() if any(w in q for w in words)]
+    # Only route when the signal is unambiguous; 2+ families means don't narrow.
+    return hits if len(hits) == 1 else []
 
 
 def tokenize(text: str) -> list[str]:
@@ -114,9 +158,7 @@ class Retriever:
         self.embeddings = self._get_embeddings(use_cache)
         self._build_faiss()
 
-        # Precompute prefix routing labels once (see chunker.doc_code_prefix).
-        from chunker import doc_code_prefix
-
+        # Precompute prefix routing labels once (see doc_code_prefix above).
         self.prefixes = [doc_code_prefix(c) for c in chunks]
 
     # ------------------------------------------------------------------ index
@@ -187,8 +229,6 @@ class Retriever:
         """Pre-retrieval doc-code routing. Returns row indices to consider."""
         if not route:
             return np.arange(len(self.chunks))
-        from chunker import route_prefixes
-
         prefixes = route_prefixes(query)
         if not prefixes:
             return np.arange(len(self.chunks))
@@ -204,11 +244,11 @@ class Retriever:
 
         `route=True` applies doc-code prefix narrowing first. On this eval set
         routing fires on 22/36 questions with 0 unsafe routes (it never
-        excluded the gold document). Caveat for scale: PREFIX_HINTS in
-        chunker.py is a hand-written keyword table. That is fine for 6
-        families / 9 docs; at 500-600 docs it should be derived from document
-        titles rather than maintained by hand, or routing becomes the thing
-        that silently loses recall.
+        excluded the gold document). Caveat for scale: PREFIX_HINTS above is a
+        hand-written keyword table. That is fine for 6 families / 9 docs; at
+        500-600 docs it should be derived from document titles rather than
+        maintained by hand, or routing becomes the thing that silently loses
+        recall.
         """
         cand = self._candidates(query, route)
         bm = self._bm25_ranking(query, cand)
@@ -248,6 +288,14 @@ class Retriever:
 
 
 if __name__ == "__main__":
+    import sys
+
+    # Chunk text carries typographic artifacts from the PDFs (U+0336 bullets,
+    # curly quotes) that a cp1252 Windows console cannot encode. Only affects
+    # this demo print, but an encoding crash here looks like a broken retriever.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     chunks = json.load(open(CHUNKS_JSON, encoding="utf-8"))
     r = Retriever(chunks)
     q = "what form is used for the customer satisfaction survey"

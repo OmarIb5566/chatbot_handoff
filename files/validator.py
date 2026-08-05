@@ -155,9 +155,11 @@ def validator_report(results: list[dict], form_whitelist: set[str]) -> dict:
 if __name__ == "__main__":
     import json
     from pathlib import Path
-    from chunker import chunk_all
 
-    chunks = chunk_all()
+    # Read the pipeline artifact rather than re-chunking: chunks.json is now
+    # produced by adaptive_chunker.py, which reads the PDFs directly.
+    chunks = json.load(open(Path(__file__).resolve().parent / "chunks.json",
+                            encoding="utf-8"))
     wl = build_form_whitelist(chunks)
     dwl = build_doc_code_whitelist(chunks)
     print(f"{len(wl)} known form numbers, {len(dwl)} known doc codes")
