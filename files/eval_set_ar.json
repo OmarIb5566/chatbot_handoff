@@ -1,0 +1,461 @@
+[
+  {
+    "id": "PCM01-1",
+    "doc": "PCM01_Customer_Satisfaction_Process_1.pdf",
+    "question": "ما هي النموذج المستخدم لاستبيان رضا العملاء؟",
+    "expected_answer": "F-P-CM-01-01",
+    "must_include": [
+      "F-P-CM-01-01"
+    ],
+    "type": "form_lookup",
+    "question_en": "What form is used for the Customer Satisfaction Survey?",
+    "review": "machine"
+  },
+  {
+    "id": "PCM01-2",
+    "doc": "PCM01_Customer_Satisfaction_Process_1.pdf",
+    "question": "كم مرة يرسل قسم المبيعات استبيان رضا العملاء خلال دورة حياة المشروع؟",
+    "expected_answer": "Twice during the project's life cycle (mid and end), or at least once a year if the project exceeds 12 months.",
+    "must_include": [
+      "twice",
+      "mid",
+      "end"
+    ],
+    "type": "fact",
+    "question_en": "How often does the Commercial dept send the customer satisfaction survey during a project's lifecycle?",
+    "review": "machine"
+  },
+  {
+    "id": "PCM01-3",
+    "doc": "PCM01_Customer_Satisfaction_Process_1.pdf",
+    "question": "من هو المسؤول عن إصدار إشعار NCR عندما يكون هناك فجوة بين إدراك العميل والمعايير المتوقعة من RME؟",
+    "expected_answer": "QA",
+    "must_include": [
+      "QA"
+    ],
+    "type": "role_lookup",
+    "question_en": "Who is responsible for issuing an NCR when there's a gap between customer perception and RME's expected standard?",
+    "review": "machine"
+  },
+  {
+    "id": "PCM01-4",
+    "doc": "PCM01_Customer_Satisfaction_Process_1.pdf",
+    "question": "في كم عدد الساعات يجب على المدير التنفيذي إرسال خطط الإجراءات التصحيحية بعد تقرير فجوة رضا العميل؟",
+    "expected_answer": "24 hours",
+    "must_include": [
+      "24"
+    ],
+    "type": "fact",
+    "question_en": "Within how many hours must the PM send corrective action plans after a customer satisfaction gap is reported?",
+    "review": "machine"
+  },
+  {
+    "id": "PCM02-1",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process_1.pdf",
+    "question": "كم عدد الأيام قبل التنفيذ يجب على رئيس الوزراء تقديم طلب الأنشطة التسويقية؟",
+    "expected_answer": "20-30 days before execution",
+    "must_include": [
+      "20",
+      "30"
+    ],
+    "type": "fact",
+    "question_en": "How many days before execution must the PM submit the Marketing Activities Request?",
+    "review": "machine"
+  },
+  {
+    "id": "PCM02-2",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process_1.pdf",
+    "question": "ما هو رقم النموذج الخاص بطلب الأنشطة التسويقية؟",
+    "expected_answer": "F-P-CM-02-01",
+    "must_include": [
+      "F-P-CM-02-01"
+    ],
+    "type": "form_lookup",
+    "question_en": "What form number is the Marketing Activities Request Form?",
+    "review": "machine"
+  },
+  {
+    "id": "PCM02-3",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process_1.pdf",
+    "question": "من يوافق على مواقع التسويق، ومن ينسق معه؟",
+    "expected_answer": "PM approves, in coordination with the HSE Officer and Branding team",
+    "must_include": [
+      "PM",
+      "HSE"
+    ],
+    "type": "role_lookup",
+    "question_en": "Who approves branding locations, and in coordination with whom?",
+    "review": "machine"
+  },
+  {
+    "id": "PCN01-1",
+    "doc": "PCN01_Subcontract_Agreement_Process_1.pdf",
+    "question": "ما هو رقم النموذج الخاص بجدول توقيع اتفاقية SC؟",
+    "expected_answer": "F-P-CN-01-11",
+    "must_include": [
+      "F-P-CN-01-11"
+    ],
+    "type": "form_lookup",
+    "question_en": "What is the form number for the SC Agreement Signature Matrix?",
+    "review": "machine"
+  },
+  {
+    "id": "PCN01-2",
+    "doc": "PCN01_Subcontract_Agreement_Process_1.pdf",
+    "question": "كم أسبوعًا يجب على عقود إعداد المقاول الفرعي بعد تلقيها رسالة التعيين (حالة المقاول الفرعي المُعيّن)؟",
+    "expected_answer": "2 weeks",
+    "must_include": [
+      "2 week"
+    ],
+    "type": "fact",
+    "question_en": "Within how many weeks must Contracts draft the subcontract after receiving a nomination letter (nominated subcontractor case)?",
+    "review": "machine"
+  },
+  {
+    "id": "PCN01-3",
+    "doc": "PCN01_Subcontract_Agreement_Process_1.pdf",
+    "question": "ما النسبة المئوية من سعر عقد تفويض مشابه تُستخدم لعناصر عقود تفويض داخلية تنفذها RME بشكل ذاتي؟",
+    "expected_answer": "90%",
+    "must_include": [
+      "90"
+    ],
+    "type": "fact",
+    "question_en": "What percentage of a similar subcontract's price is used for RME self-execution internal subcontract items?",
+    "review": "machine"
+  },
+  {
+    "id": "PCN01-4",
+    "doc": "PCN01_Subcontract_Agreement_Process_1.pdf",
+    "question": "ما هي BTB اختصارًا لها في هذه العملية؟",
+    "expected_answer": "Back-to-Back",
+    "must_include": [
+      "Back",
+      "Back"
+    ],
+    "type": "definition",
+    "question_en": "What is BTB an abbreviation for in this process?",
+    "review": "machine"
+  },
+  {
+    "id": "PQD12-1",
+    "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+    "question": "في كم يوم من اجتماع تنسيق العمليات يجب على مدير الجودة إعداد خطة جودة المشروع (PQP)؟",
+    "expected_answer": "15 days",
+    "must_include": [
+      "15"
+    ],
+    "type": "fact",
+    "question_en": "Within how many days from the operation coordination meeting must the QC Manager prepare the Project Quality Plan (PQP)?",
+    "review": "machine"
+  },
+  {
+    "id": "PQD12-2",
+    "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+    "question": "ما معنى \"نقطة الاحتفاظ (H)\" في تعريفات ITP؟",
+    "expected_answer": "The work will not proceed until the inspection is carried out.",
+    "must_include": [
+      "not proceed",
+      "inspection"
+    ],
+    "type": "definition",
+    "question_en": "What does 'Hold point (H)' mean in the ITP definitions?",
+    "review": "machine"
+  },
+  {
+    "id": "PQD12-3",
+    "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+    "question": "كم من الوقت المسبق يجب أن يخطر مهندس الموقع مكتب الجودة قبل أن يكون العمل جاهزًا للتفتيش؟",
+    "expected_answer": "1 day prior",
+    "must_include": [
+      "1 day"
+    ],
+    "type": "fact",
+    "question_en": "How far in advance must the Site Engineer inform QC before work is ready for inspection?",
+    "review": "machine"
+  },
+  {
+    "id": "PQD12-4",
+    "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+    "question": "من يوافق على خطة جودة المشروع (PQP)؟",
+    "expected_answer": "QC Manager prepares it; approved by QC dept manager and PM",
+    "must_include": [
+      "QC",
+      "PM"
+    ],
+    "type": "role_lookup",
+    "question_en": "Who approves the Project Quality Plan (PQP)?",
+    "review": "machine"
+  },
+  {
+    "id": "PSE01-1",
+    "doc": "PSE01_RME_SelfExecution_Process_1.pdf",
+    "question": "ما هو رقم النموذج الخاص بنموذج حالة العمل المكتمل؟",
+    "expected_answer": "F-P-OP-05-01",
+    "must_include": [
+      "F-P-OP-05-01"
+    ],
+    "type": "form_lookup",
+    "question_en": "What is the form number for the Work Completed Status Form?",
+    "review": "machine"
+  },
+  {
+    "id": "PSE01-2",
+    "doc": "PSE01_RME_SelfExecution_Process_1.pdf",
+    "question": "من يوافق على توظيف الموظفين في قسم التنفيذ الذاتي؟",
+    "expected_answer": "SEM executes with approval of the Projects Control Manager",
+    "must_include": [
+      "Projects Control Manager"
+    ],
+    "type": "role_lookup",
+    "question_en": "Who approves staff hiring in the Self-Execution department?",
+    "review": "machine"
+  },
+  {
+    "id": "PSE01-3",
+    "doc": "PSE01_RME_SelfExecution_Process_1.pdf",
+    "question": "ما الذي تعنيه اختصار SEM؟",
+    "expected_answer": "Self-execution Manager",
+    "must_include": [
+      "Self-execution Manager"
+    ],
+    "type": "definition",
+    "question_en": "What does SEM stand for?",
+    "review": "machine"
+  },
+  {
+    "id": "PTN01-1",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "كم عدد الأيام قبل التقديم يجب على عقود إرسال تقييم المخاطر التعاقدية إلى المناقصات؟",
+    "expected_answer": "7 days before submission",
+    "must_include": [
+      "7"
+    ],
+    "type": "fact",
+    "question_en": "How many days before submission must Contracts send the contractual Risk Assessment to Tendering?",
+    "review": "machine"
+  },
+  {
+    "id": "PTN01-2",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "كم عدد الأيام قبل التقديم يتم عقد الاجتماع الثاني للتوافق؟",
+    "expected_answer": "5 days before submission",
+    "must_include": [
+      "5"
+    ],
+    "type": "fact",
+    "question_en": "For projects >=50M USD international or 1 billion local, how many days before submission is the second alignment meeting held?",
+    "review": "machine"
+  },
+  {
+    "id": "PTN01-3",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "كم مدة يجب أن يحتفظ قسم التجارة بسجلات المناقصات؟",
+    "expected_answer": "1 year",
+    "must_include": [
+      "1 year"
+    ],
+    "type": "fact",
+    "question_en": "How long must the Commercial dept maintain tender records?",
+    "review": "machine"
+  },
+  {
+    "id": "PTN01-4",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "ما معنى \"ميدان برون\" في تعريفات هذا الإجراء؟",
+    "expected_answer": "New projects which have an old phase/extension",
+    "must_include": [
+      "old phase",
+      "extension"
+    ],
+    "type": "definition",
+    "question_en": "What does 'Brown Field' mean in this process's definitions?",
+    "review": "machine"
+  },
+  {
+    "id": "PTN02-1",
+    "doc": "PTN02_Project_Launching_Process.pdf",
+    "question": "في كم عدد أيام العمل من تاريخ إصدار LOA يجب أن تحدث اجتماع تسليم العطاء؟",
+    "expected_answer": "7-10 working days",
+    "must_include": [
+      "7",
+      "10"
+    ],
+    "type": "fact",
+    "question_en": "Within how many working days from LOA issuance must the Tender Handover Meeting occur?",
+    "review": "machine"
+  },
+  {
+    "id": "PTN02-2",
+    "doc": "PTN02_Project_Launching_Process.pdf",
+    "question": "كم عدد الأيام التي يجب إعداد برنامج الأساس خلالها من الاجتماع المتعلق بتسليم المناقصة؟",
+    "expected_answer": "45 days",
+    "must_include": [
+      "45"
+    ],
+    "type": "fact",
+    "question_en": "Within how many days from the tender handover meeting must the baseline program be prepared?",
+    "review": "machine"
+  },
+  {
+    "id": "PTN02-3",
+    "doc": "PTN02_Project_Launching_Process.pdf",
+    "question": "ما هو رقم النموذج الخاص بالخطة التنفيذية للمشروع؟",
+    "expected_answer": "F-P-TN-02-06",
+    "must_include": [
+      "F-P-TN-02-06"
+    ],
+    "type": "form_lookup",
+    "question_en": "What is the form number for the Project Execution Plan?",
+    "review": "machine"
+  },
+  {
+    "id": "PVMO01-1",
+    "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+    "question": "ما هو رقم النموذج الخاص بطلب الاقتباس (RFQ)؟",
+    "expected_answer": "F-P-VMO-01-01",
+    "must_include": [
+      "F-P-VMO-01-01"
+    ],
+    "type": "form_lookup",
+    "question_en": "What is the form number for the Request for Quotation (RFQ)?",
+    "review": "machine"
+  },
+  {
+    "id": "PVMO01-2",
+    "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+    "question": "كم عدد الأيام من اجتماع تسليم المناقصة يجب أن يجهز VMO قائمة مكونات الميزانية المفصّلة و استراتيجية مصادر المشروع؟",
+    "expected_answer": "7 days",
+    "must_include": [
+      "7"
+    ],
+    "type": "fact",
+    "question_en": "Within how many days from the Tender Handover Meeting must VMO prepare the itemized budget material list and project sourcing strategy?",
+    "review": "machine"
+  },
+  {
+    "id": "PVMO01-3",
+    "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+    "question": "ما الذي تعنيه HO-TO؟",
+    "expected_answer": "Head-Office Technical Office",
+    "must_include": [
+      "Head",
+      "Office",
+      "Technical"
+    ],
+    "type": "definition",
+    "question_en": "What does HO-TO stand for?",
+    "review": "machine"
+  },
+  {
+    "id": "PVMO02-1",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "كم عدد أيام العمل التي يجب أن تمر منذ اجتماع تسليم المناقصة حتى يصدر قسم المشتريات استراتيجية المشروع (مجال العمل)؟",
+    "expected_answer": "7 working days",
+    "must_include": [
+      "7"
+    ],
+    "type": "fact",
+    "question_en": "Within how many working days from Tender Handover Meeting must H.O Procurement issue the Project Strategy (Scope of Work)?",
+    "review": "machine"
+  },
+  {
+    "id": "PVMO02-2",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "ما هو أقل عدد من عروض الموردين المطلوب لمقارنة تجارية؟",
+    "expected_answer": "Minimum of three vendors",
+    "must_include": [
+      "three",
+      "3"
+    ],
+    "type": "fact",
+    "question_en": "What is the minimum number of vendor quotations required for a commercial comparison?",
+    "review": "machine"
+  },
+  {
+    "id": "PVMO02-3",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "ما المبلغ المدفوع مقدماً الذي يجب على الموردين تقديم خط ضمان (LG)؟",
+    "expected_answer": "1 million EGP",
+    "must_include": [
+      "1 million"
+    ],
+    "type": "fact",
+    "question_en": "Above what advance payment amount must vendors provide a Letter of Guarantee (LG)?",
+    "review": "machine"
+  },
+  {
+    "id": "PVMO02-4",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "من يوافق على خطة الدفع الشهرية قبل أن تصل إلى المالية؟",
+    "expected_answer": "BUM approves it",
+    "must_include": [
+      "BUM"
+    ],
+    "type": "role_lookup",
+    "question_en": "Who approves the Monthly Payment Plan before it goes to Finance?",
+    "review": "machine"
+  },
+  {
+    "id": "ADV-1",
+    "doc": "none",
+    "question": "ما مقدار العقوبة إذا فات مقاول فرعي موعد معلم؟",
+    "expected_answer": "Not specified in these process documents.",
+    "must_include": [
+      "not specified",
+      "not found",
+      "does not specify",
+      "no information",
+      "don't know",
+      "cannot find"
+    ],
+    "type": "unanswerable",
+    "question_en": "What is the penalty amount if a subcontractor misses a milestone date?",
+    "review": "machine"
+  },
+  {
+    "id": "ADV-2",
+    "doc": "none",
+    "question": "ما هو إجراء الموافقة على مكافآت الموظفين السنوية؟",
+    "expected_answer": "Not covered by any of these 9 process documents.",
+    "must_include": [
+      "not specified",
+      "not found",
+      "does not specify",
+      "no information",
+      "don't know",
+      "cannot find"
+    ],
+    "type": "unanswerable",
+    "question_en": "What is the process for approving employee annual bonuses?",
+    "review": "machine"
+  },
+  {
+    "id": "ADV-3",
+    "doc": "none",
+    "question": "ما هي النموذج المستخدم للطلب على سيارة شركة لزيارة موقع؟",
+    "expected_answer": "Not specified in these process documents.",
+    "must_include": [
+      "not specified",
+      "not found",
+      "does not specify",
+      "no information",
+      "don't know",
+      "cannot find"
+    ],
+    "type": "unanswerable",
+    "question_en": "What form is used to request a company car for a site visit?",
+    "review": "machine"
+  },
+  {
+    "id": "ADV-4",
+    "doc": "none",
+    "question": "ما النظام البرمجي المحدد المستخدم لإرسال سجلات مراجع مواد طلب العرض؟",
+    "expected_answer": "Unifier (mentioned in Procurement Process)",
+    "must_include": [
+      "unifier"
+    ],
+    "type": "fact_crossdoc",
+    "question_en": "Which specific software system is used to submit RFQ material reference records?",
+    "review": "machine"
+  }
+]
