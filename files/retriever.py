@@ -264,8 +264,18 @@ class Retriever:
         prefixes = route_prefixes(query)
         if not prefixes:
             return np.arange(len(self.chunks))
+        # `p is None` means the chunk carries no doc code to route on - the
+        # scanned workflow diagrams (workflow_extractor.py) are the case that
+        # exists today. Routing can only ever say "this chunk belongs to the
+        # wrong family"; about a chunk with no family it knows nothing, so
+        # dropping it is a silent recall loss rather than a safe narrowing.
+        # A question like "who approves procurement over 500 K" routes to PVMO
+        # and would otherwise exclude the signature matrix that answers it.
+        # Every one of the 114 process chunks has a prefix, so keeping the
+        # unroutable ones cannot change the measured process retrieval.
         keep = np.array(
-            [i for i, p in enumerate(self.prefixes) if p in prefixes], dtype=int
+            [i for i, p in enumerate(self.prefixes) if p is None or p in prefixes],
+            dtype=int,
         )
         # Never let routing empty the candidate pool - fall back to full search.
         return keep if len(keep) else np.arange(len(self.chunks))

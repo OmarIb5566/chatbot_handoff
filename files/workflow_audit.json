@@ -1,0 +1,601 @@
+[
+  {
+    "filename": "CS Signature Matrix.pdf",
+    "page": 1,
+    "title": "Operation [ For Application works ] Comparison Sheet Signature Matrix",
+    "warnings": [],
+    "repairs": [],
+    "graph": {
+      "title": "Operation [ For Application works ] Comparison Sheet Signature Matrix",
+      "revision": "Rev 00 - Date: 17-08-2021",
+      "lanes": [
+        {
+          "name": "Application Works Approval Flow",
+          "nodes": [
+            {
+              "id": "t_o_eng",
+              "label": "T.O Eng. (H.O) Prepare & Send via email",
+              "kind": "step"
+            },
+            {
+              "id": "pm_site",
+              "label": "PM ( Site )",
+              "kind": "approver"
+            },
+            {
+              "id": "cost_control_eng",
+              "label": "Cost Control Eng. ( Site ) approval via email",
+              "kind": "approver"
+            },
+            {
+              "id": "planning_cost_hod",
+              "label": "Planning & Cost HOD (H.O)",
+              "kind": "approver"
+            },
+            {
+              "id": "tech_office_mgrs",
+              "label": "Technical Office Managers (H.O)",
+              "kind": "approver"
+            },
+            {
+              "id": "operation_manager",
+              "label": "Operation Manager",
+              "kind": "approver"
+            },
+            {
+              "id": "coo",
+              "label": "COO",
+              "kind": "approver"
+            },
+            {
+              "id": "vp",
+              "label": "VP",
+              "kind": "approver"
+            },
+            {
+              "id": "ceo",
+              "label": "CEO",
+              "kind": "approver"
+            }
+          ],
+          "edges": [
+            {
+              "from": "t_o_eng",
+              "to": "pm_site",
+              "condition": null
+            },
+            {
+              "from": "pm_site",
+              "to": "cost_control_eng",
+              "condition": null
+            },
+            {
+              "from": "cost_control_eng",
+              "to": "planning_cost_hod",
+              "condition": null
+            },
+            {
+              "from": "planning_cost_hod",
+              "to": "tech_office_mgrs",
+              "condition": null
+            },
+            {
+              "from": "tech_office_mgrs",
+              "to": "operation_manager",
+              "condition": "For Operation 1 Only"
+            },
+            {
+              "from": "tech_office_mgrs",
+              "to": "coo",
+              "condition": null
+            },
+            {
+              "from": "operation_manager",
+              "to": "coo",
+              "condition": null
+            },
+            {
+              "from": "coo",
+              "to": "vp",
+              "condition": "500 K to 3M"
+            },
+            {
+              "from": "coo",
+              "to": "ceo",
+              "condition": "Over 3M"
+            },
+            {
+              "from": "operation_manager",
+              "to": "coo",
+              "condition": "Over 500 K"
+            }
+          ]
+        }
+      ],
+      "escalation": [
+        {
+          "condition": "Over 500 K",
+          "approver": "COO"
+        },
+        {
+          "condition": "500 K to 3M",
+          "approver": "VP"
+        },
+        {
+          "condition": "Over 3M",
+          "approver": "CEO"
+        }
+      ]
+    },
+    "ocr_text": "Operation (For Application works)\nComparison Sheet Signature Matrix\n\nVP\nCEO\n500 K to 3M\nOver 500 K\n\nCOO\n\nT.O Eng.\n(H.O)\nPrepare & Send via email\n\nPM\n( Site )\n\nCost Control Eng. (Site) approval via email\n\nPlanning & Cost HOD\n(H.O)\n\nTechnical Office Managers\n(H.O)\n\nOperation Manager\n\nFor Operation 1 Only\n\nCOO Signature\n\nRev. 00 – Date: 17-08-2021\n\nCEO Signature"
+  },
+  {
+    "filename": "CS Signature Matrix.pdf",
+    "page": 2,
+    "title": "Purchasing ( Engineering Material ) Comparison Sheet Signature Matrix",
+    "warnings": [],
+    "repairs": [],
+    "graph": {
+      "title": "Purchasing ( Engineering Material ) Comparison Sheet Signature Matrix",
+      "revision": "Rev.00 - Date: 17-08-2021",
+      "lanes": [
+        {
+          "name": "Engineering Material",
+          "nodes": [
+            {
+              "id": "eng_mat",
+              "label": "Engineering Material",
+              "kind": "step"
+            },
+            {
+              "id": "pr_created",
+              "label": "PR Created",
+              "kind": "step"
+            },
+            {
+              "id": "purch_proj_coord",
+              "label": "Purchasing Project coordinator",
+              "kind": "step"
+            },
+            {
+              "id": "purch_eng",
+              "label": "Purchasing Engineer (Assigned Project)",
+              "kind": "step"
+            },
+            {
+              "id": "purch_deputy",
+              "label": "Purchasing Deputy",
+              "kind": "decision"
+            },
+            {
+              "id": "purch_hod",
+              "label": "Purchasing HOD",
+              "kind": "approver"
+            },
+            {
+              "id": "coo",
+              "label": "COO",
+              "kind": "approver"
+            },
+            {
+              "id": "vp",
+              "label": "VP",
+              "kind": "approver"
+            },
+            {
+              "id": "cfo",
+              "label": "CFO",
+              "kind": "approver"
+            }
+          ],
+          "edges": [
+            {
+              "from": "eng_mat",
+              "to": "pr_created",
+              "condition": null
+            },
+            {
+              "from": "pr_created",
+              "to": "purch_proj_coord",
+              "condition": null
+            },
+            {
+              "from": "purch_proj_coord",
+              "to": "purch_eng",
+              "condition": null
+            },
+            {
+              "from": "purch_eng",
+              "to": "purch_deputy",
+              "condition": null
+            },
+            {
+              "from": "purch_deputy",
+              "to": "purch_hod",
+              "condition": "Approved"
+            },
+            {
+              "from": "purch_deputy",
+              "to": "purch_proj_coord",
+              "condition": "Not Approved"
+            },
+            {
+              "from": "purch_hod",
+              "to": "coo",
+              "condition": "Over 500 K"
+            },
+            {
+              "from": "coo",
+              "to": "vp",
+              "condition": null
+            },
+            {
+              "from": "vp",
+              "to": "cfo",
+              "condition": null
+            }
+          ]
+        },
+        {
+          "name": "Engineering Material ( Steel )",
+          "nodes": [
+            {
+              "id": "eng_mat_steel",
+              "label": "Engineering Material ( Steel )",
+              "kind": "step"
+            },
+            {
+              "id": "pr_created_steel",
+              "label": "PR Created",
+              "kind": "step"
+            },
+            {
+              "id": "purch_proj_coord_steel",
+              "label": "Purchasing Project coordinator",
+              "kind": "step"
+            },
+            {
+              "id": "purch_eng_steel",
+              "label": "Purchasing Engineer (Assigned Project)",
+              "kind": "step"
+            },
+            {
+              "id": "purch_deputy_steel",
+              "label": "Purchasing Deputy",
+              "kind": "decision"
+            },
+            {
+              "id": "purch_hod_steel",
+              "label": "Purchasing HOD",
+              "kind": "approver"
+            },
+            {
+              "id": "coo_steel",
+              "label": "COO",
+              "kind": "approver"
+            },
+            {
+              "id": "vp_steel",
+              "label": "VP",
+              "kind": "approver"
+            },
+            {
+              "id": "cfo_steel",
+              "label": "CFO",
+              "kind": "approver"
+            }
+          ],
+          "edges": [
+            {
+              "from": "eng_mat_steel",
+              "to": "pr_created_steel",
+              "condition": null
+            },
+            {
+              "from": "pr_created_steel",
+              "to": "purch_proj_coord_steel",
+              "condition": null
+            },
+            {
+              "from": "purch_proj_coord_steel",
+              "to": "purch_eng_steel",
+              "condition": null
+            },
+            {
+              "from": "purch_eng_steel",
+              "to": "purch_deputy_steel",
+              "condition": null
+            },
+            {
+              "from": "purch_deputy_steel",
+              "to": "purch_hod_steel",
+              "condition": "Approved"
+            },
+            {
+              "from": "purch_deputy_steel",
+              "to": "purch_proj_coord_steel",
+              "condition": "Not Approved"
+            },
+            {
+              "from": "purch_hod_steel",
+              "to": "coo_steel",
+              "condition": "Any Value"
+            },
+            {
+              "from": "coo_steel",
+              "to": "vp_steel",
+              "condition": null
+            },
+            {
+              "from": "vp_steel",
+              "to": "cfo_steel",
+              "condition": null
+            }
+          ]
+        }
+      ],
+      "escalation": [
+        {
+          "condition": "Over 500 K",
+          "approver": "COO"
+        },
+        {
+          "condition": "Any Value",
+          "approver": "COO"
+        }
+      ]
+    },
+    "ocr_text": "Purchasing (Engineering Material)\nComparison Sheet Signature Matrix\n\nEngineering Material\nPR Created\nPurchasing Project coordinator\nPurchasing Engineer (Assigned Project)\nPurchasing Deputy\nApproved\nPurchasing HOD\n\nCFO\nVP\nCOO\n\nOver 500 K\n\nAny Value\n\nEngineering Material (Steel)\nPR Created\nPurchasing Project coordinator\nPurchasing Engineer (Assigned Project)\nPurchasing Deputy\nApproved\nPurchasing HOD\n\nCOO Signature\n\nRev.00 – Date: 17-08-2021\n\nCEO Signature"
+  },
+  {
+    "filename": "CS Signature Matrix.pdf",
+    "page": 3,
+    "title": "Purchasing ( Consumable Material ) Comparison Sheet Signature Matrix",
+    "warnings": [],
+    "repairs": [],
+    "graph": {
+      "title": "Purchasing ( Consumable Material ) Comparison Sheet Signature Matrix",
+      "revision": "Rev.00 - Date: 17-08-2021",
+      "lanes": [
+        {
+          "name": "Consumable Material",
+          "nodes": [
+            {
+              "id": "consumable_material",
+              "label": "Consumable Material",
+              "kind": "step"
+            },
+            {
+              "id": "pr_created_1",
+              "label": "PR Created",
+              "kind": "step"
+            },
+            {
+              "id": "purchasing_project_coordinator_1",
+              "label": "Purchasing Project Coordinator",
+              "kind": "step"
+            },
+            {
+              "id": "purchasing_team_leader_approval_1",
+              "label": "Purchasing Team Leader Approval",
+              "kind": "decision"
+            },
+            {
+              "id": "purchasing_hod_deputy_1",
+              "label": "Purchasing HOD/Deputy",
+              "kind": "step"
+            },
+            {
+              "id": "coo_approval_1",
+              "label": "COO Approval",
+              "kind": "approver"
+            }
+          ],
+          "edges": [
+            {
+              "from": "consumable_material",
+              "to": "pr_created_1",
+              "condition": null
+            },
+            {
+              "from": "pr_created_1",
+              "to": "purchasing_project_coordinator_1",
+              "condition": null
+            },
+            {
+              "from": "purchasing_project_coordinator_1",
+              "to": "purchasing_team_leader_approval_1",
+              "condition": null
+            },
+            {
+              "from": "purchasing_team_leader_approval_1",
+              "to": "purchasing_hod_deputy_1",
+              "condition": "Approved"
+            },
+            {
+              "from": "purchasing_team_leader_approval_1",
+              "to": "purchasing_project_coordinator_1",
+              "condition": "Not Approved"
+            },
+            {
+              "from": "purchasing_hod_deputy_1",
+              "to": "coo_approval_1",
+              "condition": "Over 500 K"
+            }
+          ]
+        },
+        {
+          "name": "Consumable Material ( Wood - Formwork )",
+          "nodes": [
+            {
+              "id": "consumable_material_formwork",
+              "label": "Consumable Material ( Wood - Formwork )",
+              "kind": "step"
+            },
+            {
+              "id": "pr_created_2",
+              "label": "PR Created",
+              "kind": "step"
+            },
+            {
+              "id": "purchasing_project_coordinator_2",
+              "label": "Purchasing Project Coordinator",
+              "kind": "step"
+            },
+            {
+              "id": "purchasing_team_leader_approval_2",
+              "label": "Purchasing Team Leader Approval",
+              "kind": "decision"
+            },
+            {
+              "id": "formwork_hod",
+              "label": "Formwork HOD",
+              "kind": "decision"
+            },
+            {
+              "id": "purchasing_hod_deputy_2",
+              "label": "Purchasing HOD/Deputy",
+              "kind": "step"
+            },
+            {
+              "id": "coo_2",
+              "label": "COO",
+              "kind": "approver"
+            },
+            {
+              "id": "vp_2",
+              "label": "VP",
+              "kind": "approver"
+            },
+            {
+              "id": "cfo_2",
+              "label": "CFO",
+              "kind": "approver"
+            }
+          ],
+          "edges": [
+            {
+              "from": "consumable_material_formwork",
+              "to": "pr_created_2",
+              "condition": null
+            },
+            {
+              "from": "pr_created_2",
+              "to": "purchasing_project_coordinator_2",
+              "condition": null
+            },
+            {
+              "from": "purchasing_project_coordinator_2",
+              "to": "purchasing_team_leader_approval_2",
+              "condition": null
+            },
+            {
+              "from": "purchasing_team_leader_approval_2",
+              "to": "formwork_hod",
+              "condition": null
+            },
+            {
+              "from": "purchasing_team_leader_approval_2",
+              "to": "purchasing_project_coordinator_2",
+              "condition": "Not Approved"
+            },
+            {
+              "from": "formwork_hod",
+              "to": "purchasing_hod_deputy_2",
+              "condition": "Approved"
+            },
+            {
+              "from": "purchasing_hod_deputy_2",
+              "to": "coo_2",
+              "condition": null
+            },
+            {
+              "from": "coo_2",
+              "to": "vp_2",
+              "condition": null
+            },
+            {
+              "from": "vp_2",
+              "to": "cfo_2",
+              "condition": null
+            }
+          ]
+        },
+        {
+          "name": "Consumable Material ( Caravan )",
+          "nodes": [
+            {
+              "id": "consumable_material_caravan",
+              "label": "Consumable Material ( Caravan )",
+              "kind": "step"
+            },
+            {
+              "id": "pr_created_3",
+              "label": "PR Created",
+              "kind": "step"
+            },
+            {
+              "id": "purchasing_project_coordinator_3",
+              "label": "Purchasing Project Coordinator",
+              "kind": "step"
+            },
+            {
+              "id": "hod_requested",
+              "label": "HOD Requested ( HSE -, etc... )",
+              "kind": "step"
+            },
+            {
+              "id": "purchasing_team_leader_approval_3",
+              "label": "Purchasing Team Leader Approval",
+              "kind": "decision"
+            },
+            {
+              "id": "purchasing_hod_deputy_3",
+              "label": "Purchasing HOD/Deputy",
+              "kind": "step"
+            }
+          ],
+          "edges": [
+            {
+              "from": "consumable_material_caravan",
+              "to": "pr_created_3",
+              "condition": null
+            },
+            {
+              "from": "pr_created_3",
+              "to": "purchasing_project_coordinator_3",
+              "condition": null
+            },
+            {
+              "from": "purchasing_project_coordinator_3",
+              "to": "hod_requested",
+              "condition": null
+            },
+            {
+              "from": "hod_requested",
+              "to": "purchasing_team_leader_approval_3",
+              "condition": null
+            },
+            {
+              "from": "purchasing_team_leader_approval_3",
+              "to": "purchasing_hod_deputy_3",
+              "condition": "Approved"
+            },
+            {
+              "from": "purchasing_team_leader_approval_3",
+              "to": "purchasing_project_coordinator_3",
+              "condition": "Not Approved"
+            }
+          ]
+        }
+      ],
+      "escalation": [
+        {
+          "condition": "Over 500 K",
+          "approver": "COO Approval"
+        }
+      ]
+    },
+    "ocr_text": "Purchasing (Consumable Material)\nComparison Sheet Signature Matrix\n\nConsumable Material\nPR Created\nPurchasing Project Coordinator\nNot Approved\nPurchasing Team Leader Approval\nApproved\nPurchasing HOD/Deputy\nOver 500 K\nCOO Approval\n\nConsumable Material (Wood – Formwork)\nPR Created\nPurchasing Project Coordinator\nPurchasing Team Leader Approval\nNot Approved\nFormwork HOD\nApproved\nPurchasing HOD/Deputy\n\nCFO\nVP\nCOO\n\nConsumable Material (Caravan)\nPR Created\nPurchasing Project Coordinator\nHOD Requested (HSE – etc...)\nPurchasing Team Leader Approval\nApproved\nPurchasing HOD/Deputy\n\nCOO Signature\n\nRev.00 – Date: 17-08-2021"
+  }
+]

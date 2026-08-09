@@ -598,6 +598,21 @@ def chunk_corpus(src_dir: Path = DEFAULT_SRC,
     pdfs = sorted(Path(src_dir).glob("*.pdf"))
     if not pdfs:
         raise SystemExit(f"No PDFs found in {src_dir}")
+
+    # Scanned documents are not this module's job. Boundary detection reads
+    # font size and bold flags, which exist only for native text, so a fully
+    # scanned PDF yields no headings and gets recorded as a "windowed_fallback"
+    # document with 0 chunks - a real failure counter moving for a file that
+    # was never chunkable. Those go to workflow_extractor.py and a vision
+    # model instead; here they are skipped and reported, not silently mangled.
+    # Imported lazily so this module keeps no load-time dependency on it.
+    from workflow_extractor import classify
+
+    skipped = [p.name for p in pdfs if classify(p) == "workflow"]
+    pdfs = [p for p in pdfs if p.name not in skipped]
+    if not pdfs:
+        raise SystemExit(f"No process PDFs in {src_dir} - all {len(skipped)} are scanned")
+
     labeler = labeler or SectionLabeler(use_embeddings=use_embeddings)
 
     all_chunks, records = [], []
@@ -605,7 +620,9 @@ def chunk_corpus(src_dir: Path = DEFAULT_SRC,
         chunks, audit = chunk_pdf(pdf, labeler)
         all_chunks.extend(chunks)
         records.append(audit)
-    return all_chunks, build_audit_report(all_chunks, records)
+    report = build_audit_report(all_chunks, records)
+    report["skipped_scanned"] = skipped
+    return all_chunks, report
 
 
 def build_audit_report(chunks: list[dict], records: list[dict]) -> dict:
