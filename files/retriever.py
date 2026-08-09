@@ -107,8 +107,28 @@ def route_prefixes(query: str) -> list[str]:
     return hits if len(hits) == 1 else []
 
 
+def _singular(word: str) -> str:
+    """Crude plural strip, applied identically to corpus and query.
+
+    BM25 does no stemming, so "stakeholders" and "stakeholder" were entirely
+    different terms. That is not a theoretical concern: "who are the liable
+    stakeholder..." answered correctly while "who are the liable
+    stakeholders..." returned nothing useful, purely on the trailing s.
+
+    Deliberately a suffix rule and not a real stemmer. A Porter stemmer would
+    also fold "processing"/"processes"/"process" together, and "process" is the
+    single most common word in this corpus - collapsing its forms costs more
+    discrimination than it buys. The `ss`/`us`/`is` guard keeps "process",
+    "status" and "analysis" intact, and the length guard keeps short tokens and
+    the pieces of a split form code ("f", "p", "cm", "01") untouched.
+    """
+    if len(word) > 3 and word.endswith("s") and not word.endswith(("ss", "us", "is")):
+        return word[:-1]
+    return word
+
+
 def tokenize(text: str) -> list[str]:
-    return re.findall(r"[a-z0-9]+", text.lower())
+    return [_singular(w) for w in re.findall(r"[a-z0-9]+", text.lower())]
 
 
 def embed_text(chunk: dict) -> str:
@@ -145,7 +165,19 @@ class Retriever:
         self.model_name = model_name
 
         # --- sparse channel ---
-        self.corpus_tokens = [tokenize(c["text"]) for c in chunks]
+        # Indexed over embed_text (title + section + body), not the body alone,
+        # for the same reason the dense channel is - and one more.
+        #
+        # The section LABEL is canonical; the body text is whatever the PDF
+        # says. PVMO01's stakeholder heading is misspelled in the source as
+        # "2. STAKHOLDER", so the body contains no token a question about
+        # stakeholders can match. adaptive_chunker's fuzzy labeller already
+        # recovered the correct name into `section`, but BM25 could not see it,
+        # and the 94-character body is too short to win on dense similarity.
+        # The result was that every plural stakeholder question returned
+        # OBJECTIVES instead. Indexing the label fixes that class of miss for
+        # any short, list-shaped section identified mainly by its heading.
+        self.corpus_tokens = [tokenize(embed_text(c)) for c in chunks]
         self.bm25 = BM25Okapi(self.corpus_tokens)
 
         # --- dense channel ---
