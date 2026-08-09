@@ -107,6 +107,28 @@ def route_prefixes(query: str) -> list[str]:
     return hits if len(hits) == 1 else []
 
 
+def soft_prefixes(query: str) -> list[str]:
+    """Every doc-code family the query names. No ambiguity gate.
+
+    The soft-boost counterpart to route_prefixes(). Same keyword table, but
+    without the "exactly one family" rule, because the two are protecting
+    against different things: a hard route that picks wrong excludes the answer
+    permanently, whereas boosting two families just nudges both and lets the
+    scores decide.
+
+    That rule actively broke the boost. A rewritten follow-up naturally mentions
+    two topics - "What form is used for the Customer Satisfaction Survey in the
+    self-execution process?" hits PCM and PSE - so route_prefixes returned [],
+    and the family signal was empty for precisely the queries contextualisation
+    exists to produce.
+    """
+    q = query.lower()
+    explicit = {f"P{m}" for m in re.findall(r"\bF?-?P-([A-Z]{2,3})-\d", query.upper())}
+    if explicit:
+        return sorted(explicit & set(DOC_PREFIXES))
+    return [p for p, words in PREFIX_HINTS.items() if any(w in q for w in words)]
+
+
 def _singular(word: str) -> str:
     """Crude plural strip, applied identically to corpus and query.
 
@@ -281,7 +303,9 @@ class Retriever:
         return keep if len(keep) else np.arange(len(self.chunks))
 
     # ----------------------------------------------------------------- search
-    def search(self, query: str, top_k: int = 5, route: bool = True) -> list[dict]:
+    def search(self, query: str, top_k: int = 5, route: bool = True,
+               boost_prefixes: list[str] | None = None,
+               boost: float = 0.15) -> list[dict]:
         """Hybrid search. Same return shape as the old BM25-only version.
 
         `route=True` applies doc-code prefix narrowing first. On this eval set
@@ -313,6 +337,26 @@ class Retriever:
                     fused[i] = fused.get(i, 0.0) + w * (s - lo) / span
         else:
             raise ValueError(f"unknown fusion: {self.fusion!r}")
+
+        # --- soft family boost -------------------------------------------
+        # A nudge, not a filter: nothing is excluded, and a strong match in
+        # another family still outranks a weak match in the boosted one. Used
+        # by contextualize.py to pass "the user said self execution process"
+        # into ranking without turning it into a router.
+        #
+        # Scaled by the observed score range rather than added as a raw
+        # constant, because the two fusion modes live on different scales -
+        # weighted sums land near 0..1 while RRF scores are ~1/60. A fixed
+        # +0.15 would be a gentle nudge in one and total domination in the
+        # other.
+        if boost_prefixes and boost:
+            vals = fused.values()
+            span = (max(vals) - min(vals)) or 1.0
+            bump = boost * span
+            wanted = set(boost_prefixes)
+            for i in list(fused):
+                if self.prefixes[i] in wanted:
+                    fused[i] += bump
 
         ranked = sorted(fused.items(), key=lambda x: -x[1])[:top_k]
         return [{"score": float(s), **self.chunks[i]} for i, s in ranked]
