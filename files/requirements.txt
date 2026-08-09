@@ -12,6 +12,7 @@ rank-bm25>=0.2.2           # sparse channel
 numpy>=1.26
 requests>=2.31             # Ollama HTTP API
 jupyterlab>=4.0
+streamlit>=1.40            # app.py, the web front end (not needed for the notebook)
 
 # Optional - only needed if you want the OCR fallback path to actually run.
 # Also requires the tesseract BINARY on PATH, which is a separate install.
