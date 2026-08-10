@@ -1,47 +1,389 @@
 [
-  {"id": "PCM01-1", "doc": "PCM01_Customer_Satisfaction_Process_1.pdf", "question": "What form is used for the Customer Satisfaction Survey?", "expected_answer": "F-P-CM-01-01", "must_include": ["F-P-CM-01-01"], "type": "form_lookup"},
-  {"id": "PCM01-2", "doc": "PCM01_Customer_Satisfaction_Process_1.pdf", "question": "How often does the Commercial dept send the customer satisfaction survey during a project's lifecycle?", "expected_answer": "Twice during the project's life cycle (mid and end), or at least once a year if the project exceeds 12 months.", "must_include": ["twice", "mid", "end"], "type": "fact"},
-  {"id": "PCM01-3", "doc": "PCM01_Customer_Satisfaction_Process_1.pdf", "question": "Who is responsible for issuing an NCR when there's a gap between customer perception and RME's expected standard?", "expected_answer": "QA", "must_include": ["QA"], "type": "role_lookup"},
-  {"id": "PCM01-4", "doc": "PCM01_Customer_Satisfaction_Process_1.pdf", "question": "Within how many hours must the PM send corrective action plans after a customer satisfaction gap is reported?", "expected_answer": "24 hours", "must_include": ["24"], "type": "fact"},
-
-  {"id": "PCM02-1", "doc": "PCM02_Branding_for_Construction_Sites_Process_1.pdf", "question": "How many days before execution must the PM submit the Marketing Activities Request?", "expected_answer": "20-30 days before execution", "must_include": ["20", "30"], "type": "fact"},
-  {"id": "PCM02-2", "doc": "PCM02_Branding_for_Construction_Sites_Process_1.pdf", "question": "What form number is the Marketing Activities Request Form?", "expected_answer": "F-P-CM-02-01", "must_include": ["F-P-CM-02-01"], "type": "form_lookup"},
-  {"id": "PCM02-3", "doc": "PCM02_Branding_for_Construction_Sites_Process_1.pdf", "question": "Who approves branding locations, and in coordination with whom?", "expected_answer": "PM approves, in coordination with the HSE Officer and Branding team", "must_include": ["PM", "HSE"], "type": "role_lookup"},
-
-  {"id": "PCN01-1", "doc": "PCN01_Subcontract_Agreement_Process_1.pdf", "question": "What is the form number for the SC Agreement Signature Matrix?", "expected_answer": "F-P-CN-01-11", "must_include": ["F-P-CN-01-11"], "type": "form_lookup"},
-  {"id": "PCN01-2", "doc": "PCN01_Subcontract_Agreement_Process_1.pdf", "question": "Within how many weeks must Contracts draft the subcontract after receiving a nomination letter (nominated subcontractor case)?", "expected_answer": "2 weeks", "must_include": ["2 week"], "type": "fact"},
-  {"id": "PCN01-3", "doc": "PCN01_Subcontract_Agreement_Process_1.pdf", "question": "What percentage of a similar subcontract's price is used for RME self-execution internal subcontract items?", "expected_answer": "90%", "must_include": ["90"], "type": "fact"},
-  {"id": "PCN01-4", "doc": "PCN01_Subcontract_Agreement_Process_1.pdf", "question": "What is BTB an abbreviation for in this process?", "expected_answer": "Back-to-Back", "must_include": ["Back", "Back"], "type": "definition"},
-
-  {"id": "PQD12-1", "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf", "question": "Within how many days from the operation coordination meeting must the QC Manager prepare the Project Quality Plan (PQP)?", "expected_answer": "15 days", "must_include": ["15"], "type": "fact"},
-  {"id": "PQD12-2", "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf", "question": "What does 'Hold point (H)' mean in the ITP definitions?", "expected_answer": "The work will not proceed until the inspection is carried out.", "must_include": ["not proceed", "inspection"], "type": "definition"},
-  {"id": "PQD12-3", "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf", "question": "How far in advance must the Site Engineer inform QC before work is ready for inspection?", "expected_answer": "1 day prior", "must_include": ["1 day"], "type": "fact"},
-  {"id": "PQD12-4", "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf", "question": "Who approves the Project Quality Plan (PQP)?", "expected_answer": "QC Manager prepares it; approved by QC dept manager and PM", "must_include": ["QC", "PM"], "type": "role_lookup"},
-
-  {"id": "PSE01-1", "doc": "PSE01_RME_SelfExecution_Process_1.pdf", "question": "What is the form number for the Work Completed Status Form?", "expected_answer": "F-P-OP-05-01", "must_include": ["F-P-OP-05-01"], "type": "form_lookup"},
-  {"id": "PSE01-2", "doc": "PSE01_RME_SelfExecution_Process_1.pdf", "question": "Who approves staff hiring in the Self-Execution department?", "expected_answer": "SEM executes with approval of the Projects Control Manager", "must_include": ["Projects Control Manager"], "type": "role_lookup"},
-  {"id": "PSE01-3", "doc": "PSE01_RME_SelfExecution_Process_1.pdf", "question": "What does SEM stand for?", "expected_answer": "Self-execution Manager", "must_include": ["Self-execution Manager"], "type": "definition"},
-
-  {"id": "PTN01-1", "doc": "PTN01_Project_Initiation_Process.pdf", "question": "How many days before submission must Contracts send the contractual Risk Assessment to Tendering?", "expected_answer": "7 days before submission", "must_include": ["7"], "type": "fact"},
-  {"id": "PTN01-2", "doc": "PTN01_Project_Initiation_Process.pdf", "question": "For projects >=50M USD international or 1 billion local, how many days before submission is the second alignment meeting held?", "expected_answer": "5 days before submission", "must_include": ["5"], "type": "fact"},
-  {"id": "PTN01-3", "doc": "PTN01_Project_Initiation_Process.pdf", "question": "How long must the Commercial dept maintain tender records?", "expected_answer": "1 year", "must_include": ["1 year"], "type": "fact"},
-  {"id": "PTN01-4", "doc": "PTN01_Project_Initiation_Process.pdf", "question": "What does 'Brown Field' mean in this process's definitions?", "expected_answer": "New projects which have an old phase/extension", "must_include": ["old phase", "extension"], "type": "definition"},
-
-  {"id": "PTN02-1", "doc": "PTN02_Project_Launching_Process.pdf", "question": "Within how many working days from LOA issuance must the Tender Handover Meeting occur?", "expected_answer": "7-10 working days", "must_include": ["7", "10"], "type": "fact"},
-  {"id": "PTN02-2", "doc": "PTN02_Project_Launching_Process.pdf", "question": "Within how many days from the tender handover meeting must the baseline program be prepared?", "expected_answer": "45 days", "must_include": ["45"], "type": "fact"},
-  {"id": "PTN02-3", "doc": "PTN02_Project_Launching_Process.pdf", "question": "What is the form number for the Project Execution Plan?", "expected_answer": "F-P-TN-02-06", "must_include": ["F-P-TN-02-06"], "type": "form_lookup"},
-
-  {"id": "PVMO01-1", "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf", "question": "What is the form number for the Request for Quotation (RFQ)?", "expected_answer": "F-P-VMO-01-01", "must_include": ["F-P-VMO-01-01"], "type": "form_lookup"},
-  {"id": "PVMO01-2", "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf", "question": "Within how many days from the Tender Handover Meeting must VMO prepare the itemized budget material list and project sourcing strategy?", "expected_answer": "7 days", "must_include": ["7"], "type": "fact"},
-  {"id": "PVMO01-3", "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf", "question": "What does HO-TO stand for?", "expected_answer": "Head-Office Technical Office", "must_include": ["Head", "Office", "Technical"], "type": "definition"},
-
-  {"id": "PVMO02-1", "doc": "PVMO02_Procurement_Process.pdf", "question": "Within how many working days from Tender Handover Meeting must H.O Procurement issue the Project Strategy (Scope of Work)?", "expected_answer": "7 working days", "must_include": ["7"], "type": "fact"},
-  {"id": "PVMO02-2", "doc": "PVMO02_Procurement_Process.pdf", "question": "What is the minimum number of vendor quotations required for a commercial comparison?", "expected_answer": "Minimum of three vendors", "must_include": ["three", "3"], "type": "fact"},
-  {"id": "PVMO02-3", "doc": "PVMO02_Procurement_Process.pdf", "question": "Above what advance payment amount must vendors provide a Letter of Guarantee (LG)?", "expected_answer": "1 million EGP", "must_include": ["1 million"], "type": "fact"},
-  {"id": "PVMO02-4", "doc": "PVMO02_Procurement_Process.pdf", "question": "Who approves the Monthly Payment Plan before it goes to Finance?", "expected_answer": "BUM approves it", "must_include": ["BUM"], "type": "role_lookup"},
-
-  {"id": "ADV-1", "doc": "none", "question": "What is the penalty amount if a subcontractor misses a milestone date?", "expected_answer": "Not specified in these process documents.", "must_include": ["not specified", "not found", "does not specify", "no information", "don't know", "cannot find"], "type": "unanswerable"},
-  {"id": "ADV-2", "doc": "none", "question": "What is the process for approving employee annual bonuses?", "expected_answer": "Not covered by any of these 9 process documents.", "must_include": ["not specified", "not found", "does not specify", "no information", "don't know", "cannot find"], "type": "unanswerable"},
-  {"id": "ADV-3", "doc": "none", "question": "What form is used to request a company car for a site visit?", "expected_answer": "Not specified in these process documents.", "must_include": ["not specified", "not found", "does not specify", "no information", "don't know", "cannot find"], "type": "unanswerable"},
-  {"id": "ADV-4", "doc": "none", "question": "Which specific software system is used to submit RFQ material reference records?", "expected_answer": "Unifier (mentioned in Procurement Process)", "must_include": ["unifier"], "type": "fact_crossdoc"}
+  {
+    "id": "PCM01-1",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
+    "question": "What form is used for the Customer Satisfaction Survey?",
+    "expected_answer": "F-P-CM-01-01",
+    "must_include": [
+      "F-P-CM-01-01"
+    ],
+    "type": "form_lookup"
+  },
+  {
+    "id": "PCM01-2",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
+    "question": "How often does the Commercial dept send the customer satisfaction survey during a project's lifecycle?",
+    "expected_answer": "Twice during the project's life cycle (mid and end), or at least once a year if the project exceeds 12 months.",
+    "must_include": [
+      "twice",
+      "mid",
+      "end"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PCM01-3",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
+    "question": "Who is responsible for issuing an NCR when there's a gap between customer perception and RME's expected standard?",
+    "expected_answer": "QA",
+    "must_include": [
+      "QA"
+    ],
+    "type": "role_lookup"
+  },
+  {
+    "id": "PCM01-4",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
+    "question": "Within how many hours must the PM send corrective action plans after a customer satisfaction gap is reported?",
+    "expected_answer": "24 hours",
+    "must_include": [
+      "24"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PCM02-1",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+    "question": "How many days before execution must the PM submit the Marketing Activities Request?",
+    "expected_answer": "20-30 days before execution",
+    "must_include": [
+      "20",
+      "30"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PCM02-2",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+    "question": "What form number is the Marketing Activities Request Form?",
+    "expected_answer": "F-P-CM-02-01",
+    "must_include": [
+      "F-P-CM-02-01"
+    ],
+    "type": "form_lookup"
+  },
+  {
+    "id": "PCM02-3",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+    "question": "Who approves branding locations, and in coordination with whom?",
+    "expected_answer": "PM approves, in coordination with the HSE Officer and Branding team",
+    "must_include": [
+      "PM",
+      "HSE"
+    ],
+    "type": "role_lookup"
+  },
+  {
+    "id": "PCN01-1",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "What is the form number for the SC Agreement Signature Matrix?",
+    "expected_answer": "F-P-CN-01-11",
+    "must_include": [
+      "F-P-CN-01-11"
+    ],
+    "type": "form_lookup"
+  },
+  {
+    "id": "PCN01-2",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "Within how many weeks must Contracts draft the subcontract after receiving a nomination letter (nominated subcontractor case)?",
+    "expected_answer": "2 weeks",
+    "must_include": [
+      "2 week"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PCN01-3",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "What percentage of a similar subcontract's price is used for RME self-execution internal subcontract items?",
+    "expected_answer": "90%",
+    "must_include": [
+      "90"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PCN01-4",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "What is BTB an abbreviation for in this process?",
+    "expected_answer": "Back-to-Back",
+    "must_include": [
+      "Back",
+      "Back"
+    ],
+    "type": "definition"
+  },
+  {
+    "id": "PQD12-1",
+    "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+    "question": "Within how many days from the operation coordination meeting must the QC Manager prepare the Project Quality Plan (PQP)?",
+    "expected_answer": "15 days",
+    "must_include": [
+      "15"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PQD12-2",
+    "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+    "question": "What does 'Hold point (H)' mean in the ITP definitions?",
+    "expected_answer": "The work will not proceed until the inspection is carried out.",
+    "must_include": [
+      "not proceed",
+      "inspection"
+    ],
+    "type": "definition"
+  },
+  {
+    "id": "PQD12-3",
+    "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+    "question": "How far in advance must the Site Engineer inform QC before work is ready for inspection?",
+    "expected_answer": "1 day prior",
+    "must_include": [
+      "1 day"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PQD12-4",
+    "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+    "question": "Who approves the Project Quality Plan (PQP)?",
+    "expected_answer": "QC Manager prepares it; approved by QC dept manager and PM",
+    "must_include": [
+      "QC",
+      "PM"
+    ],
+    "type": "role_lookup"
+  },
+  {
+    "id": "PSE01-1",
+    "doc": "PSE01_RME_SelfExecution_Process.pdf",
+    "question": "What is the form number for the Work Completed Status Form?",
+    "expected_answer": "F-P-OP-05-01",
+    "must_include": [
+      "F-P-OP-05-01"
+    ],
+    "type": "form_lookup"
+  },
+  {
+    "id": "PSE01-2",
+    "doc": "PSE01_RME_SelfExecution_Process.pdf",
+    "question": "Who approves staff hiring in the Self-Execution department?",
+    "expected_answer": "SEM executes with approval of the Projects Control Manager",
+    "must_include": [
+      "Projects Control Manager"
+    ],
+    "type": "role_lookup"
+  },
+  {
+    "id": "PSE01-3",
+    "doc": "PSE01_RME_SelfExecution_Process.pdf",
+    "question": "What does SEM stand for?",
+    "expected_answer": "Self-execution Manager",
+    "must_include": [
+      "Self-execution Manager"
+    ],
+    "type": "definition"
+  },
+  {
+    "id": "PTN01-1",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "How many days before submission must Contracts send the contractual Risk Assessment to Tendering?",
+    "expected_answer": "7 days before submission",
+    "must_include": [
+      "7"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PTN01-2",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "For projects >=50M USD international or 1 billion local, how many days before submission is the second alignment meeting held?",
+    "expected_answer": "5 days before submission",
+    "must_include": [
+      "5"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PTN01-3",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "How long must the Commercial dept maintain tender records?",
+    "expected_answer": "1 year",
+    "must_include": [
+      "1 year"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PTN01-4",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "What does 'Brown Field' mean in this process's definitions?",
+    "expected_answer": "New projects which have an old phase/extension",
+    "must_include": [
+      "old phase",
+      "extension"
+    ],
+    "type": "definition"
+  },
+  {
+    "id": "PTN02-1",
+    "doc": "PTN02_Project_Launching_Process.pdf",
+    "question": "Within how many working days from LOA issuance must the Tender Handover Meeting occur?",
+    "expected_answer": "7-10 working days",
+    "must_include": [
+      "7",
+      "10"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PTN02-2",
+    "doc": "PTN02_Project_Launching_Process.pdf",
+    "question": "Within how many days from the tender handover meeting must the baseline program be prepared?",
+    "expected_answer": "45 days",
+    "must_include": [
+      "45"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PTN02-3",
+    "doc": "PTN02_Project_Launching_Process.pdf",
+    "question": "What is the form number for the Project Execution Plan?",
+    "expected_answer": "F-P-TN-02-06",
+    "must_include": [
+      "F-P-TN-02-06"
+    ],
+    "type": "form_lookup"
+  },
+  {
+    "id": "PVMO01-1",
+    "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+    "question": "What is the form number for the Request for Quotation (RFQ)?",
+    "expected_answer": "F-P-VMO-01-01",
+    "must_include": [
+      "F-P-VMO-01-01"
+    ],
+    "type": "form_lookup"
+  },
+  {
+    "id": "PVMO01-2",
+    "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+    "question": "Within how many days from the Tender Handover Meeting must VMO prepare the itemized budget material list and project sourcing strategy?",
+    "expected_answer": "7 days",
+    "must_include": [
+      "7"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PVMO01-3",
+    "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+    "question": "What does HO-TO stand for?",
+    "expected_answer": "Head-Office Technical Office",
+    "must_include": [
+      "Head",
+      "Office",
+      "Technical"
+    ],
+    "type": "definition"
+  },
+  {
+    "id": "PVMO02-1",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "Within how many working days from Tender Handover Meeting must H.O Procurement issue the Project Strategy (Scope of Work)?",
+    "expected_answer": "7 working days",
+    "must_include": [
+      "7"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PVMO02-2",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "What is the minimum number of vendor quotations required for a commercial comparison?",
+    "expected_answer": "Minimum of three vendors",
+    "must_include": [
+      "three",
+      "3"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PVMO02-3",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "Above what advance payment amount must vendors provide a Letter of Guarantee (LG)?",
+    "expected_answer": "1 million EGP",
+    "must_include": [
+      "1 million"
+    ],
+    "type": "fact"
+  },
+  {
+    "id": "PVMO02-4",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "Who approves the Monthly Payment Plan before it goes to Finance?",
+    "expected_answer": "BUM approves it",
+    "must_include": [
+      "BUM"
+    ],
+    "type": "role_lookup"
+  },
+  {
+    "id": "ADV-1",
+    "doc": "none",
+    "question": "What is the penalty amount if a subcontractor misses a milestone date?",
+    "expected_answer": "Not specified in these process documents.",
+    "must_include": [
+      "not specified",
+      "not found",
+      "does not specify",
+      "no information",
+      "don't know",
+      "cannot find"
+    ],
+    "type": "unanswerable"
+  },
+  {
+    "id": "ADV-2",
+    "doc": "none",
+    "question": "What is the process for approving employee annual bonuses?",
+    "expected_answer": "Not covered by any of these 9 process documents.",
+    "must_include": [
+      "not specified",
+      "not found",
+      "does not specify",
+      "no information",
+      "don't know",
+      "cannot find"
+    ],
+    "type": "unanswerable"
+  },
+  {
+    "id": "ADV-3",
+    "doc": "none",
+    "question": "What form is used to request a company car for a site visit?",
+    "expected_answer": "Not specified in these process documents.",
+    "must_include": [
+      "not specified",
+      "not found",
+      "does not specify",
+      "no information",
+      "don't know",
+      "cannot find"
+    ],
+    "type": "unanswerable"
+  },
+  {
+    "id": "ADV-4",
+    "doc": "none",
+    "question": "Which specific software system is used to submit RFQ material reference records?",
+    "expected_answer": "Unifier (mentioned in Procurement Process)",
+    "must_include": [
+      "unifier"
+    ],
+    "type": "fact_crossdoc"
+  }
 ]

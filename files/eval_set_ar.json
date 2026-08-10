@@ -1,7 +1,7 @@
 [
   {
     "id": "PCM01-1",
-    "doc": "PCM01_Customer_Satisfaction_Process_1.pdf",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
     "question": "ما هي النموذج المستخدم لاستبيان رضا العملاء؟",
     "expected_answer": "F-P-CM-01-01",
     "must_include": [
@@ -13,7 +13,7 @@
   },
   {
     "id": "PCM01-2",
-    "doc": "PCM01_Customer_Satisfaction_Process_1.pdf",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
     "question": "كم مرة يرسل قسم المبيعات استبيان رضا العملاء خلال دورة حياة المشروع؟",
     "expected_answer": "Twice during the project's life cycle (mid and end), or at least once a year if the project exceeds 12 months.",
     "must_include": [
@@ -27,7 +27,7 @@
   },
   {
     "id": "PCM01-3",
-    "doc": "PCM01_Customer_Satisfaction_Process_1.pdf",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
     "question": "من هو المسؤول عن إصدار إشعار NCR عندما يكون هناك فجوة بين إدراك العميل والمعايير المتوقعة من RME؟",
     "expected_answer": "QA",
     "must_include": [
@@ -39,7 +39,7 @@
   },
   {
     "id": "PCM01-4",
-    "doc": "PCM01_Customer_Satisfaction_Process_1.pdf",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
     "question": "في كم عدد الساعات يجب على المدير التنفيذي إرسال خطط الإجراءات التصحيحية بعد تقرير فجوة رضا العميل؟",
     "expected_answer": "24 hours",
     "must_include": [
@@ -51,7 +51,7 @@
   },
   {
     "id": "PCM02-1",
-    "doc": "PCM02_Branding_for_Construction_Sites_Process_1.pdf",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
     "question": "كم عدد الأيام قبل التنفيذ يجب على رئيس الوزراء تقديم طلب الأنشطة التسويقية؟",
     "expected_answer": "20-30 days before execution",
     "must_include": [
@@ -64,7 +64,7 @@
   },
   {
     "id": "PCM02-2",
-    "doc": "PCM02_Branding_for_Construction_Sites_Process_1.pdf",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
     "question": "ما هو رقم النموذج الخاص بطلب الأنشطة التسويقية؟",
     "expected_answer": "F-P-CM-02-01",
     "must_include": [
@@ -76,7 +76,7 @@
   },
   {
     "id": "PCM02-3",
-    "doc": "PCM02_Branding_for_Construction_Sites_Process_1.pdf",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
     "question": "من يوافق على مواقع التسويق، ومن ينسق معه؟",
     "expected_answer": "PM approves, in coordination with the HSE Officer and Branding team",
     "must_include": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "PCN01-1",
-    "doc": "PCN01_Subcontract_Agreement_Process_1.pdf",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
     "question": "ما هو رقم النموذج الخاص بجدول توقيع اتفاقية SC؟",
     "expected_answer": "F-P-CN-01-11",
     "must_include": [
@@ -101,7 +101,7 @@
   },
   {
     "id": "PCN01-2",
-    "doc": "PCN01_Subcontract_Agreement_Process_1.pdf",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
     "question": "كم أسبوعًا يجب على عقود إعداد المقاول الفرعي بعد تلقيها رسالة التعيين (حالة المقاول الفرعي المُعيّن)؟",
     "expected_answer": "2 weeks",
     "must_include": [
@@ -113,7 +113,7 @@
   },
   {
     "id": "PCN01-3",
-    "doc": "PCN01_Subcontract_Agreement_Process_1.pdf",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
     "question": "ما النسبة المئوية من سعر عقد تفويض مشابه تُستخدم لعناصر عقود تفويض داخلية تنفذها RME بشكل ذاتي؟",
     "expected_answer": "90%",
     "must_include": [
@@ -125,7 +125,7 @@
   },
   {
     "id": "PCN01-4",
-    "doc": "PCN01_Subcontract_Agreement_Process_1.pdf",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
     "question": "ما هي BTB اختصارًا لها في هذه العملية؟",
     "expected_answer": "Back-to-Back",
     "must_include": [
@@ -188,7 +188,7 @@
   },
   {
     "id": "PSE01-1",
-    "doc": "PSE01_RME_SelfExecution_Process_1.pdf",
+    "doc": "PSE01_RME_SelfExecution_Process.pdf",
     "question": "ما هو رقم النموذج الخاص بنموذج حالة العمل المكتمل؟",
     "expected_answer": "F-P-OP-05-01",
     "must_include": [
@@ -200,7 +200,7 @@
   },
   {
     "id": "PSE01-2",
-    "doc": "PSE01_RME_SelfExecution_Process_1.pdf",
+    "doc": "PSE01_RME_SelfExecution_Process.pdf",
     "question": "من يوافق على توظيف الموظفين في قسم التنفيذ الذاتي؟",
     "expected_answer": "SEM executes with approval of the Projects Control Manager",
     "must_include": [
@@ -212,7 +212,7 @@
   },
   {
     "id": "PSE01-3",
-    "doc": "PSE01_RME_SelfExecution_Process_1.pdf",
+    "doc": "PSE01_RME_SelfExecution_Process.pdf",
     "question": "ما الذي تعنيه اختصار SEM؟",
     "expected_answer": "Self-execution Manager",
     "must_include": [
