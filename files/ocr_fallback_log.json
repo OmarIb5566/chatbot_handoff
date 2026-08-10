@@ -1,0 +1,112 @@
+{
+  "docs": 11,
+  "total_pages": 71,
+  "fallback_pages": 13,
+  "fallback_rate": 0.1831,
+  "pages": [
+    {
+      "file": "CS_Signature_Matrix.pdf",
+      "source_file": "CS Signature Matrix.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "CS_Signature_Matrix.pdf",
+      "source_file": "CS Signature Matrix.pdf",
+      "page": 2,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "CS_Signature_Matrix.pdf",
+      "source_file": "CS Signature Matrix.pdf",
+      "page": 3,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "MHR19_Internship_Policy.pdf",
+      "source_file": "M-HR-19 Internship Policy.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "PCM01_Customer_Satisfaction_Process_1.pdf",
+      "source_file": "P-CM-01 Customer Satisfaction Process (1).pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "PCM02_Branding_for_Construction_Sites_Process_1.pdf",
+      "source_file": "P-CM-02 Branding for Construction Sites Process (1).pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "PCN01_Subcontract_Agreement_Process_1.pdf",
+      "source_file": "P-CN-01 Subcontract Agreement Process (1).pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+      "source_file": "P-QD-12 Quality Plan Inspection and Testing Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "PSE01_RME_SelfExecution_Process_1.pdf",
+      "source_file": "P-SE-01 RME Self-Execution Process (1).pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "PTN01_Project_Initiation_Process.pdf",
+      "source_file": "P-TN-01 Project Initiation Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "PTN02_Project_Launching_Process.pdf",
+      "source_file": "P-TN-02 Project Launching Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+      "source_file": "P-VMO-01 Vendor selection and Bidding Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    },
+    {
+      "file": "PVMO02_Procurement_Process.pdf",
+      "source_file": "P-VMO-02 Procurement Process.pdf",
+      "page": 1,
+      "reason": "ocr_failed",
+      "chars": 0,
+      "error": "ModuleNotFoundError: No module named 'pytesseract'"
+    }
+  ]
+}
