@@ -1,0 +1,540 @@
+{
+  "chunks": [
+    {
+      "filename": "Bonds Request - Bonds Request WF.pdf",
+      "doc_code": null,
+      "title": "Approval Routing Flowchart",
+      "section": "Approval Routing Flowchart",
+      "step": null,
+      "text": "Approval Routing Flowchart - Approval Routing Flowchart\nApproval workflow: Approval Routing Flowchart.\n\nSteps: Creation by Commercial Engineer; Send for Approval; Clients & Trade Department; Commercial Engineer Revision; Send; Commercial Engineer Modification; Send; Clients & Trade Department; Commercial Engineer Edits/Cancels; Send; End.\n\nRouting:\n  - Creation by Commercial Engineer -> Commercial Manager Approval [Send for Approval]\n  - Commercial Manager Approval -> Send for Approval [Send]\n  - Commercial Manager Approval -> Creation by Commercial Engineer [Resend for Approval]\n  - Commercial Manager Approval -> Creation by Commercial Engineer [Send back with comments]\n  - Send for Approval -> Clients & Trade Department\n  - Send for Approval -> End [Cancel]\n  - Send for Approval -> End [Cancel with Revision]\n  - Clients & Trade Department -> Commercial Engineer Revision\n  - Clients & Trade Department -> Clients & Trade Manager [Send to Clients & Trade Manager]\n  - Clients & Trade Department -> End [Cancel]\n  - Clients & Trade Department -> End [Cancel with Revision]\n  - Commercial Engineer Revision -> Send\n  - Commercial Engineer Revision -> Clients & Trade Department [Send back with comments]\n  - Send -> Clients & Trade Manager [Resend for Approval]\n  - Send -> End [Cancel]\n  - Send -> End [Cancel with Revision]\n  - Clients & Trade Manager -> Commercial Engineer Modification\n  - Clients & Trade Manager -> CFO Approval [Send to Finance]\n  - Clients & Trade Manager -> Clients & Trade Department [Send back with comments to Clients & Trade Manager]\n  - Commercial Engineer Modification -> Send\n  - Commercial Engineer Modification -> Clients & Trade Manager [Return to Commercial Engineer]\n  - Send -> Clients & Trade Department [Resend for Approval]\n  - Send -> End [Cancel]\n  - Send -> End [Cancel with Revision]\n  - CFO Approval -> Clients & Trade Department [Send to Clients & Trade Department]\n  - CFO Approval -> Clients & Trade Manager [Send back with comments to Clients & Trade Manager]\n  - Clients & Trade Department -> Commercial Engineer Edits/Cancels\n  - Clients & Trade Department -> End [Submit]\n  - Clients & Trade Department -> Clients & Trade Manager [Send back with comments to Clients & Trade Manager]\n  - Commercial Engineer Edits/Cancels -> Send\n  - Commercial Engineer Edits/Cancels -> Clients & Trade Department [Send back with comments]\n  - Send -> End [Resend for Approval]\n  - Send -> End [Cancel]\n  - Send -> End [Cancel with Revision]",
+      "raw_heading": "Approval Routing Flowchart",
+      "label_method": "vlm",
+      "label_score": 0.0,
+      "page": 1,
+      "detector": "vision",
+      "source_type": "vlm_description",
+      "vision_model": "qwen3.6:27b",
+      "review": "machine",
+      "audit_warnings": [
+        "lane 'Approval Routing Flowchart': contradictory edges clients_trade_dept_1->comm_eng_revision [None] and comm_eng_revision->clients_trade_dept_1 [Send back with comments] - one direction is probably invented",
+        "lane 'Approval Routing Flowchart': contradictory edges clients_trade_dept_2->comm_eng_edits_cancels [None] and comm_eng_edits_cancels->clients_trade_dept_2 [Send back with comments] - one direction is probably invented"
+      ],
+      "graph": {
+        "name": "Approval Routing Flowchart",
+        "nodes": [
+          {
+            "id": "creation_ce",
+            "label": "Creation by Commercial Engineer",
+            "kind": "step"
+          },
+          {
+            "id": "comm_mgr_approval",
+            "label": "Commercial Manager Approval",
+            "kind": "approver"
+          },
+          {
+            "id": "send_for_approval_1",
+            "label": "Send for Approval",
+            "kind": "decision"
+          },
+          {
+            "id": "clients_trade_dept_1",
+            "label": "Clients & Trade Department",
+            "kind": "step"
+          },
+          {
+            "id": "comm_eng_revision",
+            "label": "Commercial Engineer Revision",
+            "kind": "step"
+          },
+          {
+            "id": "send_1",
+            "label": "Send",
+            "kind": "decision"
+          },
+          {
+            "id": "clients_trade_mgr",
+            "label": "Clients & Trade Manager",
+            "kind": "approver"
+          },
+          {
+            "id": "comm_eng_modification",
+            "label": "Commercial Engineer Modification",
+            "kind": "step"
+          },
+          {
+            "id": "send_2",
+            "label": "Send",
+            "kind": "decision"
+          },
+          {
+            "id": "cfo_approval",
+            "label": "CFO Approval",
+            "kind": "approver"
+          },
+          {
+            "id": "clients_trade_dept_2",
+            "label": "Clients & Trade Department",
+            "kind": "step"
+          },
+          {
+            "id": "comm_eng_edits_cancels",
+            "label": "Commercial Engineer Edits/Cancels",
+            "kind": "step"
+          },
+          {
+            "id": "send_3",
+            "label": "Send",
+            "kind": "decision"
+          },
+          {
+            "id": "end",
+            "label": "End",
+            "kind": "step"
+          }
+        ],
+        "edges": [
+          {
+            "from": "creation_ce",
+            "to": "comm_mgr_approval",
+            "condition": "Send for Approval"
+          },
+          {
+            "from": "comm_mgr_approval",
+            "to": "send_for_approval_1",
+            "condition": "Send"
+          },
+          {
+            "from": "comm_mgr_approval",
+            "to": "creation_ce",
+            "condition": "Resend for Approval"
+          },
+          {
+            "from": "comm_mgr_approval",
+            "to": "creation_ce",
+            "condition": "Send back with comments"
+          },
+          {
+            "from": "send_for_approval_1",
+            "to": "clients_trade_dept_1",
+            "condition": null
+          },
+          {
+            "from": "send_for_approval_1",
+            "to": "end",
+            "condition": "Cancel"
+          },
+          {
+            "from": "send_for_approval_1",
+            "to": "end",
+            "condition": "Cancel with Revision"
+          },
+          {
+            "from": "clients_trade_dept_1",
+            "to": "comm_eng_revision",
+            "condition": null
+          },
+          {
+            "from": "clients_trade_dept_1",
+            "to": "clients_trade_mgr",
+            "condition": "Send to Clients & Trade Manager"
+          },
+          {
+            "from": "clients_trade_dept_1",
+            "to": "end",
+            "condition": "Cancel"
+          },
+          {
+            "from": "clients_trade_dept_1",
+            "to": "end",
+            "condition": "Cancel with Revision"
+          },
+          {
+            "from": "comm_eng_revision",
+            "to": "send_1",
+            "condition": null
+          },
+          {
+            "from": "comm_eng_revision",
+            "to": "clients_trade_dept_1",
+            "condition": "Send back with comments"
+          },
+          {
+            "from": "send_1",
+            "to": "clients_trade_mgr",
+            "condition": "Resend for Approval"
+          },
+          {
+            "from": "send_1",
+            "to": "end",
+            "condition": "Cancel"
+          },
+          {
+            "from": "send_1",
+            "to": "end",
+            "condition": "Cancel with Revision"
+          },
+          {
+            "from": "clients_trade_mgr",
+            "to": "comm_eng_modification",
+            "condition": null
+          },
+          {
+            "from": "clients_trade_mgr",
+            "to": "cfo_approval",
+            "condition": "Send to Finance"
+          },
+          {
+            "from": "clients_trade_mgr",
+            "to": "clients_trade_dept_1",
+            "condition": "Send back with comments to Clients & Trade Manager"
+          },
+          {
+            "from": "comm_eng_modification",
+            "to": "send_2",
+            "condition": null
+          },
+          {
+            "from": "comm_eng_modification",
+            "to": "clients_trade_mgr",
+            "condition": "Return to Commercial Engineer"
+          },
+          {
+            "from": "send_2",
+            "to": "clients_trade_dept_2",
+            "condition": "Resend for Approval"
+          },
+          {
+            "from": "send_2",
+            "to": "end",
+            "condition": "Cancel"
+          },
+          {
+            "from": "send_2",
+            "to": "end",
+            "condition": "Cancel with Revision"
+          },
+          {
+            "from": "cfo_approval",
+            "to": "clients_trade_dept_2",
+            "condition": "Send to Clients & Trade Department"
+          },
+          {
+            "from": "cfo_approval",
+            "to": "clients_trade_mgr",
+            "condition": "Send back with comments to Clients & Trade Manager"
+          },
+          {
+            "from": "clients_trade_dept_2",
+            "to": "comm_eng_edits_cancels",
+            "condition": null
+          },
+          {
+            "from": "clients_trade_dept_2",
+            "to": "end",
+            "condition": "Submit"
+          },
+          {
+            "from": "clients_trade_dept_2",
+            "to": "clients_trade_mgr",
+            "condition": "Send back with comments to Clients & Trade Manager"
+          },
+          {
+            "from": "comm_eng_edits_cancels",
+            "to": "send_3",
+            "condition": null
+          },
+          {
+            "from": "comm_eng_edits_cancels",
+            "to": "clients_trade_dept_2",
+            "condition": "Send back with comments"
+          },
+          {
+            "from": "send_3",
+            "to": "end",
+            "condition": "Resend for Approval"
+          },
+          {
+            "from": "send_3",
+            "to": "end",
+            "condition": "Cancel"
+          },
+          {
+            "from": "send_3",
+            "to": "end",
+            "condition": "Cancel with Revision"
+          }
+        ]
+      }
+    }
+  ],
+  "audits": [
+    {
+      "filename": "Bonds Request - Bonds Request WF.pdf",
+      "source": "Workflows/Bonds Request - Bonds Request WF.pdf",
+      "page": 1,
+      "title": "Approval Routing Flowchart",
+      "warnings": [
+        "lane 'Approval Routing Flowchart': contradictory edges clients_trade_dept_1->comm_eng_revision [None] and comm_eng_revision->clients_trade_dept_1 [Send back with comments] - one direction is probably invented",
+        "lane 'Approval Routing Flowchart': contradictory edges clients_trade_dept_2->comm_eng_edits_cancels [None] and comm_eng_edits_cancels->clients_trade_dept_2 [Send back with comments] - one direction is probably invented"
+      ],
+      "repairs": [],
+      "graph": {
+        "title": "Approval Routing Flowchart",
+        "revision": null,
+        "lanes": [
+          {
+            "name": "Approval Routing Flowchart",
+            "nodes": [
+              {
+                "id": "creation_ce",
+                "label": "Creation by Commercial Engineer",
+                "kind": "step"
+              },
+              {
+                "id": "comm_mgr_approval",
+                "label": "Commercial Manager Approval",
+                "kind": "approver"
+              },
+              {
+                "id": "send_for_approval_1",
+                "label": "Send for Approval",
+                "kind": "decision"
+              },
+              {
+                "id": "clients_trade_dept_1",
+                "label": "Clients & Trade Department",
+                "kind": "step"
+              },
+              {
+                "id": "comm_eng_revision",
+                "label": "Commercial Engineer Revision",
+                "kind": "step"
+              },
+              {
+                "id": "send_1",
+                "label": "Send",
+                "kind": "decision"
+              },
+              {
+                "id": "clients_trade_mgr",
+                "label": "Clients & Trade Manager",
+                "kind": "approver"
+              },
+              {
+                "id": "comm_eng_modification",
+                "label": "Commercial Engineer Modification",
+                "kind": "step"
+              },
+              {
+                "id": "send_2",
+                "label": "Send",
+                "kind": "decision"
+              },
+              {
+                "id": "cfo_approval",
+                "label": "CFO Approval",
+                "kind": "approver"
+              },
+              {
+                "id": "clients_trade_dept_2",
+                "label": "Clients & Trade Department",
+                "kind": "step"
+              },
+              {
+                "id": "comm_eng_edits_cancels",
+                "label": "Commercial Engineer Edits/Cancels",
+                "kind": "step"
+              },
+              {
+                "id": "send_3",
+                "label": "Send",
+                "kind": "decision"
+              },
+              {
+                "id": "end",
+                "label": "End",
+                "kind": "step"
+              }
+            ],
+            "edges": [
+              {
+                "from": "creation_ce",
+                "to": "comm_mgr_approval",
+                "condition": "Send for Approval"
+              },
+              {
+                "from": "comm_mgr_approval",
+                "to": "send_for_approval_1",
+                "condition": "Send"
+              },
+              {
+                "from": "comm_mgr_approval",
+                "to": "creation_ce",
+                "condition": "Resend for Approval"
+              },
+              {
+                "from": "comm_mgr_approval",
+                "to": "creation_ce",
+                "condition": "Send back with comments"
+              },
+              {
+                "from": "send_for_approval_1",
+                "to": "clients_trade_dept_1",
+                "condition": null
+              },
+              {
+                "from": "send_for_approval_1",
+                "to": "end",
+                "condition": "Cancel"
+              },
+              {
+                "from": "send_for_approval_1",
+                "to": "end",
+                "condition": "Cancel with Revision"
+              },
+              {
+                "from": "clients_trade_dept_1",
+                "to": "comm_eng_revision",
+                "condition": null
+              },
+              {
+                "from": "clients_trade_dept_1",
+                "to": "clients_trade_mgr",
+                "condition": "Send to Clients & Trade Manager"
+              },
+              {
+                "from": "clients_trade_dept_1",
+                "to": "end",
+                "condition": "Cancel"
+              },
+              {
+                "from": "clients_trade_dept_1",
+                "to": "end",
+                "condition": "Cancel with Revision"
+              },
+              {
+                "from": "comm_eng_revision",
+                "to": "send_1",
+                "condition": null
+              },
+              {
+                "from": "comm_eng_revision",
+                "to": "clients_trade_dept_1",
+                "condition": "Send back with comments"
+              },
+              {
+                "from": "send_1",
+                "to": "clients_trade_mgr",
+                "condition": "Resend for Approval"
+              },
+              {
+                "from": "send_1",
+                "to": "end",
+                "condition": "Cancel"
+              },
+              {
+                "from": "send_1",
+                "to": "end",
+                "condition": "Cancel with Revision"
+              },
+              {
+                "from": "clients_trade_mgr",
+                "to": "comm_eng_modification",
+                "condition": null
+              },
+              {
+                "from": "clients_trade_mgr",
+                "to": "cfo_approval",
+                "condition": "Send to Finance"
+              },
+              {
+                "from": "clients_trade_mgr",
+                "to": "clients_trade_dept_1",
+                "condition": "Send back with comments to Clients & Trade Manager"
+              },
+              {
+                "from": "comm_eng_modification",
+                "to": "send_2",
+                "condition": null
+              },
+              {
+                "from": "comm_eng_modification",
+                "to": "clients_trade_mgr",
+                "condition": "Return to Commercial Engineer"
+              },
+              {
+                "from": "send_2",
+                "to": "clients_trade_dept_2",
+                "condition": "Resend for Approval"
+              },
+              {
+                "from": "send_2",
+                "to": "end",
+                "condition": "Cancel"
+              },
+              {
+                "from": "send_2",
+                "to": "end",
+                "condition": "Cancel with Revision"
+              },
+              {
+                "from": "cfo_approval",
+                "to": "clients_trade_dept_2",
+                "condition": "Send to Clients & Trade Department"
+              },
+              {
+                "from": "cfo_approval",
+                "to": "clients_trade_mgr",
+                "condition": "Send back with comments to Clients & Trade Manager"
+              },
+              {
+                "from": "clients_trade_dept_2",
+                "to": "comm_eng_edits_cancels",
+                "condition": null
+              },
+              {
+                "from": "clients_trade_dept_2",
+                "to": "end",
+                "condition": "Submit"
+              },
+              {
+                "from": "clients_trade_dept_2",
+                "to": "clients_trade_mgr",
+                "condition": "Send back with comments to Clients & Trade Manager"
+              },
+              {
+                "from": "comm_eng_edits_cancels",
+                "to": "send_3",
+                "condition": null
+              },
+              {
+                "from": "comm_eng_edits_cancels",
+                "to": "clients_trade_dept_2",
+                "condition": "Send back with comments"
+              },
+              {
+                "from": "send_3",
+                "to": "end",
+                "condition": "Resend for Approval"
+              },
+              {
+                "from": "send_3",
+                "to": "end",
+                "condition": "Cancel"
+              },
+              {
+                "from": "send_3",
+                "to": "end",
+                "condition": "Cancel with Revision"
+              }
+            ]
+          }
+        ],
+        "escalation": []
+      },
+      "reference_text": "CFO Approval\nCreation by\nCommercial\nEngineer\nEnd\nCommercial\nManager\nApproval\nClients & Trade\nDepartment\nCommercial\nEngineer\nClients & Trade\nManager\nClients & Trade\nDepartment\nCommercial\nEngineer Revision\nCommercial\nEngineer\nEdits/Cancels\nCommercial\nEngineer\nModification\nCancel\nSend back with\ncomments to\nClients & Trade\nManager\nSend\nCancel with\nRevision\nSend\nCancel\nResend for\nApproval\nCancel with\nRevision\nSend back with\ncomments\nResend for\nApproval\nSend\nCancel with\nRevision\nSend back with\ncomments\nResend for\nApproval\nSend\nCancel\nSend for\nApproval\nSend for\nApproval\nSend to Clients\n& Trade\nManager\nSend to Finance\nSubmit\nSend back with\ncomments\nResend for\nApproval\nSend back with\ncomments to\nClients & Trade\nManager\nCancel with\nRevision\nSend to Clients\n& Trade\nDepartment\nCancel\nSend back with\ncomments to\nClients & Trade\nManager\nReturn to\nCommercial\nEngineer\n",
+      "channel": "native_text"
+    }
+  ]
+}

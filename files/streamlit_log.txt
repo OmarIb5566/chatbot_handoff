@@ -1,0 +1,2195 @@
+2026-08-10 17:06:18.893 Uvicorn server started on :::8501
+2026-08-10 17:06:19.041 Did not auto detect external IP.
+Please go to https://docs.streamlit.io/ for debugging hints.
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.80.11.24:8501
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 4735.02it/s]
+2026-08-10 17:10:50.446 Examining the path of transformers.models.aria.image_processing_aria_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\aria\image_processing_aria.py", line 23, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.463 Examining the path of transformers.models.beit.image_processing_beit_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\beit\image_processing_beit.py", line 20, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.494 Examining the path of transformers.models.bridgetower.image_processing_bridgetower_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\bridgetower\image_processing_bridgetower.py", line 20, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.513 Examining the path of transformers.models.chmv2.image_processing_chmv2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\chmv2\image_processing_chmv2.py", line 27, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.526 Examining the path of transformers.models.cohere2_vision.image_processing_cohere2_vision_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\cohere2_vision\image_processing_cohere2_vision.py", line 25, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.533 Examining the path of transformers.models.conditional_detr.image_processing_conditional_detr_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\conditional_detr\image_processing_conditional_detr.py", line 27, in <module>
+    from torchvision.io import read_image
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.546 Examining the path of transformers.models.convnext.image_processing_convnext_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\convnext\image_processing_convnext.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.555 Examining the path of transformers.models.deepseek_ocr2.image_processing_deepseek_ocr2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\deepseek_ocr2\image_processing_deepseek_ocr2.py", line 24, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.564 Examining the path of transformers.models.deepseek_vl.image_processing_deepseek_vl_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\deepseek_vl\image_processing_deepseek_vl.py", line 23, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.575 Examining the path of transformers.models.deepseek_vl_hybrid.image_processing_deepseek_vl_hybrid_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\deepseek_vl_hybrid\image_processing_deepseek_vl_hybrid.py", line 25, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.589 Examining the path of transformers.models.deformable_detr.image_processing_deformable_detr_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\deformable_detr\image_processing_deformable_detr.py", line 25, in <module>
+    from torchvision.io import read_image
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.610 Examining the path of transformers.models.depth_pro.image_processing_depth_pro_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\depth_pro\image_processing_depth_pro.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.616 Examining the path of transformers.models.detr.image_processing_detr_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\detr\image_processing_detr.py", line 22, in <module>
+    from torchvision.io import read_image
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.628 Examining the path of transformers.models.dinov3_vit.image_processing_dinov3_vit_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\dinov3_vit\image_processing_dinov3_vit.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.634 Examining the path of transformers.models.donut.image_processing_donut_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\donut\image_processing_donut.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.647 Examining the path of transformers.models.dpt.image_processing_dpt_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\dpt\image_processing_dpt.py", line 28, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.675 Examining the path of transformers.models.efficientloftr.image_processing_efficientloftr_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\efficientloftr\image_processing_efficientloftr.py", line 10, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.689 Examining the path of transformers.models.efficientnet.image_processing_efficientnet_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\efficientnet\image_processing_efficientnet.py", line 20, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.703 Examining the path of transformers.models.eomt.image_processing_eomt_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\eomt\image_processing_eomt.py", line 20, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.717 Examining the path of transformers.models.ernie4_5_vl_moe.image_processing_ernie4_5_vl_moe_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\ernie4_5_vl_moe\image_processing_ernie4_5_vl_moe.py", line 23, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.735 Examining the path of transformers.models.flava.image_processing_flava_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\flava\image_processing_flava.py", line 23, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.756 Examining the path of transformers.models.fuyu.image_processing_fuyu_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\fuyu\image_processing_fuyu.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.764 Examining the path of transformers.models.gemma3.image_processing_gemma3_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\gemma3\image_processing_gemma3.py", line 20, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.780 Examining the path of transformers.models.gemma4.image_processing_gemma4_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\gemma4\image_processing_gemma4.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.799 Examining the path of transformers.models.gemma4_unified.image_processing_gemma4_unified_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\gemma4_unified\image_processing_gemma4_unified.py", line 23, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.805 Examining the path of transformers.models.glm46v.image_processing_glm46v_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\glm46v\image_processing_glm46v.py", line 25, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.818 Examining the path of transformers.models.glm4v.image_processing_glm4v_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\glm4v\image_processing_glm4v.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.833 Examining the path of transformers.models.glm_image.image_processing_glm_image_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\glm_image\image_processing_glm_image.py", line 25, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.853 Examining the path of transformers.models.glmga.image_processing_glmga_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\glmga\image_processing_glmga.py", line 24, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.863 Examining the path of transformers.models.glpn.image_processing_glpn_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\glpn\image_processing_glpn.py", line 34, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.881 Examining the path of transformers.models.got_ocr2.image_processing_got_ocr2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\got_ocr2\image_processing_got_ocr2.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.890 Examining the path of transformers.models.grounding_dino.image_processing_grounding_dino_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\grounding_dino\image_processing_grounding_dino.py", line 30, in <module>
+    from torchvision.io import read_image
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.905 Examining the path of transformers.models.hunyuan_vl.image_processing_hunyuan_vl_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\hunyuan_vl\image_processing_hunyuan_vl.py", line 25, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.943 Examining the path of transformers.models.idefics2.image_processing_idefics2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\idefics2\image_processing_idefics2.py", line 37, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.960 Examining the path of transformers.models.idefics3.image_processing_idefics3_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\idefics3\image_processing_idefics3.py", line 20, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.974 Examining the path of transformers.models.imagegpt.image_processing_imagegpt_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\imagegpt\image_processing_imagegpt.py", line 20, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.983 Examining the path of transformers.models.inkling.image_processing_inkling_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\inkling\image_processing_inkling.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:50.989 Examining the path of transformers.models.janus.image_processing_janus_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\janus\image_processing_janus.py", line 17, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.003 Examining the path of transformers.models.kimi_k25.image_processing_kimi_k25_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\kimi_k25\image_processing_kimi_k25.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.032 Examining the path of transformers.models.layoutlmv2.image_processing_layoutlmv2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\layoutlmv2\image_processing_layoutlmv2.py", line 36, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.049 Examining the path of transformers.models.layoutlmv3.image_processing_layoutlmv3_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\layoutlmv3\image_processing_layoutlmv3.py", line 42, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.062 Examining the path of transformers.models.levit.image_processing_levit_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\levit\image_processing_levit.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.069 Examining the path of transformers.models.lfm2_vl.image_processing_lfm2_vl_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\lfm2_vl\image_processing_lfm2_vl.py", line 18, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.075 Examining the path of transformers.models.lightglue.image_processing_lightglue_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\lightglue\image_processing_lightglue.py", line 24, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.092 Examining the path of transformers.models.llama4.image_processing_llama4_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\llama4\image_processing_llama4.py", line 21, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.097 Examining the path of transformers.models.llava.image_processing_llava_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\llava\image_processing_llava.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.105 Examining the path of transformers.models.llava_next.image_processing_llava_next_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\llava_next\image_processing_llava_next.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.116 Examining the path of transformers.models.llava_onevision.image_processing_llava_onevision_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\llava_onevision\image_processing_llava_onevision.py", line 24, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.129 Examining the path of transformers.models.mask2former.image_processing_mask2former_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\mask2former\image_processing_mask2former.py", line 27, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.144 Examining the path of transformers.models.maskformer.image_processing_maskformer_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\maskformer\image_processing_maskformer.py", line 22, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.176 Examining the path of transformers.models.minimax_m3_vl.image_processing_minimax_m3_vl_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\minimax_m3_vl\image_processing_minimax_m3_vl.py", line 18, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.183 Examining the path of transformers.models.mllama.image_processing_mllama_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\mllama\image_processing_mllama.py", line 40, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.204 Examining the path of transformers.models.mobilenet_v2.image_processing_mobilenet_v2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\mobilenet_v2\image_processing_mobilenet_v2.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.216 Examining the path of transformers.models.mobilevit.image_processing_mobilevit_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\mobilevit\image_processing_mobilevit.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.228 Examining the path of transformers.models.nougat.image_processing_nougat_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\nougat\image_processing_nougat.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.242 Examining the path of transformers.models.oneformer.image_processing_oneformer_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\oneformer\image_processing_oneformer.py", line 23, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.256 Examining the path of transformers.models.ovis2.image_processing_ovis2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\ovis2\image_processing_ovis2.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.277 Examining the path of transformers.models.owlv2.image_processing_owlv2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\owlv2\image_processing_owlv2.py", line 25, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.309 Examining the path of transformers.models.perceiver.image_processing_perceiver_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\perceiver\image_processing_perceiver.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.317 Examining the path of transformers.models.perception_lm.image_processing_perception_lm_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\perception_lm\image_processing_perception_lm.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.324 Examining the path of transformers.models.phi4_multimodal.image_processing_phi4_multimodal_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\phi4_multimodal\image_processing_phi4_multimodal.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.344 Examining the path of transformers.models.pix2struct.image_processing_pix2struct_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\pix2struct\image_processing_pix2struct.py", line 21, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.355 Examining the path of transformers.models.pixtral.image_processing_pixtral_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\pixtral\image_processing_pixtral.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.363 Examining the path of transformers.models.poolformer.image_processing_poolformer_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\poolformer\image_processing_poolformer.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.375 Examining the path of transformers.models.pp_doclayout_v2.image_processing_pp_doclayout_v2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\pp_doclayout_v2\image_processing_pp_doclayout_v2.py", line 23, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.381 Examining the path of transformers.models.pp_doclayout_v3.image_processing_pp_doclayout_v3_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\pp_doclayout_v3\image_processing_pp_doclayout_v3.py", line 24, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.387 Examining the path of transformers.models.pp_formulanet.image_processing_pp_formulanet_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\pp_formulanet\image_processing_pp_formulanet.py", line 23, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.393 Examining the path of transformers.models.pp_lcnet.image_processing_pp_lcnet_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\pp_lcnet\image_processing_pp_lcnet.py", line 24, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.398 Examining the path of transformers.models.pp_ocrv5_server_det.image_processing_pp_ocrv5_server_det_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\pp_ocrv5_server_det\image_processing_pp_ocrv5_server_det.py", line 25, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.445 Examining the path of transformers.models.pp_ocrv5_server_rec.image_processing_pp_ocrv5_server_rec_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\pp_ocrv5_server_rec\image_processing_pp_ocrv5_server_rec.py", line 24, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.450 Examining the path of transformers.models.pp_ocrv6_small_rec.image_processing_pp_ocrv6_small_rec_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\pp_ocrv6_small_rec\image_processing_pp_ocrv6_small_rec.py", line 24, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.463 Examining the path of transformers.models.prompt_depth_anything.image_processing_prompt_depth_anything_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\prompt_depth_anything\image_processing_prompt_depth_anything.py", line 42, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.491 Examining the path of transformers.models.qwen2_vl.image_processing_qwen2_vl_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\qwen2_vl\image_processing_qwen2_vl.py", line 25, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.497 Examining the path of transformers.models.rf_detr.image_processing_rf_detr_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\rf_detr\image_processing_rf_detr.py", line 26, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.513 Examining the path of transformers.models.rt_detr.image_processing_rt_detr_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\rt_detr\image_processing_rt_detr.py", line 24, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.529 Examining the path of transformers.models.sam.image_processing_sam_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\sam\image_processing_sam.py", line 25, in <module>
+    from torchvision.ops.boxes import batched_nms
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.536 Examining the path of transformers.models.sam2.image_processing_sam2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\sam2\image_processing_sam2.py", line 28, in <module>
+    from torchvision.ops.boxes import batched_nms
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.544 Examining the path of transformers.models.sam3.image_processing_sam3_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\sam3\image_processing_sam3.py", line 30, in <module>
+    from torchvision.ops.boxes import batched_nms
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.550 Examining the path of transformers.models.sapiens2.image_processing_sapiens2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\sapiens2\image_processing_sapiens2.py", line 23, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.561 Examining the path of transformers.models.segformer.image_processing_segformer_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\segformer\image_processing_segformer.py", line 25, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.576 Examining the path of transformers.models.seggpt.image_processing_seggpt_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\seggpt\image_processing_seggpt.py", line 20, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.598 Examining the path of transformers.models.siglip2.image_processing_siglip2_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\siglip2\image_processing_siglip2.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.604 Examining the path of transformers.models.slanext.image_processing_slanext_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\slanext\image_processing_slanext.py", line 23, in <module>
+    import torchvision.transforms.v2.functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.620 Examining the path of transformers.models.smolvlm.image_processing_smolvlm_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\smolvlm\image_processing_smolvlm.py", line 27, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.632 Examining the path of transformers.models.superglue.image_processing_superglue_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\superglue\image_processing_superglue.py", line 47, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.637 Examining the path of transformers.models.superpoint.image_processing_superpoint_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\superpoint\image_processing_superpoint.py", line 31, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.648 Examining the path of transformers.models.swin2sr.image_processing_swin2sr_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\swin2sr\image_processing_swin2sr.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.660 Examining the path of transformers.models.textnet.image_processing_textnet_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\textnet\image_processing_textnet.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.684 Examining the path of transformers.models.tvp.image_processing_tvp_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\tvp\image_processing_tvp.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.723 Examining the path of transformers.models.videomae.image_processing_videomae_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\videomae\image_processing_videomae.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.732 Examining the path of transformers.models.vilt.image_processing_vilt_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\vilt\image_processing_vilt.py", line 17, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.750 Examining the path of transformers.models.vitmatte.image_processing_vitmatte_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\vitmatte\image_processing_vitmatte.py", line 19, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.763 Examining the path of transformers.models.vitpose.image_processing_vitpose_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\vitpose\image_processing_vitpose.py", line 22, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.779 Examining the path of transformers.models.yolos.image_processing_yolos_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\yolos\image_processing_yolos.py", line 12, in <module>
+    from torchvision.io import read_image
+ModuleNotFoundError: No module named 'torchvision'
+2026-08-10 17:10:51.793 Examining the path of transformers.models.zoedepth.image_processing_zoedepth_fast raised:
+Traceback (most recent call last):
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 340, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 327, in <lambda>
+    if hasattr(m, "__path__")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\__init__.py", line 862, in _getattr
+    return getattr(importlib.import_module(target, __name__), name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "D:\Model\RME-Chatbot-handoff\chatbot_handoff\venv_chatbot\Lib\site-packages\transformers\models\zoedepth\image_processing_zoedepth.py", line 43, in <module>
+    from torchvision.transforms.v2 import functional as tvF
+ModuleNotFoundError: No module named 'torchvision'

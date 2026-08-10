@@ -145,6 +145,16 @@ Rules:
 - Output an edge in ONE direction only. Do not emit both A->B and B->A unless
   the page really draws two separate arrowheads, which is rare and normally
   only happens for a "Not Approved" loop.
+- Lines cross on these pages. Where two lines' paths overlap or pass near the
+  same box, trace EACH line individually from its start to its own arrowhead
+  before transcribing its label - do not let a label or endpoint from one line
+  bleed onto the other. A box with a short loop back to itself AND a separate
+  line continuing on to a different box are two edges, not one; give each its
+  own "to" and its own condition.
+- Every arrow either has a label or does not. If a label near an arrow is
+  small, faint, or partly illegible, transcribe your best reading rather than
+  outputting condition: null - null is only for arrows that are genuinely
+  unlabelled on the page, never a fallback for "hard to read".
 - A page may contain SEVERAL parallel flows side by side. Each is its own lane.
 - A column of senior approvers (for example COO -> VP -> CFO) drawn between two
   flows is SHARED by them. It is not a lane of its own. Repeat those nodes and
@@ -406,23 +416,38 @@ def audit(graph: dict, ocr_text: str, exact_reference: bool = False) -> list[str
         # threshold to an arrow that does not exist. Presence-checking the
         # amount against OCR cannot catch that - the token IS present, just
         # bound to the wrong edge - so this check is the one that would.
-        # Duplicate parallel edges: the same from->to emitted twice, typically
-        # once bare and once carrying a condition. The second run on page 1
-        # produced both "Operation Manager -> COO" and
-        # "Operation Manager -> COO [Over 500 K]" - the model attaching a real
-        # threshold to a copy of an existing arrow rather than to the arrow it
-        # actually labels. Reciprocal detection misses this because both point
-        # the same way.
+        # Duplicate parallel edges: the same from->to emitted twice. A decision
+        # box fanning out several distinctly-labelled branches to the same
+        # target (several ways to reach "End", say) is normal and not this bug
+        # - what the second run on page 1 actually did was produce both
+        # "Operation Manager -> COO" and "Operation Manager -> COO [Over 500 K]",
+        # attaching a real threshold to a bare COPY of an existing arrow. That
+        # signature is either a blank condition sitting alongside a labelled
+        # one, or the exact same condition text repeated - not merely several
+        # distinct labels sharing a target.
         grouped: dict[tuple, list] = {}
         for e in lane.get("edges") or []:
             grouped.setdefault((e.get("from"), e.get("to")), []).append(e.get("condition"))
         for (a, b), conds in grouped.items():
             if len(conds) > 1:
-                warnings.append(
-                    f"lane {lane.get('name')!r}: {a}->{b} appears {len(conds)} times "
-                    f"with conditions {conds} - the threshold is probably on a "
-                    "different arrow")
+                norm = [str(c).strip().lower() if c else "" for c in conds]
+                has_blank = "" in norm
+                has_repeat = len(set(norm)) < len(norm)
+                if has_blank or has_repeat:
+                    warnings.append(
+                        f"lane {lane.get('name')!r}: {a}->{b} appears {len(conds)} times "
+                        f"with conditions {conds} - the threshold is probably on a "
+                        "different arrow")
 
+        # Reciprocal edges: A->B and B->A both present. A real two-way
+        # relationship (a revision loop, "resend" paired with "send back") is
+        # drawn with a distinct label on each direction and is not a bug.
+        # What run 2 actually did was invent a reverse arrow to hang a real
+        # threshold on - so the genuine side of that pair had NO label. Flag
+        # reciprocal edges only when one direction is unlabelled (the invented
+        # arrow's real partner had nothing to say) or both sides carry the
+        # identical condition text (the label got copied onto a fabricated
+        # copy rather than describing its own arrow).
         pairs = {}
         for e in lane.get("edges") or []:
             pairs[(e.get("from"), e.get("to"))] = e.get("condition")
@@ -430,10 +455,13 @@ def audit(graph: dict, ocr_text: str, exact_reference: bool = False) -> list[str
             if (b, a) in pairs and str(a) < str(b):
                 back = pairs[(b, a)]
                 if not _is_loop(cond) and not _is_loop(back):
-                    warnings.append(
-                        f"lane {lane.get('name')!r}: contradictory edges "
-                        f"{a}->{b} [{cond}] and {b}->{a} [{back}] - one direction "
-                        "is probably invented")
+                    blank = not cond or not back
+                    same = bool(cond) and bool(back) and str(cond).strip().lower() == str(back).strip().lower()
+                    if blank or same:
+                        warnings.append(
+                            f"lane {lane.get('name')!r}: contradictory edges "
+                            f"{a}->{b} [{cond}] and {b}->{a} [{back}] - one direction "
+                            "is probably invented")
     return warnings
 
 

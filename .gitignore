@@ -4,10 +4,6 @@ __pycache__/
 .embed_cache/
 .vscode/
 
-# Zip backups of the source folders - never tracked.
-processes_pdf.zip
-Workflows.zip
-
 # NOTE: processes_pdf/ and Workflows/ are deliberately TRACKED for now, so the
 # deduplicated corpus survives a clone and the workflow extraction can be run
 # on a machine with the vision model pulled. Once that has happened they go
