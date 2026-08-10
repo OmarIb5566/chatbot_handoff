@@ -1,5 +1,4 @@
 .claude/
-processes_pdf/
 venv_chatbot/
 __pycache__/
 .embed_cache/
