@@ -93,22 +93,20 @@ MONEY_RE = re.compile(r"\b\d[\d,\.]*\s*(?:K|M|EGP|LE)\b", re.I)
 
 
 # --------------------------------------------------------------- classify
-def page_text_lengths(pdf: Path) -> list[int]:
+# Routing moved to document_router.py. It used to live here as "no page has
+# extractable text", which was right while the only workflow in the corpus was
+# a 3-page scan - and wrong the moment Workflows/ arrived, where 136 of 139
+# diagrams carry a text layer. Re-exported so `from workflow_extractor import
+# classify` (adaptive_chunker.chunk_corpus) keeps working.
+from document_router import classify, page_text_lengths  # noqa: E402,F401
+
+
+def page_native_text(pdf: Path) -> list[str]:
+    """The PDF's own text layer, per page. Empty string where there is none."""
     import pymupdf
 
     with pymupdf.open(pdf) as doc:
-        return [len(p.get_text().strip()) for p in doc]
-
-
-def classify(pdf: Path) -> str:
-    """'workflow' if no page has real text, else 'process'.
-
-    Deliberately "every page", not "any page". The nine process documents each
-    have exactly one image-only signature cover page; a rule of "any page needs
-    OCR" would misfile all of them as workflows.
-    """
-    lengths = page_text_lengths(pdf)
-    return "workflow" if all(n < MIN_CHARS_PER_PAGE for n in lengths) else "process"
+        return [p.get_text() for p in doc]
 
 
 def render(pdf: Path, dpi: int = RENDER_DPI) -> list[bytes]:
@@ -288,7 +286,75 @@ def ocr_page_text(png: bytes, model: str = OCR_MODEL, host: str = OLLAMA_HOST) -
         return ""
 
 
-def audit(graph: dict, ocr_text: str) -> list[str]:
+def reference_texts(pdf: Path, pages: list[bytes], host: str = OLLAMA_HOST) -> tuple[list[str], str]:
+    """The independent text channel `audit()` checks the graph against.
+
+    Returns (per-page text, which channel produced it).
+
+    Prefers the PDF's OWN text layer, and that is a genuine upgrade rather than
+    a shortcut. The audit's job is to prove the vision model did not drop a
+    label; glm-ocr can only do that approximately, because it is a second model
+    guessing at the same pixels and its own misreads show up as false warnings.
+    The text layer is what the document actually says - exact, free, and
+    available on 136 of the 139 diagrams in Workflows/.
+
+    It is emphatically NOT a substitute for the vision pass. The text layer
+    carries labels with every relationship destroyed ("Commercial Dept. / End /
+    QAM No / COO / Submit"), which is the whole reason this module exists. It
+    can say a label is missing from the graph; it cannot say where an arrow
+    points.
+
+    Falls back to glm-ocr for genuinely scanned pages, so the original
+    CS Signature Matrix path is unchanged.
+    """
+    native = page_native_text(pdf)
+    if all(len(t.strip()) >= MIN_CHARS_PER_PAGE for t in native):
+        return native, "native_text"
+    if any(len(t.strip()) >= MIN_CHARS_PER_PAGE for t in native):
+        # Mixed: keep native where it exists, OCR only the pages missing it.
+        out = [t if len(t.strip()) >= MIN_CHARS_PER_PAGE
+               else ocr_page_text(png, host=host) for t, png in zip(native, pages)]
+        return out, "mixed_native_ocr"
+    return [ocr_page_text(png, host=host) for png in pages], "ocr_model"
+
+
+# Text in the reference channel that is page furniture rather than a diagram
+# label, so its absence from the graph means nothing.
+_FURNITURE_RE = re.compile(
+    r"^(?:page\s*\d+|\d+\s*/\s*\d+|rev(?:ision)?\.?\s*\S*|\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|[\W\d_]*)$",
+    re.I)
+
+
+def missing_labels(graph: dict, reference: str, exact: bool) -> list[str]:
+    """Reference-channel lines that appear nowhere in the graph.
+
+    Only run when the reference is the PDF's own text layer (`exact`). Against
+    OCR this check is noise - the reader's own errors become phantom "missing"
+    labels - which is why it never existed while glm-ocr was the only channel.
+
+    Deliberately reported as one warning listing everything, not one per line:
+    a diagram whose graph missed six boxes has one problem, not six.
+    """
+    if not exact:
+        return []
+    blob = re.sub(r"\s+", " ", json.dumps(graph, ensure_ascii=False)).lower()
+    missing = []
+    for raw in (reference or "").splitlines():
+        line = " ".join(raw.split())
+        if len(line) < 3 or _FURNITURE_RE.match(line):
+            continue
+        if line.lower() not in blob:
+            missing.append(line)
+    # Dedupe, keep order: a label printed twice on the page is one label.
+    seen, out = set(), []
+    for m in missing:
+        if m.lower() not in seen:
+            seen.add(m.lower())
+            out.append(m)
+    return out
+
+
+def audit(graph: dict, ocr_text: str, exact_reference: bool = False) -> list[str]:
     """Deterministic completeness check on one page's graph.
 
     The failure this is built for: the VLM reads most of a diagram correctly
@@ -300,10 +366,21 @@ def audit(graph: dict, ocr_text: str) -> list[str]:
     blob = json.dumps(graph, ensure_ascii=False)
 
     seen = {m.group(0).replace(" ", "").upper() for m in MONEY_RE.finditer(blob)}
+    channel = "The page text" if exact_reference else "OCR"
     for m in MONEY_RE.finditer(ocr_text or ""):
         tok = m.group(0).replace(" ", "").upper()
         if tok not in seen:
-            warnings.append(f"OCR found the amount {m.group(0)!r} but it is absent from the graph")
+            warnings.append(
+                f"{channel} has the amount {m.group(0)!r} but it is absent from the graph")
+
+    # Only possible when the reference channel is the PDF's own text layer.
+    # Against a scanned page this stays silent rather than guessing.
+    gone = missing_labels(graph, ocr_text, exact_reference)
+    if gone:
+        shown = "; ".join(f"{g!r}" for g in gone[:8])
+        warnings.append(
+            f"{len(gone)} label(s) printed on the page are absent from the graph: {shown}"
+            + (" ..." if len(gone) > 8 else ""))
 
     lanes = graph.get("lanes") or []
     if not lanes:
@@ -548,10 +625,22 @@ def rebuild_from_audit(audit_path: Path, model: str = VISION_MODEL) -> list[dict
     render_prose changes - and it has, twice - re-running three 27B vision
     calls to regenerate text that is a pure function of saved JSON is waste.
     """
+    return rebuild_chunks(json.load(open(audit_path, encoding="utf-8")), model=model)
+
+
+def rebuild_chunks(records: list[dict], model: str = VISION_MODEL) -> list[dict]:
+    """Audit records -> lane chunks. Pure function of the saved graphs.
+
+    Split out from rebuild_from_audit so the extraction loop can call it after
+    every document to checkpoint, without a round trip through the filesystem.
+    """
     chunks = []
-    for rec in json.load(open(audit_path, encoding="utf-8")):
+    for rec in records:
         resolve_shared_lanes(rec["graph"])
-        warns = audit(rec["graph"], rec.get("ocr_text") or "")
+        # `reference_text` is the current field; `ocr_text` is what audit files
+        # written before the native-text channel existed call it.
+        ref = rec.get("reference_text") or rec.get("ocr_text") or ""
+        warns = audit(rec["graph"], ref, exact_reference=rec.get("channel") == "native_text")
         chunks += chunks_from_graph(rec["graph"], rec["filename"], rec["page"],
                                     model, warns)
     return chunks
@@ -569,19 +658,25 @@ def to_chunks(pdf: Path, model: str = VISION_MODEL, host: str = OLLAMA_HOST,
     chunks, audits = [], []
     pages = render(pdf)
 
-    # Two passes, one model at a time. Interleaving them would swap a 17 GB
-    # model and a 2 GB model in and out of VRAM once per page.
-    graphs = [describe(png, model=model, host=host) for png in pages]
-    ocr_texts = [ocr_page_text(png, host=host) for png in pages]
+    # Reference text first: on a native-text diagram this is a free file read,
+    # so a PDF that turns out to have no usable text costs nothing before the
+    # expensive pass starts.
+    refs, channel = reference_texts(pdf, pages, host=host)
+    exact = channel == "native_text"
 
-    for i, (graph, ocr) in enumerate(zip(graphs, ocr_texts), start=1):
+    # One model at a time. Interleaving describe() and the OCR fallback would
+    # swap a 17 GB model and a 2 GB model in and out of VRAM once per page.
+    graphs = [describe(png, model=model, host=host) for png in pages]
+
+    for i, (graph, ref) in enumerate(zip(graphs, refs), start=1):
         # Repair first, then audit - so warnings describe the graph that
         # actually becomes chunks, not the raw model output.
         repairs = resolve_shared_lanes(graph)
-        warns = audit(graph, ocr)
-        audits.append({"filename": pdf.name, "page": i,
+        warns = audit(graph, ref, exact_reference=exact)
+        audits.append({"filename": pdf.name, "source": pdf.as_posix(), "page": i,
                        "title": graph.get("title"), "warnings": warns,
-                       "repairs": repairs, "graph": graph, "ocr_text": ocr})
+                       "repairs": repairs, "graph": graph,
+                       "reference_text": ref, "channel": channel})
         if on_page:
             on_page(i, graph, warns, repairs)
 
@@ -595,11 +690,19 @@ def main() -> None:
     from translate import enable_utf8_stdout
 
     enable_utf8_stdout()
-    ap = argparse.ArgumentParser(description="Extract scanned workflow diagrams")
-    ap.add_argument("--src", type=Path, default=DEFAULT_SRC)
+    ap = argparse.ArgumentParser(description="Extract workflow diagrams into lane chunks")
+    ap.add_argument("--src", type=Path, nargs="+", default=[DEFAULT_SRC],
+                    help="directories to scan; searched recursively")
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
-    ap.add_argument("--audit", type=Path, default=None)
+    ap.add_argument("--audit", type=Path, default=None,
+                    help="per-page audit file. With --resume this is also the "
+                         "checkpoint, and it is rewritten after every document.")
     ap.add_argument("--model", default=VISION_MODEL)
+    ap.add_argument("--limit", type=int, default=None,
+                    help="stop after N documents - sample before committing to "
+                         "a full run")
+    ap.add_argument("--resume", action="store_true",
+                    help="skip documents already present in --audit")
     ap.add_argument("--from-audit", type=Path, default=None,
                     help="re-render chunks from a saved audit file instead of "
                          "calling the vision model again")
@@ -614,16 +717,49 @@ def main() -> None:
               f"{len(chunks)} lane chunks, {warned} carrying warnings (no model calls)")
         return
 
-    pdfs = sorted(args.src.glob("*.pdf"))
-    workflows = [p for p in pdfs if classify(p) == "workflow"]
-    print(f"{len(pdfs)} PDFs: {len(workflows)} workflow (scanned), "
-          f"{len(pdfs) - len(workflows)} process (native text)")
-    for p in workflows:
-        print(f"  workflow: {p.name}")
+    from document_router import classify_dir
 
-    all_chunks, all_audits = [], []
-    for p in workflows:
-        print(f"\n--- {p.name} ---")
+    records = []
+    for src in args.src:
+        if not src.exists():
+            raise SystemExit(f"No such directory: {src}")
+        records += classify_dir(src)
+    workflows = [Path(r["path"]) for r in records if r["kind"] == "workflow"]
+    n_scanned = sum(1 for r in records if r["kind"] == "workflow" and r["scanned"])
+    print(f"{len(records)} PDFs: {len(workflows)} workflow "
+          f"({len(workflows) - n_scanned} native text, {n_scanned} scanned), "
+          f"{len(records) - len(workflows)} process")
+
+    # Resume against the audit file, which is the only complete record of what
+    # has already been through the vision model. Keyed by source path, so two
+    # diagrams with the same basename in different folders stay distinct.
+    all_audits = []
+    if args.resume and args.audit and args.audit.exists():
+        all_audits = json.load(open(args.audit, encoding="utf-8"))
+        done = {a.get("source") or a.get("filename") for a in all_audits}
+        before = len(workflows)
+        workflows = [p for p in workflows if p.as_posix() not in done]
+        print(f"resuming: {before - len(workflows)} already extracted, "
+              f"{len(workflows)} to go")
+
+    if args.limit:
+        workflows = workflows[:args.limit]
+        print(f"limited to {len(workflows)} document(s) this run")
+
+    def _flush():
+        """Write both artifacts. Called after every document, because a run of
+        this length WILL be interrupted and a crash at document 130 must not
+        throw away 129 vision passes."""
+        chunks = rebuild_chunks(all_audits, model=args.model)
+        args.out.write_text(json.dumps(chunks, indent=2, ensure_ascii=False),
+                            encoding="utf-8")
+        if args.audit:
+            args.audit.write_text(json.dumps(all_audits, indent=2, ensure_ascii=False),
+                                  encoding="utf-8")
+        return chunks
+
+    for n, p in enumerate(workflows, start=1):
+        print(f"\n--- [{n}/{len(workflows)}] {p.name} ---")
 
         def _log(i, graph, warns, repairs=()):
             lanes = [l.get("name") for l in graph.get("lanes") or []]
@@ -633,17 +769,22 @@ def main() -> None:
             for w in warns:
                 print(f"      WARNING: {w}")
 
-        c, a = to_chunks(p, model=args.model, on_page=_log)
-        all_chunks += c
+        try:
+            _, a = to_chunks(p, model=args.model, on_page=_log)
+        except Exception as e:
+            # One unreadable diagram must not end the run. It is absent from
+            # the audit file, so --resume retries it next time.
+            print(f"      FAILED: {type(e).__name__}: {e}")
+            continue
         all_audits += a
+        _flush()
 
-    args.out.write_text(json.dumps(all_chunks, indent=2, ensure_ascii=False), encoding="utf-8")
+    chunks = _flush()
     n_warn = sum(len(a["warnings"]) for a in all_audits)
-    print(f"\nWrote {args.out.name}: {len(all_chunks)} lane chunks from "
-          f"{len(all_audits)} pages, {n_warn} audit warning(s)")
+    warned = sum(1 for c in chunks if c["audit_warnings"])
+    print(f"\nWrote {args.out.name}: {len(chunks)} lane chunks from "
+          f"{len(all_audits)} pages, {n_warn} audit warning(s) on {warned} chunk(s)")
     if args.audit:
-        args.audit.write_text(json.dumps(all_audits, indent=2, ensure_ascii=False),
-                              encoding="utf-8")
         print(f"Wrote {args.audit.name}")
     if n_warn:
         print("\nWarnings are not fatal, but every one is a place the diagram was "
