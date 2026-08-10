@@ -1,0 +1,29 @@
+# Normalize line endings for text files: LF in the repository, native in the
+# working tree. This repo is worked on from Windows (core.autocrlf=true), so
+# without this the correct behaviour depends on each clone's local config.
+* text=auto
+
+# Source and data files are text.
+*.py    text diff=python
+*.md    text
+*.txt   text
+*.json  text
+
+# Notebooks are JSON, but line-ending translation and merge conflict markers
+# both break the format, so keep them out of the merge driver.
+*.ipynb text -merge
+
+# Binaries: never translate line endings, never try to diff or merge.
+# The repo tracks 400+ PDFs, some with an uppercase extension.
+*.pdf   binary
+*.PDF   binary
+*.npy   binary
+*.pkl   binary
+*.faiss binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.zip   binary
+*.docx  binary
+*.xlsx  binary
