@@ -79,10 +79,18 @@ def render(rec: dict, show_context: bool) -> None:
 
     if v["verdict"] == "flagged":
         st.warning(f"Unverifiable form number(s): {', '.join(v['unknown'])}. "
-                   "Not necessarily wrong — the whitelist only covers the 9 indexed "
-                   "documents, so this may be a real form from a document not here yet.")
+                   "Not necessarily wrong — the whitelist covers the 71 indexed process "
+                   "documents, so this may be a real form from one not here yet.")
     elif v["verdict"] == "blocked":
         st.error(f"Answer withheld — cited {', '.join(v['unknown'])}, not in the corpus.")
+    elif v["verdict"] == "ungrounded":
+        # Weaker than "flagged": the form is real. What is wrong is that it was
+        # not in the chunks below, and the prompt tells the model to answer from
+        # those only. Shown as info rather than a warning because the likeliest
+        # cause is a retrieval window that was too narrow, not a fabrication.
+        st.info(f"Cited {', '.join(v['ungrounded'])}, which exists in the corpus but "
+                "is not in the sources below. Check it against the document before "
+                "relying on it.")
 
     # Provenance. The validator's whitelist is built from verbatim source text
     # only, so it cannot vouch for anything read off a scanned diagram - a
@@ -165,8 +173,10 @@ show_context = st.sidebar.checkbox("Show retrieved text", value=False)
 strict = st.sidebar.checkbox(
     "Block unverifiable citations", value=False,
     help="Withhold any answer citing a form number absent from the corpus. Off by "
-         "default: at 9 documents the whitelist is incomplete, so 'unknown' means "
-         "unverifiable rather than fabricated, and blocking suppresses correct answers.")
+         "default: at 71 documents the whitelist (366 forms) is much better but still "
+         "incomplete, so 'unknown' means unverifiable rather than fabricated. It also "
+         "would not have caught the one citation error in the 100-question run, which "
+         "cited a real form that was simply the wrong one.")
 policy = "block" if strict else "flag"
 
 follow_ups = st.sidebar.checkbox(

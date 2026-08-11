@@ -701,6 +701,14 @@ def print_audit(report: dict) -> None:
 
 
 def main() -> None:
+    # The audit prints headings verbatim, and the corpus has plenty that are not
+    # cp1252-encodable (typographic quotes, 'Cote d'Ivoire', Arabic). On a
+    # Windows console that raised UnicodeEncodeError from print_audit AFTER the
+    # chunks had been written but BEFORE --audit was - so the run looked like a
+    # crash, left no audit file, and still silently produced a good chunks.json.
+    from translate import enable_utf8_stdout
+
+    enable_utf8_stdout()
     ap = argparse.ArgumentParser(description="Adaptive structural chunker")
     ap.add_argument("--src", type=Path, default=DEFAULT_SRC)
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)

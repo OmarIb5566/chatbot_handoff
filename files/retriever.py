@@ -84,27 +84,57 @@ PREFIX_HINTS = {
 
 
 def doc_code_prefix(chunk: dict) -> str | None:
-    """'P-VMO-01' -> 'PVMO'. Falls back to the filename when doc_code is missing."""
+    """'P-VMO-01' -> 'PVMO', 'M-HR-08' -> 'MHR'.
+
+    Falls back to the filename when doc_code is missing. The M family was added
+    with the full corpus: the 20 M-HR-* HR policies are a fifth of the documents
+    and matched nothing while this required a literal P.
+    """
     code = chunk.get("doc_code") or chunk.get("filename", "")
-    m = re.match(r"P-?([A-Z]{2,3})-?\d", code.upper())
-    return f"P{m.group(1)}" if m else None
+    m = re.match(r"([PM])-?([A-Z]{2,3})-?\d", code.upper())
+    return f"{m.group(1)}{m.group(2)}" if m else None
 
 
 def route_prefixes(query: str) -> list[str]:
-    """Return the doc-code prefixes a query should be restricted to.
+    """Doc-code prefixes to restrict the search to. Explicit codes ONLY.
 
-    Empty list means "no confident route, search everything" - that is the
-    safe default, since a wrong route is an unrecoverable miss while a
-    missing route only costs latency.
+    Empty list means "no confident route, search everything" - the safe
+    default, since a wrong route is an unrecoverable miss while a missing route
+    only costs latency.
+
+    KEYWORD HINTS NO LONGER HARD-ROUTE, AND THAT IS A BUG FIX, NOT A RETREAT
+    ------------------------------------------------------------------------
+    PREFIX_HINTS covers 6 families. The 9-document corpus had 6. The full corpus
+    has 19, so a keyword table that was exhaustive became a table that knows
+    about a third of the index - and hard routing on it does not degrade
+    gracefully, it *excludes*. Measured on eval_set_v2.json: routing fired on 19
+    of 92 questions and sent 8 of them away from their own gold document, which
+    is 8 of the 11 retrieval failures in the generation run. Every one is a
+    keyword that used to be unambiguous and no longer is:
+
+        "handover"    -> PTN, excluding PEN / PFW / PLO
+        "subcontract" -> PCN, excluding POP (Subcontractor Management,
+                         Variation Order, Earthmoving)
+        "vendor"      -> PVMO, excluding PPR (Evaluation of External Providers)
+
+    Extending the table to 19 families would buy back the same failure at the
+    next document intake, and is the mistake adaptive_chunker.py already
+    documents making with its literal heading list. An explicit code in the
+    query is different in kind: "what is P-OP-02" cannot mean anything else, so
+    that stays a hard route.
+
+    Keyword hints keep their real job - `soft_prefixes` boosts on them, which
+    nudges ranking without excluding anything and cannot cause this failure.
     """
-    q = query.lower()
-    # An explicit code in the query wins outright: "what is P-VMO-01" or "F-P-CN-01-11"
-    explicit = {f"P{m}" for m in re.findall(r"\bF?-?P-([A-Z]{2,3})-\d", query.upper())}
-    if explicit:
-        return sorted(explicit & set(DOC_PREFIXES))
-    hits = [p for p, words in PREFIX_HINTS.items() if any(w in q for w in words)]
-    # Only route when the signal is unambiguous; 2+ families means don't narrow.
-    return hits if len(hits) == 1 else []
+    # "what is P-VMO-01", "F-P-CN-01-11", "M-HR-08".
+    #
+    # No intersection with DOC_PREFIXES any more: that list is the original six,
+    # so "what is P-OP-02 about" intersected to nothing and did not route at all.
+    # Validation moved to _candidates(), which checks the prefix against the
+    # corpus actually loaded rather than a hard-coded list that goes stale.
+    explicit = {f"{fam}{sub}" for fam, sub
+                in re.findall(r"\bF?-?([PM])-([A-Z]{2,3})-\d", query.upper())}
+    return sorted(explicit)
 
 
 def soft_prefixes(query: str) -> list[str]:
@@ -123,9 +153,9 @@ def soft_prefixes(query: str) -> list[str]:
     exists to produce.
     """
     q = query.lower()
-    explicit = {f"P{m}" for m in re.findall(r"\bF?-?P-([A-Z]{2,3})-\d", query.upper())}
+    explicit = route_prefixes(query)
     if explicit:
-        return sorted(explicit & set(DOC_PREFIXES))
+        return explicit
     return [p for p, words in PREFIX_HINTS.items() if any(w in q for w in words)]
 
 
@@ -214,6 +244,7 @@ class Retriever:
 
         # Precompute prefix routing labels once (see doc_code_prefix above).
         self.prefixes = [doc_code_prefix(c) for c in chunks]
+        self._present_prefixes = {p for p in self.prefixes if p}
 
     # ------------------------------------------------------------------ index
     def _corpus_fingerprint(self) -> str:
@@ -284,6 +315,12 @@ class Retriever:
         if not route:
             return np.arange(len(self.chunks))
         prefixes = route_prefixes(query)
+        # A prefix no chunk carries is not a narrowing, it is an empty index.
+        # Checked against the corpus that is actually loaded rather than a
+        # module-level list, because the module-level list is what went stale:
+        # DOC_PREFIXES still names the six families the 9-document corpus had,
+        # and the index now holds 19.
+        prefixes = [p for p in prefixes if p in self._present_prefixes]
         if not prefixes:
             return np.arange(len(self.chunks))
         # `p is None` means the chunk carries no doc code to route on - the

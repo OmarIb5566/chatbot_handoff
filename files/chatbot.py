@@ -249,8 +249,11 @@ class Chatbot:
         t_gen = time.perf_counter() - t0
 
         answer = strip_reasoning(raw)
+        # `retrieved=hits` turns on the groundedness check: a form that exists
+        # but was not in the chunks this answer was built from. The whitelist
+        # cannot see that class of error - see validate_answer's docstring.
         v = V.validate_answer(answer, self.form_whitelist, self.doc_whitelist,
-                              policy=self.policy)
+                              policy=self.policy, retrieved=hits)
 
         # A code in Arabic-Indic digits is unlookuppable AND invisible to the
         # validator, so it would otherwise pass as "cited nothing, clean".

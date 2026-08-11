@@ -25,22 +25,67 @@ It is deliberately dumb and deterministic. No model judges another model.
    blocking now would suppress correct answers. Once all 500-600 docs are
    indexed the whitelist approaches complete and BLOCK becomes safe -
    `policy="block"` switches it.
+
+--- Scale, and why the regexes were widened ---
+
+At 71 process documents the whitelist holds 370 forms rather than 67. That is
+most of the way to the condition point 2 sets for BLOCK, so the regexes now have
+to be right: at 67 forms an over-narrow pattern was one missing entry among many
+unverifiable ones, and at 370 it is a correct answer being called a
+hallucination. Both the dash class and the F-M-* family below were found by
+counting what the corpus contains against what these patterns could match, and
+both were silent - a whitelist that is too small produces no error, only
+confident false flags.
 """
 from __future__ import annotations
 
 import re
 
+# Every dash the corpus actually uses. Two documents (P-PC-03 and the Quality
+# Manual) write their form numbers with U+2010 HYPHEN rather than ASCII
+# hyphen-minus - 18 references in total. Matching only ASCII kept those forms
+# out of the whitelist entirely, so a model that cited "F-P-PC-03-02" correctly,
+# with an ordinary hyphen, was flagged as having hallucinated it. A false
+# hallucination flag is worse than no flag: it trains the reader to ignore them.
+DASH = r"[-‐‑‒–—−]"
+
 # Loose on purpose. A tight regex that only matches well-formed real codes
 # would let a malformed hallucination ("F-P-CM-1-1", "F-P-ZZZ-99-99") through
 # unnoticed, which is precisely the failure we are trying to detect.
-FORM_RE = re.compile(r"\bF\s*-\s*P\s*-\s*([A-Z]{1,5})\s*-\s*(\d{1,3})\s*-\s*(\d{1,3})\b", re.I)
+#
+# The second letter is [A-Z], not a literal P. It was a literal P while the
+# corpus was 9 process documents, and every form in those is F-P-*. The full
+# corpus has 60 references to F-M-* forms (the M-HR-* HR policies: resignation,
+# promotion, local transfer, casual-labour hiring) plus one F-F-*, which is 37
+# distinct real forms the whitelist could not see. Same consequence as the
+# hyphen, at twice the scale.
+FORM_RE = re.compile(
+    rf"\bF\s*{DASH}\s*([A-Z])\s*{DASH}\s*([A-Z]{{1,5}})\s*{DASH}\s*(\d{{1,3}})\s*{DASH}\s*(\d{{1,3}})\b",
+    re.I)
 
-# Doc codes: P-CM-01, P-VMO-02, ...
-DOC_CODE_RE = re.compile(r"\bP\s*-\s*([A-Z]{1,5})\s*-\s*(\d{1,3})\b", re.I)
+# Doc codes: P-CM-01, P-VMO-02, M-HR-08, ...
+#
+# Deliberately [PM] rather than [A-Z]. A form number is anchored by its leading
+# "F-", so widening its second letter cannot make it match much else; a doc code
+# has no such anchor, and LETTER-LETTERS-DIGITS is a common enough shape that
+# [A-Z] would start reporting spurious unknown doc codes. P and M are the two
+# families that exist (Process and Manual): 69 codes in the corpus, of which 20
+# are M-HR-*.
+DOC_CODE_RE = re.compile(rf"\b([PM])\s*{DASH}\s*([A-Z]{{1,5}})\s*{DASH}\s*(\d{{1,3}})\b", re.I)
+
+_DASH_CHARS = "‐‑‒–—−"
 
 
 def _norm(s: str) -> str:
-    return re.sub(r"\s+", "", s).upper()
+    """Whitespace out, dashes folded to ASCII, upper-cased.
+
+    Folding the dashes matters as much as matching them: without it a corpus
+    form written with U+2010 and the same form cited with an ASCII hyphen
+    normalise to two different strings, so the whitelist would contain the code
+    and still not recognise it.
+    """
+    s = re.sub(r"\s+", "", s).upper()
+    return s.translate({ord(d): "-" for d in _DASH_CHARS})
 
 
 def build_form_whitelist(chunks: list[dict]) -> set[str]:
@@ -71,23 +116,81 @@ def extract_forms(text: str) -> list[str]:
     return out
 
 
+def context_forms(chunks: list[dict]) -> set[str]:
+    """Form numbers occurring in the chunks one answer was actually built from.
+
+    The whitelist answers "does this form exist?". This answers "was it in
+    front of the model?", which is a different and stricter question - and the
+    one the prompt actually sets, since it says to answer from the context only.
+    """
+    known = set()
+    for c in chunks or []:
+        for m in FORM_RE.finditer(c.get("text", "")):
+            known.add(_norm(m.group(0)))
+    return known
+
+
 def validate_answer(
     answer: str,
     form_whitelist: set[str],
     doc_whitelist: set[str] | None = None,
     policy: str = "flag",
+    retrieved: list[dict] | None = None,
 ) -> dict:
-    """Check an answer's cited form numbers against the corpus.
+    """Check an answer's cited form numbers against the corpus and its context.
 
     Returns:
         cited          - form numbers the answer mentions
-        unknown        - those not present in the corpus
+        unknown        - those not present in the corpus at all
+        ungrounded     - those that exist, but not in the retrieved chunks
         ok             - True if every cited form is known (or none cited)
-        verdict        - "clean" | "flagged" | "blocked"
+        verdict        - "clean" | "ungrounded" | "flagged" | "blocked"
         display_answer - the answer, or a refusal if policy == "block"
+
+    WHY `ungrounded` EXISTS, AND WHAT IT STILL DOES NOT CATCH
+    ---------------------------------------------------------
+    The whitelist answers "does this form exist anywhere in the corpus", which
+    is a weaker question than the prompt asks of the model - the prompt says to
+    answer from the context only. A form cited that was not in the context is a
+    contract violation regardless of whether it exists, so it is worth naming.
+
+    Be clear about the limit, because the case that motivated this check is NOT
+    caught by it. In the first generation run over eval_set_v2.json, asked which
+    form is the Project Sourcing Strategy, the model answered
+
+        "The form for the Project Sourcing Strategy is F-P-TN-02-04."
+
+    The answer is F-P-TN-02-05. Both forms exist, so `unknown` was empty. Both
+    were ALSO in the retrieved chunks, because the source lists them two lines
+    apart:
+
+        Tender sourcing strategy   F-P-TN-02-04
+        Project sourcing strategy  F-P-TN-02-05
+
+    so `ungrounded` is empty too, and the verdict is "clean". The model picked
+    the adjacent, confusable entry out of material it was genuinely shown.
+
+    That is the honest boundary: this check catches a citation pulled from
+    OUTSIDE the context, and cannot catch the wrong one chosen from INSIDE it -
+    which, on a corpus that names forms in near-identical pairs, is the more
+    likely error. No form-number check can close that gap; it needs the answer
+    compared against the specific line, which is a different kind of check.
+    Treat a "clean" verdict as "cited nothing impossible", never as "correct".
+
+    Reported separately from `unknown` rather than merged, because the two mean
+    different things to a reader: `unknown` says the corpus has no such form,
+    `ungrounded` says the answer went outside what it was shown.
     """
     cited = extract_forms(answer)
     unknown = [f for f in cited if f not in form_whitelist]
+
+    # Only meaningful when the caller passed the chunks. `None` means "not
+    # checked" and must not read as "all grounded", so the default is no check
+    # rather than an empty set.
+    ungrounded = []
+    if retrieved is not None:
+        seen = context_forms(retrieved)
+        ungrounded = [f for f in cited if f not in unknown and f not in seen]
 
     unknown_docs = []
     if doc_whitelist is not None:
@@ -99,22 +202,30 @@ def validate_answer(
             if code not in doc_whitelist:
                 unknown_docs.append(code)
 
+    # `ok` stays keyed to `unknown` alone, so the existing meaning - and every
+    # caller that reads it - is unchanged. An ungrounded citation is surfaced
+    # through `verdict`, and never blocks: the form is real, and the model may
+    # have had a good reason the retrieval window did not show.
     ok = not unknown
-    if ok:
-        verdict = "clean"
-        display = answer
-    elif policy == "block":
+    if unknown and policy == "block":
         verdict = "blocked"
         display = ("Answer withheld: it cited form number(s) "
                    f"{', '.join(unknown)} that do not appear in the process "
                    "corpus. Please check the source document directly.")
-    else:
+    elif unknown:
         verdict = "flagged"
+        display = answer
+    elif ungrounded:
+        verdict = "ungrounded"
+        display = answer
+    else:
+        verdict = "clean"
         display = answer
 
     return {
         "cited": cited,
         "unknown": unknown,
+        "ungrounded": ungrounded,
         "unknown_doc_codes": sorted(set(unknown_docs)),
         "ok": ok,
         "verdict": verdict,
