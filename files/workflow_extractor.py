@@ -70,7 +70,9 @@ from __future__ import annotations
 
 import base64
 import json
+import math
 import re
+import statistics
 from pathlib import Path
 
 import requests
@@ -84,8 +86,37 @@ OLLAMA_HOST = "http://localhost:11434"
 # answers questions - does NOT have one; check with /api/tags before swapping.
 VISION_MODEL = "qwen3.6:27b"
 
+# Force the vision model onto the CPU, and ONLY the vision model.
+#
+# With Ollama's Vulkan backend enabled (OLLAMA_VULKAN=1, needed to reach an
+# Intel Arc GPU) qwen3:14b runs fully on the GPU and the chatbot gets much
+# faster - but this model dies partway through every request:
+#
+#     slot process_mtmd: id 0 | task 0 | encoding mtmd batch from idx = 4
+#     [GIN] 500 | POST "/api/generate"
+#     an error was encountered while running the model: ... forcibly closed
+#
+# The LLM half loads and runs; it is the multimodal projector that Vulkan
+# cannot execute. llama.cpp has --no-mmproj-offload for exactly this, and the
+# flag is present inside the ollama binary, but no OLLAMA_* env var exposes it -
+# so the projector cannot be placed separately and the whole model has to come
+# back to the CPU.
+#
+# Set per-request rather than by unsetting OLLAMA_VULKAN, because that variable
+# is global and the interactive path genuinely wants it. None = let Ollama
+# decide, which is correct on a CUDA machine and on a CPU-only one.
+VISION_NUM_GPU: int | None = 0
+
 RENDER_DPI = 140          # legible for 8pt diagram labels without huge payloads
 MIN_CHARS_PER_PAGE = 20   # below this a page counts as having no real text
+
+# --- tiling: see plan_tiles() for the measurement these come from ---
+TARGET_TILE_PX = 1400     # long edge every tile is rendered to
+MIN_LABEL_PX = 12         # a label must survive the model's own downscale
+MAX_TILES_PER_PAGE = 12   # cost ceiling; the split coarsens rather than exceed it
+TILE_OVERLAP_FRAC = 0.12  # so an arrow crossing a split is whole in one tile
+MIN_GUTTER_PT = 8         # empty run wide enough to cut through without hitting a box
+CONTENT_PAD_PT = 8
 
 # Monetary thresholds are the highest-value and most-missed content. Matches
 # "500 K", "3M", "1,000,000", "Over 500K".
@@ -110,12 +141,208 @@ def page_native_text(pdf: Path) -> list[str]:
 
 
 def render(pdf: Path, dpi: int = RENDER_DPI) -> list[bytes]:
+    """Whole page, one PNG each. Kept for callers that want the old behaviour;
+    the extraction path uses render_tiles()."""
     import pymupdf
 
     out = []
     with pymupdf.open(pdf) as doc:
         for page in doc:
             out.append(page.get_pixmap(dpi=dpi).tobytes("png"))
+    return out
+
+
+# -------------------------------------------------------------------- tiles
+# WHY A WHOLE PAGE IS SOMETIMES THE WRONG UNIT
+# --------------------------------------------
+# These diagrams are Visio exports, and the canvas is whatever Visio was set to.
+# Across the 133 extracted pages, grouped by the longest page edge:
+#
+#     under 1700 pt (A4/A3)   85 pages   58 clean   0.4 warnings/page
+#     1700-3000 pt            27 pages   12 clean   0.8
+#     over 3000 pt            21 pages    1 clean   8.9
+#
+# `Subcontracts - Subcontract Preparation V4.pdf` is 7082 x 4642 pt - a 66-inch
+# canvas. Rendered whole at RENDER_DPI it is a 9288 px PNG, which the vision
+# model's own preprocessor then downscales to roughly 1-1.5k px on the long
+# edge. A 16 pt label ends up two or three pixels tall. The model is not
+# misreading those pages, it cannot see them: on one 399-line diagram it
+# returned 16 nodes and 21 edges, and 136 printed labels never appeared at all.
+#
+# What matters is therefore not the render DPI but the ratio
+#
+#     label height / page extent
+#
+# because the model's input size is fixed no matter what we send. So the page is
+# cut into tiles small enough that a label survives that downscale, each tile is
+# read separately, and the graphs are merged on label identity.
+#
+# Cuts are placed in GUTTERS - runs of empty space no box or line crosses - so a
+# tile boundary never bisects a node and invents two half-labelled ones. Tiles
+# then overlap, because an *arrow* crossing a boundary is unavoidable and the
+# overlap keeps both of its endpoints visible in at least one tile.
+#
+# A page that already fits is a single tile cropped to its content, rendered
+# exactly as before - so the 85 pages that were clean stay on their current path.
+def _content_rects(page) -> list:
+    """Every ink-bearing rectangle on the page: word boxes and vector shapes."""
+    import pymupdf
+
+    rects = [pymupdf.Rect(w[:4]) for w in page.get_text("words")]
+    for d in page.get_drawings():
+        r = d.get("rect")
+        if r is not None and r.width > 0 and r.height > 0:
+            rects.append(r)
+    return rects
+
+
+def content_bbox(page, rects: list | None = None):
+    """The drawn area, padded. Visio pages are routinely half empty margin, and
+    cropping to content is free resolution before any tiling happens."""
+    rects = _content_rects(page) if rects is None else rects
+    if not rects:
+        return page.rect
+    box = rects[0]
+    for r in rects[1:]:
+        box |= r
+    box += (-CONTENT_PAD_PT, -CONTENT_PAD_PT, CONTENT_PAD_PT, CONTENT_PAD_PT)
+    return box & page.rect
+
+
+def _gutters(rects: list, axis: int, lo: float, hi: float) -> list[float]:
+    """Centres of the empty runs along `axis` (0 = x, 1 = y) between lo and hi.
+
+    A cut here passes through whitespace, so no node box is bisected.
+    """
+    spans = sorted((r.x0, r.x1) if axis == 0 else (r.y0, r.y1) for r in rects)
+    merged: list[list[float]] = []
+    for a, b in spans:
+        if merged and a <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], b)
+        else:
+            merged.append([a, b])
+    out = []
+    for (_, end), (start, _) in zip(merged, merged[1:]):
+        if start - end >= MIN_GUTTER_PT and lo < (end + start) / 2 < hi:
+            out.append((end + start) / 2)
+    return out
+
+
+def _split_axis(rects: list, axis: int, lo: float, hi: float,
+                max_extent: float) -> list[float]:
+    """Cut positions spanning [lo, hi], each band at most `max_extent` wide.
+
+    Bands are equal-width in intent and gutter-snapped in practice: the ideal
+    cut is computed first, then moved to the nearest gutter if one is close
+    enough. `close enough` is half a band - beyond that the gutter is serving a
+    different part of the diagram and snapping to it would produce one huge tile
+    and one sliver.
+    """
+    n = max(1, math.ceil((hi - lo) / max_extent))
+    if n == 1:
+        return [lo, hi]
+    band = (hi - lo) / n
+    gut = _gutters(rects, axis, lo, hi)
+    cuts = set()
+    for i in range(1, n):
+        ideal = lo + band * i
+        if gut:
+            best = min(gut, key=lambda g: abs(g - ideal))
+            cuts.add(best if abs(best - ideal) <= band / 2 else ideal)
+        else:
+            cuts.add(ideal)
+    return [lo] + sorted(cuts) + [hi]
+
+
+def plan_tiles(page) -> list:
+    """The regions of `page` to render, in PDF coordinates.
+
+    One tile means "render it whole, as before". Returns rects, never bytes, so
+    the plan can be inspected and asserted on without rendering anything.
+    """
+    heights = [w[3] - w[1] for w in page.get_text("words") if w[3] > w[1]]
+    if not heights:
+        # A genuinely scanned page: no text layer, so no basis for a label-size
+        # estimate and no checklist to seed either. Unchanged from before.
+        return [page.rect]
+
+    rects = _content_rects(page)
+    box = content_bbox(page, rects)
+
+    # The tile extent at which a median label still lands at MIN_LABEL_PX once
+    # the model has scaled the tile down to its own input size.
+    max_extent = statistics.median(heights) * TARGET_TILE_PX / MIN_LABEL_PX
+    if max(box.width, box.height) <= max_extent:
+        return [box]
+
+    # Coarsen until the tile count is affordable. Better a slightly small label
+    # on a few pages than 40 vision calls on one diagram.
+    while True:
+        xs = _split_axis(rects, 0, box.x0, box.x1, max_extent)
+        ys = _split_axis(rects, 1, box.y0, box.y1, max_extent)
+        if (len(xs) - 1) * (len(ys) - 1) <= MAX_TILES_PER_PAGE:
+            break
+        max_extent *= 1.25
+
+    ov = max_extent * TILE_OVERLAP_FRAC
+    tiles = []
+    for y0, y1 in zip(ys, ys[1:]):
+        for x0, x1 in zip(xs, xs[1:]):
+            tiles.append(box & _rect(x0 - ov, y0 - ov, x1 + ov, y1 + ov))
+    return tiles
+
+
+def _rect(x0, y0, x1, y1):
+    import pymupdf
+
+    return pymupdf.Rect(x0, y0, x1, y1)
+
+
+def tile_labels(page, rect) -> list[str]:
+    """The PDF's own text inside `rect`, one entry per text block.
+
+    Blocks rather than lines on purpose: the text layer word-wraps a single box
+    caption across several lines ('Operation/MEP/Si' + 'te TO Engineer'), and
+    feeding those to the model as separate items would ask it to find two
+    labels that do not exist. A block is closer to one drawn box.
+    """
+    out, seen = [], set()
+    for b in page.get_text("blocks", clip=rect):
+        line = " ".join(str(b[4]).split())
+        if len(line) < 3 or _FURNITURE_RE.match(line):
+            continue
+        if line.lower() not in seen:
+            seen.add(line.lower())
+            out.append(line)
+    return out
+
+
+def render_tiles(pdf: Path, enabled: bool = True) -> list[list[dict]]:
+    """Per page, the tiles to send to the vision model.
+
+    Each tile is {"rect", "png", "labels"}. `enabled=False` restores whole-page
+    rendering, for A/B against this change.
+    """
+    import pymupdf
+
+    out = []
+    with pymupdf.open(pdf) as doc:
+        for page in doc:
+            regions = plan_tiles(page) if enabled else [page.rect]
+            single = len(regions) == 1
+            tiles = []
+            for rect in regions:
+                scale = TARGET_TILE_PX / max(rect.width, rect.height)
+                if single:
+                    # Never render a whole page smaller than it used to be.
+                    # Multi-tile pages take the computed scale as-is: going
+                    # above it only inflates the payload, since the model
+                    # downscales to a fixed size regardless.
+                    scale = max(scale, RENDER_DPI / 72)
+                pix = page.get_pixmap(matrix=pymupdf.Matrix(scale, scale), clip=rect)
+                tiles.append({"rect": tuple(rect), "png": pix.tobytes("png"),
+                              "labels": tile_labels(page, rect)})
+            out.append(tiles)
     return out
 
 
@@ -164,16 +391,63 @@ Rules:
 Output ONLY the JSON."""
 
 
-def describe(png: bytes, model: str = VISION_MODEL, host: str = OLLAMA_HOST) -> dict:
-    """One page -> the graph the VLM reads off it. Deterministic settings."""
+# The audit already knows exactly what the page says - `reference_texts()` reads
+# the PDF's own text layer on 130 of 133 pages - and until now it only ever used
+# that to complain afterwards. Handing the same list to the model up front turns
+# a post-hoc warning into a constraint it can act on, at no extra cost: the text
+# is already in memory and the tokens are cheap next to the image.
+#
+# It is deliberately NOT a substitute for looking at the image. The list carries
+# labels with every relationship destroyed, so it can say WHAT is on the page and
+# never WHERE an arrow points - which is the entire reason this module exists.
+# The instruction is therefore "place each of these", not "transcribe these".
+CHECKLIST = """
+CHECKLIST - {n} text items are printed on this image. This list comes from the
+PDF's own text layer, so it is exact and complete; your reading of the image is
+not. Place EVERY item somewhere in your output: as a node "label", as an edge
+"condition", as an "escalation" condition, or as the "title"/"revision".
+
+Work through the list item by item. An item drawn inside a box is a node. An item
+sitting on or beside a line is that line's condition. An item that is genuinely
+page furniture - a legend, a sheet number, a company name - may be left out, but
+leave it out deliberately, not by overlooking it.
+
+Do not paraphrase, re-spell or merge these items, and do not invent nodes or
+arrows that are not drawn just to give an item somewhere to live. If you truly
+cannot see where an item belongs, put it in a lane's nodes with kind "step"
+rather than dropping it.
+
+{items}
+"""
+
+
+def build_prompt(labels: list[str] | None) -> str:
+    """The page prompt, plus the text-layer checklist when there is one."""
+    if not labels:
+        return PROMPT
+    items = "\n".join(f"  - {l}" for l in labels)
+    return PROMPT + "\n" + CHECKLIST.format(n=len(labels), items=items)
+
+
+def _vision_options(opts: dict) -> dict:
+    """Add the CPU pin to a vision request's options. See VISION_NUM_GPU."""
+    if VISION_NUM_GPU is not None:
+        opts = dict(opts, num_gpu=VISION_NUM_GPU)
+    return opts
+
+
+def describe(png: bytes, labels: list[str] | None = None,
+             model: str = VISION_MODEL, host: str = OLLAMA_HOST) -> dict:
+    """One tile -> the graph the VLM reads off it. Deterministic settings."""
     payload = {
         "model": model,
-        "prompt": PROMPT,
+        "prompt": build_prompt(labels),
         "images": [base64.b64encode(png).decode()],
         "stream": False,
         "format": "json",
         "think": False,
-        "options": {"temperature": 0, "seed": 0, "num_ctx": 8192, "num_predict": -1},
+        "options": _vision_options({"temperature": 0, "seed": 0,
+                                    "num_ctx": 8192, "num_predict": -1}),
     }
     r = requests.post(f"{host}/api/generate", json=payload, timeout=1800)
     if r.status_code == 400:
@@ -183,8 +457,123 @@ def describe(png: bytes, model: str = VISION_MODEL, host: str = OLLAMA_HOST) -> 
     return json.loads(r.json()["response"])
 
 
+# ------------------------------------------------------------------- merge
+def _norm(text) -> str:
+    return " ".join(str(text or "").split()).strip().lower()
+
+
+def _slug(text) -> str:
+    s = re.sub(r"[^a-z0-9]+", "_", _norm(text)).strip("_")
+    return s[:48] or "node"
+
+
+def merge_graphs(graphs: list[dict]) -> dict:
+    """Several tile graphs -> the one page graph they are pieces of.
+
+    NODE IDENTITY IS THE LABEL, NOT THE ID. The model slugs ids per call, so the
+    same drawn box arrives as `coo_approval` from one tile and `coo` from the
+    tile that overlaps it. Merging on ids would keep both and split the flow in
+    half at the seam; merging on the normalised label text - which is verbatim
+    off the page, and now checklist-constrained to be exactly so - joins them.
+
+    Edges are then rewritten into that shared namespace and deduplicated. Where
+    the same arrow arrives labelled from the tile that could read its condition
+    and unlabelled from the tile that only caught its tail, the labelled one
+    wins: an unlabelled duplicate is what `audit()` flags as an invented copy,
+    and here it is a known artefact of the seam rather than a model error.
+    """
+    if len(graphs) == 1:
+        return graphs[0]
+
+    merged = {"title": None, "revision": None, "lanes": [], "escalation": []}
+    lanes_by_key: dict[str, dict] = {}
+    esc_seen = set()
+
+    for g in graphs:
+        if not isinstance(g, dict):
+            continue
+        merged["title"] = merged["title"] or g.get("title")
+        merged["revision"] = merged["revision"] or g.get("revision")
+
+        for lane in g.get("lanes") or []:
+            # Local id -> canonical id, built from this tile's own nodes.
+            local = {}
+            for n in lane.get("nodes") or []:
+                local[n.get("id")] = _slug(n.get("label") or n.get("id"))
+
+            key = _slug(lane.get("name") or merged["title"] or "workflow")
+            tgt = lanes_by_key.get(key)
+            if tgt is None:
+                tgt = {"name": lane.get("name"), "nodes": [], "edges": []}
+                lanes_by_key[key] = tgt
+                merged["lanes"].append(tgt)
+
+            have = {n["id"] for n in tgt["nodes"]}
+            for n in lane.get("nodes") or []:
+                cid = local[n.get("id")]
+                if cid not in have:
+                    have.add(cid)
+                    tgt["nodes"].append({"id": cid, "label": n.get("label"),
+                                         "kind": n.get("kind")})
+
+            for e in lane.get("edges") or []:
+                a = local.get(e.get("from")) or _slug(e.get("from"))
+                b = local.get(e.get("to")) or _slug(e.get("to"))
+                tgt["edges"].append({"from": a, "to": b,
+                                     "condition": e.get("condition")})
+
+        for e in g.get("escalation") or []:
+            k = (_norm(e.get("condition")), _norm(e.get("approver")))
+            if k not in esc_seen:
+                esc_seen.add(k)
+                merged["escalation"].append(e)
+
+    for lane in merged["lanes"]:
+        lane["edges"] = _dedupe_edges(lane["edges"])
+    _drop_seam_fragments(merged)
+    return merged
+
+
+def _dedupe_edges(edges: list[dict]) -> list[dict]:
+    """One entry per (from, to, condition), and drop a bare arrow that also
+    exists with a condition - see merge_graphs for why that pair shows up."""
+    by_pair: dict[tuple, list[dict]] = {}
+    for e in edges:
+        by_pair.setdefault((e["from"], e["to"]), []).append(e)
+
+    out = []
+    for _, group in by_pair.items():
+        labelled = [e for e in group if _norm(e.get("condition"))]
+        keep = labelled or group[:1]
+        seen = set()
+        for e in keep:
+            c = _norm(e.get("condition"))
+            if c not in seen:
+                seen.add(c)
+                out.append(e)
+    return out
+
+
+def _drop_seam_fragments(graph: dict) -> None:
+    """Remove nodes that are a truncated reading of another node.
+
+    Gutter-snapped cuts mean this should be rare - that is what they are for -
+    but a box can still be clipped where no gutter was available and the tile
+    was split on the ideal position instead. The signature is a node whose slug
+    is a strict prefix of another node's in the same lane AND which nothing
+    points at or away from: a real abbreviation would still have its edges.
+    """
+    for lane in graph.get("lanes") or []:
+        ids = [n["id"] for n in lane.get("nodes") or []]
+        used = {e[k] for e in lane.get("edges") or [] for k in ("from", "to")}
+        drop = {i for i in ids if i not in used
+                and any(o != i and o.startswith(i) for o in ids)}
+        if drop:
+            lane["nodes"] = [n for n in lane["nodes"] if n["id"] not in drop]
+
+
 # ------------------------------------------------------------------ repair
-def resolve_shared_lanes(graph: dict) -> list[str]:
+def resolve_shared_lanes(graph: dict, title_hint: str | None = None) -> list[str]:
     """Fold a shared approver column back into the lanes that route into it.
 
     Mutates `graph`. Returns a list of human-readable notes about what moved.
@@ -241,15 +630,38 @@ def resolve_shared_lanes(graph: dict) -> list[str]:
             notes.append(f"lane {lane.get('name')!r}: pulled in shared approver(s) "
                          f"{', '.join(sorted(pulled))}")
 
-    title = (graph.get("title") or "").strip().lower()
+    # The name check used to be `lane name == graph title`, and it silently
+    # stopped working when tiling arrived. A tiled page is merged from several
+    # model calls, and this model returns `title: null` on pages whose heading it
+    # cannot find - so `title` was "", nothing equalled it, and every pseudo-lane
+    # survived. Measured on the Damietta RFQ diagram: six real flows plus one
+    # lane named "Construction Company Approval Routing Flowchart", which is the
+    # model describing the whole page rather than naming a flow.
+    #
+    # `title_hint` (the filename stem) is a SECOND name to match against, for a
+    # page whose heading the model missed. It deliberately does not stand in for
+    # the model's own title, because the two answer different questions: the
+    # load-bearing change is that FULL ABSORPTION alone is sufficient when THE
+    # MODEL reported no title, and a hint we supplied ourselves is no evidence
+    # that it did. Conflating them re-blocks exactly the case this fixes.
+    #
+    # Absorption alone is safe, and the safety comes from what absorption means
+    # rather than from any name: a lane every one of whose nodes was pulled into
+    # sibling lanes has no content that is not already somewhere else. Dropping
+    # it cannot lose anything - that is the whole premise of the pull above.
+    model_title = _norm(graph.get("title"))
+    names = {t for t in (model_title, _norm(title_hint)) if t}
     keep = []
     for lane in lanes:
         ids = {n.get("id") for n in lane.get("nodes") or []}
-        fully_absorbed = ids and ids <= absorbed[id(lane)]
-        looks_like_title = (lane.get("name") or "").strip().lower() == title
-        if fully_absorbed and looks_like_title:
-            notes.append(f"dropped pseudo-lane {lane.get('name')!r} - it was the shared "
-                         "approver column, now folded into the flows that use it")
+        fully_absorbed = bool(ids) and ids <= absorbed[id(lane)]
+        looks_like_title = _norm(lane.get("name")) in names
+        if fully_absorbed and (looks_like_title or not model_title):
+            why = ("it was the shared approver column, now folded into the flows "
+                   "that use it" if looks_like_title else
+                   "every node in it also appears in a named flow, and the page "
+                   "reported no title to identify it by")
+            notes.append(f"dropped pseudo-lane {lane.get('name')!r} - {why}")
             continue
         keep.append(lane)
     graph["lanes"] = keep
@@ -283,7 +695,7 @@ def ocr_page_text(png: bytes, model: str = OCR_MODEL, host: str = OLLAMA_HOST) -
         "model": model, "prompt": OCR_PROMPT,
         "images": [base64.b64encode(png).decode()],
         "stream": False, "think": False,
-        "options": {"temperature": 0, "seed": 0, "num_predict": -1},
+        "options": _vision_options({"temperature": 0, "seed": 0, "num_predict": -1}),
     }
     try:
         r = requests.post(f"{host}/api/generate", json=payload, timeout=1800)
@@ -664,7 +1076,7 @@ def rebuild_chunks(records: list[dict], model: str = VISION_MODEL) -> list[dict]
     """
     chunks = []
     for rec in records:
-        resolve_shared_lanes(rec["graph"])
+        resolve_shared_lanes(rec["graph"], Path(rec["filename"]).stem)
         # `reference_text` is the current field; `ocr_text` is what audit files
         # written before the native-text channel existed call it.
         ref = rec.get("reference_text") or rec.get("ocr_text") or ""
@@ -675,7 +1087,7 @@ def rebuild_chunks(records: list[dict], model: str = VISION_MODEL) -> list[dict]
 
 
 def to_chunks(pdf: Path, model: str = VISION_MODEL, host: str = OLLAMA_HOST,
-              on_page=None) -> tuple[list[dict], list[dict]]:
+              on_page=None, tile: bool = True) -> tuple[list[dict], list[dict]]:
     """Whole scanned PDF -> (chunks, per-page audit records).
 
     One chunk per LANE, not per file. `CS Signature Matrix.pdf` holds six
@@ -684,29 +1096,34 @@ def to_chunks(pdf: Path, model: str = VISION_MODEL, host: str = OLLAMA_HOST,
     generator to guess which chain applies.
     """
     chunks, audits = [], []
-    pages = render(pdf)
+    tiles_per_page = render_tiles(pdf, enabled=tile)
 
     # Reference text first: on a native-text diagram this is a free file read,
     # so a PDF that turns out to have no usable text costs nothing before the
-    # expensive pass starts.
-    refs, channel = reference_texts(pdf, pages, host=host)
+    # expensive pass starts. It only needs the PNGs for the scanned fallback,
+    # and a scanned page is always a single whole-page tile.
+    refs, channel = reference_texts(pdf, [t[0]["png"] for t in tiles_per_page],
+                                    host=host)
     exact = channel == "native_text"
 
     # One model at a time. Interleaving describe() and the OCR fallback would
     # swap a 17 GB model and a 2 GB model in and out of VRAM once per page.
-    graphs = [describe(png, model=model, host=host) for png in pages]
+    graphs = [merge_graphs([describe(t["png"], labels=t["labels"],
+                                     model=model, host=host) for t in tiles])
+              for tiles in tiles_per_page]
 
     for i, (graph, ref) in enumerate(zip(graphs, refs), start=1):
         # Repair first, then audit - so warnings describe the graph that
         # actually becomes chunks, not the raw model output.
-        repairs = resolve_shared_lanes(graph)
+        repairs = resolve_shared_lanes(graph, pdf.stem)
         warns = audit(graph, ref, exact_reference=exact)
         audits.append({"filename": pdf.name, "source": pdf.as_posix(), "page": i,
                        "title": graph.get("title"), "warnings": warns,
                        "repairs": repairs, "graph": graph,
-                       "reference_text": ref, "channel": channel})
+                       "reference_text": ref, "channel": channel,
+                       "tiles": len(tiles_per_page[i - 1])})
         if on_page:
-            on_page(i, graph, warns, repairs)
+            on_page(i, graph, warns, repairs, len(tiles_per_page[i - 1]))
 
         chunks += chunks_from_graph(graph, pdf.name, i, model, warns)
     return chunks, audits
@@ -734,6 +1151,10 @@ def main() -> None:
     ap.add_argument("--from-audit", type=Path, default=None,
                     help="re-render chunks from a saved audit file instead of "
                          "calling the vision model again")
+    ap.add_argument("--no-tile", action="store_true",
+                    help="send each page whole instead of splitting oversized "
+                         "canvases into tiles - the pre-tiling behaviour, kept "
+                         "so the change can be measured against it")
     args = ap.parse_args()
 
     if args.from_audit:
@@ -789,16 +1210,18 @@ def main() -> None:
     for n, p in enumerate(workflows, start=1):
         print(f"\n--- [{n}/{len(workflows)}] {p.name} ---")
 
-        def _log(i, graph, warns, repairs=()):
+        def _log(i, graph, warns, repairs=(), ntiles=1):
             lanes = [l.get("name") for l in graph.get("lanes") or []]
-            print(f"  p{i}: {graph.get('title')!r}  lanes={lanes}")
+            tiled = f"  [{ntiles} tiles]" if ntiles > 1 else ""
+            print(f"  p{i}: {graph.get('title')!r}  lanes={lanes}{tiled}")
             for r in repairs:
                 print(f"      repaired: {r}")
             for w in warns:
                 print(f"      WARNING: {w}")
 
         try:
-            _, a = to_chunks(p, model=args.model, on_page=_log)
+            _, a = to_chunks(p, model=args.model, on_page=_log,
+                             tile=not args.no_tile)
         except Exception as e:
             # One unreadable diagram must not end the run. It is absent from
             # the audit file, so --resume retries it next time.
