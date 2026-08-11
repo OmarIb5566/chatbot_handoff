@@ -50,6 +50,12 @@ First run downloads the `all-MiniLM-L6-v2` embedding model from HuggingFace (~90
 machine is offline, pre-fetch it — the retriever loads it unconditionally, because query
 encoding needs it even when the corpus embeddings are cached.
 
+> This was **not true until now**: both loaders passed `local_files_only=True` with no fallback,
+> so on a machine without the cache they did not download, they crashed — inside the library,
+> with an error that never mentions the network. `retriever.load_embedder` now tries the cache
+> first and downloads only if it is missing, and raises a message naming the pre-fetch command
+> when both fail. Relevant whenever this repo moves to another machine.
+
 ## 3. Pull the model
 
 ```bash

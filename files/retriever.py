@@ -83,6 +83,43 @@ PREFIX_HINTS = {
 }
 
 
+def load_embedder(model_name: str = DEFAULT_MODEL, device: str | None = None):
+    """MiniLM from the local HF cache, downloading it only if it is not there.
+
+    Cache first, because that is the normal case and it avoids a network round
+    trip to check for updates on every single construction - the Retriever is
+    built once per process but that is still once per notebook cell, per app
+    restart, per eval run.
+
+    The fallback is the point, though. This used to be `local_files_only=True`
+    with no fallback, which is correct on a machine that already has the model
+    and a hard failure on one that does not - and README_HANDOFF says "first run
+    downloads the model", which was simply untrue. Moving this repo to another
+    machine is a normal thing to do (a colleague's GPU box, a fresh clone), and
+    the first thing it did there was crash inside a library with an error that
+    does not mention the network.
+
+    Offline with no cache still fails, as it must - but now it fails saying so.
+    """
+    from sentence_transformers import SentenceTransformer
+
+    try:
+        return SentenceTransformer(model_name, device=device, local_files_only=True)
+    except Exception:
+        pass
+    try:
+        return SentenceTransformer(model_name, device=device)
+    except Exception as e:
+        raise RuntimeError(
+            f"Could not load the embedding model {model_name!r}. It is not in the "
+            "local HuggingFace cache and could not be downloaded. On a machine "
+            "with no network, pre-fetch it once from a machine that has one:\n"
+            "    python -c \"from sentence_transformers import SentenceTransformer; "
+            f"SentenceTransformer('sentence-transformers/{model_name}')\"\n"
+            f"Underlying error: {type(e).__name__}: {e}"
+        ) from e
+
+
 def doc_code_prefix(chunk: dict) -> str | None:
     """'P-VMO-01' -> 'PVMO', 'M-HR-08' -> 'MHR'.
 
@@ -233,12 +270,7 @@ class Retriever:
         self.bm25 = BM25Okapi(self.corpus_tokens)
 
         # --- dense channel ---
-        from sentence_transformers import SentenceTransformer
-
-        # local_files_only: use the already-installed HF cache
-        # (~/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2)
-        # instead of hitting the network to check for updates.
-        self.model = SentenceTransformer(model_name, device=device, local_files_only=True)
+        self.model = load_embedder(model_name, device=device)
         self.embeddings = self._get_embeddings(use_cache)
         self._build_faiss()
 

@@ -389,9 +389,13 @@ class SectionLabeler:
         self.model = None
         self._canon_emb = None
         if use_embeddings:
-            from sentence_transformers import SentenceTransformer
-            # local_files_only mirrors retriever.py: the model is already cached.
-            self.model = SentenceTransformer(model_name, local_files_only=True)
+            # Shared with retriever.py so both paths get the same cache-first,
+            # download-if-missing behaviour and the same actionable error. This
+            # file used to carry its own local_files_only=True copy, which meant
+            # a fresh clone failed here too, separately, for the same reason.
+            from retriever import load_embedder
+
+            self.model = load_embedder(model_name)
             self._canon_emb = self.model.encode(
                 self.canonical, normalize_embeddings=True, convert_to_numpy=True)
 
