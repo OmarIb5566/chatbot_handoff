@@ -1,0 +1,2317 @@
+[
+  {
+    "id": "MHR04-1",
+    "type": "numeric",
+    "doc": "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+    "question": "Within how long after an incident must an employee file a written complaint with the HR Office under the DE&I policy?",
+    "answer": "Under the DE&I policy, an employee must file a written complaint with the HR Office within 14 days after the incident or problem occurrence. (Doc. No.: M-HR-04)",
+    "retrieved": [
+      "MHR13_C_A_R_E_Policy.pdf",
+      "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 11.092819899999995,
+    "total_s": 12.469910399999208
+  },
+  {
+    "id": "MHR04-2",
+    "type": "numeric",
+    "doc": "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+    "question": "How long does the HR Manager have to conduct an investigation and hearing after a DE&I complaint is filed?",
+    "answer": "The HR Manager has 7 days to conduct an investigation and hearing after a DE&I complaint is filed. This is specified in the document \"MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf\".",
+    "retrieved": [
+      "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 19.83806149999964,
+    "total_s": 19.864067700001215
+  },
+  {
+    "id": "MHR07-1",
+    "type": "form_lookup",
+    "doc": "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+    "question": "Which form is used to terminate a casual worker when drug abuse, theft or unethical acts are proved?",
+    "answer": "The form used to terminate a casual worker when drug abuse, theft, or unethical acts are proved is the Termination notice (F-M-HR-07-05). This information is specified in the document MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf.",
+    "retrieved": [
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-M-HR-07-05"
+    ],
+    "vlm_sources": [],
+    "generation_s": 21.840431600000557,
+    "total_s": 21.861381699999583
+  },
+  {
+    "id": "MHR07-2",
+    "type": "numeric",
+    "doc": "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+    "question": "What is the maximum overtime for indirect casual labor per period?",
+    "answer": "The maximum overtime for indirect casual labor per period is 52 hours. (MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf)",
+    "retrieved": [
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 9.114189900000383,
+    "total_s": 9.171579600001678
+  },
+  {
+    "id": "MHR08-1",
+    "type": "numeric",
+    "doc": "MHR08_Accommodation_Policy.pdf",
+    "question": "What is the maximum increase allowed on accommodation contract renewals?",
+    "answer": "The maximum increase allowed on accommodation contract renewals is 10%. (MHR08_Accommodation_Policy.pdf)",
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 7.036394000000655,
+    "total_s": 7.060577999999623
+  },
+  {
+    "id": "MHR08-2",
+    "type": "numeric",
+    "doc": "MHR08_Accommodation_Policy.pdf",
+    "question": "By when must the original water, gas and electricity bills for the previous month be sent?",
+    "answer": "The original water, gas, and electricity bills for the previous month must be sent within the first 5 days of the new month. (MHR08_Accommodation_Policy.pdf)",
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 15.948077600000033,
+    "total_s": 15.97196399999848
+  },
+  {
+    "id": "MHR10-1",
+    "type": "form_lookup",
+    "doc": "MHR10_Code_of_Conduct_Policy.pdf",
+    "question": "Which form records a violation of the Code of Conduct policy?",
+    "answer": "The form that records a violation of the Code of Conduct policy is the Employee Misconduct Record (F-M-HR-10-02). This is specified in the document MHR10_Code_of_Conduct_Policy.pdf.",
+    "retrieved": [
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-M-HR-10-02"
+    ],
+    "vlm_sources": [],
+    "generation_s": 15.25386090000029,
+    "total_s": 15.272443800001383
+  },
+  {
+    "id": "MHR11-1",
+    "type": "form_lookup",
+    "doc": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+    "question": "Within how many hours must the initial incident report be sent, and which form is it?",
+    "answer": "The initial incident report must be sent within 24 hours, and the form used is F-P-SF-01-01. (Doc: MHR11_Incident_Reporting_Investigation_Policy.pdf)",
+    "retrieved": [
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-SF-01-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 48.891715800000384,
+    "total_s": 48.91700969999965
+  },
+  {
+    "id": "MHR11-2",
+    "type": "role_lookup",
+    "doc": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+    "question": "Who sends the initial incident report and to whom?",
+    "answer": "The initial incident report is sent by the Project HSE Manager to the Operation Manager, COO, HR Manager, H.O. HSE Manager, and Project Manager. (Doc: MHR11_Incident_Reporting_Investigation_Policy.pdf)",
+    "retrieved": [
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 14.38109170000007,
+    "total_s": 14.396713099999943
+  },
+  {
+    "id": "MHR12-1",
+    "type": "fact",
+    "doc": "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+    "question": "Which projects pay an annual bonus based on personal performance under the French-Speaking Sub-Saharan Africa policy?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": false,
+    "missing": [
+      "annual bonus"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 11.266698700000234,
+    "total_s": 11.287253800001963
+  },
+  {
+    "id": "MHR13-1",
+    "type": "numeric",
+    "doc": "MHR13_C_A_R_E_Policy.pdf",
+    "question": "How long does the HR Manager have to review and approve the Committee's recommendations after the investigation closes under the C.A.R.E policy?",
+    "answer": "The HR Manager has 7 days to review and approve the Committee's recommendations after the investigation closes under the C.A.R.E policy. This is specified in the document [MHR13_C_A_R_E_Policy.pdf].",
+    "retrieved": [
+      "MHR13_C_A_R_E_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 62.70813030000045,
+    "total_s": 62.84671700000035
+  },
+  {
+    "id": "MHR14-1",
+    "type": "form_lookup",
+    "doc": "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+    "question": "Which form does a Direct Manager submit to request a promotion?",
+    "answer": "The Direct Manager shall submit the Promotion Request (F-M-HR-14-06) form to request a promotion. (MHR14_Promotion_Upward_Mobility_Policy.pdf)",
+    "retrieved": [
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+      "MHR22_Company_Car_Transportation_Allowance_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-M-HR-14-06"
+    ],
+    "vlm_sources": [],
+    "generation_s": 20.27520800000002,
+    "total_s": 20.295972099999744
+  },
+  {
+    "id": "MHR14-2",
+    "type": "numeric",
+    "doc": "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+    "question": "What is the minimum length of service required to be eligible for promotion?",
+    "answer": "The minimum length of service required to be eligible for promotion is one year with the company, with no warnings or disciplinary actions on record. (MHR14_Promotion_Upward_Mobility_Policy.pdf)",
+    "retrieved": [
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 24.276209599999675,
+    "total_s": 24.300434199998563
+  },
+  {
+    "id": "MHR14-3",
+    "type": "definition",
+    "doc": "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+    "question": "What does 'Fast-tracked' mean in the promotion policy?",
+    "answer": "\"Fast-tracked\" refers to employees who are identified as High Potential/Key Talent and are accelerated on the relevant ladder. (Doc: MHR14_Promotion_Upward_Mobility_Policy.pdf)",
+    "retrieved": [
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 20.17241759999979,
+    "total_s": 20.189819400000488
+  },
+  {
+    "id": "MHR16-1",
+    "type": "form_lookup",
+    "doc": "MHR16_Employee_Separation_Policy.pdf",
+    "question": "Which form is used to submit a written resignation?",
+    "answer": "The form used to submit a written resignation is F-M-HR-16-01, as specified in the document MHR18_UAE_Branch_Policy.pdf.",
+    "retrieved": [
+      "MHR16_Employee_Separation_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-M-HR-16-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 16.869589899999482,
+    "total_s": 16.887631100000362
+  },
+  {
+    "id": "MHR16-2",
+    "type": "numeric",
+    "doc": "MHR16_Employee_Separation_Policy.pdf",
+    "question": "Within how long must the Talent Acquisition Team schedule an exit interview after receiving a resignation?",
+    "answer": "The Talent Acquisition Team must schedule an exit interview within 48 hours from receiving the resignation request. (Doc: MHR16_Employee_Separation_Policy.pdf)",
+    "retrieved": [
+      "MHR16_Employee_Separation_Policy.pdf",
+      "MHR16_Employee_Separation_Policy.pdf",
+      "PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 16.198995200001264,
+    "total_s": 16.22111230000155
+  },
+  {
+    "id": "MHR16-3",
+    "type": "numeric",
+    "doc": "MHR16_Employee_Separation_Policy.pdf",
+    "question": "What notice period must a resigning employee with five or more years of service give?",
+    "answer": "A resigning employee with five or more years of service must give a notice period of not less than two months, according to labor law. (PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf)",
+    "retrieved": [
+      "MHR16_Employee_Separation_Policy.pdf",
+      "MHR16_Employee_Separation_Policy.pdf",
+      "PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 17.078157400001146,
+    "total_s": 17.10360160000164
+  },
+  {
+    "id": "MHR17-1",
+    "type": "numeric",
+    "doc": "MHR17_KSA_Branch_Policy.pdf",
+    "question": "How much Umrah leave are employees entitled to under the KSA branch policy, and how often?",
+    "answer": "Employees are entitled to paid Umrah leave of 2 days, renewed every 2 years. (Doc: MHR17_KSA_Branch_Policy.pdf)",
+    "retrieved": [
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 25.718866699999126,
+    "total_s": 25.741777699999147
+  },
+  {
+    "id": "MHR17-2",
+    "type": "numeric",
+    "doc": "MHR17_KSA_Branch_Policy.pdf",
+    "question": "What is the maximum salary advance under the KSA branch policy?",
+    "answer": "The maximum salary advance under the KSA branch policy is 50% of the basic salary. (MHR17_KSA_Branch_Policy.pdf)",
+    "retrieved": [
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 32.53054329999941,
+    "total_s": 32.54686149999907
+  },
+  {
+    "id": "MHR18-1",
+    "type": "numeric",
+    "doc": "MHR18_UAE_Branch_Policy.pdf",
+    "question": "For how long does the company provide accommodation to newly joined employees arriving in the UAE?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": false,
+    "missing": [
+      "one month"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 24.428737799999,
+    "total_s": 24.453721399999267
+  },
+  {
+    "id": "MHR18-2",
+    "type": "numeric",
+    "doc": "MHR18_UAE_Branch_Policy.pdf",
+    "question": "After how long can UAE employees use their annual vacation balance?",
+    "answer": "After 6 months from joining the company, UAE employees can use their annual vacation balance. (MHR18_UAE_Branch_Policy.pdf)",
+    "retrieved": [
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 32.32679619999908,
+    "total_s": 32.342472099997394
+  },
+  {
+    "id": "MHR19-1",
+    "type": "form_lookup",
+    "doc": "MHR19_Internship_Policy.pdf",
+    "question": "Which form is the internship agreement?",
+    "answer": "The internship agreement is outlined in the document F-M-HR-19-02. The filename is MHR19_Internship_Policy.pdf.",
+    "retrieved": [
+      "MHR19_Internship_Policy.pdf",
+      "MHR19_Internship_Policy.pdf",
+      "MHR19_Internship_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-M-HR-19-02"
+    ],
+    "vlm_sources": [],
+    "generation_s": 15.676498300001185,
+    "total_s": 15.693144800001392
+  },
+  {
+    "id": "MHR19-2",
+    "type": "definition",
+    "doc": "MHR19_Internship_Policy.pdf",
+    "question": "How many hours per week does a part-time internship require?",
+    "answer": "A part-time internship requires 20 hours per week, as specified in the document [MHR19_Internship_Policy.pdf].",
+    "retrieved": [
+      "MHR19_Internship_Policy.pdf",
+      "MHR19_Internship_Policy.pdf",
+      "MHR19_Internship_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 9.812971400000606,
+    "total_s": 9.83400619999884
+  },
+  {
+    "id": "MHR19-3",
+    "type": "numeric",
+    "doc": "MHR19_Internship_Policy.pdf",
+    "question": "How often is the internship grant rate reviewed and approved, and by whom?",
+    "answer": "The internship grant rate is reviewed and approved every 6 months by the HR manager. (MHR19_Internship_Policy.pdf)",
+    "retrieved": [
+      "MHR19_Internship_Policy.pdf",
+      "MHR19_Internship_Policy.pdf",
+      "MHR19_Internship_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 10.001111800000217,
+    "total_s": 10.026782699998876
+  },
+  {
+    "id": "MHR20P-1",
+    "type": "numeric",
+    "doc": "MHR20_Employees_Performance_Policy.pdf",
+    "question": "How soon after each quarter closes must performance results be communicated to employees via HITS?",
+    "answer": "Performance results must be communicated to employees via HITS within a maximum of one month after the closing of each quarter. (MHR20_Employees_Performance_Policy.pdf)",
+    "retrieved": [
+      "MHR20_Employees_Performance_Policy.pdf",
+      "MHR20_Employees_Performance_Policy.pdf",
+      "MHR20_Employees_Performance_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 17.54642110000168,
+    "total_s": 17.571180800001457
+  },
+  {
+    "id": "MHR20P-2",
+    "type": "numeric",
+    "doc": "MHR20_Employees_Performance_Policy.pdf",
+    "question": "What minimum service is needed for annual performance increments to apply?",
+    "answer": "The minimum service needed for annual performance increments to apply is 3 months. (MHR20_Employees_Performance_Policy.pdf)",
+    "retrieved": [
+      "MHR20_Employees_Performance_Policy.pdf",
+      "PEQ01_Equipment_Management_Process.pdf",
+      "PPR02_Evaluation_of_External_Providers.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 12.411893200000122,
+    "total_s": 12.431523699997342
+  },
+  {
+    "id": "MHR20T-1",
+    "type": "form_lookup",
+    "doc": "MHR20_Local_Transfer_Policy.pdf",
+    "question": "Which form does the initiator submit to start a local transfer?",
+    "answer": "The initiator submits the Local Transfer Request (F-M-HR-20-01) to start a local transfer.  \nSource: MHR20_Local_Transfer_Policy.pdf",
+    "retrieved": [
+      "MHR20_Local_Transfer_Policy.pdf",
+      "MHR20_Local_Transfer_Policy.pdf",
+      "MHR20_Local_Transfer_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-M-HR-20-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 20.727880800001003,
+    "total_s": 20.7508695000015
+  },
+  {
+    "id": "MHR20T-2",
+    "type": "definition",
+    "doc": "MHR20_Local_Transfer_Policy.pdf",
+    "question": "What is a 'Local Mission' and what is its maximum duration?",
+    "answer": "A 'Local Mission' is a temporary official assignment for company purposes, with a maximum duration of 6 weeks. (MHR20_Local_Transfer_Policy.pdf)",
+    "retrieved": [
+      "MHR20_Local_Transfer_Policy.pdf",
+      "MHR20_Employees_Performance_Policy.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 13.433079700000235,
+    "total_s": 13.464163099999496
+  },
+  {
+    "id": "MHR22-1",
+    "type": "form_lookup",
+    "doc": "MHR22_Company_Car_Transportation_Allowance_Policy.pdf",
+    "question": "Which form does an employee submit to request a company car?",
+    "answer": "The employee submits the Company Car Request form (F-P-LO-01-01).  \nSource: MHR22_Company_Car_Transportation_Allowance_Policy.pdf",
+    "retrieved": [
+      "MHR22_Company_Car_Transportation_Allowance_Policy.pdf",
+      "MHR22_Company_Car_Transportation_Allowance_Policy.pdf",
+      "MHR22_Company_Car_Transportation_Allowance_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-LO-01-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 15.42857980000008,
+    "total_s": 15.446521399997437
+  },
+  {
+    "id": "PCM01-3",
+    "type": "role_lookup",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
+    "question": "Who prepares the analysis report for all customer satisfaction surveys received?",
+    "answer": "The QA Manager prepares the analysis report for all customer satisfaction surveys received. (Doc. No.: P-CM-01)",
+    "retrieved": [
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 17.65256640000007,
+    "total_s": 17.672704800001156
+  },
+  {
+    "id": "PCM02-2",
+    "type": "definition",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+    "question": "What does Marcom stand for in the branding process?",
+    "answer": "Marcom stands for Marketing & Communication in the branding process. (Doc filename: PCM02_Branding_for_Construction_Sites_Process.pdf)",
+    "retrieved": [
+      "PCM02_Branding_for_Construction_Sites_Process.pdf",
+      "PCM02_Branding_for_Construction_Sites_Process.pdf",
+      "PCM02_Branding_for_Construction_Sites_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 14.436943200000314,
+    "total_s": 14.455861400001595
+  },
+  {
+    "id": "PCN01-2",
+    "type": "numeric",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "How long does the Technical Office have to collect the requested documents to finalise the subcontract agreement?",
+    "answer": "The Technical Office has two weeks to collect the requested documents to finalize the subcontract agreement. (Doc. No.: P-CN-01)",
+    "retrieved": [
+      "PCN01_Subcontract_Agreement_Process.pdf",
+      "PCN01_Subcontract_Agreement_Process.pdf",
+      "PCN01_Subcontract_Agreement_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 39.155616400001236,
+    "total_s": 39.18059069999981
+  },
+  {
+    "id": "PCN01-3",
+    "type": "numeric",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "If the PM receives a nomination letter from the client after the awarding phase, how quickly must it be forwarded?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PCN02_Claim_Process.pdf",
+      "POP03_Direct_Award_Projects_Process.pdf",
+      "Variation Order Flow Chart.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "24 hours"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "Variation Order Flow Chart.pdf"
+    ],
+    "generation_s": 31.074268700000175,
+    "total_s": 31.09424880000006
+  },
+  {
+    "id": "PCN02-2",
+    "type": "definition",
+    "doc": "PCN02_Claim_Process.pdf",
+    "question": "What does EOT stand for in the claim process?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PCN02_Claim_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "PCN02_Claim_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": false,
+    "missing": [
+      "Extension of"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 19.4387155000004,
+    "total_s": 19.45685290000256
+  },
+  {
+    "id": "PCN02-3",
+    "type": "numeric",
+    "doc": "PCN02_Claim_Process.pdf",
+    "question": "Within how long must concerned parties provide additional information requested during a claim?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PCN02_Claim_Process.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "POP04_Request_for_Information_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": false,
+    "missing": [
+      "3 days"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 11.00777030000063,
+    "total_s": 11.034755599999698
+  },
+  {
+    "id": "PEN01-2",
+    "type": "numeric",
+    "doc": "PEN01_Engineering_Process.pdf",
+    "question": "How long after trade handover must the Engineering department issue the as-built?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PTN02_Project_Launching_Process.pdf",
+      "MHR20_Local_Transfer_Policy.pdf",
+      "PTN02_Project_Launching_Process.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "one month"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 19.465361599999596,
+    "total_s": 19.494496699999218
+  },
+  {
+    "id": "PEQ01-2",
+    "type": "role_lookup",
+    "doc": "PEQ01_Equipment_Management_Process.pdf",
+    "question": "Who decides whether to rent or buy equipment?",
+    "answer": "EDM decides whether to rent or buy equipment after the discussion with VP. This is specified in the document PEQ01_Equipment_Management_Process.pdf.",
+    "retrieved": [
+      "PEQ01_Equipment_Management_Process.pdf",
+      "PEQ01_Equipment_Management_Process.pdf",
+      "MHR08_Accommodation_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 66.38471589999972,
+    "total_s": 66.40560489999916
+  },
+  {
+    "id": "PEQ01-3",
+    "type": "numeric",
+    "doc": "PEQ01_Equipment_Management_Process.pdf",
+    "question": "Within how long must the warehouse approve the PR after the EDM's approval?",
+    "answer": "The warehouse must approve the PR within 24 hours after the EDM's approval. (Doc filename: PEQ01_Equipment_Management_Process.pdf)",
+    "retrieved": [
+      "Request for Quotation - Equipment Purchasing CS.pdf",
+      "PEQ01_Equipment_Management_Process.pdf",
+      "PIT01_Information_Technology.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "Request for Quotation - Equipment Purchasing CS.pdf"
+    ],
+    "generation_s": 92.4495511999994,
+    "total_s": 92.47204969999802
+  },
+  {
+    "id": "PFN01-2",
+    "type": "numeric",
+    "doc": "PFN01_Material_Control_Process.pdf",
+    "question": "How long does the committee have to submit and sign the physical inventory report?",
+    "answer": "The committee has 48 hours from the physical inventory ending date to submit and sign the physical inventory report. This is specified in the document \"PFN01_Material_Control_Process.pdf\".",
+    "retrieved": [
+      "PFN01_Material_Control_Process.pdf",
+      "PFN01_Material_Control_Process.pdf",
+      "Quality_Manual_2026.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 81.81981389999964,
+    "total_s": 81.84549159999915
+  },
+  {
+    "id": "PFN01-3",
+    "type": "numeric",
+    "doc": "PFN01_Material_Control_Process.pdf",
+    "question": "What is the time frame for preparing the QS for normal versus fast-track projects?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PQD09_Management_Leadership_and_Commitment.pdf",
+      "POP06_Client_Invoicing_Process.pdf",
+      "PQD01_Internal_Audit_Process.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "two weeks"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 20.55623569999989,
+    "total_s": 20.57962360000056
+  },
+  {
+    "id": "PFN02-1",
+    "type": "form_lookup",
+    "doc": "PFN02_Overseas_Petty_Cash_Process.pdf",
+    "question": "Which form is the Cash Fund Settlement used in the overseas petty cash process?",
+    "answer": "The Cash Fund Settlement is used in the form called \"Cash Fund Settlement Form,\" as specified in the document \"PFN02_Overseas_Petty_Cash_Process.pdf.\"",
+    "retrieved": [
+      "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "PFN02_Overseas_Petty_Cash_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": false,
+    "missing": [
+      "F-P-HR-04-03"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 11.476029199999175,
+    "total_s": 11.496927199998026
+  },
+  {
+    "id": "PFN03-2",
+    "type": "fact",
+    "doc": "PFN03_Overseas_Payment_Release_Process.pdf",
+    "question": "What happens to payments not included in the approved Biweekly Payment List?",
+    "answer": "Payments not included in the approved Biweekly Payment List will be automatically deferred to the next cycle to ensure proper fund control. (PFN03_Overseas_Payment_Release_Process.pdf)",
+    "retrieved": [
+      "PFN03_Overseas_Payment_Release_Process.pdf",
+      "PFN03_Overseas_Payment_Release_Process.pdf",
+      "Subcontracts - Subcontract Preparation KSA V4.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "Subcontracts - Subcontract Preparation KSA V4.pdf"
+    ],
+    "generation_s": 19.855616400000144,
+    "total_s": 19.87363429999823
+  },
+  {
+    "id": "PFW01-2",
+    "type": "numeric",
+    "doc": "PFW01_Formwork_Process.pdf",
+    "question": "Within how long after the tender handover meeting must Formwork meet the PM/CM?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PTN02_Project_Launching_Process.pdf",
+      "PTN02_Project_Launching_Process.pdf",
+      "Project Launching - WF - Project Launching.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "two weeks"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "Project Launching - WF - Project Launching.pdf"
+    ],
+    "generation_s": 20.98731299999963,
+    "total_s": 21.016137100001288
+  },
+  {
+    "id": "PHR01-2",
+    "type": "numeric",
+    "doc": "PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf",
+    "question": "How long does MPTA have to submit the salary scale after receiving the Organization Staff Plan?",
+    "answer": "MPTA has one week to submit the salary scale after receiving the Organization Staff Plan. (PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf)",
+    "retrieved": [
+      "PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf",
+      "PPC02_Staff_Hiring_Plan_Process.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 39.870047700000214,
+    "total_s": 39.895133399997576
+  },
+  {
+    "id": "PHR02-1",
+    "type": "numeric",
+    "doc": "PHR02_Learning_Development_Process.pdf",
+    "question": "What minimum attendance is required for each assigned training session?",
+    "answer": "The minimum attendance required for each assigned training session is 75%. (PHR02_Learning_Development_Process.pdf)",
+    "retrieved": [
+      "PHR02_Learning_Development_Process.pdf",
+      "MHR19_Internship_Policy.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 29.037428499999805,
+    "total_s": 29.051560199999585
+  },
+  {
+    "id": "PHR02-2",
+    "type": "definition",
+    "doc": "PHR02_Learning_Development_Process.pdf",
+    "question": "What does IDP stand for in the Learning & Development process?",
+    "answer": "IDP stands for Individual Development Plan. (Doc. No.: P-HR-02)",
+    "retrieved": [
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 25.506581300000107,
+    "total_s": 25.527704399999493
+  },
+  {
+    "id": "PHR04-2",
+    "type": "numeric",
+    "doc": "PHR04_Overseas_Business_Travel_Process.pdf",
+    "question": "When are Top Management entitled to business-class flights?",
+    "answer": "Top Management are entitled to business-class flights only for flights exceeding 5 hours in duration. (Doc. No.: P-HR-04)",
+    "retrieved": [
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "PHR04_Overseas_Business_Travel_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 58.83883179999975,
+    "total_s": 58.854041399998096
+  },
+  {
+    "id": "PHR04-3",
+    "type": "numeric",
+    "doc": "PHR04_Overseas_Business_Travel_Process.pdf",
+    "question": "For how many days maximum does staff receive per-diem compensation per trip or country?",
+    "answer": "Staff receive per-diem compensation for a maximum of 30 days for the trip/country, as per the table of benefits. (Doc. No.: P-HR-04)",
+    "retrieved": [
+      "MHR17_KSA_Branch_Policy.pdf",
+      "PHR04_Overseas_Business_Travel_Process.pdf",
+      "PHR04_Overseas_Business_Travel_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 45.82636620000085,
+    "total_s": 45.84562950000145
+  },
+  {
+    "id": "PHR05-1",
+    "type": "form_lookup",
+    "doc": "PHR05_KSA_Hiring_Process.pdf",
+    "question": "Which form is the KSA Hiring Table?",
+    "answer": "The KSA Hiring Table is referenced in the document as \"KSA Hiring Table (Annex 2)\" and is associated with the form \"F-P-HR-05-02\". Therefore, the KSA Hiring Table is \"F-P-HR-05-02\".",
+    "retrieved": [
+      "PHR05_KSA_Hiring_Process.pdf",
+      "PHR05_KSA_Hiring_Process.pdf",
+      "PHR05_KSA_Hiring_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-HR-05-02"
+    ],
+    "vlm_sources": [],
+    "generation_s": 33.005289300001095,
+    "total_s": 33.02472999999918
+  },
+  {
+    "id": "PHR06-1",
+    "type": "numeric",
+    "doc": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+    "question": "After how long must direct casual labor be evaluated?",
+    "answer": "Direct casual labor must be evaluated after 3 months of hiring, as specified in the document PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf.",
+    "retrieved": [
+      "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 21.08564170000136,
+    "total_s": 21.102994300001228
+  },
+  {
+    "id": "PHR06-2",
+    "type": "role_lookup",
+    "doc": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+    "question": "Who must sign requests for hiring direct casual labor?",
+    "answer": "The requests for hiring direct casual labor must be signed by the Construction Manager and the Project Manager. (Doc: PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf)",
+    "retrieved": [
+      "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 10.544869199999084,
+    "total_s": 10.562168099999326
+  },
+  {
+    "id": "PIT01-1",
+    "type": "numeric",
+    "doc": "PIT01_Information_Technology.pdf",
+    "question": "How often is the IT price list updated?",
+    "answer": "The IT price list is updated every 3-6 months with the latest prices based on market price changes, as specified in the document PIT01_Information_Technology.pdf.",
+    "retrieved": [
+      "PIT01_Information_Technology.pdf",
+      "PPU01_Purchasing_Process.pdf",
+      "Bid Closing & Approval Internal Process - WF.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "Bid Closing & Approval Internal Process - WF.pdf"
+    ],
+    "generation_s": 24.60438079999949,
+    "total_s": 24.622885099995983
+  },
+  {
+    "id": "PLO01-1",
+    "type": "numeric",
+    "doc": "PLO01_Logistics_Process.pdf",
+    "question": "What is the maximum loading/unloading time for rented trucks versus company-owned trucks?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "4 hours",
+      "2 hours"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 11.165992399999595,
+    "total_s": 11.183831799999098
+  },
+  {
+    "id": "PMSE01-2",
+    "type": "role_lookup",
+    "doc": "PMSE01_MSE_Project_Process.pdf",
+    "question": "Who takes the final decision on whether to proceed with an MSE project?",
+    "answer": "The final decision on whether to proceed with an MSE project is taken by the VP. This is specified in the document \"PMSE01_MSE_Project_Process.pdf\".",
+    "retrieved": [
+      "PMSE01_MSE_Project_Process.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "PMSE01_MSE_Project_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 19.072721900000033,
+    "total_s": 19.094674900001337
+  },
+  {
+    "id": "POP02-1",
+    "type": "numeric",
+    "doc": "POP02_Variation_Order_Process.pdf",
+    "question": "Within how long must the PCE submit the time impact study to the Contract Department?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "Variation Order Flow Chart.pdf",
+      "Variation Order Flow Chart.pdf",
+      "Variation Order Flow Chart.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "5 days"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "Variation Order Flow Chart.pdf",
+      "Variation Order Flow Chart.pdf",
+      "Variation Order Flow Chart.pdf"
+    ],
+    "generation_s": 22.370652300000074,
+    "total_s": 22.393092299998898
+  },
+  {
+    "id": "POP03-1",
+    "type": "form_lookup",
+    "doc": "POP03_Direct_Award_Projects_Process.pdf",
+    "question": "Which form is the initial project budget form for direct award projects?",
+    "answer": "The initial project budget form for direct award projects is F-P-OP-03-01. (Doc filename: POP03_Direct_Award_Projects_Process.pdf)",
+    "retrieved": [
+      "POP03_Direct_Award_Projects_Process.pdf",
+      "POP03_Direct_Award_Projects_Process.pdf",
+      "POP03_Direct_Award_Projects_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-OP-03-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 19.63224750000154,
+    "total_s": 19.64499320000141
+  },
+  {
+    "id": "POP04-1",
+    "type": "form_lookup",
+    "doc": "POP04_Request_for_Information_Process.pdf",
+    "question": "Which form is the RFI Log?",
+    "answer": "The RFI Log is form F-P-OP-04-01. (POP04_Request_for_Information_Process.pdf)",
+    "retrieved": [
+      "POP04_Request_for_Information_Process.pdf",
+      "POP04_Request_for_Information_Process.pdf",
+      "POP04_Request_for_Information_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-OP-04-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 11.644853699999658,
+    "total_s": 11.662584399999105
+  },
+  {
+    "id": "POP05-2",
+    "type": "role_lookup",
+    "doc": "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+    "question": "Who reviews and approves the work completed status?",
+    "answer": "The work completed status is reviewed and approved by TOM, PM, and CM depending on the specific document. In the \"S-C Work Completed Status - TO Work Completed Status.pdf\" document, TOM and PM are involved in the approval process. In the \"S-C Work Completed Status - Site Work Completed Status.pdf\" document, CM, PM, and TOM are involved in the approval process. In the \"S-C Work Completed Status - QC Work Completed Status.pdf\" document, PM, TO, and TOM are involved in the approval process.",
+    "retrieved": [
+      "S-C Work Completed Status - TO Work Completed Status.pdf",
+      "S-C Work Completed Status - Site Work Completed Status.pdf",
+      "S-C Work Completed Status - QC Work Completed Status.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "S-C Work Completed Status - TO Work Completed Status.pdf",
+      "S-C Work Completed Status - Site Work Completed Status.pdf",
+      "S-C Work Completed Status - QC Work Completed Status.pdf"
+    ],
+    "generation_s": 24.439897899999778,
+    "total_s": 24.456958200000372
+  },
+  {
+    "id": "POP06-1",
+    "type": "form_lookup",
+    "doc": "POP06_Client_Invoicing_Process.pdf",
+    "question": "Which form is the IPC in the client invoicing process?",
+    "answer": "The IPC in the client invoicing process is referred to in several forms, including F-P-OP-06-01, F-P-OP-06-02, F-P-OP-06-03, F-P-OP-06-04, and F-P-OP-06-05. These forms are mentioned in the context provided.",
+    "retrieved": [
+      "POP06_Client_Invoicing_Process.pdf",
+      "POP06_Client_Invoicing_Process.pdf",
+      "POP06_Client_Invoicing_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-OP-06-01",
+      "F-P-OP-06-02",
+      "F-P-OP-06-03",
+      "F-P-OP-06-04",
+      "F-P-OP-06-05"
+    ],
+    "vlm_sources": [],
+    "generation_s": 35.847165099999984,
+    "total_s": 35.87327410000216
+  },
+  {
+    "id": "POP07-2",
+    "type": "role_lookup",
+    "doc": "POP07_Project_Closeout_Process.pdf",
+    "question": "Who prepares the demobilization plan at project closeout?",
+    "answer": "The PM prepares the demobilization plan at project closeout. (POP07_Project_Closeout_Process.pdf)",
+    "retrieved": [
+      "POP07_Project_Closeout_Process.pdf",
+      "POP07_Project_Closeout_Process.pdf",
+      "POP07_Project_Closeout_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 34.169975000000704,
+    "total_s": 34.191208500002176
+  },
+  {
+    "id": "POP08-1",
+    "type": "form_lookup",
+    "doc": "POP08_Concrete_Pouring_Process.pdf",
+    "question": "Which form is the Concrete Pouring Plan?",
+    "answer": "The Concrete Pouring Plan is documented in the form F-P-OP-08-04. (Doc filename: POP08_Concrete_Pouring_Process.pdf)",
+    "retrieved": [
+      "POP08_Concrete_Pouring_Process.pdf",
+      "POP08_Concrete_Pouring_Process.pdf",
+      "POP08_Concrete_Pouring_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-OP-08-04"
+    ],
+    "vlm_sources": [],
+    "generation_s": 24.849053600000843,
+    "total_s": 24.866753600001175
+  },
+  {
+    "id": "POP09-1",
+    "type": "form_lookup",
+    "doc": "POP09_Earthmoving_Process.pdf",
+    "question": "Which form is the EM Subcontract Template in the earthmoving process?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PCN01_Subcontract_Agreement_Process.pdf",
+      "PCN01_Subcontract_Agreement_Process.pdf",
+      "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "F-P-OP-09-01"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf"
+    ],
+    "generation_s": 51.604678599998806,
+    "total_s": 51.620592499997656
+  },
+  {
+    "id": "POP10-2",
+    "type": "fact",
+    "doc": "POP10_Technical_Office_Support_Followup.pdf",
+    "question": "How often must the QS-status be prepared and updated?",
+    "answer": "The QS-status must be prepared and updated monthly. This is specified in the document \"POP10_Technical_Office_Support_Followup.pdf\".",
+    "retrieved": [
+      "POP10_Technical_Office_Support_Followup.pdf",
+      "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+      "PQD09_Management_Leadership_and_Commitment.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 78.34568480000053,
+    "total_s": 78.36163879999913
+  },
+  {
+    "id": "POP11-1",
+    "type": "form_lookup",
+    "doc": "POP11_El_Sadat_Factory_Production_Process.pdf",
+    "question": "Which form is the Production Factory Plan?",
+    "answer": "The form for the Production Factory Plan is **F-P-OP-11-01**. This is cited in the document **POP11_El_Sadat_Factory_Production_Process.pdf**.",
+    "retrieved": [
+      "POP11_El_Sadat_Factory_Production_Process.pdf",
+      "POP11_El_Sadat_Factory_Production_Process.pdf",
+      "POP11_El_Sadat_Factory_Production_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-OP-11-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 33.00617919999968,
+    "total_s": 33.02259989999948
+  },
+  {
+    "id": "PPC01-2",
+    "type": "fact",
+    "doc": "PPC01_Planning_Cost_Control_Process.pdf",
+    "question": "How often must the action plan be updated and sent to concerned parties?",
+    "answer": "The action plan must be updated weekly and sent to the concerned parties. (Doc. filename: PPC01_Planning_Cost_Control_Process.pdf)",
+    "retrieved": [
+      "PPC01_Planning_Cost_Control_Process.pdf",
+      "PTN02_Project_Launching_Process.pdf",
+      "PQD05_Risk_Assessment_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 26.934759800000393,
+    "total_s": 26.95865440000125
+  },
+  {
+    "id": "PPC02-1",
+    "type": "form_lookup",
+    "doc": "PPC02_Staff_Hiring_Plan_Process.pdf",
+    "question": "Which form is the Organizational Staff Plan?",
+    "answer": "The Organizational Staff Plan is form F-P-PC-02-01. (PPC02_Staff_Hiring_Plan_Process.pdf)",
+    "retrieved": [
+      "PPC02_Staff_Hiring_Plan_Process.pdf",
+      "PPC02_Staff_Hiring_Plan_Process.pdf",
+      "PPC02_Staff_Hiring_Plan_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-PC-02-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 23.61812859999918,
+    "total_s": 23.639979599998696
+  },
+  {
+    "id": "PPR02-2",
+    "type": "fact",
+    "doc": "PPR02_Evaluation_of_External_Providers.pdf",
+    "question": "How are new or nominated vendors identified?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+      "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+      "PVMO01_Vendor_selection_and_Bidding_Process.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "tax"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 11.006742499999746,
+    "total_s": 11.02131599999484
+  },
+  {
+    "id": "PPU01-1",
+    "type": "form_lookup",
+    "doc": "PPU01_Purchasing_Process.pdf",
+    "question": "Which form is the Purchasing Approval Authority Matrix?",
+    "answer": "The Purchasing Approval Authority Matrix is referenced in the document **PPU01_Purchasing_Process.pdf** with the form number **F-P-PU-01-07**.",
+    "retrieved": [
+      "PPU01_Purchasing_Process.pdf",
+      "PPU01_Purchasing_Process.pdf",
+      "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-PU-01-07"
+    ],
+    "vlm_sources": [],
+    "generation_s": 82.03165119999903,
+    "total_s": 82.04906800000026
+  },
+  {
+    "id": "PQD01-2",
+    "type": "role_lookup",
+    "doc": "PQD01_Internal_Audit_Process.pdf",
+    "question": "Who reviews and approves the internal audit program?",
+    "answer": "The internal audit program is reviewed and approved by the COO. (Doc. No.: P-QD-01)",
+    "retrieved": [
+      "PQD01_Internal_Audit_Process.pdf",
+      "PQD01_Internal_Audit_Process.pdf",
+      "Quality_Manual_2026.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 35.18764330000158,
+    "total_s": 35.20943360000274
+  },
+  {
+    "id": "PQD01-3",
+    "type": "definition",
+    "doc": "PQD01_Internal_Audit_Process.pdf",
+    "question": "How does the internal audit process define an audit?",
+    "answer": "The internal audit process defines an audit as a systematic documented and independent verification of the Quality System to determine whether or not the system is still in compliance with the requirement of the Quality Management System (PQD01_Internal_Audit_Process.pdf).",
+    "retrieved": [
+      "PQD01_Internal_Audit_Process.pdf",
+      "PQD01_Internal_Audit_Process.pdf",
+      "PQD01_Internal_Audit_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 11.360588000001371,
+    "total_s": 11.381900100002895
+  },
+  {
+    "id": "PQD02-1",
+    "type": "form_lookup",
+    "doc": "PQD02_Control_of_NonConformity_Process.pdf",
+    "question": "Which form is the Site NCR?",
+    "answer": "The Site NCR form is F-P-QD-02-02. (Doc filename: PQD02_Control_of_NonConformity_Process.pdf)",
+    "retrieved": [
+      "PQD02_Control_of_NonConformity_Process.pdf",
+      "PQD02_Control_of_NonConformity_Process.pdf",
+      "PQD07_Control_of_Production.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-QD-02-02"
+    ],
+    "vlm_sources": [],
+    "generation_s": 26.266736199999286,
+    "total_s": 26.2837834999973
+  },
+  {
+    "id": "PQD03-1",
+    "type": "form_lookup",
+    "doc": "PQD03_Control_of_Measuring_Devices_Process.pdf",
+    "question": "Which form is the Measuring Equipment Calibration Log?",
+    "answer": "The Measuring Equipment Calibration Log is form F-P-QD-03-01, as specified in the document \"PQD03_Control_of_Measuring_Devices_Process.pdf\".",
+    "retrieved": [
+      "PQD03_Control_of_Measuring_Devices_Process.pdf",
+      "PQD03_Control_of_Measuring_Devices_Process.pdf",
+      "PQD03_Control_of_Measuring_Devices_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-QD-03-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 16.43304419999913,
+    "total_s": 16.45167660000152
+  },
+  {
+    "id": "PQD07-1",
+    "type": "form_lookup",
+    "doc": "PQD07_Control_of_Production.pdf",
+    "question": "Which form is the Internal Inspection Request?",
+    "answer": "The Internal Inspection Request is referred to as IIR. This is specified in the document \"PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf\".",
+    "retrieved": [
+      "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+      "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+      "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "F-P-QD-07-02"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 14.27428830000099,
+    "total_s": 14.290744500001892
+  },
+  {
+    "id": "PQD08-2",
+    "type": "definition",
+    "doc": "PQD08_Control_of_Records_Filing_Archiving_and_Backup_Process.pdf",
+    "question": "What does DC stand for in the records control process?",
+    "answer": "DC stands for Document Controller in the records control process. (PQD08_Control_of_Records_Filing_Archiving_and_Backup_Process.pdf)",
+    "retrieved": [
+      "PQD08_Control_of_Records_Filing_Archiving_and_Backup_Process.pdf",
+      "PQD08_Control_of_Records_Filing_Archiving_and_Backup_Process.pdf",
+      "MHR20_Employees_Performance_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 20.387458199998946,
+    "total_s": 20.407747599994764
+  },
+  {
+    "id": "PQD09-2",
+    "type": "role_lookup",
+    "doc": "PQD09_Management_Leadership_and_Commitment.pdf",
+    "question": "Who distributes and explains the Quality Policy after it is issued or changed?",
+    "answer": "QA distributes and explains the Quality Policy after it is issued or changed. This is specified in the document \"PQD09_Management_Leadership_and_Commitment.pdf\".",
+    "retrieved": [
+      "PQD09_Management_Leadership_and_Commitment.pdf",
+      "Quality_Manual_2026.pdf",
+      "Quality_Manual_2026.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 18.528217199998835,
+    "total_s": 18.556011299997408
+  },
+  {
+    "id": "PQD11-1",
+    "type": "form_lookup",
+    "doc": "PQD11_Material_Inspection_Process.pdf",
+    "question": "Which form is the MIR Log?",
+    "answer": "The MIR Log is form F-P-QD-11-01. (PQD11_Material_Inspection_Process.pdf)",
+    "retrieved": [
+      "PQD11_Material_Inspection_Process.pdf",
+      "PQD11_Material_Inspection_Process.pdf",
+      "PQD11_Material_Inspection_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-QD-11-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 14.82544179999968,
+    "total_s": 14.844274900000528
+  },
+  {
+    "id": "PSE01-1",
+    "type": "role_lookup",
+    "doc": "PSE01_RME_SelfExecution_Process.pdf",
+    "question": "Who sends the approved and signed Work Completed Status form to the Site Technical Office, and after whose approval?",
+    "answer": "The CM sends the approved and signed Work Completed Status form to the Site Technical Office after the PM's approval. This is specified in the document \"POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf\".",
+    "retrieved": [
+      "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+      "S-C Work Completed Status - TO Work Completed Status.pdf",
+      "S-C Work Completed Status - Site Work Completed Status.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "S-C Work Completed Status - TO Work Completed Status.pdf",
+      "S-C Work Completed Status - Site Work Completed Status.pdf"
+    ],
+    "generation_s": 52.47571990000142,
+    "total_s": 52.49995450000279
+  },
+  {
+    "id": "PTN01-2",
+    "type": "fact",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "What happens if the decision is not to proceed with a project study?",
+    "answer": "If the decision is not to proceed with a project study, the Commercial shall send a letter of apology to the client who sent the RFP/RFQ. (Doc. No.: P-TN-01)",
+    "retrieved": [
+      "PQD05_Risk_Assessment_Process.pdf",
+      "PTN01_Project_Initiation_Process.pdf",
+      "PTN01_Project_Initiation_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 31.67309849999947,
+    "total_s": 31.699361700000736
+  },
+  {
+    "id": "PTN01-3",
+    "type": "role_lookup",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "Who initiates the estimation process and assigns a Tender Coordinator?",
+    "answer": "The Tendering Manager initiates the estimation process and assigns a Tender Coordinator. (Doc. filename: PTN01_Project_Initiation_Process.pdf)",
+    "retrieved": [
+      "PTN01_Project_Initiation_Process.pdf",
+      "Bid Closing & Approval Internal Process - WF.pdf",
+      "PTN01_Project_Initiation_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "Bid Closing & Approval Internal Process - WF.pdf"
+    ],
+    "generation_s": 26.46153620000041,
+    "total_s": 26.483107000001837
+  },
+  {
+    "id": "PVMO01-1",
+    "type": "form_lookup",
+    "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+    "question": "Which form is the Project Sourcing Strategy?",
+    "answer": "The form for the Project Sourcing Strategy is **F-P-TN-02-04**.  \nReference: [PVMO01_Vendor_selection_and_Bidding_Process.pdf | PROCESS OPERATION] (Step 6).",
+    "retrieved": [
+      "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+      "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+      "PVMO02_Procurement_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": false,
+    "missing": [
+      "F-P-TN-02-05"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-TN-02-04"
+    ],
+    "vlm_sources": [],
+    "generation_s": 65.89740509999865,
+    "total_s": 65.91772139999739
+  },
+  {
+    "id": "PVMO02-1",
+    "type": "form_lookup",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "Which form is the Procurement Approval Authority Matrix?",
+    "answer": "The form referred to as the Procurement Approval Authority Matrix is \"F-P-VMO-01-07.\" This is cited in the document \"PVMO02_Procurement_Process.pdf.\"",
+    "retrieved": [
+      "PVMO02_Procurement_Process.pdf",
+      "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+      "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-VMO-01-07"
+    ],
+    "vlm_sources": [
+      "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+      "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf"
+    ],
+    "generation_s": 54.53415169999971,
+    "total_s": 54.55129699999816
+  },
+  {
+    "id": "QM-1",
+    "type": "definition",
+    "doc": "Quality_Manual_2026.pdf",
+    "question": "What does SWOT analysis stand for in the Quality Manual?",
+    "answer": "SWOT analysis stands for Strengths, weaknesses, opportunities, and threats. This is specified in the \"TERMS AND DEFINITIONS\" section of the Quality Manual (Doc. No.: QM-01).",
+    "retrieved": [
+      "Quality_Manual_2026.pdf",
+      "Quality_Manual_2026.pdf",
+      "Quality_Manual_2026.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 23.112153899999612,
+    "total_s": 23.128451299997323
+  },
+  {
+    "id": "XDOC-1",
+    "type": "fact_crossdoc",
+    "doc": "PQD05_Risk_Assessment_Process.pdf",
+    "question": "Several processes say risks are recorded on a risk identification and assessment form maintained by the HoD. Which form number is that?",
+    "answer": "The form number is F-P-QD-05-01. This is specified in the documents PQD05_Risk_Assessment_Process.pdf, PCN02_Claim_Process.pdf, and PEN01_Engineering_Process.pdf.",
+    "retrieved": [
+      "PQD05_Risk_Assessment_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "PEN01_Engineering_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-QD-05-01"
+    ],
+    "vlm_sources": [],
+    "generation_s": 13.64873179999995,
+    "total_s": 13.676836900001945
+  },
+  {
+    "id": "XDOC-2",
+    "type": "fact_crossdoc",
+    "doc": "PQD06_Control_of_Documents_Communication_Process.pdf",
+    "question": "Many processes reference a MOM form. Which form number is the Minutes of Meeting form?",
+    "answer": "The Minutes of Meeting (MOM) form number is **F-P-QD-06-02**. This is specified in the document **PQD06_Control_of_Documents_Communication_Process.pdf**.",
+    "retrieved": [
+      "PQD06_Control_of_Documents_Communication_Process.pdf",
+      "PQD06_Control_of_Documents_Communication_Process.pdf",
+      "PQD09_Management_Leadership_and_Commitment.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [
+      "F-P-QD-06-02"
+    ],
+    "vlm_sources": [],
+    "generation_s": 43.00163060000159,
+    "total_s": 43.02530200000183
+  },
+  {
+    "id": "NONE-1",
+    "type": "unanswerable",
+    "doc": "none",
+    "question": "What is RME's dividend policy for shareholders?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "PIT01_Information_Technology.pdf"
+    ],
+    "retrieval_hit": null,
+    "answer_hit": null,
+    "missing": null,
+    "refused": true,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 17.550559299999804,
+    "total_s": 17.56524580000041
+  },
+  {
+    "id": "NONE-2",
+    "type": "unanswerable",
+    "doc": "none",
+    "question": "How many employees does Rowad Modern Engineering currently have?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "MHR16_Employee_Separation_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf"
+    ],
+    "retrieval_hit": null,
+    "answer_hit": null,
+    "missing": null,
+    "refused": true,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 6.360165300000517,
+    "total_s": 6.377133500003765
+  },
+  {
+    "id": "NONE-3",
+    "type": "unanswerable",
+    "doc": "none",
+    "question": "What is the company's revenue for the 2025 financial year?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf"
+    ],
+    "retrieval_hit": null,
+    "answer_hit": null,
+    "missing": null,
+    "refused": true,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 31.876389799999743,
+    "total_s": 31.892005500001687
+  },
+  {
+    "id": "NONE-4",
+    "type": "unanswerable",
+    "doc": "none",
+    "question": "Which brand of tower crane does RME use on its Damietta project?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PQD02_Control_of_NonConformity_Process.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "PCN02_Claim_Process.pdf"
+    ],
+    "retrieval_hit": null,
+    "answer_hit": null,
+    "missing": null,
+    "refused": true,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 36.07195740000134,
+    "total_s": 36.0979780000016
+  },
+  {
+    "id": "NONE-5",
+    "type": "unanswerable",
+    "doc": "none",
+    "question": "What is the WiFi password at the head office?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR16_Employee_Separation_Policy.pdf",
+      "MHR01_Main_Head_Office_Policy_Procedures.pdf",
+      "MHR06_Head_Office_Dress_Code_Policy.pdf"
+    ],
+    "retrieval_hit": null,
+    "answer_hit": null,
+    "missing": null,
+    "refused": true,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 15.141607899999144,
+    "total_s": 15.15353800000048
+  },
+  {
+    "id": "NONE-6",
+    "type": "unanswerable",
+    "doc": "none",
+    "question": "Who won the tender for the new Cairo metro line?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+      "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf"
+    ],
+    "retrieval_hit": null,
+    "answer_hit": null,
+    "missing": null,
+    "refused": true,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 8.187600900000689,
+    "total_s": 8.210177899998598
+  },
+  {
+    "id": "NONE-7",
+    "type": "unanswerable",
+    "doc": "none",
+    "question": "What is the melting point of the steel used in RME formwork?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PFW01_Formwork_Process.pdf",
+      "PSE01_RME_SelfExecution_Process.pdf",
+      "POP01_Subcontractor_Management_Process.pdf"
+    ],
+    "retrieval_hit": null,
+    "answer_hit": null,
+    "missing": null,
+    "refused": true,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 21.228189200000998,
+    "total_s": 21.25053250000019
+  },
+  {
+    "id": "NONE-8",
+    "type": "unanswerable",
+    "doc": "none",
+    "question": "How much annual leave do employees get in the Qatar branch?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf"
+    ],
+    "retrieval_hit": null,
+    "answer_hit": null,
+    "missing": null,
+    "refused": true,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 38.40797670000029,
+    "total_s": 38.429328899999746
+  },
+  {
+    "id": "MHR01-1",
+    "type": "role_lookup",
+    "doc": "MHR01_Main_Head_Office_Policy_Procedures.pdf",
+    "question": "Who must approve any change to the head office seating plan?",
+    "answer": "The Admin department must approve any change to the head office seating plan. (Doc: MHR01_Main_Head_Office_Policy_Procedures.pdf)",
+    "retrieved": [
+      "MHR01_Main_Head_Office_Policy_Procedures.pdf",
+      "MHR22_Company_Car_Transportation_Allowance_Policy.pdf",
+      "MHR20_Local_Transfer_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 20.848847600000227,
+    "total_s": 20.869090199998027
+  },
+  {
+    "id": "MHR03-1",
+    "type": "numeric",
+    "doc": "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+    "question": "How early must users be at the meeting point before the scheduled bus pick-up time?",
+    "answer": "Users must be at the meeting point at least five minutes before the scheduled pick-up time. (MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf)",
+    "retrieved": [
+      "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+      "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+      "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 20.943108999999822,
+    "total_s": 20.968120599998656
+  },
+  {
+    "id": "MHR03-2",
+    "type": "numeric",
+    "doc": "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+    "question": "How many supervisors does Administration appoint from the passengers of each bus?",
+    "answer": "The Administration appoints 2 supervisors from the passengers of each bus. (Doc filename: MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf)",
+    "retrieved": [
+      "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+      "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+      "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 23.272711300000083,
+    "total_s": 23.293459000002258
+  },
+  {
+    "id": "MHR05-1",
+    "type": "fact",
+    "doc": "MHR05_HQ_Cafeteria_Services_Office_Support_Team_s_Role_Policy.pdf",
+    "question": "Who is exempt from picking up drinks and food personally from the cafeteria?",
+    "answer": "Department managers are exempt from picking up drinks and food personally from the cafeteria. (MHR05_HQ_Cafeteria_Services_Office_Support_Team_s_Role_Policy.pdf)",
+    "retrieved": [
+      "MHR05_HQ_Cafeteria_Services_Office_Support_Team_s_Role_Policy.pdf",
+      "MHR05_HQ_Cafeteria_Services_Office_Support_Team_s_Role_Policy.pdf",
+      "MHR05_HQ_Cafeteria_Services_Office_Support_Team_s_Role_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 22.11636759999965,
+    "total_s": 22.1355491000013
+  },
+  {
+    "id": "PHR03-1",
+    "type": "role_lookup",
+    "doc": "PHR03_Safe_Work_Environment_Policy.pdf",
+    "question": "Who is the harassment victim invited to meet under the safe work environment policy?",
+    "answer": "The harassment victim is invited to meet with the human resources committee. This is stated in the document PHR03_Safe_Work_Environment_Policy.pdf.",
+    "retrieved": [
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 113.45399220000036,
+    "total_s": 113.47848299999896
+  },
+  {
+    "id": "POP01-1",
+    "type": "fact",
+    "doc": "POP01_Subcontractor_Management_Process.pdf",
+    "question": "How often must the RME safety officer hold Toolbox Talks for subcontractors?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "PCN01_Subcontract_Agreement_Process.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "Toolbox Talks"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 25.000624599999355,
+    "total_s": 25.020990099998016
+  },
+  {
+    "id": "PPC03-1",
+    "type": "numeric",
+    "doc": "PPC03_Projects_Reward_Scheme_Process.pdf",
+    "question": "For a project with special conditions scoring below 70%, what is the maximum reward that can be released and who decides?",
+    "answer": "For a project with special conditions scoring below 70%, the maximum reward that can be released is 0.50-month reward, and the decision is made by OM or COO. (Doc. No.: P-PC-03)",
+    "retrieved": [
+      "PPC03_Projects_Reward_Scheme_Process.pdf",
+      "PPC03_Projects_Reward_Scheme_Process.pdf",
+      "PPC03_Projects_Reward_Scheme_Process.pdf"
+    ],
+    "retrieval_hit": true,
+    "answer_hit": true,
+    "missing": [],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [],
+    "generation_s": 26.98894459999974,
+    "total_s": 27.016279000001305
+  },
+  {
+    "id": "PTN02-1",
+    "type": "numeric",
+    "doc": "PTN02_Project_Launching_Process.pdf",
+    "question": "Within how long from signing the contract must subcontract templates be modified and sent to Operation and VMO?",
+    "answer": "Not specified in these process documents.",
+    "retrieved": [
+      "PCN01_Subcontract_Agreement_Process.pdf",
+      "PCN01_Subcontract_Agreement_Process.pdf",
+      "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf"
+    ],
+    "retrieval_hit": false,
+    "answer_hit": false,
+    "missing": [
+      "45 days"
+    ],
+    "refused": null,
+    "validator": "clean",
+    "unknown_forms": [],
+    "cited_forms": [],
+    "vlm_sources": [
+      "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf"
+    ],
+    "generation_s": 48.515108199999304,
+    "total_s": 48.54438979999759
+  }
+]

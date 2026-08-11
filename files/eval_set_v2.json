@@ -1,0 +1,1088 @@
+[
+  {
+    "id": "MHR04-1",
+    "doc": "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+    "question": "Within how long after an incident must an employee file a written complaint with the HR Office under the DE&I policy?",
+    "expected_answer": "Within 14 days after the event or problem occurrence.",
+    "must_include": [
+      "14 days"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR04-2",
+    "doc": "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+    "question": "How long does the HR Manager have to conduct an investigation and hearing after a DE&I complaint is filed?",
+    "expected_answer": "Within 7 days after filing.",
+    "must_include": [
+      "7 days"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR07-1",
+    "doc": "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+    "question": "Which form is used to terminate a casual worker when drug abuse, theft or unethical acts are proved?",
+    "expected_answer": "The Termination notice, F-M-HR-07-05.",
+    "must_include": [
+      "F-M-HR-07-05"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "MHR07-2",
+    "doc": "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+    "question": "What is the maximum overtime for indirect casual labor per period?",
+    "expected_answer": "A maximum of 52 hours per period.",
+    "must_include": [
+      "52 hours"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR08-1",
+    "doc": "MHR08_Accommodation_Policy.pdf",
+    "question": "What is the maximum increase allowed on accommodation contract renewals?",
+    "expected_answer": "A maximum of 10%.",
+    "must_include": [
+      "10%"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR08-2",
+    "doc": "MHR08_Accommodation_Policy.pdf",
+    "question": "By when must the original water, gas and electricity bills for the previous month be sent?",
+    "expected_answer": "Within the first 5 days of the new month.",
+    "must_include": [
+      "5 days"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR10-1",
+    "doc": "MHR10_Code_of_Conduct_Policy.pdf",
+    "question": "Which form records a violation of the Code of Conduct policy?",
+    "expected_answer": "The Employee Misconduct Record, F-M-HR-10-02.",
+    "must_include": [
+      "F-M-HR-10-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "MHR11-1",
+    "doc": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+    "question": "Within how many hours must the initial incident report be sent, and which form is it?",
+    "expected_answer": "Within 24 hours, using form F-P-SF-01-01.",
+    "must_include": [
+      "24 hours",
+      "F-P-SF-01-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "MHR11-2",
+    "doc": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+    "question": "Who sends the initial incident report and to whom?",
+    "expected_answer": "The Project HSE Manager sends it to the Operation Manager, COO, HR Manager and Head Office.",
+    "must_include": [
+      "HSE Manager"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "MHR12-1",
+    "doc": "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+    "question": "Which projects pay an annual bonus based on personal performance under the French-Speaking Sub-Saharan Africa policy?",
+    "expected_answer": "Projects with a duration of more than one year.",
+    "must_include": [
+      "annual bonus"
+    ],
+    "type": "fact",
+    "review": "machine"
+  },
+  {
+    "id": "MHR13-1",
+    "doc": "MHR13_C_A_R_E_Policy.pdf",
+    "question": "How long does the HR Manager have to review and approve the Committee's recommendations after the investigation closes under the C.A.R.E policy?",
+    "expected_answer": "Within 7 days after closing of the investigation and hearing.",
+    "must_include": [
+      "7 days"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR14-1",
+    "doc": "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+    "question": "Which form does a Direct Manager submit to request a promotion?",
+    "expected_answer": "The Promotion Request, F-M-HR-14-06.",
+    "must_include": [
+      "F-M-HR-14-06"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "MHR14-2",
+    "doc": "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+    "question": "What is the minimum length of service required to be eligible for promotion?",
+    "expected_answer": "A minimum of one year of service, with no warnings or disciplinary actions.",
+    "must_include": [
+      "one year"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR14-3",
+    "doc": "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+    "question": "What does 'Fast-tracked' mean in the promotion policy?",
+    "expected_answer": "Employees identified as High Potential / Key Talent who are accelerated on the relevant ladder.",
+    "must_include": [
+      "accelerated"
+    ],
+    "type": "definition",
+    "review": "machine"
+  },
+  {
+    "id": "MHR16-1",
+    "doc": "MHR16_Employee_Separation_Policy.pdf",
+    "question": "Which form is used to submit a written resignation?",
+    "expected_answer": "The resignation request form, F-M-HR-16-01.",
+    "must_include": [
+      "F-M-HR-16-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "MHR16-2",
+    "doc": "MHR16_Employee_Separation_Policy.pdf",
+    "question": "Within how long must the Talent Acquisition Team schedule an exit interview after receiving a resignation?",
+    "expected_answer": "Within 48 hours from receiving the resignation request.",
+    "must_include": [
+      "48 hours"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR16-3",
+    "doc": "MHR16_Employee_Separation_Policy.pdf",
+    "question": "What notice period must a resigning employee with five or more years of service give?",
+    "expected_answer": "Not less than two months' notice.",
+    "must_include": [
+      "two months"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR17-1",
+    "doc": "MHR17_KSA_Branch_Policy.pdf",
+    "question": "How much Umrah leave are employees entitled to under the KSA branch policy, and how often?",
+    "expected_answer": "Paid leave of 2 days, renewed every 2 years.",
+    "must_include": [
+      "2 days"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR17-2",
+    "doc": "MHR17_KSA_Branch_Policy.pdf",
+    "question": "What is the maximum salary advance under the KSA branch policy?",
+    "expected_answer": "Not more than 50% of the basic salary.",
+    "must_include": [
+      "50%"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR18-1",
+    "doc": "MHR18_UAE_Branch_Policy.pdf",
+    "question": "For how long does the company provide accommodation to newly joined employees arriving in the UAE?",
+    "expected_answer": "A maximum of one month, or until completion of their residency.",
+    "must_include": [
+      "one month"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR18-2",
+    "doc": "MHR18_UAE_Branch_Policy.pdf",
+    "question": "After how long can UAE employees use their annual vacation balance?",
+    "expected_answer": "After 6 months from joining the company.",
+    "must_include": [
+      "6 months"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR19-1",
+    "doc": "MHR19_Internship_Policy.pdf",
+    "question": "Which form is the internship agreement?",
+    "expected_answer": "F-M-HR-19-02.",
+    "must_include": [
+      "F-M-HR-19-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "MHR19-2",
+    "doc": "MHR19_Internship_Policy.pdf",
+    "question": "How many hours per week does a part-time internship require?",
+    "expected_answer": "20 hours per week.",
+    "must_include": [
+      "20 hours"
+    ],
+    "type": "definition",
+    "review": "machine"
+  },
+  {
+    "id": "MHR19-3",
+    "doc": "MHR19_Internship_Policy.pdf",
+    "question": "How often is the internship grant rate reviewed and approved, and by whom?",
+    "expected_answer": "Every 6 months by the HR manager.",
+    "must_include": [
+      "6 months"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR20P-1",
+    "doc": "MHR20_Employees_Performance_Policy.pdf",
+    "question": "How soon after each quarter closes must performance results be communicated to employees via HITS?",
+    "expected_answer": "Within a maximum of one month after the closing of each quarter.",
+    "must_include": [
+      "one month"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR20P-2",
+    "doc": "MHR20_Employees_Performance_Policy.pdf",
+    "question": "What minimum service is needed for annual performance increments to apply?",
+    "expected_answer": "A minimum of 3 months in service.",
+    "must_include": [
+      "3 months"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR20T-1",
+    "doc": "MHR20_Local_Transfer_Policy.pdf",
+    "question": "Which form does the initiator submit to start a local transfer?",
+    "expected_answer": "The Local Transfer Request, F-M-HR-20-01.",
+    "must_include": [
+      "F-M-HR-20-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "MHR20T-2",
+    "doc": "MHR20_Local_Transfer_Policy.pdf",
+    "question": "What is a 'Local Mission' and what is its maximum duration?",
+    "expected_answer": "A temporary official assignment for company purposes, not exceeding 6 weeks.",
+    "must_include": [
+      "6 weeks"
+    ],
+    "type": "definition",
+    "review": "machine"
+  },
+  {
+    "id": "MHR22-1",
+    "doc": "MHR22_Company_Car_Transportation_Allowance_Policy.pdf",
+    "question": "Which form does an employee submit to request a company car?",
+    "expected_answer": "The Company Car Request form, F-P-LO-01-01.",
+    "must_include": [
+      "F-P-LO-01-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PCM01-3",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
+    "question": "Who prepares the analysis report for all customer satisfaction surveys received?",
+    "expected_answer": "The QA Manager.",
+    "must_include": [
+      "QA Manager"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PCM02-2",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+    "question": "What does Marcom stand for in the branding process?",
+    "expected_answer": "Marketing & Communication.",
+    "must_include": [
+      "Marketing"
+    ],
+    "type": "definition",
+    "review": "machine"
+  },
+  {
+    "id": "PCN01-2",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "How long does the Technical Office have to collect the requested documents to finalise the subcontract agreement?",
+    "expected_answer": "Within two weeks from the conducted meeting.",
+    "must_include": [
+      "two weeks"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PCN01-3",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "If the PM receives a nomination letter from the client after the awarding phase, how quickly must it be forwarded?",
+    "expected_answer": "Within 24 hours, to Contracts, Finance and Procurement/MEP/H.O. TO.",
+    "must_include": [
+      "24 hours"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PCN02-2",
+    "doc": "PCN02_Claim_Process.pdf",
+    "question": "What does EOT stand for in the claim process?",
+    "expected_answer": "Extension of Time.",
+    "must_include": [
+      "Extension of"
+    ],
+    "type": "definition",
+    "review": "machine"
+  },
+  {
+    "id": "PCN02-3",
+    "doc": "PCN02_Claim_Process.pdf",
+    "question": "Within how long must concerned parties provide additional information requested during a claim?",
+    "expected_answer": "Within 3 days from the requested date.",
+    "must_include": [
+      "3 days"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PEN01-2",
+    "doc": "PEN01_Engineering_Process.pdf",
+    "question": "How long after trade handover must the Engineering department issue the as-built?",
+    "expected_answer": "Within one month from the trade handover.",
+    "must_include": [
+      "one month"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PEQ01-2",
+    "doc": "PEQ01_Equipment_Management_Process.pdf",
+    "question": "Who decides whether to rent or buy equipment?",
+    "expected_answer": "The EDM (Equipment Department Manager), after discussion.",
+    "must_include": [
+      "EDM"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PEQ01-3",
+    "doc": "PEQ01_Equipment_Management_Process.pdf",
+    "question": "Within how long must the warehouse approve the PR after the EDM's approval?",
+    "expected_answer": "Within 24 hours after EDM's approval.",
+    "must_include": [
+      "24 hours"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PFN01-2",
+    "doc": "PFN01_Material_Control_Process.pdf",
+    "question": "How long does the committee have to submit and sign the physical inventory report?",
+    "expected_answer": "Within 48 hours from the physical inventory ending date.",
+    "must_include": [
+      "48 hours"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PFN01-3",
+    "doc": "PFN01_Material_Control_Process.pdf",
+    "question": "What is the time frame for preparing the QS for normal versus fast-track projects?",
+    "expected_answer": "Within a month for normal projects and two weeks for fast-track projects.",
+    "must_include": [
+      "two weeks"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PFN02-1",
+    "doc": "PFN02_Overseas_Petty_Cash_Process.pdf",
+    "question": "Which form is the Cash Fund Settlement used in the overseas petty cash process?",
+    "expected_answer": "F-P-HR-04-03",
+    "must_include": [
+      "F-P-HR-04-03"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PFN03-2",
+    "doc": "PFN03_Overseas_Payment_Release_Process.pdf",
+    "question": "What happens to payments not included in the approved Biweekly Payment List?",
+    "expected_answer": "They are automatically deferred to the next cycle.",
+    "must_include": [
+      "deferred"
+    ],
+    "type": "fact",
+    "review": "machine"
+  },
+  {
+    "id": "PFW01-2",
+    "doc": "PFW01_Formwork_Process.pdf",
+    "question": "Within how long after the tender handover meeting must Formwork meet the PM/CM?",
+    "expected_answer": "Within two weeks from the tender handover meeting.",
+    "must_include": [
+      "two weeks"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PHR01-2",
+    "doc": "PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf",
+    "question": "How long does MPTA have to submit the salary scale after receiving the Organization Staff Plan?",
+    "expected_answer": "After one week from receiving the Organization Staff Plan.",
+    "must_include": [
+      "one week"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PHR02-1",
+    "doc": "PHR02_Learning_Development_Process.pdf",
+    "question": "What minimum attendance is required for each assigned training session?",
+    "expected_answer": "At least 75% of each assigned training session.",
+    "must_include": [
+      "75%"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PHR02-2",
+    "doc": "PHR02_Learning_Development_Process.pdf",
+    "question": "What does IDP stand for in the Learning & Development process?",
+    "expected_answer": "Individual Development Plan.",
+    "must_include": [
+      "Individual Development Plan"
+    ],
+    "type": "definition",
+    "review": "machine"
+  },
+  {
+    "id": "PHR04-2",
+    "doc": "PHR04_Overseas_Business_Travel_Process.pdf",
+    "question": "When are Top Management entitled to business-class flights?",
+    "expected_answer": "Only for flights exceeding 5 hours in duration.",
+    "must_include": [
+      "5 hours"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PHR04-3",
+    "doc": "PHR04_Overseas_Business_Travel_Process.pdf",
+    "question": "For how many days maximum does staff receive per-diem compensation per trip or country?",
+    "expected_answer": "A maximum of 30 days.",
+    "must_include": [
+      "30 days"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PHR05-1",
+    "doc": "PHR05_KSA_Hiring_Process.pdf",
+    "question": "Which form is the KSA Hiring Table?",
+    "expected_answer": "F-P-HR-05-02",
+    "must_include": [
+      "F-P-HR-05-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PHR06-1",
+    "doc": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+    "question": "After how long must direct casual labor be evaluated?",
+    "expected_answer": "After 3 months of hiring.",
+    "must_include": [
+      "3 months"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PHR06-2",
+    "doc": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+    "question": "Who must sign requests for hiring direct casual labor?",
+    "expected_answer": "The Construction Manager and the Project Manager.",
+    "must_include": [
+      "Construction Manager"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PIT01-1",
+    "doc": "PIT01_Information_Technology.pdf",
+    "question": "How often is the IT price list updated?",
+    "expected_answer": "Every 3-6 months, based on market price changes.",
+    "must_include": [
+      "3-6"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PLO01-1",
+    "doc": "PLO01_Logistics_Process.pdf",
+    "question": "What is the maximum loading/unloading time for rented trucks versus company-owned trucks?",
+    "expected_answer": "4 hours for rented trucks and 2 hours for company owned trucks.",
+    "must_include": [
+      "4 hours",
+      "2 hours"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PMSE01-2",
+    "doc": "PMSE01_MSE_Project_Process.pdf",
+    "question": "Who takes the final decision on whether to proceed with an MSE project?",
+    "expected_answer": "The VP, after the MSE Manager sends the project summary.",
+    "must_include": [
+      "VP"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "POP02-1",
+    "doc": "POP02_Variation_Order_Process.pdf",
+    "question": "Within how long must the PCE submit the time impact study to the Contract Department?",
+    "expected_answer": "Within 5 days.",
+    "must_include": [
+      "5 days"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "POP03-1",
+    "doc": "POP03_Direct_Award_Projects_Process.pdf",
+    "question": "Which form is the initial project budget form for direct award projects?",
+    "expected_answer": "F-P-OP-03-01",
+    "must_include": [
+      "F-P-OP-03-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "POP04-1",
+    "doc": "POP04_Request_for_Information_Process.pdf",
+    "question": "Which form is the RFI Log?",
+    "expected_answer": "F-P-OP-04-01",
+    "must_include": [
+      "F-P-OP-04-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "POP05-2",
+    "doc": "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+    "question": "Who reviews and approves the work completed status?",
+    "expected_answer": "The CM and the PM.",
+    "must_include": [
+      "PM"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "POP06-1",
+    "doc": "POP06_Client_Invoicing_Process.pdf",
+    "question": "Which form is the IPC in the client invoicing process?",
+    "expected_answer": "F-P-OP-06-01",
+    "must_include": [
+      "F-P-OP-06-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "POP07-2",
+    "doc": "POP07_Project_Closeout_Process.pdf",
+    "question": "Who prepares the demobilization plan at project closeout?",
+    "expected_answer": "The PM.",
+    "must_include": [
+      "PM"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "POP08-1",
+    "doc": "POP08_Concrete_Pouring_Process.pdf",
+    "question": "Which form is the Concrete Pouring Plan?",
+    "expected_answer": "F-P-OP-08-04",
+    "must_include": [
+      "F-P-OP-08-04"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "POP09-1",
+    "doc": "POP09_Earthmoving_Process.pdf",
+    "question": "Which form is the EM Subcontract Template in the earthmoving process?",
+    "expected_answer": "F-P-OP-09-01",
+    "must_include": [
+      "F-P-OP-09-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "POP10-2",
+    "doc": "POP10_Technical_Office_Support_Followup.pdf",
+    "question": "How often must the QS-status be prepared and updated?",
+    "expected_answer": "Monthly, based on shop drawing versus contract BOQ.",
+    "must_include": [
+      "monthly"
+    ],
+    "type": "fact",
+    "review": "machine"
+  },
+  {
+    "id": "POP11-1",
+    "doc": "POP11_El_Sadat_Factory_Production_Process.pdf",
+    "question": "Which form is the Production Factory Plan?",
+    "expected_answer": "F-P-OP-11-01",
+    "must_include": [
+      "F-P-OP-11-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PPC01-2",
+    "doc": "PPC01_Planning_Cost_Control_Process.pdf",
+    "question": "How often must the action plan be updated and sent to concerned parties?",
+    "expected_answer": "Weekly.",
+    "must_include": [
+      "weekly"
+    ],
+    "type": "fact",
+    "review": "machine"
+  },
+  {
+    "id": "PPC02-1",
+    "doc": "PPC02_Staff_Hiring_Plan_Process.pdf",
+    "question": "Which form is the Organizational Staff Plan?",
+    "expected_answer": "F-P-PC-02-01",
+    "must_include": [
+      "F-P-PC-02-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PPR02-2",
+    "doc": "PPR02_Evaluation_of_External_Providers.pdf",
+    "question": "How are new or nominated vendors identified?",
+    "expected_answer": "Via the Rowad website, by their tax number.",
+    "must_include": [
+      "tax"
+    ],
+    "type": "fact",
+    "review": "machine"
+  },
+  {
+    "id": "PPU01-1",
+    "doc": "PPU01_Purchasing_Process.pdf",
+    "question": "Which form is the Purchasing Approval Authority Matrix?",
+    "expected_answer": "F-P-PU-01-07",
+    "must_include": [
+      "F-P-PU-01-07"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PQD01-2",
+    "doc": "PQD01_Internal_Audit_Process.pdf",
+    "question": "Who reviews and approves the internal audit program?",
+    "expected_answer": "The COO.",
+    "must_include": [
+      "COO"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PQD01-3",
+    "doc": "PQD01_Internal_Audit_Process.pdf",
+    "question": "How does the internal audit process define an audit?",
+    "expected_answer": "A systematic, documented and independent verification of the Quality System to determine whether it still complies with requirements.",
+    "must_include": [
+      "systematic"
+    ],
+    "type": "definition",
+    "review": "machine"
+  },
+  {
+    "id": "PQD02-1",
+    "doc": "PQD02_Control_of_NonConformity_Process.pdf",
+    "question": "Which form is the Site NCR?",
+    "expected_answer": "F-P-QD-02-02",
+    "must_include": [
+      "F-P-QD-02-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PQD03-1",
+    "doc": "PQD03_Control_of_Measuring_Devices_Process.pdf",
+    "question": "Which form is the Measuring Equipment Calibration Log?",
+    "expected_answer": "F-P-QD-03-01",
+    "must_include": [
+      "F-P-QD-03-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PQD07-1",
+    "doc": "PQD07_Control_of_Production.pdf",
+    "question": "Which form is the Internal Inspection Request?",
+    "expected_answer": "F-P-QD-07-02",
+    "must_include": [
+      "F-P-QD-07-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PQD08-2",
+    "doc": "PQD08_Control_of_Records_Filing_Archiving_and_Backup_Process.pdf",
+    "question": "What does DC stand for in the records control process?",
+    "expected_answer": "Document Controller.",
+    "must_include": [
+      "Document Controller"
+    ],
+    "type": "definition",
+    "review": "machine"
+  },
+  {
+    "id": "PQD09-2",
+    "doc": "PQD09_Management_Leadership_and_Commitment.pdf",
+    "question": "Who distributes and explains the Quality Policy after it is issued or changed?",
+    "expected_answer": "QA distributes it and explains it to all HoDs.",
+    "must_include": [
+      "QA"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PQD11-1",
+    "doc": "PQD11_Material_Inspection_Process.pdf",
+    "question": "Which form is the MIR Log?",
+    "expected_answer": "F-P-QD-11-01",
+    "must_include": [
+      "F-P-QD-11-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PSE01-1",
+    "doc": "PSE01_RME_SelfExecution_Process.pdf",
+    "question": "Who sends the approved and signed Work Completed Status form to the Site Technical Office, and after whose approval?",
+    "expected_answer": "The CM sends it after the PM's approval.",
+    "must_include": [
+      "CM"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PTN01-2",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "What happens if the decision is not to proceed with a project study?",
+    "expected_answer": "The Commercial department sends a letter of apology to the client who sent the RFP/RFQ.",
+    "must_include": [
+      "apology"
+    ],
+    "type": "fact",
+    "review": "machine"
+  },
+  {
+    "id": "PTN01-3",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "Who initiates the estimation process and assigns a Tender Coordinator?",
+    "expected_answer": "The Tendering Manager.",
+    "must_include": [
+      "Tendering Manager"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PVMO01-1",
+    "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+    "question": "Which form is the Project Sourcing Strategy?",
+    "expected_answer": "F-P-TN-02-05",
+    "must_include": [
+      "F-P-TN-02-05"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "PVMO02-1",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "Which form is the Procurement Approval Authority Matrix?",
+    "expected_answer": "F-P-VMO-01-07",
+    "must_include": [
+      "F-P-VMO-01-07"
+    ],
+    "type": "form_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "QM-1",
+    "doc": "Quality_Manual_2026.pdf",
+    "question": "What does SWOT analysis stand for in the Quality Manual?",
+    "expected_answer": "Strengths, weaknesses, opportunities and threats.",
+    "must_include": [
+      "Strengths"
+    ],
+    "type": "definition",
+    "review": "machine"
+  },
+  {
+    "id": "XDOC-1",
+    "doc": "PQD05_Risk_Assessment_Process.pdf",
+    "question": "Several processes say risks are recorded on a risk identification and assessment form maintained by the HoD. Which form number is that?",
+    "expected_answer": "F-P-QD-05-01, the Risk Register.",
+    "must_include": [
+      "F-P-QD-05-01"
+    ],
+    "type": "fact_crossdoc",
+    "review": "machine"
+  },
+  {
+    "id": "XDOC-2",
+    "doc": "PQD06_Control_of_Documents_Communication_Process.pdf",
+    "question": "Many processes reference a MOM form. Which form number is the Minutes of Meeting form?",
+    "expected_answer": "F-P-QD-06-02",
+    "must_include": [
+      "F-P-QD-06-02"
+    ],
+    "type": "fact_crossdoc",
+    "review": "machine"
+  },
+  {
+    "id": "NONE-1",
+    "doc": "none",
+    "question": "What is RME's dividend policy for shareholders?",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine"
+  },
+  {
+    "id": "NONE-2",
+    "doc": "none",
+    "question": "How many employees does Rowad Modern Engineering currently have?",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine"
+  },
+  {
+    "id": "NONE-3",
+    "doc": "none",
+    "question": "What is the company's revenue for the 2025 financial year?",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine"
+  },
+  {
+    "id": "NONE-4",
+    "doc": "none",
+    "question": "Which brand of tower crane does RME use on its Damietta project?",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine"
+  },
+  {
+    "id": "NONE-5",
+    "doc": "none",
+    "question": "What is the WiFi password at the head office?",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine"
+  },
+  {
+    "id": "NONE-6",
+    "doc": "none",
+    "question": "Who won the tender for the new Cairo metro line?",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine"
+  },
+  {
+    "id": "NONE-7",
+    "doc": "none",
+    "question": "What is the melting point of the steel used in RME formwork?",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine"
+  },
+  {
+    "id": "NONE-8",
+    "doc": "none",
+    "question": "How much annual leave do employees get in the Qatar branch?",
+    "expected_answer": "Not covered by these documents; the corpus has KSA and UAE branch policies but no Qatar branch policy.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine"
+  },
+  {
+    "id": "MHR01-1",
+    "doc": "MHR01_Main_Head_Office_Policy_Procedures.pdf",
+    "question": "Who must approve any change to the head office seating plan?",
+    "expected_answer": "The Admin department.",
+    "must_include": [
+      "Admin"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "MHR03-1",
+    "doc": "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+    "question": "How early must users be at the meeting point before the scheduled bus pick-up time?",
+    "expected_answer": "At least five minutes before the scheduled pick-up time.",
+    "must_include": [
+      "five minutes"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR03-2",
+    "doc": "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+    "question": "How many supervisors does Administration appoint from the passengers of each bus?",
+    "expected_answer": "2 supervisors per bus.",
+    "must_include": [
+      "2 supervisors"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "MHR05-1",
+    "doc": "MHR05_HQ_Cafeteria_Services_Office_Support_Team_s_Role_Policy.pdf",
+    "question": "Who is exempt from picking up drinks and food personally from the cafeteria?",
+    "expected_answer": "The department managers.",
+    "must_include": [
+      "department managers"
+    ],
+    "type": "fact",
+    "review": "machine"
+  },
+  {
+    "id": "PHR03-1",
+    "doc": "PHR03_Safe_Work_Environment_Policy.pdf",
+    "question": "Who is the harassment victim invited to meet under the safe work environment policy?",
+    "expected_answer": "The human resources committee, in person.",
+    "must_include": [
+      "human resources committee"
+    ],
+    "type": "role_lookup",
+    "review": "machine"
+  },
+  {
+    "id": "POP01-1",
+    "doc": "POP01_Subcontractor_Management_Process.pdf",
+    "question": "How often must the RME safety officer hold Toolbox Talks for subcontractors?",
+    "expected_answer": "On a weekly basis.",
+    "must_include": [
+      "Toolbox Talks"
+    ],
+    "type": "fact",
+    "review": "machine"
+  },
+  {
+    "id": "PPC03-1",
+    "doc": "PPC03_Projects_Reward_Scheme_Process.pdf",
+    "question": "For a project with special conditions scoring below 70%, what is the maximum reward that can be released and who decides?",
+    "expected_answer": "A maximum of 0.50-month reward, decided by the OM or COO.",
+    "must_include": [
+      "70%"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  },
+  {
+    "id": "PTN02-1",
+    "doc": "PTN02_Project_Launching_Process.pdf",
+    "question": "Within how long from signing the contract must subcontract templates be modified and sent to Operation and VMO?",
+    "expected_answer": "Within 45 days from signing the contract.",
+    "must_include": [
+      "45 days"
+    ],
+    "type": "numeric",
+    "review": "machine"
+  }
+]
