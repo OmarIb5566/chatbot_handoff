@@ -1,5 +1,15 @@
 # RME Process Chatbot
 
+> **This file describes the 9-document prototype and has not been rewritten for the full corpus.**
+> The pipeline, the Arabic path, the model choice and the design reasoning below are all still
+> accurate — that is why it is kept. The *numbers* are not: the corpus is now **71 process
+> documents (1329 chunks) plus 139 workflow diagrams**, not 9, and `processes_pdf/` and
+> `Workflows/` are **tracked**, not gitignored.
+>
+> Superseded figures are marked inline like this: ~~old~~ → new. Where the two files disagree,
+> **[../README.md](../README.md) is current** — it has the corpus layout, the routing split, the
+> 100-question evaluation and the known issues.
+
 A retrieval-augmented chatbot over RME's ISO process documents. Ask a question in **English or
 Arabic**, get an answer built only from the process PDFs, with the source documents cited and
 every form number it mentions checked against the corpus.
@@ -23,7 +33,8 @@ chunking and extraction.
 ```
 RME Chatbot/
   files/            <- code, notebook, eval set, extracted artifacts
-  processes_pdf/    <- the 9 source PDFs
+  processes_pdf/    <- ~~the 9 source PDFs~~ -> 71 process documents (+ other/, parked)
+  Workflows/        <- 139 approval flowcharts, added later; see ../README.md
 ```
 
 ## 2. Install
@@ -101,8 +112,12 @@ python workflow_extractor.py --from-audit workflow_audit.json   # re-render, no 
 ```
 
 Needs a **vision-capable** model — `qwen3.6:27b` by default. `qwen3:14b`, the model that answers
-questions, has no vision capability; check `/api/tags` before changing it. `glm-ocr:latest` is
-used as a second, independent reader to cross-check.
+questions, has no vision capability; check `/api/tags` before changing it. ~~`glm-ocr:latest` is
+used as a second, independent reader to cross-check.~~ → **`glm-ocr` is no longer installed on
+this machine.** `ocr_page_text` returns `''` on any failure by design, so the second-reader audit
+channel is silently a no-op for genuinely scanned pages — the same trap this section describes
+tesseract falling into. It does not affect the 130 of 133 diagrams that have a native text layer,
+which the audit prefers anyway.
 
 The model emits a **structured graph** (nodes, edges, conditions, per lane) and the embedded
 prose is rendered deterministically from it. Free prose would be unauditable, and a paraphrased
@@ -118,7 +133,8 @@ all three shapes plus omissions found by the second reader. It **cannot** catch 
 misreading (`Over 3M -> VP` instead of `CEO`), which is what `review: "machine"` is for: six
 lanes against three pages is about twenty minutes of human checking.
 
-`processes_pdf/` is gitignored, so the source PDF is not in the repo — `workflow_chunks.json` is
+~~`processes_pdf/` is gitignored, so the source PDF is not in the repo~~ -> both `processes_pdf/`
+and `Workflows/` are now tracked, so the PDFs *are* in the repo. `workflow_chunks.json` is still
 the committed artifact, the same relationship `chunks.json` has to the process PDFs.
 
 ## 5. Run it
@@ -257,8 +273,9 @@ removes anything that slips through — including on translations. The raw respo
 the returned record for audit.
 
 **The validator is a hallucination proxy independent of the answer itself.** It extracts form
-numbers from each answer and checks them against the 67 that actually occur in the corpus. It
-*flags* rather than *blocks*, because at 9 documents the whitelist is incomplete — the corpus
+numbers from each answer and checks them against the ~~67~~ -> **366** that actually occur in the
+corpus. It
+*flags* rather than *blocks*, because at ~~9~~ 71 documents the whitelist is still incomplete — the corpus
 cites form families (FW, HR, OP, PU, QP) whose source documents aren't here yet, so "unknown"
 currently means *unverifiable*, not *fabricated*. `policy="block"` becomes safe once the full
 500–600 document corpus is indexed.
@@ -272,7 +289,7 @@ collapsed into a single chunk without reporting a problem.
 
 Two measured caveats. The **font signal is nearly inert on this corpus** — headings are 12 pt
 against 11 pt body, under the 1.15 ratio, so `numbering` fires 103 times to `font_size`'s 3 and
-the layout half is largely untested here. And **every threshold is calibrated on 9 documents**
+the layout half is largely untested here. And **every threshold is calibrated on 9 documents** (unchanged — they were never recalibrated for the 71)
 (0.85 fuzzy, 0.45 cosine, 1.15 size ratio); the first real batch of non-ISO documents is the
 actual test.
 
@@ -287,6 +304,8 @@ Headings that match nothing are labeled `UNMATCHED`, still chunked and still ret
 listed in the audit — a flag for a human, never a discard.
 
 **No chunk carries a step number.** Step-level splitting inside `PROCESS OPERATION` is not
-implemented — `step` is `None` on all 114 chunks. Harmless at 9 documents, where sections are
+implemented — `step` is `None` on all ~~114~~ 1329 chunks. **This is now measured**: it accounts for
+most of the retrieval misses in ../README.md section 7, because a duration has no term
+distinctive to its document. Harmless at 9 documents, where sections are
 small; at 500–600 it is what keeps a process step attached to its own form number, and it is
 the next thing to build.
