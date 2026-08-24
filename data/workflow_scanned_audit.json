@@ -1,0 +1,816 @@
+[
+  {
+    "filename": "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+    "source": "../Workflows/Request For Quotation Date - WF - Request For Quotation Date.pdf",
+    "page": 1,
+    "title": null,
+    "warnings": [],
+    "repairs": [],
+    "graph": {
+      "title": null,
+      "revision": null,
+      "lanes": [
+        {
+          "name": "Creation",
+          "nodes": [
+            {
+              "id": "creation",
+              "label": "Creation",
+              "kind": "step"
+            },
+            {
+              "id": "end",
+              "label": "End",
+              "kind": "step"
+            }
+          ],
+          "edges": [
+            {
+              "from": "creation",
+              "to": "end",
+              "condition": "Submit"
+            }
+          ]
+        }
+      ],
+      "escalation": []
+    },
+    "reference_text": "",
+    "channel": "ocr_model",
+    "tiles": 1
+  },
+  {
+    "filename": "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+    "source": "Workflows/Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+    "page": 1,
+    "title": "Procurement ( Civil - Arch - MEP ) Comparison Sheet Signature Matrix",
+    "graph": {
+      "title": "Procurement ( Civil - Arch - MEP ) Comparison Sheet Signature Matrix",
+      "revision": "F-P-VMO-01-07 | Issue Date: 17/08/2020 | Rev.03 21/02/2024",
+      "lanes": [
+        {
+          "name": "Comparison Sheet Signature Matrix",
+          "nodes": [
+            {
+              "id": "procurement_eng_civil",
+              "label": "Procurement Eng. (Procurement Civil - Arch)",
+              "kind": "step"
+            },
+            {
+              "id": "procurement_section_head",
+              "label": "Procurement Section Head",
+              "kind": "step"
+            },
+            {
+              "id": "cost_control_eng_civil",
+              "label": "Cost Control Engineer ( Site ) Via email (Civil - Arch)",
+              "kind": "step"
+            },
+            {
+              "id": "dam_civil",
+              "label": "DAM (Civil - Arch)",
+              "kind": "step"
+            },
+            {
+              "id": "procurement_eng_mep",
+              "label": "Procurement Eng./ Technical Office Engineer (Procurement MEP)",
+              "kind": "step"
+            },
+            {
+              "id": "procurement_manager_mep",
+              "label": "Procurement Manager/ MEP Technical Affairs Manager",
+              "kind": "step"
+            },
+            {
+              "id": "mep_deputy",
+              "label": "MEP Deputy",
+              "kind": "step"
+            },
+            {
+              "id": "cost_control_eng_mep",
+              "label": "Cost Control Engineer ( Site ) Via email (MEP)",
+              "kind": "step"
+            },
+            {
+              "id": "dam_mep",
+              "label": "DAM (MEP)",
+              "kind": "step"
+            },
+            {
+              "id": "planning_cost_hod",
+              "label": "Planning & Cost HOD",
+              "kind": "step"
+            },
+            {
+              "id": "psm_lt_2m",
+              "label": "PsM Signature",
+              "kind": "step"
+            },
+            {
+              "id": "psm_2m_3m",
+              "label": "PsM Signature",
+              "kind": "step"
+            },
+            {
+              "id": "vmo_2m_3m",
+              "label": "VMO Manager Signature",
+              "kind": "step"
+            },
+            {
+              "id": "psm_3m_10m",
+              "label": "PsM Signature",
+              "kind": "step"
+            },
+            {
+              "id": "vmo_3m_10m",
+              "label": "VMO Manager Signature",
+              "kind": "step"
+            },
+            {
+              "id": "coo_3m_10m",
+              "label": "COO Signature",
+              "kind": "step"
+            },
+            {
+              "id": "vp_3m_10m",
+              "label": "VP Signature",
+              "kind": "step"
+            },
+            {
+              "id": "psm_above_10m",
+              "label": "PsM Signature",
+              "kind": "step"
+            },
+            {
+              "id": "vmo_above_10m",
+              "label": "VMO Manager Signature",
+              "kind": "step"
+            },
+            {
+              "id": "coo_above_10m",
+              "label": "COO Signature",
+              "kind": "step"
+            },
+            {
+              "id": "ceo_above_10m",
+              "label": "CEO Signature",
+              "kind": "step"
+            }
+          ],
+          "edges": [
+            {
+              "from": "procurement_eng_civil",
+              "to": "procurement_section_head",
+              "condition": null
+            },
+            {
+              "from": "procurement_section_head",
+              "to": "cost_control_eng_civil",
+              "condition": null
+            },
+            {
+              "from": "cost_control_eng_civil",
+              "to": "dam_civil",
+              "condition": "For Direct Award Projects Only."
+            },
+            {
+              "from": "cost_control_eng_civil",
+              "to": "planning_cost_hod",
+              "condition": "Competitive Projects"
+            },
+            {
+              "from": "dam_civil",
+              "to": "planning_cost_hod",
+              "condition": null
+            },
+            {
+              "from": "procurement_eng_mep",
+              "to": "procurement_manager_mep",
+              "condition": null
+            },
+            {
+              "from": "procurement_manager_mep",
+              "to": "mep_deputy",
+              "condition": null
+            },
+            {
+              "from": "mep_deputy",
+              "to": "cost_control_eng_mep",
+              "condition": null
+            },
+            {
+              "from": "cost_control_eng_mep",
+              "to": "dam_mep",
+              "condition": "For Direct Award Projects Only."
+            },
+            {
+              "from": "cost_control_eng_mep",
+              "to": "planning_cost_hod",
+              "condition": "Competitive Projects"
+            },
+            {
+              "from": "dam_mep",
+              "to": "planning_cost_hod",
+              "condition": null
+            },
+            {
+              "from": "planning_cost_hod",
+              "to": "psm_lt_2m",
+              "condition": "Less than 2M. Note: PsM approval is obtained up to 2M, in case CS is within budget. CC: Finance/CFO"
+            },
+            {
+              "from": "planning_cost_hod",
+              "to": "psm_2m_3m",
+              "condition": "2M-3M"
+            },
+            {
+              "from": "planning_cost_hod",
+              "to": "psm_3m_10m",
+              "condition": "3M-10M"
+            },
+            {
+              "from": "planning_cost_hod",
+              "to": "psm_above_10m",
+              "condition": "Above 10M"
+            },
+            {
+              "from": "psm_2m_3m",
+              "to": "vmo_2m_3m",
+              "condition": null
+            },
+            {
+              "from": "psm_3m_10m",
+              "to": "vmo_3m_10m",
+              "condition": null
+            },
+            {
+              "from": "vmo_3m_10m",
+              "to": "coo_3m_10m",
+              "condition": null
+            },
+            {
+              "from": "coo_3m_10m",
+              "to": "vp_3m_10m",
+              "condition": null
+            },
+            {
+              "from": "psm_above_10m",
+              "to": "vmo_above_10m",
+              "condition": null
+            },
+            {
+              "from": "vmo_above_10m",
+              "to": "coo_above_10m",
+              "condition": null
+            },
+            {
+              "from": "coo_above_10m",
+              "to": "ceo_above_10m",
+              "condition": null
+            }
+          ]
+        }
+      ],
+      "escalation": [
+        {
+          "condition": "Less than 2M",
+          "approver": "PsM Signature"
+        },
+        {
+          "condition": "2M-3M",
+          "approver": "VMO Manager Signature"
+        },
+        {
+          "condition": "3M-10M",
+          "approver": "VP Signature"
+        },
+        {
+          "condition": "Above 10M",
+          "approver": "CEO Signature"
+        }
+      ]
+    },
+    "reference_text": "Procurement ( Civil - Arch - MEP ) Comparison Sheet Signature Matrix\nF-P-VMO-01-07 | Issue Date: 17/08/2020 | Rev.03 21/02/2024\nComparison Sheet Signature Matrix\nProcurement Eng. (Procurement Civil - Arch)\nProcurement Section Head\nCost Control Engineer ( Site ) Via email (Civil - Arch)\nDAM (Civil - Arch)\nProcurement Eng./ Technical Office Engineer (Procurement MEP)\nProcurement Manager/ MEP Technical Affairs Manager\nMEP Deputy\nCost Control Engineer ( Site ) Via email (MEP)\nDAM (MEP)\nPlanning & Cost HOD\nPsM Signature\nPsM Signature\nVMO Manager Signature\nPsM Signature\nVMO Manager Signature\nCOO Signature\nVP Signature\nPsM Signature\nVMO Manager Signature\nCOO Signature\nCEO Signature\nFor Direct Award Projects Only.\nCompetitive Projects\nFor Direct Award Projects Only.\nCompetitive Projects\nLess than 2M. Note: PsM approval is obtained up to 2M, in case CS is within budget. CC: Finance/CFO\n2M-3M\n3M-10M\nAbove 10M\nLess than 2M PsM Signature\n2M-3M VMO Manager Signature\n3M-10M VP Signature\nAbove 10M CEO Signature",
+    "channel": "claude_read",
+    "warnings": [],
+    "repairs": [],
+    "tiles": 1
+  },
+  {
+    "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+    "source": "Workflows/Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+    "page": 1,
+    "title": "Subcontract Agreement Signature Matrix",
+    "graph": {
+      "title": "Subcontract Agreement Signature Matrix",
+      "revision": "F-P-CN-01-11 | Issue Date: 31/08/2021 | Rev.05 15-08-2024",
+      "lanes": [
+        {
+          "name": "Apply Subcontracts (Civil, Arch, MEP)",
+          "nodes": [
+            {
+              "id": "apply_subcontracts",
+              "label": "Apply Subcontracts (Civil, Arch, MEP) (Initiate subcontract)",
+              "kind": "step"
+            },
+            {
+              "id": "earthmoving_hod",
+              "label": "Earthmoving HoD (if related)",
+              "kind": "step"
+            },
+            {
+              "id": "pm_signature_low",
+              "label": "PM Signature (printed 'PM initials', amended by hand)",
+              "kind": "step"
+            },
+            {
+              "id": "subcontractor_sig_low",
+              "label": "Subcontractor Signature",
+              "kind": "step"
+            },
+            {
+              "id": "mep_tam_low",
+              "label": "MEP TAM initials",
+              "kind": "step"
+            },
+            {
+              "id": "mep_deputy_low",
+              "label": "MEP Deputy initials",
+              "kind": "step"
+            },
+            {
+              "id": "tam_dam_low",
+              "label": "TAM/DAM initials",
+              "kind": "step"
+            },
+            {
+              "id": "psm_low",
+              "label": "PsM initials (printed 'PsM signature', amended by hand)",
+              "kind": "step"
+            },
+            {
+              "id": "pm_initials_high",
+              "label": "PM initials",
+              "kind": "step"
+            },
+            {
+              "id": "subcontractor_sig_mid",
+              "label": "Subcontractor signature",
+              "kind": "step"
+            },
+            {
+              "id": "mep_tam_mid",
+              "label": "MEP TAM initials",
+              "kind": "step"
+            },
+            {
+              "id": "tam_dam_mid",
+              "label": "TAM/DAM initials",
+              "kind": "step"
+            },
+            {
+              "id": "mep_manager_mid",
+              "label": "MEP Manager initials",
+              "kind": "step"
+            },
+            {
+              "id": "psm_mid",
+              "label": "PsM initials",
+              "kind": "step"
+            },
+            {
+              "id": "ops_manager_mid",
+              "label": "Operations Manager initials",
+              "kind": "step"
+            },
+            {
+              "id": "coo_mid",
+              "label": "COO initial",
+              "kind": "step"
+            },
+            {
+              "id": "vp_mid",
+              "label": "VP Signature",
+              "kind": "step"
+            },
+            {
+              "id": "mep_tam_top",
+              "label": "MEP TAM initials",
+              "kind": "step"
+            },
+            {
+              "id": "tam_dam_top",
+              "label": "TAM/DAM initials",
+              "kind": "step"
+            },
+            {
+              "id": "mep_manager_top",
+              "label": "MEP Manager initials",
+              "kind": "step"
+            },
+            {
+              "id": "psm_top",
+              "label": "PsM initials",
+              "kind": "step"
+            },
+            {
+              "id": "contracts_dept_top",
+              "label": "Contracts Dept. Initials",
+              "kind": "step"
+            },
+            {
+              "id": "subcontractor_sig_top",
+              "label": "Subcontractor signature",
+              "kind": "step"
+            },
+            {
+              "id": "ops_manager_top",
+              "label": "Operations Manager initials",
+              "kind": "step"
+            },
+            {
+              "id": "coo_top",
+              "label": "COO Initial",
+              "kind": "step"
+            },
+            {
+              "id": "vp_top",
+              "label": "VP Signature",
+              "kind": "step"
+            },
+            {
+              "id": "ceo_top",
+              "label": "CEO Signature",
+              "kind": "step"
+            }
+          ],
+          "edges": [
+            {
+              "from": "apply_subcontracts",
+              "to": "earthmoving_hod",
+              "condition": "if related"
+            },
+            {
+              "from": "apply_subcontracts",
+              "to": "pm_signature_low",
+              "condition": "Less than 500K - 500K struck through and amended by hand to 2M. Note: PsM approval is obtained up to 2M, in case S/C is within budget. If S/C is not within budget, COO approval is required. CC: Finance/CFO"
+            },
+            {
+              "from": "apply_subcontracts",
+              "to": "pm_initials_high",
+              "condition": "More than 500K - printed figure; the opposite branch carries a handwritten amendment of 500K to 2M"
+            },
+            {
+              "from": "pm_signature_low",
+              "to": "subcontractor_sig_low",
+              "condition": null
+            },
+            {
+              "from": "subcontractor_sig_low",
+              "to": "mep_tam_low",
+              "condition": null
+            },
+            {
+              "from": "mep_tam_low",
+              "to": "mep_deputy_low",
+              "condition": null
+            },
+            {
+              "from": "mep_deputy_low",
+              "to": "tam_dam_low",
+              "condition": null
+            },
+            {
+              "from": "tam_dam_low",
+              "to": "psm_low",
+              "condition": null
+            },
+            {
+              "from": "pm_initials_high",
+              "to": "subcontractor_sig_mid",
+              "condition": "500K to 4M - 500K struck through and amended by hand to 2M, giving 2M to 4M"
+            },
+            {
+              "from": "pm_initials_high",
+              "to": "mep_tam_top",
+              "condition": "More than 4M"
+            },
+            {
+              "from": "subcontractor_sig_mid",
+              "to": "mep_tam_mid",
+              "condition": null
+            },
+            {
+              "from": "mep_tam_mid",
+              "to": "tam_dam_mid",
+              "condition": null
+            },
+            {
+              "from": "tam_dam_mid",
+              "to": "mep_manager_mid",
+              "condition": null
+            },
+            {
+              "from": "mep_manager_mid",
+              "to": "psm_mid",
+              "condition": null
+            },
+            {
+              "from": "psm_mid",
+              "to": "ops_manager_mid",
+              "condition": null
+            },
+            {
+              "from": "ops_manager_mid",
+              "to": "coo_mid",
+              "condition": null
+            },
+            {
+              "from": "coo_mid",
+              "to": "vp_mid",
+              "condition": null
+            },
+            {
+              "from": "mep_tam_top",
+              "to": "tam_dam_top",
+              "condition": null
+            },
+            {
+              "from": "tam_dam_top",
+              "to": "mep_manager_top",
+              "condition": null
+            },
+            {
+              "from": "mep_manager_top",
+              "to": "psm_top",
+              "condition": null
+            },
+            {
+              "from": "psm_top",
+              "to": "contracts_dept_top",
+              "condition": null
+            },
+            {
+              "from": "contracts_dept_top",
+              "to": "subcontractor_sig_top",
+              "condition": null
+            },
+            {
+              "from": "subcontractor_sig_top",
+              "to": "ops_manager_top",
+              "condition": null
+            },
+            {
+              "from": "ops_manager_top",
+              "to": "coo_top",
+              "condition": null
+            },
+            {
+              "from": "coo_top",
+              "to": "vp_top",
+              "condition": "From 4M to 6M"
+            },
+            {
+              "from": "coo_top",
+              "to": "ceo_top",
+              "condition": "Above 6M"
+            }
+          ]
+        },
+        {
+          "name": "Supply & Apply Subcontracts (Civil, Arch, MEP)",
+          "nodes": [
+            {
+              "id": "supply_apply",
+              "label": "Supply & Apply Subcontracts (Civil, Arch, MEP) (Initiate Subcontract)",
+              "kind": "step"
+            },
+            {
+              "id": "pm_initials_sa",
+              "label": "PM Initials",
+              "kind": "step"
+            },
+            {
+              "id": "direct_award_manager",
+              "label": "Direct Award Manager Initials",
+              "kind": "step"
+            },
+            {
+              "id": "sub_sig_lt2m",
+              "label": "Subcontractor Signature",
+              "kind": "step"
+            },
+            {
+              "id": "psm_lt2m_sa",
+              "label": "PsM Signature",
+              "kind": "step"
+            },
+            {
+              "id": "sub_sig_2m3m",
+              "label": "Subcontractor Signature",
+              "kind": "step"
+            },
+            {
+              "id": "psm_2m3m_sa",
+              "label": "PsM initials",
+              "kind": "step"
+            },
+            {
+              "id": "vmo_2m3m_sa",
+              "label": "VMO Manager Signature",
+              "kind": "step"
+            },
+            {
+              "id": "sub_sig_3m10m",
+              "label": "Subcontractor Signature",
+              "kind": "step"
+            },
+            {
+              "id": "psm_3m10m_sa",
+              "label": "PsM initials",
+              "kind": "step"
+            },
+            {
+              "id": "vmo_3m10m_sa",
+              "label": "VMO Manager Initials",
+              "kind": "step"
+            },
+            {
+              "id": "coo_3m10m_sa",
+              "label": "COO Initial",
+              "kind": "step"
+            },
+            {
+              "id": "vp_3m10m_sa",
+              "label": "VP Signature",
+              "kind": "step"
+            },
+            {
+              "id": "psm_above10m_sa",
+              "label": "PsM initials",
+              "kind": "step"
+            },
+            {
+              "id": "vmo_above10m_sa",
+              "label": "VMO Manager initials",
+              "kind": "step"
+            },
+            {
+              "id": "contracts_above10m",
+              "label": "Contracts Initials",
+              "kind": "step"
+            },
+            {
+              "id": "sub_sig_above10m",
+              "label": "Subcontractor Signature",
+              "kind": "step"
+            },
+            {
+              "id": "coo_above10m_sa",
+              "label": "COO Initial",
+              "kind": "step"
+            },
+            {
+              "id": "ceo_above10m_sa",
+              "label": "CEO Signature",
+              "kind": "step"
+            }
+          ],
+          "edges": [
+            {
+              "from": "supply_apply",
+              "to": "pm_initials_sa",
+              "condition": null
+            },
+            {
+              "from": "pm_initials_sa",
+              "to": "direct_award_manager",
+              "condition": "In case of Direct Award Projects"
+            },
+            {
+              "from": "pm_initials_sa",
+              "to": "sub_sig_lt2m",
+              "condition": "Less than 2M. Note: PsM approval is obtained up to 2M, in case S/C is within budget. If S/C is not within budget, COO approval is required. CC: Finance/CFO"
+            },
+            {
+              "from": "pm_initials_sa",
+              "to": "sub_sig_2m3m",
+              "condition": "2M - 3M"
+            },
+            {
+              "from": "pm_initials_sa",
+              "to": "sub_sig_3m10m",
+              "condition": "3M - 10M"
+            },
+            {
+              "from": "pm_initials_sa",
+              "to": "psm_above10m_sa",
+              "condition": "Above 10M"
+            },
+            {
+              "from": "sub_sig_lt2m",
+              "to": "psm_lt2m_sa",
+              "condition": null
+            },
+            {
+              "from": "sub_sig_2m3m",
+              "to": "psm_2m3m_sa",
+              "condition": null
+            },
+            {
+              "from": "psm_2m3m_sa",
+              "to": "vmo_2m3m_sa",
+              "condition": null
+            },
+            {
+              "from": "sub_sig_3m10m",
+              "to": "psm_3m10m_sa",
+              "condition": null
+            },
+            {
+              "from": "psm_3m10m_sa",
+              "to": "vmo_3m10m_sa",
+              "condition": null
+            },
+            {
+              "from": "vmo_3m10m_sa",
+              "to": "coo_3m10m_sa",
+              "condition": null
+            },
+            {
+              "from": "coo_3m10m_sa",
+              "to": "vp_3m10m_sa",
+              "condition": null
+            },
+            {
+              "from": "psm_above10m_sa",
+              "to": "vmo_above10m_sa",
+              "condition": null
+            },
+            {
+              "from": "vmo_above10m_sa",
+              "to": "contracts_above10m",
+              "condition": null
+            },
+            {
+              "from": "contracts_above10m",
+              "to": "sub_sig_above10m",
+              "condition": null
+            },
+            {
+              "from": "sub_sig_above10m",
+              "to": "coo_above10m_sa",
+              "condition": null
+            },
+            {
+              "from": "coo_above10m_sa",
+              "to": "ceo_above10m_sa",
+              "condition": null
+            }
+          ]
+        }
+      ],
+      "escalation": [
+        {
+          "condition": "Apply Subcontracts: less than 500K, amended by hand to 2M",
+          "approver": "PsM initials"
+        },
+        {
+          "condition": "Apply Subcontracts: 500K to 4M, amended by hand to 2M to 4M",
+          "approver": "VP Signature"
+        },
+        {
+          "condition": "Apply Subcontracts: more than 4M, from 4M to 6M",
+          "approver": "VP Signature"
+        },
+        {
+          "condition": "Apply Subcontracts: above 6M",
+          "approver": "CEO Signature"
+        },
+        {
+          "condition": "Supply & Apply Subcontracts: less than 2M",
+          "approver": "PsM Signature"
+        },
+        {
+          "condition": "Supply & Apply Subcontracts: 2M - 3M",
+          "approver": "VMO Manager Signature"
+        },
+        {
+          "condition": "Supply & Apply Subcontracts: 3M - 10M",
+          "approver": "VP Signature"
+        },
+        {
+          "condition": "Supply & Apply Subcontracts: above 10M",
+          "approver": "CEO Signature"
+        }
+      ]
+    },
+    "reference_text": "Subcontract Agreement Signature Matrix\nF-P-CN-01-11 | Issue Date: 31/08/2021 | Rev.05 15-08-2024\nApply Subcontracts (Civil, Arch, MEP)\nApply Subcontracts (Civil, Arch, MEP) (Initiate subcontract)\nEarthmoving HoD (if related)\nPM Signature (printed 'PM initials', amended by hand)\nSubcontractor Signature\nMEP TAM initials\nMEP Deputy initials\nTAM/DAM initials\nPsM initials (printed 'PsM signature', amended by hand)\nPM initials\nSubcontractor signature\nMEP TAM initials\nTAM/DAM initials\nMEP Manager initials\nPsM initials\nOperations Manager initials\nCOO initial\nVP Signature\nMEP TAM initials\nTAM/DAM initials\nMEP Manager initials\nPsM initials\nContracts Dept. Initials\nSubcontractor signature\nOperations Manager initials\nCOO Initial\nVP Signature\nCEO Signature\nif related\nLess than 500K - 500K struck through and amended by hand to 2M. Note: PsM approval is obtained up to 2M, in case S/C is within budget. If S/C is not within budget, COO approval is required. CC: Finance/CFO\nMore than 500K - printed figure; the opposite branch carries a handwritten amendment of 500K to 2M\n500K to 4M - 500K struck through and amended by hand to 2M, giving 2M to 4M\nMore than 4M\nFrom 4M to 6M\nAbove 6M\nSupply & Apply Subcontracts (Civil, Arch, MEP)\nSupply & Apply Subcontracts (Civil, Arch, MEP) (Initiate Subcontract)\nPM Initials\nDirect Award Manager Initials\nSubcontractor Signature\nPsM Signature\nSubcontractor Signature\nPsM initials\nVMO Manager Signature\nSubcontractor Signature\nPsM initials\nVMO Manager Initials\nCOO Initial\nVP Signature\nPsM initials\nVMO Manager initials\nContracts Initials\nSubcontractor Signature\nCOO Initial\nCEO Signature\nIn case of Direct Award Projects\nLess than 2M. Note: PsM approval is obtained up to 2M, in case S/C is within budget. If S/C is not within budget, COO approval is required. CC: Finance/CFO\n2M - 3M\n3M - 10M\nAbove 10M\nApply Subcontracts: less than 500K, amended by hand to 2M PsM initials\nApply Subcontracts: 500K to 4M, amended by hand to 2M to 4M VP Signature\nApply Subcontracts: more than 4M, from 4M to 6M VP Signature\nApply Subcontracts: above 6M CEO Signature\nSupply & Apply Subcontracts: less than 2M PsM Signature\nSupply & Apply Subcontracts: 2M - 3M VMO Manager Signature\nSupply & Apply Subcontracts: 3M - 10M VP Signature\nSupply & Apply Subcontracts: above 10M CEO Signature\nhandwritten amendments on this sheet change printed thresholds (500K -> 2M) and change 'initials' to 'Signature'; both readings are recorded in the edge conditions - a person should confirm which governs",
+    "channel": "claude_read",
+    "warnings": [
+      "handwritten amendments on this sheet change printed thresholds (500K -> 2M) and change 'initials' to 'Signature'; both readings are recorded in the edge conditions - a person should confirm which governs"
+    ],
+    "repairs": [],
+    "tiles": 1
+  }
+]

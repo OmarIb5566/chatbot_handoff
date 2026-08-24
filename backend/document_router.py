@@ -68,8 +68,9 @@ import argparse
 import json
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-DEFAULT_DIRS = [HERE.parent / "processes_pdf", HERE.parent / "Workflows"]
+from paths import PROCESSES_PDF, WORKFLOWS  # noqa: E402
+
+DEFAULT_DIRS = [PROCESSES_PDF, WORKFLOWS]
 
 PROCESS = "process"
 WORKFLOW = "workflow"

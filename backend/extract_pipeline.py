@@ -32,10 +32,8 @@ import fitz  # PyMuPDF
 
 # Resolve everything relative to this file (the "files" folder), not the CWD,
 # so the pipeline works no matter where it's invoked from.
-HERE = Path(__file__).resolve().parent
-DEFAULT_SRC = HERE.parent / "processes_pdf"
-DEFAULT_OUT = HERE / "extracted_raw.json"
-DEFAULT_LOG = HERE / "ocr_fallback_log.json"
+from paths import (PROCESSES_PDF as DEFAULT_SRC, EXTRACTED_RAW as DEFAULT_OUT,
+                   OCR_FALLBACK_LOG as DEFAULT_LOG)  # noqa: E402
 
 # Fallback trigger thresholds. Deliberately conservative: we would rather OCR
 # a handful of genuinely sparse pages than silently ship an empty page into

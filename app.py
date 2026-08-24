@@ -17,6 +17,14 @@ read the sources under it.
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# backend/ holds the pipeline; its modules import each other by bare name.
+# See paths.add_backend_to_path for why that is worth keeping.
+sys.path.insert(0, str(Path(__file__).resolve().parent / "backend"))
+
+
 import uuid
 
 import streamlit as st
@@ -116,13 +124,17 @@ def render(rec: dict, show_context: bool) -> None:
             "A form number written in those is unlookuppable and invisible to the "
             "validator, so treat any citation here as unchecked.")
 
-    lat = f"retrieval {rec['retrieval_s']*1000:.0f} ms · generation {rec['generation_s']:.1f} s"
+    reused = rec.get("reused_sources")
+    lat = ("retrieval skipped" if reused
+           else f"retrieval {rec['retrieval_s']*1000:.0f} ms")
+    lat += f" · generation {rec['generation_s']:.1f} s"
     if rec["lang"] == "ar":
         lat = f"translate {rec['translate_in_s']:.1f} s · " + lat
     st.caption(f"{lat} · **{rec['total_s']:.1f} s** total · {rec['model']}"
                + ("  ·  reasoning trace stripped" if rec["had_reasoning"] else ""))
 
-    with st.expander(f"Sources ({len(rec['hits'])}) · "
+    label = "Sources reused" if reused else "Sources"
+    with st.expander(f"{label} ({len(rec['hits'])}) · "
                      f"cited {', '.join(v['cited']) if v['cited'] else 'nothing'} · "
                      f"validator {v['verdict']}"):
         if rec["lang"] == "ar":
@@ -130,16 +142,30 @@ def render(rec: dict, show_context: bool) -> None:
             # mistranslated domain term is a retrieval miss with no other signal.
             st.markdown("**Translated for retrieval:**")
             st.code(rec["question_en"], language=None)
-        if rec.get("was_rewritten"):
+        if reused:
+            # The hits below are last turn's, not this turn's. Saying so matters
+            # more here than anywhere else in this expander: the whole point of
+            # showing sources is to tell a retrieval failure from a generation
+            # one, and on this path there was no retrieval to blame.
+            st.info("Read as **“that answer was incomplete”**, not as a new "
+                    "question — so nothing was retrieved. The chunks below are "
+                    "the ones from the previous turn, re-used to find what the "
+                    "first answer left out.")
+            st.caption(f"gate: {', '.join(rec['gate_reasons'])}")
+        elif rec.get("was_rewritten"):
             # Same reason the Arabic translation is shown: if the answer looks
             # wrong, the rewrite is the first thing to check.
             st.markdown("**Resolved from your follow-up:**")
             st.code(rec["query_used"], language=None)
             st.caption(f"gate: {', '.join(rec['gate_reasons'])} · "
                        f"rewritten by {rec.get('rewrite_model')}")
-        st.caption(f"route: {rec['route'] or 'none — searched everything'}"
-                   + (f" · boost: {', '.join(rec['boost_prefixes'])}"
-                      if rec.get("boost_prefixes") else ""))
+        if rec.get("spelling_repairs"):
+            fixed = ", ".join(f"*{a}* → **{b}**" for a, b in rec["spelling_repairs"])
+            st.caption(f"spelling repaired against the corpus vocabulary: {fixed}")
+        if not reused:
+            st.caption(f"route: {rec['route'] or 'none — searched everything'}"
+                       + (f" · boost: {', '.join(rec['boost_prefixes'])}"
+                          if rec.get("boost_prefixes") else ""))
         for h in rec["hits"]:
             vlm = h.get("source_type") == "vlm_description"
             badge = f"  ·  ⚠ machine-read diagram, p{h.get('page')}" if vlm else ""
@@ -181,9 +207,14 @@ policy = "block" if strict else "flag"
 
 follow_ups = st.sidebar.checkbox(
     "Resolve follow-up questions", value=True,
-    help="Rewrite fragments like 'in the self execution process' into standalone "
-         "queries using the last few turns. A cheap heuristic decides first, so a "
-         "self-contained question costs no extra model call.")
+    help="Uses the last few turns to make sense of a message that depends on them. "
+         "A fragment like 'in the self execution process' is rewritten into a "
+         "standalone query and searched as usual; 'you missed a few, list the rest' "
+         "is instead answered from the previous turn's chunks, with nothing "
+         "re-retrieved. A plain question — four words or more, opening with a "
+         "wh-word or an auxiliary, referring to nothing outside itself — skips "
+         "the check entirely and costs no extra model call. Off: every message "
+         "is searched exactly as typed.")
 
 st.sidebar.divider()
 st.sidebar.caption(f"hardware: {ollama_placement()}" if up else "ollama: down")

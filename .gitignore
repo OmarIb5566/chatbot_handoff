@@ -23,23 +23,23 @@ __pycache__/
 # ---------------------------------------------------------------------------
 
 # python extract_pipeline.py   (OCR-health audit; rewritten whole each run)
-files/extracted_raw.json
-files/ocr_fallback_log.json
+data/extracted_raw.json
+data/ocr_fallback_log.json
 
 # demo_chatbot.ipynb §1 on every Run All — the notebook's own copies of the above
-files/demo_extracted_raw.json
-files/demo_ocr_fallback_log.json
+data/demo_extracted_raw.json
+data/demo_ocr_fallback_log.json
 
 # streamlit run app.py — session log, append-only, grows without bound
-files/streamlit_log.txt
+streamlit_log.txt
 
 # one-off single-document re-extractions, named after the PDF
-files/rerun_*.json
+data/rerun_*.json
 
 # default output paths of the --audit / --json flags, for throwaway runs:
 #   python adaptive_chunker.py --audit audit.json
 #   python document_router.py --json routing.json
-files/audit.json
-files/routing.json
+data/audit.json
+data/routing.json
 audit.json
 routing.json

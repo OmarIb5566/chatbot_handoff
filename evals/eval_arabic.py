@@ -42,14 +42,30 @@ term and a PREFIX_HINTS routing keyword for PCM. It is a translation failure,
 not a retrieval failure, and it is exactly the silent-miss mode the notebook
 warns about: nothing in the output says a domain term was lost.
 
-Needs Ollama up (translation runs through qwen3:14b) and eval_set_ar.json,
-so run make_arabic_eval.py first.
+The numbers above are the 36-question v1 set. The same harness runs the
+100-question v2 set, which covers all 71 indexed documents rather than 9 - a
+much harder denominator, and the one to quote for anything corpus-wide.
+
+Needs Ollama up (translation runs through qwen3:14b) and a built Arabic set, so
+run make_arabic_eval.py first.
 
     python make_arabic_eval.py
     python eval_arabic.py
+
+    python make_arabic_eval.py --source eval_set_v2.json --out eval_set_v2_ar.json
+    python eval_arabic.py --source eval_set_v2.json --arabic eval_set_v2_ar.json
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# backend/ holds the pipeline; its modules import each other by bare name.
+# See paths.add_backend_to_path for why that is worth keeping.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
+
+
+import argparse
 import json
 import time
 from pathlib import Path
@@ -58,10 +74,8 @@ from make_arabic_eval import _gen
 from retriever import Retriever
 from translate import enable_utf8_stdout, is_arabic, to_english
 
-HERE = Path(__file__).resolve().parent
-EVAL_EN = HERE / "eval_set.json"
-EVAL_AR = HERE / "eval_set_ar.json"
-CHUNKS = HERE / "chunks.json"
+from paths import (EVAL_SET as EVAL_EN, EVAL_SET_AR as EVAL_AR,
+                   CHUNKS_JSON as CHUNKS)
 
 
 def retrieval_hit(item: dict, question: str, search_fn, top_k: int = 3) -> bool | None:
@@ -87,13 +101,22 @@ def score(name: str, items: list[dict], questions: list[str], search_fn,
     return acc
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
     enable_utf8_stdout()
-    if not EVAL_AR.exists():
-        raise SystemExit(f"{EVAL_AR.name} not found - run `python make_arabic_eval.py` first.")
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
+    ap.add_argument("--source", type=Path, default=EVAL_EN,
+                    help="English eval set (default: eval_set.json)")
+    ap.add_argument("--arabic", type=Path, default=EVAL_AR,
+                    help="matching Arabic set (default: eval_set_ar.json)")
+    args = ap.parse_args(argv)
 
-    eval_en = json.load(open(EVAL_EN, encoding="utf-8"))
-    by_id = {it["id"]: it for it in json.load(open(EVAL_AR, encoding="utf-8"))}
+    if not args.arabic.exists():
+        raise SystemExit(f"{args.arabic.name} not found - run "
+                         f"`python make_arabic_eval.py --source {args.source.name} "
+                         f"--out {args.arabic.name}` first.")
+
+    eval_en = json.load(open(args.source, encoding="utf-8"))
+    by_id = {it["id"]: it for it in json.load(open(args.arabic, encoding="utf-8"))}
     # Iterate the English set so ordering and the denominator match exactly.
     items = [it for it in eval_en if it["id"] in by_id]
     en_qs = [it["question"] for it in items]

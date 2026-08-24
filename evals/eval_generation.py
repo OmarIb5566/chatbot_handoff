@@ -40,14 +40,21 @@ and the notebook both key off this exact sentence.
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# backend/ holds the pipeline; its modules import each other by bare name.
+# See paths.add_backend_to_path for why that is worth keeping.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
+
+
 import argparse
 import collections
 import json
 import time
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-DEFAULT_EVAL = HERE / "eval_set_v2.json"
+from paths import EVAL_SET_V2 as DEFAULT_EVAL, GENERATION_EVAL_RESULTS
 
 
 def scored(rec: dict, item: dict, refusal: str) -> dict:
@@ -148,7 +155,7 @@ def main() -> None:
     enable_utf8_stdout()
     ap = argparse.ArgumentParser(description="Generation accuracy, end to end")
     ap.add_argument("--eval", type=Path, default=DEFAULT_EVAL)
-    ap.add_argument("--out", type=Path, default=HERE / "generation_eval_results.json")
+    ap.add_argument("--out", type=Path, default=GENERATION_EVAL_RESULTS)
     ap.add_argument("--limit", type=int, default=None, help="first N questions only")
     ap.add_argument("--top-k", type=int, default=3)
     ap.add_argument("--model", default=None)

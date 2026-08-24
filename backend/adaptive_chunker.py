@@ -108,9 +108,7 @@ os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 import fitz  # PyMuPDF
 
-HERE = Path(__file__).resolve().parent
-DEFAULT_SRC = HERE.parent / "processes_pdf"
-DEFAULT_OUT = HERE / "chunks.json"
+from paths import PROCESSES_PDF as DEFAULT_SRC, CHUNKS_JSON as DEFAULT_OUT  # noqa: E402
 
 # --- boundary detection thresholds ------------------------------------------
 SIZE_RATIO_THRESHOLD = 1.15   # "bigger than body text" (vs the median line size)
@@ -127,6 +125,8 @@ NUMBERED_HEADING_RE = re.compile(
     r"^(?P<number>\d{1,2}(?:\.\d{1,2}){0,3}\.?)\s+(?P<title>[A-Z][A-Za-z].{0,78})$"
 )
 LEADING_NUMBER_RE = re.compile(r"^\s*\d{1,2}(?:\.\d{1,2}){0,3}\.?\s*")
+# A heading is a complete unit; a clause is not. See _demote_runons.
+TERMINAL_PUNCT = (".", ":", ";", "!", "?")
 
 # --- chunking thresholds ----------------------------------------------------
 MIN_CHUNK_CHARS = 30          # drop headings with no body of their own
@@ -294,6 +294,60 @@ def _demote_inline_lists(cands: list[dict]) -> set[int]:
     return demoted
 
 
+def _demote_runons(cands: list[dict], lines: list[dict],
+                   already: set[int]) -> set[int]:
+    """Drop numbered candidates whose sentence runs on to the next line.
+
+    M-HR-19 numbers its clauses, so "5.5.1. The internship lasts between 1
+    month" matches the numbering pattern exactly as "1. OBJECTIVES" does. That
+    document produced 38 headings, 32 of them clause-level, with a median body
+    of 11 tokens - one-sentence chunks that retrieve as fragments.
+
+    DEPTH IS NOT THE DISCRIMINATOR, though it looks like one on this document
+    (32 of its 38 headings sit at depth 3). Measured over the corpus, 13 of 71
+    documents use depth >=3, for 332 of 1356 headings, and plenty are real: the
+    Quality Manual's "5.1.1 Customer Focus" and "8.2.1 Customer Communication"
+    are genuine sections with 60-90 token bodies. M-HR-10 settles it by holding
+    both classes at one depth - "5.3.1. Rowad conducts fair and unbiased" is a
+    clause, "5.7.1. Supplier/Customer Relationships:" is a heading. A depth cap
+    cannot separate those, and M-HR-05's false positives are at depth 1 anyway.
+
+    Neither is same-line content, which NUMBERED_HEADING_RE already requires -
+    every candidate in the corpus has a title on the number's line, in both
+    classes, so the test has no discriminating power at all.
+
+    What separates them is COMPLETENESS. A heading is a whole unit: the line
+    ends, and what follows starts something new. A clause is a sentence clipped
+    by the 80-char line limit and continued on the next line. So a plain
+    numbered candidate is body text when its title carries no terminal
+    punctuation AND the following line opens lowercase.
+
+    Measured on 48 hand-checked real headings and 127 hand-checked clauses:
+    0/48 real demoted, 103/127 clauses caught. The 24 misses are all the
+    "Additional Benefits:" colon-label shape, which is the same shape as
+    M-HR-10's real 5.7.x headings - left alone deliberately rather than traded
+    against the Quality Manual.
+
+    Plain candidates only, exactly as _demote_inline_lists is: a bold or larger
+    heading is never demoted, which is what keeps the font-flat documents
+    (P-CN-01, P-VMO-02) that rely on numbering as their only signal intact.
+    They come through this pass unchanged.
+    """
+    by_idx = {l["idx"]: l for l in lines}
+    demoted: set[int] = set()
+    for cand in cands:
+        if (cand["idx"] in already or cand["detector"] != "numbering"
+                or not cand["plain"]):
+            continue
+        m = NUMBERED_HEADING_RE.match(cand["text"])
+        if not m or m.group("title").rstrip().endswith(TERMINAL_PUNCT):
+            continue
+        nxt = by_idx.get(cand["idx"] + 1)
+        if nxt and nxt["text"] and nxt["text"][0].islower():
+            demoted.add(cand["idx"])
+    return demoted
+
+
 def _demote_duplicate_numbers(cands: list[dict], already: set[int]) -> set[int]:
     """Drop a plain candidate reusing a section number already claimed.
 
@@ -346,19 +400,22 @@ def _stitch_lone_numbers(cands: list[dict], lines: list[dict],
 def detect_headings(lines: list[dict], page_count: int) -> tuple[list[dict], dict]:
     """Structural heading detection. Returns (headings, detection stats)."""
     if not lines:
-        return [], {"candidates": 0, "demoted_list": 0, "demoted_duplicate": 0}
+        return [], {"candidates": 0, "demoted_list": 0, "demoted_duplicate": 0,
+                    "demoted_runon": 0}
 
     running = find_running_headers(lines, page_count)
     cands = _candidates(lines, running)
     demoted_list = _demote_inline_lists(cands)
     demoted_dupe = _demote_duplicate_numbers(cands, demoted_list)
-    demoted = demoted_list | demoted_dupe
+    demoted_runon = _demote_runons(cands, lines, demoted_list | demoted_dupe)
+    demoted = demoted_list | demoted_dupe | demoted_runon
     headings = _stitch_lone_numbers(cands, lines, demoted)
 
     stats = {
         "candidates": len(cands),
         "demoted_list": len(demoted_list),
         "demoted_duplicate": len(demoted_dupe),
+        "demoted_runon": len(demoted_runon),
         "demoted_text": [c["text"] for c in cands if c["idx"] in demoted],
         "detectors": dict(Counter(h["detector"] for h in headings)),
         "running_headers": len(running),

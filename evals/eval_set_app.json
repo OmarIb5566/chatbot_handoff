@@ -1,0 +1,224 @@
+{
+  "_about": {
+    "purpose": "20 paired English/Arabic questions for exercising the APP end to end, not the retriever in isolation. Covers the four things the app does that eval_set_v2.json does not touch: spelling repair, follow-up rewriting, continuation replay, and the Arabic round trip.",
+    "arabic": "Hand-written in Egyptian-flavoured Arabic, NOT produced by translating the English through qwen3. eval_set_ar.json is machine-translated by the same model that then translates it back for retrieval, which flatters itself - the model reliably undoes its own word choices. These do not have that round trip, so an Arabic miss here is a real miss. They are still not user-collected: mark review=human only after a native speaker has read them.",
+    "gold": "Every answerable question is taken from eval_set_v2.json with its verified doc and must_include, except APP-17 which was added from MHR08 §2.1/§4.1.12 while debugging the accommodation query.",
+    "scoring": "must_include entries that are form codes or figures are checked in BOTH languages - they survive translation. Prose entries are checked in English only, because an Arabic answer fails English substring matching for reasons that have nothing to do with the pipeline. See eval_app.py.",
+    "review": "machine"
+  },
+  "questions": [
+    {
+      "id": "APP-01",
+      "type": "numeric",
+      "probes": "plain retrieval",
+      "doc": "MHR08_Accommodation_Policy.pdf",
+      "question_en": "What is the maximum increase allowed on accommodation contract renewals?",
+      "question_ar": "أقصى نسبة زيادة مسموح بيها عند تجديد عقود السكن كام؟",
+      "expected_answer": "A maximum of 10%.",
+      "must_include": ["10%"]
+    },
+    {
+      "id": "APP-02",
+      "type": "numeric",
+      "probes": "plain retrieval",
+      "doc": "MHR08_Accommodation_Policy.pdf",
+      "question_en": "By when must the original water, gas and electricity bills for the previous month be sent?",
+      "question_ar": "امتى لازم تتبعت فواتير المياه والغاز والكهرباء الأصلية بتاعة الشهر اللي فات؟",
+      "expected_answer": "Within the first 5 days of the new month.",
+      "must_include": ["5 days"]
+    },
+    {
+      "id": "APP-03",
+      "type": "numeric",
+      "probes": "plain retrieval",
+      "doc": "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+      "question_en": "Within how long after an incident must an employee file a written complaint with the HR Office under the DE&I policy?",
+      "question_ar": "خلال قد إيه بعد الواقعة لازم الموظف يقدم شكوى مكتوبة لمكتب الموارد البشرية حسب سياسة التنوع والمساواة؟",
+      "expected_answer": "Within 14 days after the event or problem occurrence.",
+      "must_include": ["14 days"]
+    },
+    {
+      "id": "APP-04",
+      "type": "numeric",
+      "probes": "plain retrieval",
+      "doc": "MHR13_C_A_R_E_Policy.pdf",
+      "question_en": "How long does the HR Manager have to review and approve the Committee's recommendations after the investigation closes under the C.A.R.E policy?",
+      "question_ar": "مدير الموارد البشرية عنده قد إيه عشان يراجع ويعتمد توصيات اللجنة بعد ما التحقيق يقفل في سياسة C.A.R.E؟",
+      "expected_answer": "Within 7 days after closing of the investigation and hearing.",
+      "must_include": ["7 days"]
+    },
+    {
+      "id": "APP-05",
+      "type": "form_lookup",
+      "probes": "exact form code - the BM25 channel's job",
+      "doc": "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "question_en": "Which form is used to terminate a casual worker when drug abuse, theft or unethical acts are proved?",
+      "question_ar": "أنهي استمارة بتستخدم لإنهاء خدمة عامل باليومية لو ثبت عليه تعاطي مخدرات أو سرقة أو تصرفات غير أخلاقية؟",
+      "expected_answer": "The Termination notice, F-M-HR-07-05.",
+      "must_include": ["F-M-HR-07-05"]
+    },
+    {
+      "id": "APP-06",
+      "type": "form_lookup",
+      "probes": "exact form code",
+      "doc": "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "question_en": "Which form is the Cash Fund Settlement used in the overseas petty cash process?",
+      "question_ar": "أنهي استمارة بتستخدم لتسوية عهدة النقدية في إجراء المصروفات النثرية بالخارج؟",
+      "expected_answer": "F-P-HR-04-03.",
+      "must_include": ["F-P-HR-04-03"]
+    },
+    {
+      "id": "APP-07",
+      "type": "role_lookup",
+      "probes": "plain retrieval",
+      "doc": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "question_en": "Who sends the initial incident report and to whom?",
+      "question_ar": "مين اللي بيبعت تقرير الحادث المبدئي؟ وبيبعته لمين؟",
+      "expected_answer": "The Project HSE Manager sends it to the Operation Manager, COO, HR Manager and Head Office.",
+      "must_include": ["HSE Manager"]
+    },
+    {
+      "id": "APP-08",
+      "type": "role_lookup",
+      "probes": "plain retrieval",
+      "doc": "PCM01_Customer_Satisfaction_Process.pdf",
+      "question_en": "Who prepares the analysis report for all customer satisfaction surveys received?",
+      "question_ar": "مين اللي بيجهز تقرير تحليل استبيانات رضا العملاء؟",
+      "expected_answer": "The QA Manager.",
+      "must_include": ["QA Manager"]
+    },
+    {
+      "id": "APP-09",
+      "type": "role_lookup",
+      "probes": "plain retrieval",
+      "doc": "PEQ01_Equipment_Management_Process.pdf",
+      "question_en": "Who decides whether to rent or buy equipment?",
+      "question_ar": "مين اللي بيقرر يأجر المعدات ولا يشتريها؟",
+      "expected_answer": "The EDM (Equipment Department Manager).",
+      "must_include": ["EDM"]
+    },
+    {
+      "id": "APP-10",
+      "type": "definition",
+      "probes": "plain retrieval",
+      "doc": "PHR02_Learning_Development_Process.pdf",
+      "question_en": "What does IDP stand for in the Learning & Development process?",
+      "question_ar": "IDP اختصار لإيه في إجراء التعلم والتطوير؟",
+      "expected_answer": "Individual Development Plan.",
+      "must_include": ["Individual Development Plan"]
+    },
+    {
+      "id": "APP-11",
+      "type": "definition",
+      "probes": "plain retrieval",
+      "doc": "PCN02_Claim_Process.pdf",
+      "question_en": "What does EOT stand for in the claim process?",
+      "question_ar": "EOT اختصار لإيه في إجراء المطالبات؟",
+      "expected_answer": "Extension of Time.",
+      "must_include": ["Extension of"]
+    },
+    {
+      "id": "APP-12",
+      "type": "definition",
+      "probes": "plain retrieval",
+      "doc": "PCM02_Branding_for_Construction_Process.pdf",
+      "question_en": "What does Marcom stand for in the branding process?",
+      "question_ar": "كلمة Marcom اختصار لإيه في إجراء العلامة التجارية؟",
+      "expected_answer": "Marketing Communications.",
+      "must_include": ["Marketing"]
+    },
+    {
+      "id": "APP-13",
+      "type": "fact_crossdoc",
+      "probes": "cross-document reference",
+      "doc": "PQD05_Risk_Assessment_Process.pdf",
+      "question_en": "Several processes say risks are recorded on a risk identification and assessment form maintained by the HoD. Which form number is that?",
+      "question_ar": "كذا إجراء بيقول إن المخاطر بتتسجل في نموذج تحديد وتقييم المخاطر اللي بيحتفظ بيه رئيس القسم، رقم النموذج ده إيه؟",
+      "expected_answer": "F-P-QD-05-01, the Risk Register.",
+      "must_include": ["F-P-QD-05-01"]
+    },
+    {
+      "id": "APP-14",
+      "type": "fact",
+      "probes": "plain retrieval",
+      "doc": "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "question_en": "Which projects pay an annual bonus based on personal performance under the French-Speaking Sub-Saharan Africa policy?",
+      "question_ar": "أنهي مشاريع بتصرف مكافأة سنوية على أساس الأداء الشخصي في سياسة دول أفريقيا الناطقة بالفرنسية؟",
+      "expected_answer": "Projects with a duration of more than one year.",
+      "must_include": ["annual bonus"]
+    },
+    {
+      "id": "APP-15",
+      "type": "unanswerable",
+      "probes": "refusal - must NOT invent an answer",
+      "doc": "none",
+      "question_en": "What is RME's dividend policy for shareholders?",
+      "question_ar": "إيه هي سياسة توزيع الأرباح على المساهمين في الشركة؟",
+      "expected_answer": "Not covered by these documents.",
+      "must_include": []
+    },
+    {
+      "id": "APP-16",
+      "type": "unanswerable",
+      "probes": "refusal - must NOT invent an answer",
+      "doc": "none",
+      "question_en": "What is the company's revenue for the 2025 financial year?",
+      "question_ar": "إيرادات الشركة للسنة المالية 2025 كام؟",
+      "expected_answer": "Not covered by these documents.",
+      "must_include": []
+    },
+    {
+      "id": "APP-17",
+      "type": "numeric",
+      "probes": "spelling repair - this is the query that exposed the typo bug",
+      "doc": "MHR08_Accommodation_Policy.pdf",
+      "question_en": "How far should employees live to get access to accommodation?",
+      "question_en_typo": "how far should employees live to get access to accomdation",
+      "question_ar": "الموظف لازم يسكن على بعد كام كيلومتر عن مقر العمل عشان ياخد سكن من الشركة؟",
+      "expected_answer": "More than 160 km round trip between residence and project area (§4.1.12).",
+      "must_include": ["160"],
+      "min_top_k": 8,
+      "note": "NEEDS top_k>=8, and the reason is worth reading before treating a refusal here as a bug. Two different chunks carry '160'. §2.1 ranks 2nd and is a DEFINITION - it says who the policy applies to ('an expatriate whose place of residence ... is 160 kilometers away from the workplace'), not what earns you housing. §4.1.12 is the actual eligibility RULE - 'allowed to accommodate ... if the distance ... exceeds 160 kilometers round trip' - and it ranks 7th, because it shares no wording with the question ('far', 'live', 'access' appear nowhere in it). At top_k<=6 the model sees only the definition and answers 'Not specified', which is defensible. At top_k=8 it answers correctly and says 'more than 160 kilometres'. Measured: refuses at 3, 5 and 6; answers at 8. Also note the source document is internally inconsistent - §2.1's 160 km reads one-way, §4.1.12's is round trip, a factor of two.",
+      "brittleness": "With identical retrieved chunks and temperature=0/seed=0, 'how far ... accommodation' answers from the §2.1 definition while 'How far ... accommodation' refuses. A capital letter flips it. That is the model sitting on the fence over whether a definition answers the question - the instability is the signal, not the capital."
+    },
+    {
+      "id": "APP-18",
+      "type": "form_lookup",
+      "probes": "spelling repair on a form-code question",
+      "doc": "PCM01_Customer_Satisfaction_Process.pdf",
+      "question_en": "What form is used for the Customer Satisfaction Survey?",
+      "question_en_typo": "what form is used for the custmer satisfction survey",
+      "question_ar": "أنهي استمارة بتستخدم في استبيان رضا العملاء؟",
+      "expected_answer": "F-P-CM-01-01.",
+      "must_include": ["F-P-CM-01-01"],
+      "note": "Also checks that repair does not damage the form code itself."
+    },
+    {
+      "id": "APP-19",
+      "type": "followup",
+      "probes": "gate + rewrite: the second turn is meaningless without the first",
+      "doc": "PCN02_Claim_Process.pdf",
+      "setup_en": "What does IDP stand for in the Learning & Development process?",
+      "setup_ar": "IDP اختصار لإيه في إجراء التعلم والتطوير؟",
+      "question_en": "and what about EOT?",
+      "question_ar": "وEOT؟",
+      "expected_answer": "Extension of Time.",
+      "must_include": ["Extension of"],
+      "note": "Expect mode=followup and a rewritten query naming EOT. Retrieval must move from PHR02 to PCN02."
+    },
+    {
+      "id": "APP-20",
+      "type": "continuation",
+      "probes": "continuation replay: no new retrieval, same chunks re-prompted",
+      "doc": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "setup_en": "Who sends the initial incident report and to whom?",
+      "setup_ar": "مين اللي بيبعت تقرير الحادث المبدئي؟ وبيبعته لمين؟",
+      "question_en": "that's not all of them, who else receives it?",
+      "question_ar": "مش دول كلهم، مين كمان بيستلمه؟",
+      "expected_answer": "The remaining recipients from the same chunk - Operation Manager, COO, HR Manager, Head Office.",
+      "must_include": [],
+      "scoring": "manual",
+      "note": "Automatic scoring cannot judge 'did it add what it missed'. Check by hand that mode=continuation, that the Sources expander says sources were reused, that retrieval was skipped, and that the answer names recipients the first answer left out rather than repeating it."
+    }
+  ]
+}

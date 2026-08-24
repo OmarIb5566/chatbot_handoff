@@ -1,0 +1,848 @@
+[
+  {
+    "id": "APP-01",
+    "lang": "en",
+    "typo": false,
+    "question": "What is the maximum increase allowed on accommodation contract renewals?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf"
+    ],
+    "answer": "The maximum increase allowed on accommodation contract renewals is 10%. (MHR08_Accommodation_Policy.pdf)",
+    "verdict": "clean",
+    "seconds": 11.842771799987531,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-01",
+    "lang": "ar",
+    "typo": false,
+    "question": "أقصى نسبة زيادة مسموح بيها عند تجديد عقود السكن كام؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf"
+    ],
+    "answer": "النسبة القصوى المسموح بها لزيادة إبرام عقود الإقامة الجديدة هي 10%.  \n(المصدر: MHR08_Accommodation_Policy.pdf)",
+    "verdict": "clean",
+    "seconds": 16.09259510000993,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-02",
+    "lang": "en",
+    "typo": false,
+    "question": "By when must the original water, gas and electricity bills for the previous month be sent?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "PFN03_Overseas_Payment_Release_Process.pdf",
+      "MHR16_Employee_Separation_Policy.pdf"
+    ],
+    "answer": "The original water, gas, and electricity bills for the previous month must be sent within the first 5 days of the new month. (MHR08_Accommodation_Policy.pdf)",
+    "verdict": "clean",
+    "seconds": 10.82383999999729,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-02",
+    "lang": "ar",
+    "typo": false,
+    "question": "امتى لازم تتبعت فواتير المياه والغاز والكهرباء الأصلية بتاعة الشهر اللي فات؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "POP09_Earthmoving_Process.pdf",
+      "MHR16_Employee_Separation_Policy.pdf"
+    ],
+    "answer": "يجب إرسال أصل فواتير الماء، الغاز، والكهرباء للشهر المنقضي خلال 5 أيام من الشهر الجديد، مرفقًا بتقرير مفصل للفواتير (F-M-HR-08-04).  \nالمصدر: MHR08_Accommodation_Policy.pdf",
+    "verdict": "clean",
+    "seconds": 25.958069699976477,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-03",
+    "lang": "en",
+    "typo": false,
+    "question": "Within how long after an incident must an employee file a written complaint with the HR Office under the DE&I policy?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR13_C_A_R_E_Policy.pdf",
+      "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf"
+    ],
+    "answer": "Under the DE&I policy, an employee must file a written complaint with the HR Office within 14 days after the incident or problem occurrence.\n\nReference: MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+    "verdict": "clean",
+    "seconds": 74.90020189997449,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-03",
+    "lang": "ar",
+    "typo": false,
+    "question": "خلال قد إيه بعد الواقعة لازم الموظف يقدم شكوى مكتوبة لمكتب الموارد البشرية حسب سياسة التنوع والمساواة؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf"
+    ],
+    "answer": "غير محدد في وثائق العمليات هذه.",
+    "verdict": "clean",
+    "seconds": 103.69685369999206,
+    "doc_hit": true,
+    "missed": [
+      "14 days (as 14)"
+    ],
+    "outcome": "WRONG"
+  },
+  {
+    "id": "APP-04",
+    "lang": "en",
+    "typo": false,
+    "question": "How long does the HR Manager have to review and approve the Committee's recommendations after the investigation closes under the C.A.R.E policy?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR13_C_A_R_E_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+      "MHR14_Promotion_Upward_Mobility_Policy.pdf"
+    ],
+    "answer": "Under the C.A.R.E policy, the HR Manager has 7 days to review and approve the Committee's recommendations after the investigation closes.\n\nReference: [MHR13_C_A_R_E_Policy.pdf | PROCESS OPERATION]",
+    "verdict": "clean",
+    "seconds": 94.48516599999857,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-04",
+    "lang": "ar",
+    "typo": false,
+    "question": "مدير الموارد البشرية عنده قد إيه عشان يراجع ويعتمد توصيات اللجنة بعد ما التحقيق يقفل في سياسة C.A.R.E؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf"
+    ],
+    "answer": "يقوم مدير الموارد البشرية بمراجعة واعتماد التوصيات الصادرة عن اللجنة خلال 7 أيام بعد إنتهاء التحقيق وتقديم المقترحات، وفقًا لوثيقة [MHR13_C_A_R_E_Policy.pdf].",
+    "verdict": "clean",
+    "seconds": 78.45490620000055,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-05",
+    "lang": "en",
+    "typo": false,
+    "question": "Which form is used to terminate a casual worker when drug abuse, theft or unethical acts are proved?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf"
+    ],
+    "answer": "The form used to terminate a casual worker when drug abuse, theft, or unethical acts are proved is the Termination notice (F-M-HR-07-05). This information is specified in the document \"MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf\".",
+    "verdict": "clean",
+    "seconds": 35.74237070001254,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-05",
+    "lang": "ar",
+    "typo": false,
+    "question": "أنهي استمارة بتستخدم لإنهاء خدمة عامل باليومية لو ثبت عليه تعاطي مخدرات أو سرقة أو تصرفات غير أخلاقية؟",
+    "mode": "new",
+    "repairs": [
+      [
+        "unethically",
+        "unethical"
+      ]
+    ],
+    "retrieved": [
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "PIT01_Information_Technology.pdf"
+    ],
+    "answer": "يتم إنهاء خدمة العامل اليومي الذي يُكتشف استخدامه للمخدرات أو سرقته أو تصرفه بشكل غير أخلاقي فورًا باستخدام إشعار إنهاء الخدمة (F-M-HR-07-05)، وفقًا لوثيقة [MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf].",
+    "verdict": "clean",
+    "seconds": 43.7994681999844,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-06",
+    "lang": "en",
+    "typo": false,
+    "question": "Which form is the Cash Fund Settlement used in the overseas petty cash process?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "PFN02_Overseas_Petty_Cash_Process.pdf"
+    ],
+    "answer": "The Cash Fund Settlement is used in the form F-P-HR-04-03. (PFN02_Overseas_Petty_Cash_Process.pdf)",
+    "verdict": "clean",
+    "seconds": 16.180066600019927,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-06",
+    "lang": "ar",
+    "typo": false,
+    "question": "أنهي استمارة بتستخدم لتسوية عهدة النقدية في إجراء المصروفات النثرية بالخارج؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "PFN02_Overseas_Petty_Cash_Process.pdf",
+      "PHR04_Overseas_Business_Travel_Process.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf"
+    ],
+    "answer": "النموذج المستخدم لتسوية ودائع النقد الصغيرة للاستعمالات العرضية بالخارج هو **F-P-HR-04-03**.  \nالمصدر: **PFN02_Overseas_Petty_Cash_Process.pdf**.",
+    "verdict": "clean",
+    "seconds": 30.191421699986677,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-07",
+    "lang": "en",
+    "typo": false,
+    "question": "Who sends the initial incident report and to whom?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf"
+    ],
+    "answer": "The initial incident report is sent by the Project HSE Manager to the Operation Manager, COO, HR Manager, H.O. HSE Manager, and Project Manager. (Doc: MHR11_Incident_Reporting_Investigation_Policy.pdf)",
+    "verdict": "clean",
+    "seconds": 49.487161099983496,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-07",
+    "lang": "ar",
+    "typo": false,
+    "question": "مين اللي بيبعت تقرير الحادث المبدئي؟ وبيبعته لمين؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf"
+    ],
+    "answer": "أرسلت تقرير الحادث الأولي (F-P-SF-01-01) مدير السلامة والصحة المهنية للمشروع إلى مدير العمليات، ومدير العمليات التنفيذية (COO)، ومدير الموارد البشرية، ومدير السلامة والصحة المهنية في المقر الرئيسي، ومدير المشروع، وفقًا للملف MHR11_Incident_Reporting_Investigation_Policy.pdf.",
+    "verdict": "clean",
+    "seconds": 102.73468420001154,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "n/a"
+  },
+  {
+    "id": "APP-08",
+    "lang": "en",
+    "typo": false,
+    "question": "Who prepares the analysis report for all customer satisfaction surveys received?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf"
+    ],
+    "answer": "The QA Manager prepares the analysis report for all customer satisfaction surveys received. (Doc. No.: P-CM-01)",
+    "verdict": "clean",
+    "seconds": 27.152389299983042,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-08",
+    "lang": "ar",
+    "typo": false,
+    "question": "مين اللي بيجهز تقرير تحليل استبيانات رضا العملاء؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf"
+    ],
+    "answer": "المسؤول عن إعداد تقرير تحليل استبيان رضا العملاء هو QA Manager.  \n(المصدر: PCM01_Customer_Satisfaction_Process.pdf)",
+    "verdict": "clean",
+    "seconds": 27.396591900018393,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "n/a"
+  },
+  {
+    "id": "APP-09",
+    "lang": "en",
+    "typo": false,
+    "question": "Who decides whether to rent or buy equipment?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PEQ01_Equipment_Management_Process.pdf",
+      "PEQ01_Equipment_Management_Process.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "Subcontract Amendments - Rental Equipment Variation Order WF - UAE.pdf",
+      "Subcontract Amendments - Rental Equipment Variation Order WF.pdf"
+    ],
+    "answer": "EDM decides whether to rent or buy equipment after the discussion with VP based on the Rent/Buy Analysis. This is specified in the document PEQ01_Equipment_Management_Process.pdf.",
+    "verdict": "clean",
+    "seconds": 80.90387879998889,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-09",
+    "lang": "ar",
+    "typo": false,
+    "question": "مين اللي بيقرر يأجر المعدات ولا يشتريها؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PEQ01_Equipment_Management_Process.pdf",
+      "Subcontract Amendments - Rental Equipment Variation Order WF - UAE.pdf",
+      "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "Rented Equipment Timesheet - Rented Equipment Timesheet - New - WF.pdf"
+    ],
+    "answer": "EDM يقرر إما استئجار المعدات أو شراؤها بعد مناقشة مع نائب الرئيس (VP) بناءً على التحليل التالي:  \n- الشراء الاختياري (الحد الأدنى 3 موردين)  \n- الشراء من مصدر واحد (في الحالات الطارئة)  \n- المعدات المستعملة/المملوكة، يتم اتباع الشراء من مصدر واحد.  \n\nالمصدر: PEQ01_Equipment_Management_Process.pdf",
+    "verdict": "clean",
+    "seconds": 109.89640770001279,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "n/a"
+  },
+  {
+    "id": "APP-10",
+    "lang": "en",
+    "typo": false,
+    "question": "What does IDP stand for in the Learning & Development process?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf"
+    ],
+    "answer": "IDP stands for Individual Development Plan. (Doc. No.: P-HR-02)",
+    "verdict": "clean",
+    "seconds": 38.710123100012424,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-10",
+    "lang": "ar",
+    "typo": false,
+    "question": "IDP اختصار لإيه في إجراء التعلم والتطوير؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf"
+    ],
+    "answer": "IDP stands for Individual Development Plan. (PHR02_Learning_Development_Process.pdf)",
+    "verdict": "clean",
+    "seconds": 37.36924890000955,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "n/a"
+  },
+  {
+    "id": "APP-11",
+    "lang": "en",
+    "typo": false,
+    "question": "What does EOT stand for in the claim process?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PCN02_Claim_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "POP07_Project_Closeout_Process.pdf"
+    ],
+    "answer": "EOT stands for Extension of Time in the claim process. (Doc filename: PCN02_Claim_Process.pdf)",
+    "verdict": "clean",
+    "seconds": 24.28448470000876,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-11",
+    "lang": "ar",
+    "typo": false,
+    "question": "EOT اختصار لإيه في إجراء المطالبات؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PCN02_Claim_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "POP07_Project_Closeout_Process.pdf"
+    ],
+    "answer": "EOT هو اختصار لـ \"Extension of Time\" في معالجة المطالبات، كما هو محدد في وثيقة \"PCN02_Claim_Process.pdf\".",
+    "verdict": "clean",
+    "seconds": 31.605866600002628,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "n/a"
+  },
+  {
+    "id": "APP-12",
+    "lang": "en",
+    "typo": false,
+    "question": "What does Marcom stand for in the branding process?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PCM02_Branding_for_Construction_Sites_Process.pdf",
+      "PCM02_Branding_for_Construction_Sites_Process.pdf",
+      "PCM02_Branding_for_Construction_Sites_Process.pdf",
+      "PCM02_Branding_for_Construction_Sites_Process.pdf",
+      "PCM02_Branding_for_Construction_Sites_Process.pdf"
+    ],
+    "answer": "Marcom stands for Marketing & Communication in the branding process. (Doc filename: PCM02_Branding_for_Construction_Sites_Process.pdf)",
+    "verdict": "clean",
+    "seconds": 18.153668199985987,
+    "doc_hit": false,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-12",
+    "lang": "ar",
+    "typo": false,
+    "question": "كلمة Marcom اختصار لإيه في إجراء العلامة التجارية؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PCM02_Branding_for_Construction_Sites_Process.pdf",
+      "PCM02_Branding_for_Construction_Sites_Process.pdf",
+      "MHR20_Employees_Performance_Policy.pdf",
+      "PCM02_Branding_for_Construction_Sites_Process.pdf",
+      "Quality_Manual_2026.pdf"
+    ],
+    "answer": "Marketing & Communication",
+    "verdict": "clean",
+    "seconds": 18.35072480000963,
+    "doc_hit": false,
+    "missed": [],
+    "outcome": "n/a"
+  },
+  {
+    "id": "APP-13",
+    "lang": "en",
+    "typo": false,
+    "question": "Several processes say risks are recorded on a risk identification and assessment form maintained by the HoD. Which form number is that?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PQD05_Risk_Assessment_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "PEN01_Engineering_Process.pdf",
+      "PQD08_Control_of_Records_Filing_Archiving_and_Backup_Process.pdf",
+      "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf"
+    ],
+    "answer": "The form number is F-P-QD-05-01. This is specified in the context provided.",
+    "verdict": "clean",
+    "seconds": 12.144756499998039,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-13",
+    "lang": "ar",
+    "typo": false,
+    "question": "كذا إجراء بيقول إن المخاطر بتتسجل في نموذج تحديد وتقييم المخاطر اللي بيحتفظ بيه رئيس القسم، رقم النموذج ده إيه؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PQD05_Risk_Assessment_Process.pdf",
+      "PQD05_Risk_Assessment_Process.pdf",
+      "PQD06_Control_of_Documents_Communication_Process.pdf",
+      "PCN02_Claim_Process.pdf",
+      "PPC02_Staff_Hiring_Plan_Process.pdf"
+    ],
+    "answer": "رقم هذا النموذج هو F-P-QD-05-01، كما ورد في وثيقة \"PQD05_Risk_Assessment_Process.pdf\".",
+    "verdict": "clean",
+    "seconds": 22.633766800005105,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-14",
+    "lang": "en",
+    "typo": false,
+    "question": "Which projects pay an annual bonus based on personal performance under the French-Speaking Sub-Saharan Africa policy?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf"
+    ],
+    "answer": "Projects with a duration of more than one year pay an annual bonus based on personal performance under the French-Speaking Sub-Saharan Africa policy. (Doc: MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf)",
+    "verdict": "clean",
+    "seconds": 14.066254499994102,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-14",
+    "lang": "ar",
+    "typo": false,
+    "question": "أنهي مشاريع بتصرف مكافأة سنوية على أساس الأداء الشخصي في سياسة دول أفريقيا الناطقة بالفرنسية؟",
+    "mode": "new",
+    "repairs": [
+      [
+        "african",
+        "africa"
+      ]
+    ],
+    "retrieved": [
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf"
+    ],
+    "answer": "غير محدد في وثائق العمليات هذه.",
+    "verdict": "clean",
+    "seconds": 21.51178709999658,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "n/a"
+  },
+  {
+    "id": "APP-15",
+    "lang": "en",
+    "typo": false,
+    "question": "What is RME's dividend policy for shareholders?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "PIT01_Information_Technology.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf"
+    ],
+    "answer": "Not specified in these process documents.",
+    "verdict": "clean",
+    "seconds": 13.221739700005855,
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-15",
+    "lang": "ar",
+    "typo": false,
+    "question": "إيه هي سياسة توزيع الأرباح على المساهمين في الشركة؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "PQD09_Management_Leadership_and_Commitment.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "Quality_Manual_2026.pdf"
+    ],
+    "answer": "غير محدد في وثائق العمليات هذه.",
+    "verdict": "clean",
+    "seconds": 20.511779899999965,
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-16",
+    "lang": "en",
+    "typo": false,
+    "question": "What is the company's revenue for the 2025 financial year?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "Quality_Manual_2026.pdf",
+      "PPC01_Planning_Cost_Control_Process.pdf"
+    ],
+    "answer": "Not specified in these process documents.",
+    "verdict": "clean",
+    "seconds": 43.52871429998777,
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-16",
+    "lang": "ar",
+    "typo": false,
+    "question": "إيرادات الشركة للسنة المالية 2025 كام؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR18_UAE_Branch_Policy.pdf",
+      "PPC01_Planning_Cost_Control_Process.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf"
+    ],
+    "answer": "غير محدد في وثائق العمليات هذه.",
+    "verdict": "clean",
+    "seconds": 57.42658960001427,
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-17",
+    "lang": "en",
+    "typo": false,
+    "question": "How far should employees live to get access to accommodation?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "PQD06_Control_of_Documents_Communication_Process.pdf"
+    ],
+    "answer": "Not specified in these process documents.",
+    "verdict": "clean",
+    "seconds": 15.635270099999616,
+    "doc_hit": true,
+    "missed": [
+      "160"
+    ],
+    "outcome": "WRONG"
+  },
+  {
+    "id": "APP-17",
+    "lang": "ar",
+    "typo": false,
+    "question": "الموظف لازم يسكن على بعد كام كيلومتر عن مقر العمل عشان ياخد سكن من الشركة؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR08_Accommodation_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf"
+    ],
+    "answer": "يجب أن يعيش الموظف على مسافة تزيد عن 160 كيلومتر من مكان العمل لاستحقاق سكن من الشركة. (\"MHR08_Accommodation_Policy.pdf\")",
+    "verdict": "clean",
+    "seconds": 27.08405339998717,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-18",
+    "lang": "en",
+    "typo": false,
+    "question": "What form is used for the Customer Satisfaction Survey?",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf"
+    ],
+    "answer": "The form used for the Customer Satisfaction Survey is **Customer Satisfaction Survey, F-P-CM-01-01**. (Doc filename: PCM01_Customer_Satisfaction_Process.pdf)",
+    "verdict": "clean",
+    "seconds": 21.620945900009247,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-18",
+    "lang": "ar",
+    "typo": false,
+    "question": "أنهي استمارة بتستخدم في استبيان رضا العملاء؟",
+    "mode": "new",
+    "repairs": [],
+    "retrieved": [
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf",
+      "PCM01_Customer_Satisfaction_Process.pdf"
+    ],
+    "answer": "نعم، يتم استخدام نموذج \"Customer Satisfaction Survey\" لاستبيان رضا العملاء، ورقم هذا النموذج هو F-P-CM-01-01، كما ورد في وثيقة PCM01_Customer_Satisfaction_Process.pdf.",
+    "verdict": "clean",
+    "seconds": 24.03518060001079,
+    "doc_hit": true,
+    "missed": [],
+    "outcome": "ok"
+  },
+  {
+    "id": "APP-19",
+    "lang": "en",
+    "typo": false,
+    "question": "and what about EOT?",
+    "mode": "followup",
+    "repairs": [],
+    "retrieved": [
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf"
+    ],
+    "answer": "Not specified in these process documents.",
+    "verdict": "clean",
+    "seconds": 54.51259830003255,
+    "doc_hit": false,
+    "missed": [
+      "Extension of"
+    ],
+    "outcome": "WRONG"
+  },
+  {
+    "id": "APP-19",
+    "lang": "ar",
+    "typo": false,
+    "question": "وEOT؟",
+    "mode": "followup",
+    "repairs": [],
+    "retrieved": [
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf",
+      "PHR02_Learning_Development_Process.pdf"
+    ],
+    "answer": "غير محدد في وثائق العمليات هذه.",
+    "verdict": "clean",
+    "seconds": 80.24836679999135,
+    "doc_hit": false,
+    "missed": [],
+    "outcome": "n/a"
+  },
+  {
+    "id": "APP-20",
+    "lang": "en",
+    "typo": false,
+    "question": "that's not all of them, who else receives it?",
+    "mode": "continuation",
+    "repairs": [],
+    "retrieved": [
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "PHR03_Safe_Work_Environment_Policy.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+      "MHR13_C_A_R_E_Policy.pdf"
+    ],
+    "answer": "- The complainant shall send an email with the incident details to safe.work.env@rowad-rme.com. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The complaint will be investigated by a committee from the human resources and legal departments reporting to the HR Manager. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The harassment victim and the suspect shall be invited to a meeting in person with the human resources committee. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The complaint parties are committed to not talking about the incident, and disciplinary action will be taken if this rule is broken. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- After hearing both parties, the committee will discuss the points of view for recommendation and appropriate action. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The Policy shall be illustrated to both parties, and the investigation shall be conducted. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- An interview will be conducted with witnesses if they exist. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The incident shall be documented with thorough details for any duplication. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The incident must be confirmed to have occurred. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- If the complaint is found to be false, a formal warning letter shall be issued, and punishment shall be issued for the complainant. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- A report shall be written by the committee and submitted to the HR Manager with findings and recommendations. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- Both parties shall be informed of the investigation findings. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The HR Manager shall send a copy of the incident report to the company CEO before the start of the investigation by the next day of the incident. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The HR Manager shall review and approve the recommendations issued by the Committee. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The HR Manager shall follow up the implementation of the planned corrective and legal actions based on the recommendations of the Committee. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- All parties are obligated to maintain strict confidentiality of the subject during and after the completion of all procedures. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The Legal Officer creates a record of all legal actions taken and presents them to the HR Manager and CEO. (Doc: PHR03_Safe_Work_Environment_Policy.pdf)  \n- The HR Manager shall send a monthly report on minor incidents to the H.O. HSE Manager and Project Manager. (Doc: MHR11_Incident_Reporting_Investigation_Policy.pdf)  \n- The HSE Manager shall create a record (F-P-SF-01-31) that includes all incident reports and follow up on corrective and preventive actions, reporting periodically to the HR Manager and CEO. (Doc: MHR11_Incident_Reporting_Investigation_Policy.pdf)",
+    "verdict": "clean",
+    "seconds": 208.37045099999523,
+    "outcome": "manual",
+    "doc_hit": true
+  },
+  {
+    "id": "APP-20",
+    "lang": "ar",
+    "typo": false,
+    "question": "مش دول كلهم، مين كمان بيستلمه؟",
+    "mode": "followup",
+    "repairs": [],
+    "retrieved": [
+      "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+      "PHR04_Overseas_Business_Travel_Process.pdf",
+      "MHR22_Company_Car_Transportation_Allowance_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf",
+      "MHR10_Code_of_Conduct_Policy.pdf"
+    ],
+    "answer": "غير محدد في وثائق العمليات هذه.",
+    "verdict": "clean",
+    "seconds": 79.09774139999354,
+    "outcome": "manual",
+    "doc_hit": false
+  }
+]

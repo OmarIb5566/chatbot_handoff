@@ -34,23 +34,30 @@ from pathlib import Path
 import requests
 
 import validator as V
-from contextualize import Contextualizer
+from contextualize import CONTINUATION_PROMPT, Contextualizer
 from retriever import Retriever, route_prefixes
 from translate import ANSWER_IN_ARABIC, REFUSAL_AR, is_arabic, to_arabic, to_english
 
-HERE = Path(__file__).resolve().parent
-CHUNKS_JSON = HERE / "chunks.json"            # native-text process documents
-WORKFLOW_CHUNKS_JSON = HERE / "workflow_chunks.json"   # scanned diagrams, VLM-read
+from paths import CHUNKS_JSON, WORKFLOW_CHUNKS_JSON  # noqa: E402  (see paths.py)
 
 
 def load_corpus(include_workflows: bool = True) -> list[dict]:
-    """The indexed corpus: process chunks, plus scanned workflow diagrams.
+    """The indexed corpus: process chunks, plus workflow diagrams.
 
-    Two kinds of chunk live here and they are not equally trustworthy.
-    Process chunks are verbatim PDF text. Workflow chunks are a vision
-    model's reading of a scanned flowchart, carry `source_type:
-    "vlm_description"`, and are `review: "machine"` until a person checks
-    them - see workflow_extractor.py for the measured failure modes.
+    Three kinds of chunk live here and they are not equally trustworthy.
+
+      pdf_text         verbatim PDF text (adaptive_chunker.py)
+      pdf_vector       labels read verbatim from a vector flowchart's own text
+                       layer, with the topology derived geometrically from the
+                       shapes (workflow_vector.py). No model involved.
+      vlm_description  a vision model's reading of a genuinely scanned page -
+                       now only the two image-only signature matrices, which
+                       have no text layer to read (workflow_extractor.py).
+
+    All workflow chunks stay `review: "machine"` until a person checks them:
+    the pdf_vector tokens are verbatim, but which arrow points where is still
+    inferred, and `coverage` plus `audit_warnings` on each chunk say how much
+    of the page the extractor could account for.
 
     They share an index because a user does not know which kind of document
     answers their question, and "who approves procurement over 500 K" is
@@ -64,7 +71,7 @@ def load_corpus(include_workflows: bool = True) -> list[dict]:
 
 
 def ground_truth_chunks(chunks: list[dict]) -> list[dict]:
-    """Only chunks that are verbatim source text.
+    """Only chunks whose TOKENS came off the page rather than out of a model.
 
     The form-number whitelist MUST be built from these alone. It is what makes
     a hallucinated citation detectable, and it works by asserting that a cited
@@ -72,6 +79,14 @@ def ground_truth_chunks(chunks: list[dict]) -> list[dict]:
     corpus and a form number the vision model invented would whitelist itself -
     the validator would then confirm it as genuine, which is worse than having
     no validator at all.
+
+    The test is on the tokens, not on the sentences. `pdf_vector` chunks
+    qualify: every label in them is read from the flowchart's own text layer,
+    so a form number in a workflow cannot have been invented, even though the
+    prose around it is rendered from the graph rather than quoted. Only
+    `vlm_description` - a model looking at a picture - is excluded, and since
+    workflow_vector.py took over the vector sheets that is just the two
+    image-only signature matrices.
     """
     return [c for c in chunks if c.get("source_type") != "vlm_description"]
 
@@ -97,19 +112,39 @@ def strip_reasoning(text: str) -> str:
     return out.strip()
 
 
-def build_prompt(question: str, retrieved: list[dict], answer_in_arabic: bool = False) -> str:
-    """Context-only prompt. The Arabic directive is the only thing that varies."""
-    context = "\n\n".join(
+def format_context(retrieved: list[dict]) -> str:
+    """Chunks as the model sees them. Shared, so a continuation prompt shows the
+    same text in the same shape as the answer it is continuing."""
+    return "\n\n".join(
         f"[{c['filename']} | {c['section']}]\n{c['text']}" for c in retrieved
     )
+
+
+def build_prompt(question: str, retrieved: list[dict], answer_in_arabic: bool = False) -> str:
+    """Context-only prompt. The Arabic directive is the only thing that varies."""
+    context = format_context(retrieved)
     refusal = REFUSAL_AR if answer_in_arabic else REFUSAL_EN
     instruction = (
-        "Answer using ONLY the context below. If the answer isn't in the context, "
+        "Answer using ONLY the context below. Dont just state whats in the context, explain it before stating to refer to the document. If the answer isn't in the context, "
         f"say '{refusal}' Always cite the doc filename."
     )
     if answer_in_arabic:
         instruction += ANSWER_IN_ARABIC
     return f"{instruction}\n\nCONTEXT:\n{context}\n\nQUESTION: {question}\nANSWER:"
+
+
+def build_continuation_prompt(retrieved: list[dict], prev_answer: str,
+                              answer_in_arabic: bool = False) -> str:
+    """Prompt for "you missed some" - same chunks, second pass.
+
+    No QUESTION line, because there is no new question: the instruction is to
+    finish the previous answer out of the context it was already built from.
+    """
+    prompt = CONTINUATION_PROMPT.format(chunks=format_context(retrieved),
+                                        prev_answer=prev_answer)
+    if answer_in_arabic:
+        prompt += ANSWER_IN_ARABIC
+    return prompt + "\n\nANSWER:"
 
 
 # ------------------------------------------------------------------- ollama
@@ -233,19 +268,40 @@ class Chatbot:
         t0 = time.perf_counter()
         ctx = self.contextualizer.resolve(q_en, session_id)
         t_ctx = time.perf_counter() - t0
-        q_search = ctx.query
 
-        # Retrieval runs every turn, on the resolved query. Previous chunks are
-        # never reused - the boost is a ranking signal, nothing is excluded.
-        t0 = time.perf_counter()
-        route = route_prefixes(q_search)
-        hits = self.retriever.search(q_search, top_k=top_k,
-                                     boost_prefixes=ctx.boost_prefixes)
-        t_ret = time.perf_counter() - t0
+        if ctx.needs_retrieval:
+            # Retrieval runs on the resolved query. Previous chunks are not
+            # reused - the boost is a ranking signal, nothing is excluded.
+            # Spelling repair up front, so retrieval AND generation see the
+            # same words. Doing it only inside search() was not enough: the
+            # chunks came back right and the generator still read the typo in
+            # the question, which was the difference between "160 kilometers"
+            # and "Not specified in these process documents" off identical
+            # context. Idempotent, so search() repeating it is free.
+            #
+            # Surfaced in the record for the same reason the Arabic
+            # translation is: if it guessed wrong, that is invisible in the
+            # answer.
+            q_search, repairs = self.retriever.repair_query(ctx.query)
+            t0 = time.perf_counter()
+            route = route_prefixes(q_search)
+            hits = self.retriever.search(q_search, top_k=top_k,
+                                         boost_prefixes=ctx.boost_prefixes)
+            t_ret = time.perf_counter() - t0
+            prompt = build_prompt(q_search, hits, answer_in_arabic=src_ar)
+        else:
+            # Continuation: the user said the last answer was incomplete. The
+            # chunks are already the right ones - retrieving on "list the rest"
+            # would search the corpus for those words and replace the very
+            # context being asked about. Replay them and re-prompt instead.
+            q_search = ctx.original
+            route, t_ret, repairs = None, 0.0, []
+            hits = ctx.reuse_hits
+            prompt = build_continuation_prompt(hits, ctx.prev_answer,
+                                               answer_in_arabic=src_ar)
 
         t0 = time.perf_counter()
-        raw = generate(build_prompt(q_search, hits, answer_in_arabic=src_ar),
-                       model=self.model, host=self.host)
+        raw = generate(prompt, model=self.model, host=self.host)
         t_gen = time.perf_counter() - t0
 
         answer = strip_reasoning(raw)
@@ -282,6 +338,9 @@ class Chatbot:
             "question": question, "question_en": q_en,
             "query_used": q_search,
             "was_rewritten": ctx.was_rewritten,
+            "mode": ctx.mode,
+            "reused_sources": ctx.is_continuation,
+            "spelling_repairs": repairs,
             "gate_reasons": ctx.gate.reasons,
             "rewrite_model": ctx.rewrite_model,
             "boost_prefixes": ctx.boost_prefixes,
@@ -295,9 +354,17 @@ class Chatbot:
             "generation_s": t_gen, "translate_out_s": t_out,
             "total_s": t_ctx + t_in + t_ret + t_gen + t_out,
         }
-        # Record the ORIGINAL question, so history reads as the user spoke it,
-        # and a gist of the answer rather than the whole generation.
-        self.contextualizer.record(session_id, question, answer)
+        # Record the ORIGINAL question, so history reads as the user spoke it.
+        # The hits go in too, so the next turn can be a continuation of this
+        # one - including a continuation of a continuation, which stores the
+        # same replayed chunks again rather than losing them.
+        #
+        # A continuation records what has been said ACROSS both turns, not just
+        # the items it added. "Do not repeat items already listed" is only true
+        # if the prompt can see everything already listed; storing the delta
+        # alone would let a third turn re-offer what the first one answered.
+        recorded = f"{ctx.prev_answer}\n\n{answer}".strip() if ctx.is_continuation else answer
+        self.contextualizer.record(session_id, question, recorded, hits=hits)
         return rec
 
 

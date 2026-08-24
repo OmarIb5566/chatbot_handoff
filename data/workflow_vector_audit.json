@@ -1,0 +1,2452 @@
+[
+  {
+    "filename": "Bid Closing & Approval Internal Process - WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 60,
+        "classified": 60,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 8,
+        "edges": 12,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "technical_director->technical_director_2"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['technical_director->technical_director_2']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Bonds Request - Bond Request Revision WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 83,
+        "classified": 83,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 11,
+        "edges": 18,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Bonds Request - Bonds Request WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 81,
+        "classified": 81,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 11,
+        "edges": 17,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "BOQ Quantity Modification - WF - BOQ Quantity Modification.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 11,
+        "classified": 11,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Client Contract Lines Modification - WF - Client Contract Lines Modification.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 11,
+        "classified": 11,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Client Contract VO - Client Variation Order WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 15,
+        "classified": 15,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Client Contracts - Client Contracts WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 23,
+        "classified": 23,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Cost Report Narrative - WF - Cost Report Narrative.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 18,
+        "classified": 18,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 24,
+        "classified": 24,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 8,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Customer Satisfaction - Creation by PM.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 16,
+        "classified": 14,
+        "coverage": 0.875,
+        "unclassified_text": [
+          "Issue NCR &",
+          "Send to COO"
+        ],
+        "nodes": 5,
+        "edges": 5,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "2 of 16 text spans unclassified: ['Issue NCR &', 'Send to COO']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Customer Satisfaction - Customer Satisfaction WF V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 17,
+        "classified": 17,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 3,
+        "lanes": 2,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 9,
+        "classified": 9,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Department Risk Assessment - Department Risk.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 10,
+        "classified": 10,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Document Submittal - Document Submittal Client WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 8,
+        "classified": 8,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 3,
+        "edges": 2,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Document Submittal - Document Submittals WF V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 17,
+        "classified": 17,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Document Submittal - Documents Submittal.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 8,
+        "classified": 8,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 3,
+        "edges": 2,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Document Submittal - ITP (Client) WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 25,
+        "classified": 22,
+        "coverage": 0.88,
+        "unclassified_text": [
+          "Send back to",
+          "QCM with",
+          "Comments"
+        ],
+        "nodes": 6,
+        "edges": 8,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "3 of 25 text spans unclassified: ['Send back to', 'QCM with', 'Comments']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Document Submittal - ITP WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 26,
+        "classified": 23,
+        "coverage": 0.8846,
+        "unclassified_text": [
+          "Send back to",
+          "QCM with",
+          "Comments"
+        ],
+        "nodes": 6,
+        "edges": 8,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "3 of 26 text spans unclassified: ['Send back to', 'QCM with', 'Comments']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Document Submittal - Method Statement Client WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 24,
+        "classified": 24,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Document Submittal - Method Statement WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 25,
+        "classified": 25,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Drawing List (E1 Log) - Drawing List (E1 Log) WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 38,
+        "classified": 38,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 10,
+        "edges": 14,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "technical_office_mep->technical_office_mep_2",
+          "e1_log_closure_2->e1_log_closure"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['technical_office_mep->technical_office_mep_2', 'e1_log_closure_2->e1_log_closure']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Drawings Submittal - Drawings Submittal WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 33,
+        "classified": 33,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 7,
+        "edges": 9,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "External Material Inspection Request - External Material Inspection Request.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 14,
+        "classified": 14,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "edit_by_qc->end"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['edit_by_qc->end']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Financial Documents Changes - Financial Document Changes WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 9,
+        "classified": 7,
+        "coverage": 0.7778,
+        "unclassified_text": [
+          "Send Back with",
+          "Comments"
+        ],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "2 of 9 text spans unclassified: ['Send Back with', 'Comments']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Formwork Initial Evaluation - Initial Evaluation.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 6,
+        "classified": 6,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 3,
+        "edges": 2,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Go Or No Go - Go or No Go - Competitive Bidding.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 62,
+        "classified": 59,
+        "coverage": 0.9516,
+        "unclassified_text": [
+          "Start Cost",
+          "Estimation",
+          "Study"
+        ],
+        "nodes": 11,
+        "edges": 17,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "3 of 62 text spans unclassified: ['Start Cost', 'Estimation', 'Study']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Go Or No Go - Go or No Go - Direct Award.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 64,
+        "classified": 64,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 10,
+        "edges": 14,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Go Or No Go - Go or No Go - RME FIT-OUT.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 11,
+        "classified": 11,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 3,
+        "edges": 2,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Incident Reports - Creation Workflow - Incident Reports.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 10,
+        "classified": 10,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 5,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Infrastructure Inspection Request (IIR) - Holding Tanks WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 32,
+        "classified": 32,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Infrastructure Inspection Request (IIR) - House Connection Chamber WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 32,
+        "classified": 32,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Infrastructure Inspection Request (IIR) - Inspection Chamber WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 32,
+        "classified": 32,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Infrastructure Inspection Request (IIR) - Manholes Inspection Request.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 32,
+        "classified": 32,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Infrastructure Inspection Request (IIR) - New_Form-Inspection_Request_WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 18,
+        "classified": 18,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 5,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Infrastructure Inspection Request (IIR) - Pipes Inspection Request.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 32,
+        "classified": 32,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Infrastructure Inspection Request (IIR) - Valve Chambers Inspection Request.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 32,
+        "classified": 32,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Inspection Request (IR) - Formwork IR.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 22,
+        "classified": 22,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Inspection Request (IR) - Inspection Request (Client).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 54,
+        "classified": 54,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 8,
+        "edges": 15,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Inspection Request (IR) - New - Inspection Request V2.0.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 46,
+        "classified": 46,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 7,
+        "edges": 12,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Internal Head Office NCR - New Internal Head Office NCR.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 39,
+        "classified": 37,
+        "coverage": 0.9487,
+        "unclassified_text": [
+          "Send Back with",
+          "Comments"
+        ],
+        "nodes": 10,
+        "edges": 11,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "2 of 39 text spans unclassified: ['Send Back with', 'Comments']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Internal Project NCR - Internal Project NCR WF V2.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 39,
+        "classified": 37,
+        "coverage": 0.9487,
+        "unclassified_text": [
+          "Send Back with",
+          "Comments"
+        ],
+        "nodes": 10,
+        "edges": 11,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "2 of 39 text spans unclassified: ['Send Back with', 'Comments']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Legal Initial Evaluation - Legal Initial Evaluation.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 6,
+        "classified": 6,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 3,
+        "edges": 2,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Management Leadership Meeting - Management Leadership Meeting.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 11,
+        "classified": 11,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Material List ( E2 Log ) - E2 Log.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 22,
+        "classified": 22,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 5,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Material List ( E2 Log ) - Manual Material List WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 15,
+        "classified": 15,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Material List - Material List WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 15,
+        "classified": 15,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 5,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Meeting Minutes - Meeting Minutes WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 11,
+        "classified": 11,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Memos - Memos WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 5,
+        "classified": 5,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 2,
+        "edges": 1,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 48,
+        "classified": 48,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 10,
+        "edges": 14,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Manual Creation.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 46,
+        "classified": 44,
+        "coverage": 0.9565,
+        "unclassified_text": [
+          "Send Back to",
+          "PM"
+        ],
+        "nodes": 9,
+        "edges": 12,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "2 of 46 text spans unclassified: ['Send Back to', 'PM']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Payment Applications - Payment Application CD V2.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 103,
+        "classified": 100,
+        "coverage": 0.9709,
+        "unclassified_text": [
+          "Send to Site",
+          "TOM for",
+          "Review"
+        ],
+        "nodes": 16,
+        "edges": 27,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "3 of 103 text spans unclassified: ['Send to Site', 'TOM for', 'Review']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Payment Applications - Payment Application V2.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 81,
+        "classified": 81,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 14,
+        "edges": 20,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "sto->pm_2"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['sto->pm_2']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Potential Delay Events - NOD Auto Workflow.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 12,
+        "classified": 12,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 3,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Potential Delay Events - NOD Manual WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 18,
+        "classified": 18,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 31,
+        "classified": 28,
+        "coverage": 0.9032,
+        "unclassified_text": [
+          "Request Input",
+          "from",
+          "Departments"
+        ],
+        "nodes": 7,
+        "edges": 9,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "coo->mep_operation"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "3 of 31 text spans unclassified: ['Request Input', 'from', 'Departments']",
+          "direction uncertain (arrowhead margin < 5pt) on: ['coo->mep_operation']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Project Budget - Project Budget.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 8,
+        "classified": 8,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Project Closeout - Project Closeout WF V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 15,
+        "classified": 15,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 5,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Project Closeout - Weekly Update for Project Checklist V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 3,
+        "classified": 3,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 2,
+        "edges": 1,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Project Creation - Competitive Bidding Projects.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 53,
+        "classified": 53,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 11,
+        "edges": 16,
+        "lanes": 2,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "commercial_cost_price_inquiry->rme_admin_input"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['commercial_cost_price_inquiry->rme_admin_input']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Project Launching - WF - Project Launching.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 50,
+        "classified": 50,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 10,
+        "edges": 9,
+        "lanes": 3,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "handover_meeting->direct_award_committee",
+          "tender_department->operation"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['handover_meeting->direct_award_committee', 'tender_department->operation']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Project Risk Assessment - Risk Assessment.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 10,
+        "classified": 10,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "QC Initial Evaluation - Initial Evaluation WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 17,
+        "classified": 17,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Quality Objectives (Project) - Quality Objectives PL WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 25,
+        "classified": 25,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Quality Objectives - Quarterly Quality Objectives WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 71,
+        "classified": 71,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 15,
+        "edges": 23,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Rented Equipment Timesheet - Rented Equipment Timesheet - New - WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 14,
+        "classified": 14,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request For Information (RFI) - From SC.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 46,
+        "classified": 46,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 10,
+        "edges": 13,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request For Information (RFI) - RME to Client ( Manual Rev. ) V2.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 58,
+        "classified": 58,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 9,
+        "edges": 16,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request For Information (RFI) - RME to Client V2.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 58,
+        "classified": 58,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 9,
+        "edges": 15,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request For Proposal (RFP) - RFP WF V2.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 32,
+        "classified": 32,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request For Proposal (RFP) - RFP WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 32,
+        "classified": 32,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - Equipment Purchasing CS.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 45,
+        "classified": 45,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 10,
+        "edges": 15,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - Purchasing RFQ WF - FC in Damietta.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 162,
+        "classified": 162,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 25,
+        "edges": 31,
+        "lanes": 2,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "purchasing_mep_hod_approval_2->purchasing_mep_hod_approval_2_formwork",
+          "purchasing_mep_hod_approval_1_formwork->purchasing_mep_hod_approval_1"
+        ],
+        "lost_amounts": [
+          "15M"
+        ],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['purchasing_mep_hod_approval_2->purchasing_mep_hod_approval_2_formwork', 'purchasing_mep_hod_approval_1_formwork->purchasing_mep_hod_approval_1']",
+          "amount(s) printed on the page but absent from the graph: ['15M']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - Purchasing RFQ WF – BU in Egypt V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 144,
+        "classified": 144,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 20,
+        "edges": 20,
+        "lanes": 3,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "vp_approval_1->ceo_approval_1",
+          "purchasing_mep_hod_approval_2->purchasing_mep_hod_approval_2_formwork",
+          "mep_purchasing_manager->purchasing_deputy_manager"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['vp_approval_1->ceo_approval_1', 'purchasing_mep_hod_approval_2->purchasing_mep_hod_approval_2_formwork', 'mep_purchasing_manager->purchasing_deputy_manager']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 58,
+        "classified": 58,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 10,
+        "edges": 22,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - Rental Equipment CS.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 63,
+        "classified": 63,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 11,
+        "edges": 23,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - Request for Bid (Operation).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 46,
+        "classified": 46,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 9,
+        "edges": 17,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - Request for Bid (VMO) CD V2.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 107,
+        "classified": 107,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 16,
+        "edges": 28,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "approval_by_procurement_mep_hod_1->cs_team_leader_review"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['approval_by_procurement_mep_hod_1->cs_team_leader_review']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - Request for Bid WF (VMO) V1-FC in Damietta.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 111,
+        "classified": 111,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 18,
+        "edges": 29,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "end->approval_by_coo_1"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['end->approval_by_coo_1']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - Request for Bid WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 13,
+        "classified": 13,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - RFQ - Apply works (Operation & MEP) - BU - V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 135,
+        "classified": 135,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 18,
+        "edges": 43,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request for Quotation - VMO RFQ WF – BU in Egypt V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 129,
+        "classified": 129,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 16,
+        "edges": 30,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 3,
+        "classified": 3,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 2,
+        "edges": 1,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Requests for Bid (Commercial Offers) - Request for Bid WF (Creation by VMO).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 64,
+        "classified": 64,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 13,
+        "edges": 14,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "vice_president->coo"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['vice_president->coo']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "RFQ Material Reference - RFQ_Material_Reference_WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 13,
+        "classified": 13,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 5,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 0,
+        "classified": 0,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 0,
+        "edges": 0,
+        "lanes": 0,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 0,
+        "classified": 0,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 0,
+        "edges": 0,
+        "lanes": 0,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Rule of Credit Amendments - ROC Amendments.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 11,
+        "classified": 11,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 4,
+        "edges": 4,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "S-C Invoice - S-C Invoice MEP.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 60,
+        "classified": 59,
+        "coverage": 0.9833,
+        "unclassified_text": [
+          "Send to End"
+        ],
+        "nodes": 13,
+        "edges": 23,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "1 of 60 text spans unclassified: ['Send to End']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "S-C Invoice - S-C Invoice Operation.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 71,
+        "classified": 71,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 13,
+        "edges": 22,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "S-C Work Completed Status - QC Work Completed Status.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 18,
+        "classified": 18,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 8,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "S-C Work Completed Status - Site Work Completed Status.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 18,
+        "classified": 18,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 8,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "S-C Work Completed Status - TO Work Completed Status.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 14,
+        "classified": 14,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 6,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Site NCR - New - Site Project NCR V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 39,
+        "classified": 36,
+        "coverage": 0.9231,
+        "unclassified_text": [
+          "Send Comments",
+          "to Responsible",
+          "engineer"
+        ],
+        "nodes": 9,
+        "edges": 15,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "3 of 39 text spans unclassified: ['Send Comments', 'to Responsible', 'engineer']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Snagging and De-snagging - Snagging and De-snagging WF V1.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 17,
+        "classified": 17,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 6,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Snagging and De-snagging - Snagging and De-snagging WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 21,
+        "classified": 21,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 7,
+        "edges": 8,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Start New Activity (SNA) - Start New Activity - WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 19,
+        "classified": 19,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 5,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 35,
+        "classified": 32,
+        "coverage": 0.9143,
+        "unclassified_text": [
+          "Request",
+          "Documents",
+          "from ERA"
+        ],
+        "nodes": 8,
+        "edges": 12,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "3 of 35 text spans unclassified: ['Request', 'Documents', 'from ERA']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 405,
+        "classified": 400,
+        "coverage": 0.9877,
+        "unclassified_text": [
+          "Submit to BU",
+          "Manager",
+          "Request",
+          "Documents",
+          "from ERA"
+        ],
+        "nodes": 61,
+        "edges": 102,
+        "lanes": 3,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [
+          "5 of 405 text spans unclassified: ['Submit to BU', 'Manager', 'Request', 'Documents', 'from ERA']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 207,
+        "classified": 207,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 33,
+        "edges": 55,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "psm_aproval->psm_aproval_2",
+          "psm_aproval_3->psm_aproval_4"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['psm_aproval->psm_aproval_2', 'psm_aproval_3->psm_aproval_4']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 220,
+        "classified": 219,
+        "coverage": 0.9955,
+        "unclassified_text": [
+          "Send to Finance"
+        ],
+        "nodes": 40,
+        "edges": 59,
+        "lanes": 3,
+        "blank_labels": 3,
+        "low_margin_edges": [
+          "psm_approval_1->ceo_approval",
+          "preparation_by_equipment_rental_admin->procurement_mep_engineer",
+          "projects_control_engineer->psm_approval_2"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "1 of 220 text spans unclassified: ['Send to Finance']",
+          "3 node(s) carry no label",
+          "direction uncertain (arrowhead margin < 5pt) on: ['psm_approval_1->ceo_approval', 'preparation_by_equipment_rental_admin->procurement_mep_engineer', 'projects_control_engineer->psm_approval_2']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Subcontracts - nominate Subcontractor.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 42,
+        "classified": 42,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 10,
+        "edges": 12,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Subcontracts - Nominated Subcontractor.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 42,
+        "classified": 42,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 10,
+        "edges": 12,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 224,
+        "classified": 224,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 37,
+        "edges": 53,
+        "lanes": 3,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "finance->s_c_signature_2",
+          "psm_approval_1->ceo_approval",
+          "procurement_mep_engineer->preparation_by_equipment_rental_admin",
+          "s_c_signature_1_2->vmo_hod_approval_2"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['finance->s_c_signature_2', 'psm_approval_1->ceo_approval', 'procurement_mep_engineer->preparation_by_equipment_rental_admin', 's_c_signature_1_2->vmo_hod_approval_2']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 449,
+        "classified": 444,
+        "coverage": 0.9889,
+        "unclassified_text": [
+          "Send to Finance",
+          "Apply SCs KSA",
+          "WF",
+          "Send Back to",
+          "Finance"
+        ],
+        "nodes": 72,
+        "edges": 104,
+        "lanes": 9,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "contracts_dept_approval->coo_approval_4",
+          "dam_approval_1->vmo_hod_approval_1",
+          "psm_approval->coo_approval",
+          "contracts_dept_approval_2->coo_approval_2"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "5 of 449 text spans unclassified: ['Send to Finance', 'Apply SCs KSA', 'WF', 'Send Back to', 'Finance']",
+          "direction uncertain (arrowhead margin < 5pt) on: ['contracts_dept_approval->coo_approval_4', 'dam_approval_1->vmo_hod_approval_1', 'psm_approval->coo_approval', 'contracts_dept_approval_2->coo_approval_2']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Subcontracts - Subcontract Preparation V4.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 499,
+        "classified": 491,
+        "coverage": 0.984,
+        "unclassified_text": [
+          "Send Back to",
+          "Finance",
+          "Less than 10 M",
+          "EGP",
+          "Request",
+          "Documents",
+          "Send to Finance",
+          "from ERA"
+        ],
+        "nodes": 64,
+        "edges": 120,
+        "lanes": 4,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "projects_control_engineer_2->procurement_mep_team_leader_2",
+          "psm_approval->coo_approval_3",
+          "coo_1->vmo_manager"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "8 of 499 text spans unclassified: ['Send Back to', 'Finance', 'Less than 10 M', 'EGP', 'Request', 'Documents', 'Send to Finance', 'from ERA']",
+          "direction uncertain (arrowhead margin < 5pt) on: ['projects_control_engineer_2->procurement_mep_team_leader_2', 'psm_approval->coo_approval_3', 'coo_1->vmo_manager']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "SVS Pre-qualification - 01 WF.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 111,
+        "classified": 111,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 13,
+        "edges": 19,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "site_visit->factory_visit"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['site_visit->factory_visit']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "SVS Secondary department - SVS Secondary department.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 65,
+        "classified": 64,
+        "coverage": 0.9846,
+        "unclassified_text": [
+          "Re"
+        ],
+        "nodes": 11,
+        "edges": 16,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "site_visit->factory_visit"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "1 of 65 text spans unclassified: ['Re']",
+          "direction uncertain (arrowhead margin < 5pt) on: ['site_visit->factory_visit']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Variation Order Flow Chart.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 69,
+        "classified": 69,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 17,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [],
+        "lost_amounts": [],
+        "warnings": [],
+        "shared_lane_notes": []
+      },
+      {
+        "page": 2,
+        "spans": 85,
+        "classified": 85,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 18,
+        "edges": 10,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "a_pce_pm_cat1_cat2_cat3_cat4_a_yes_no_ye->no_p1_c_cost_of_vo_yes_10m_egp_start_no_",
+          "p3_d_p3_d_operation_dep_p3_d->a_pce_pm_cat1_cat2_cat3_cat4_a_yes_no_ye"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['a_pce_pm_cat1_cat2_cat3_cat4_a_yes_no_ye->no_p1_c_cost_of_vo_yes_10m_egp_start_no_', 'p3_d_p3_d_operation_dep_p3_d->a_pce_pm_cat1_cat2_cat3_cat4_a_yes_no_ye']"
+        ],
+        "shared_lane_notes": []
+      },
+      {
+        "page": 3,
+        "spans": 77,
+        "classified": 77,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 14,
+        "edges": 7,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "p2_d_official_submission_to_client_consu->variation_order_page_p3_vo_breakdown_off"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['p2_d_official_submission_to_client_consu->variation_order_page_p3_vo_breakdown_off']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Variation Orders Approval - Auto-Creation V2 (Cote d'lvoire Shell).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 135,
+        "classified": 135,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 18,
+        "edges": 30,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "rfv_using_contract_forms->rfv_using_company_forms",
+          "operation_manager_approval->tender_approval",
+          "rfv_using_contract_forms->contracts_department",
+          "price_requests_quotations->send_to_pce_for_approval"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['rfv_using_contract_forms->rfv_using_company_forms', 'operation_manager_approval->tender_approval', 'rfv_using_contract_forms->contracts_department', 'price_requests_quotations->send_to_pce_for_approval']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  },
+  {
+    "filename": "Variation Orders Approval - Variation Orders (Auto Creation V2).pdf",
+    "pages": [
+      {
+        "page": 1,
+        "spans": 137,
+        "classified": 137,
+        "coverage": 1.0,
+        "unclassified_text": [],
+        "nodes": 18,
+        "edges": 30,
+        "lanes": 1,
+        "blank_labels": 0,
+        "low_margin_edges": [
+          "rfv_using_contract_forms->rfv_using_company_forms",
+          "rfv_using_contract_forms->contracts_department",
+          "operation_manager_approval->tender_approval",
+          "price_requests_quotations->send_to_pce_for_approval"
+        ],
+        "lost_amounts": [],
+        "warnings": [
+          "direction uncertain (arrowhead margin < 5pt) on: ['rfv_using_contract_forms->rfv_using_company_forms', 'rfv_using_contract_forms->contracts_department', 'operation_manager_approval->tender_approval', 'price_requests_quotations->send_to_pce_for_approval']"
+        ],
+        "shared_lane_notes": []
+      }
+    ]
+  }
+]

@@ -77,9 +77,8 @@ from pathlib import Path
 
 import requests
 
-HERE = Path(__file__).resolve().parent
-DEFAULT_SRC = HERE.parent / "processes_pdf"
-DEFAULT_OUT = HERE / "workflow_chunks.json"
+from paths import (PROCESSES_PDF as DEFAULT_SRC,
+                   WORKFLOW_CHUNKS_JSON as DEFAULT_OUT)  # noqa: E402
 
 OLLAMA_HOST = "http://localhost:11434"
 # Needs a model with the `vision` capability. qwen3:14b - the model that
@@ -1148,6 +1147,10 @@ def main() -> None:
                          "a full run")
     ap.add_argument("--resume", action="store_true",
                     help="skip documents already present in --audit")
+    ap.add_argument("--include-vector", action="store_true",
+                    help="also run the vision model over diagrams that have a "
+                         "text layer (workflow_vector.py handles those better; "
+                         "this is for comparing the two)")
     ap.add_argument("--from-audit", type=Path, default=None,
                     help="re-render chunks from a saved audit file instead of "
                          "calling the vision model again")
@@ -1178,6 +1181,22 @@ def main() -> None:
     print(f"{len(records)} PDFs: {len(workflows)} workflow "
           f"({len(workflows) - n_scanned} native text, {n_scanned} scanned), "
           f"{len(records) - len(workflows)} process")
+
+    # A diagram with its own text layer belongs to workflow_vector.py, which
+    # reads the labels off the page instead of asking a model to recognise
+    # them. Over Workflows/ that is 108 of 110 files, and handing them to a
+    # VLM was measurably worse - see this module's docstring and that one's.
+    # What is left here is the case this module was actually written for: a
+    # page with no text to read.
+    if not args.include_vector:
+        skipped = [p for r, p in ((r, Path(r["path"])) for r in records)
+                   if r["kind"] == "workflow" and not r["scanned"]]
+        workflows = [p for p in workflows if p not in skipped]
+        print(f"  {len(skipped)} native-text diagram(s) left to workflow_vector.py; "
+              f"{len(workflows)} scanned page(s) for the vision model")
+        if not workflows:
+            print("  nothing scanned to do - run workflow_vector.py instead")
+            return
 
     # Resume against the audit file, which is the only complete record of what
     # has already been through the vision model. Keyed by source path, so two

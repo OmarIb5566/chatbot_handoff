@@ -58,6 +58,14 @@ reports that subset separately as soon as one exists.
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# backend/ holds the pipeline; its modules import each other by bare name.
+# See paths.add_backend_to_path for why that is worth keeping.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
+
+
 import argparse
 import collections
 import json
@@ -65,9 +73,7 @@ import re
 import time
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-DEFAULT_EVAL = HERE / "eval_set_v2.json"
-DEFAULT_CHUNKS = HERE / "chunks.json"
+from paths import EVAL_SET_V2 as DEFAULT_EVAL, CHUNKS_JSON as DEFAULT_CHUNKS
 
 
 def verify(items: list[dict], chunks: list[dict]) -> list[str]:

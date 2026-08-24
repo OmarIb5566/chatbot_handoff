@@ -40,10 +40,12 @@ point), and prefix routing reaches 100% at every weight including w=0.0.
 """
 from __future__ import annotations
 
+import difflib
 import hashlib
 import json
 import os
 import re
+from collections import Counter
 from pathlib import Path
 
 # Use the embedding model already cached on this machine and never reach out to
@@ -55,12 +57,16 @@ os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 import numpy as np
 from rank_bm25 import BM25Okapi
 
-HERE = Path(__file__).resolve().parent
-CHUNKS_JSON = HERE / "chunks.json"   # written by adaptive_chunker.py
-CACHE_DIR = HERE / ".embed_cache"
+from paths import CHUNKS_JSON, EMBED_CACHE as CACHE_DIR  # noqa: E402
 
 DEFAULT_MODEL = "all-MiniLM-L6-v2"
 RRF_K = 60  # standard RRF damping constant
+
+# Query repair (see Retriever.repair_query). Tuned on the 136 eval questions:
+# 0.90 alters one token across all of them, 0.85 alters 21, 0.92 alters none
+# but stops fixing "accomdation".
+REPAIR_CUTOFF = 0.90
+MIN_REPAIR_LEN = 4
 
 
 # --- doc-code prefix routing -------------------------------------------------
@@ -268,6 +274,13 @@ class Retriever:
         # any short, list-shaped section identified mainly by its heading.
         self.corpus_tokens = [tokenize(embed_text(c)) for c in chunks]
         self.bm25 = BM25Okapi(self.corpus_tokens)
+        # Vocabulary for query repair, with frequencies to break ties toward
+        # the term the corpus actually uses. Free - these tokens are already
+        # computed for BM25.
+        self._vocab: Counter[str] = Counter()
+        for toks in self.corpus_tokens:
+            self._vocab.update(toks)
+        self._repair_cache: dict[str, tuple[tuple[str, ...], tuple[tuple[str, str], ...]]] = {}
 
         # --- dense channel ---
         self.model = load_embedder(model_name, device=device)
@@ -325,6 +338,91 @@ class Retriever:
         self.index.add(self.embeddings)
 
     # --------------------------------------------------------------- channels
+    def repair_query(self, query: str) -> tuple[str, list[tuple[str, str]]]:
+        """Map out-of-vocabulary query words onto the nearest corpus term.
+
+        Returns the repaired QUERY TEXT and the substitutions made, so a caller
+        can show its work. Words are replaced in place in the original string,
+        so a query with nothing to repair comes back byte-identical and both
+        channels behave exactly as they did before this existed.
+
+        WHY THIS EXISTS
+        ---------------
+        BM25 matches tokens exactly, and it carries 60% of the fused score
+        (dense_weight=0.4). So one misspelled word does not merely degrade the
+        sparse channel, it inverts it: the misspelling contributes nothing, and
+        what is left scores every document sharing the query's COMMON words
+        while the document holding the rare discriminative one gets no credit
+        for it. "how far should employees live to get access to accomdation"
+        put MHR08_Accommodation_Policy outside BM25's top 40 - the dense
+        channel still ranked it 1st, and the fusion buried it at 14 anyway.
+
+        Applied to BOTH channels, which was not the original intent. The
+        argument for sparse-only is good on paper - MiniLM embeds subwords and
+        is already typo-tolerant, so why risk poisoning the channel that worked
+        - but it measured worse: repairing only BM25 left the target chunk at
+        rank 6, repairing both brought it to 4, level with the correctly spelled
+        query. Nothing is poisoned because the substitution is in place: a query
+        with no repairs reaches both channels byte-identical.
+
+        What this does NOT do is move the eval. Top-3 document accuracy over
+        eval_set.json + eval_set_v2.json is 113/124 with repair and 113/124
+        without, top-5 is 115/124 either way - because every question in both
+        sets is already spelled correctly, so there is nothing to repair. The
+        eval's job here is to show the feature costs nothing, and that is all
+        it shows. The gain is only visible on input the eval does not contain:
+
+            "...to get access to accomdation"       rank 14 -> 4
+            "distance required for company acommodation"  13 -> 6
+
+        Measured at cutoff 0.90, ONE token across those 136 correctly-spelled
+        questions is altered ("misses" -> "misuse" in ADV-1), and it changes no
+        retrieval. Loosening to 0.85 raises that to 21 altered tokens; 0.92
+        drops to zero but stops repairing "accomdation". The cutoff is where it
+        is because that is where the curve turns, not because it is round.
+
+        The honest limit: this fixes typos in words the CORPUS knows. A user who
+        misspells in a way that lands within 0.90 of the wrong corpus term gets
+        a confident wrong substitution, and nothing downstream can tell. That is
+        why `search()` returns the repairs and the app prints them.
+
+        Deliberately NOT a spell-checker: the vocabulary is this corpus, so
+        "aproval" resolves to the corpus's "approval" and a real word the
+        corpus never uses is left alone unless something is very close to it.
+        """
+        cached = self._repair_cache.get(query)
+        if cached is not None:
+            return cached[0], [tuple(e) for e in cached[1]]
+
+        edits: dict[str, str] = {}
+        for t in tokenize(query):
+            # Short tokens have too many neighbours to correct safely, and the
+            # pieces of a split form code ("f", "p", "cm", "01") are all short
+            # - which is what keeps F-P-CM-01-01 out of this entirely.
+            if len(t) < MIN_REPAIR_LEN or t.isdigit() or t in self._vocab or t in edits:
+                continue
+            near = difflib.get_close_matches(t, self._vocab, n=3, cutoff=REPAIR_CUTOFF)
+            if not near:
+                continue
+            edits[t] = max(near, key=lambda w: (difflib.SequenceMatcher(None, t, w).ratio(),
+                                                self._vocab[w]))
+
+        if edits:
+            # Substitute in place, matching each surface word through the same
+            # normalisation BM25 uses, so "Accomdation" and "accomdations" both
+            # find their entry. Everything else - punctuation, casing, word
+            # order - is left exactly as the user typed it.
+            def _sub(m: re.Match) -> str:
+                return edits.get(_singular(m.group(0).lower()), m.group(0))
+
+            repaired = re.sub(r"[A-Za-z0-9]+", _sub, query)
+        else:
+            repaired = query
+
+        pairs = sorted(edits.items())
+        self._repair_cache[query] = (repaired, tuple(pairs))
+        return repaired, pairs
+
     def _bm25_ranking(self, query: str, candidates: np.ndarray) -> list[tuple[int, float]]:
         scores = self.bm25.get_scores(tokenize(query))
         pairs = [(int(i), float(scores[i])) for i in candidates]
@@ -385,6 +483,11 @@ class Retriever:
         maintained by hand, or routing becomes the thing that silently loses
         recall.
         """
+        # Spelling repair first, so both channels and the router see the same
+        # text. No-op for a query whose words are all in the corpus vocabulary,
+        # which is every question in both eval sets bar one.
+        query, _repairs = self.repair_query(query)
+
         cand = self._candidates(query, route)
         bm = self._bm25_ranking(query, cand)
         dn = self._dense_ranking(query, cand)

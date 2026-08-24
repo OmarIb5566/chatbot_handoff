@@ -1,0 +1,1188 @@
+[
+  {
+    "id": "MHR04-1",
+    "doc": "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+    "question": "في كم من الوقت يجب على الموظف تقديم شكوى مكتوبة إلى مكتب الموارد البشرية بموجب سياسة المساواة والتنوع والاحترام بعد وقوع الحادث؟",
+    "expected_answer": "Within 14 days after the event or problem occurrence.",
+    "must_include": [
+      "14 days"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "Within how long after an incident must an employee file a written complaint with the HR Office under the DE&I policy?"
+  },
+  {
+    "id": "MHR04-2",
+    "doc": "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
+    "question": "كم من الوقت يملك مدير الموارد البشرية لإجراء تحقيق وسماع شهادات بعد تقديم شكوى حول المساواة في العمل والتنوع؟",
+    "expected_answer": "Within 7 days after filing.",
+    "must_include": [
+      "7 days"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How long does the HR Manager have to conduct an investigation and hearing after a DE&I complaint is filed?"
+  },
+  {
+    "id": "MHR07-1",
+    "doc": "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+    "question": "أي نموذج يستخدم لإنهاء عامل عرضي عندما تثبت إدمان المخدرات أو السرقة أو الأفعال غير الأخلاقية؟",
+    "expected_answer": "The Termination notice, F-M-HR-07-05.",
+    "must_include": [
+      "F-M-HR-07-05"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is used to terminate a casual worker when drug abuse, theft or unethical acts are proved?"
+  },
+  {
+    "id": "MHR07-2",
+    "doc": "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
+    "question": "ما هو أقصى عدد للعمل الإضافي للعمالة غير المنتظمة غير المباشرة لكل فترة؟",
+    "expected_answer": "A maximum of 52 hours per period.",
+    "must_include": [
+      "52 hours"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "What is the maximum overtime for indirect casual labor per period?"
+  },
+  {
+    "id": "MHR08-1",
+    "doc": "MHR08_Accommodation_Policy.pdf",
+    "question": "ما هو الحد الأقصى للزيادة المسموح بها عند تجديد عقود الإقامة؟",
+    "expected_answer": "A maximum of 10%.",
+    "must_include": [
+      "10%"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "What is the maximum increase allowed on accommodation contract renewals?"
+  },
+  {
+    "id": "MHR08-2",
+    "doc": "MHR08_Accommodation_Policy.pdf",
+    "question": "بأي وقت يجب إرسال فواتير المياه والغاز والكهرباء الأصلية للفترة السابقة؟",
+    "expected_answer": "Within the first 5 days of the new month.",
+    "must_include": [
+      "5 days"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "By when must the original water, gas and electricity bills for the previous month be sent?"
+  },
+  {
+    "id": "MHR10-1",
+    "doc": "MHR10_Code_of_Conduct_Policy.pdf",
+    "question": "أي نموذج يسجل خرقًا لسياسة لائحة السلوك؟",
+    "expected_answer": "The Employee Misconduct Record, F-M-HR-10-02.",
+    "must_include": [
+      "F-M-HR-10-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form records a violation of the Code of Conduct policy?"
+  },
+  {
+    "id": "MHR11-1",
+    "doc": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+    "question": "كم عدد الساعات التي يجب إرسال تقرير الحادث الأول خلالها، وما هو النموذج الذي يجب استخدامه؟",
+    "expected_answer": "Within 24 hours, using form F-P-SF-01-01.",
+    "must_include": [
+      "24 hours",
+      "F-P-SF-01-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Within how many hours must the initial incident report be sent, and which form is it?"
+  },
+  {
+    "id": "MHR11-2",
+    "doc": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+    "question": "من يرسل تقرير الحادث الأولي ومن إلى من؟",
+    "expected_answer": "The Project HSE Manager sends it to the Operation Manager, COO, HR Manager and Head Office.",
+    "must_include": [
+      "HSE Manager"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who sends the initial incident report and to whom?"
+  },
+  {
+    "id": "MHR12-1",
+    "doc": "MHR12_French_Speaking_SubSaharan_Africa_Policy.pdf",
+    "question": "أي مشاريع تدفع مكافأة سنوية بناءً على الأداء الفردي وفقًا لسياسة إفريقيا جنوب الصحراء الناطقة بالفرنسية؟",
+    "expected_answer": "Projects with a duration of more than one year.",
+    "must_include": [
+      "annual bonus"
+    ],
+    "type": "fact",
+    "review": "machine",
+    "question_en": "Which projects pay an annual bonus based on personal performance under the French-Speaking Sub-Saharan Africa policy?"
+  },
+  {
+    "id": "MHR13-1",
+    "doc": "MHR13_C_A_R_E_Policy.pdf",
+    "question": "كم من الوقت يملك مدير الموارد البشرية لمراجعة وموافقة لجنة التوصيات بعد إغلاق التحقيق وفقًا لسياسة C.A.R.E؟",
+    "expected_answer": "Within 7 days after closing of the investigation and hearing.",
+    "must_include": [
+      "7 days"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How long does the HR Manager have to review and approve the Committee's recommendations after the investigation closes under the C.A.R.E policy?"
+  },
+  {
+    "id": "MHR14-1",
+    "doc": "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+    "question": "ما هي النموذج الذي يُقدّمه المدير المباشر لطلب ترقية؟",
+    "expected_answer": "The Promotion Request, F-M-HR-14-06.",
+    "must_include": [
+      "F-M-HR-14-06"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form does a Direct Manager submit to request a promotion?"
+  },
+  {
+    "id": "MHR14-2",
+    "doc": "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+    "question": "ما هو الحد الأدنى من مدة الخدمة المطلوبة للتأهل للترقية؟",
+    "expected_answer": "A minimum of one year of service, with no warnings or disciplinary actions.",
+    "must_include": [
+      "one year"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "What is the minimum length of service required to be eligible for promotion?"
+  },
+  {
+    "id": "MHR14-3",
+    "doc": "MHR14_Promotion_Upward_Mobility_Policy.pdf",
+    "question": "ما معنى \"مُسرَّع\" في سياسة الترقية؟",
+    "expected_answer": "Employees identified as High Potential / Key Talent who are accelerated on the relevant ladder.",
+    "must_include": [
+      "accelerated"
+    ],
+    "type": "definition",
+    "review": "machine",
+    "question_en": "What does 'Fast-tracked' mean in the promotion policy?"
+  },
+  {
+    "id": "MHR16-1",
+    "doc": "MHR16_Employee_Separation_Policy.pdf",
+    "question": "أي نموذج يستخدم لتقديم استقالة مكتوبة؟",
+    "expected_answer": "The resignation request form, F-M-HR-16-01.",
+    "must_include": [
+      "F-M-HR-16-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is used to submit a written resignation?"
+  },
+  {
+    "id": "MHR16-2",
+    "doc": "MHR16_Employee_Separation_Policy.pdf",
+    "question": "في كم من الوقت يجب على فريق توظيف المواهب أن يجد موعدًا لمقابلة الخروج بعد تلقي استقالة؟",
+    "expected_answer": "Within 48 hours from receiving the resignation request.",
+    "must_include": [
+      "48 hours"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "Within how long must the Talent Acquisition Team schedule an exit interview after receiving a resignation?"
+  },
+  {
+    "id": "MHR16-3",
+    "doc": "MHR16_Employee_Separation_Policy.pdf",
+    "question": "ما مدة الإشعار التي يجب على الموظف المُستقيل الذي لديه خمس سنوات أو أكثر من الخدمة أن يُقدمها؟",
+    "expected_answer": "Not less than two months' notice.",
+    "must_include": [
+      "two months"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "What notice period must a resigning employee with five or more years of service give?"
+  },
+  {
+    "id": "MHR17-1",
+    "doc": "MHR17_KSA_Branch_Policy.pdf",
+    "question": "كم عدد أيام العمرة التي يستحقها الموظفون وفقًا لسياسة فرع المملكة العربية السعودية، وكيف часто؟",
+    "expected_answer": "Paid leave of 2 days, renewed every 2 years.",
+    "must_include": [
+      "2 days"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How much Umrah leave are employees entitled to under the KSA branch policy, and how often?"
+  },
+  {
+    "id": "MHR17-2",
+    "doc": "MHR17_KSA_Branch_Policy.pdf",
+    "question": "ما هو أقصى مقدار لل advances المرتبطة بسياسة فرع المملكة العربية السعودية؟",
+    "expected_answer": "Not more than 50% of the basic salary.",
+    "must_include": [
+      "50%"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "What is the maximum salary advance under the KSA branch policy?"
+  },
+  {
+    "id": "MHR18-1",
+    "doc": "MHR18_UAE_Branch_Policy.pdf",
+    "question": "كم مدة تقدم الشركة إقامة للعمال الجدد الذين يأتون إلى دولة الإمارات العربية المتحدة؟",
+    "expected_answer": "A maximum of one month, or until completion of their residency.",
+    "must_include": [
+      "one month"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "For how long does the company provide accommodation to newly joined employees arriving in the UAE?"
+  },
+  {
+    "id": "MHR18-2",
+    "doc": "MHR18_UAE_Branch_Policy.pdf",
+    "question": "بعد كم من الوقت يمكن للموظفين في دولة الإمارات استخدام رصيد إجازاتهم السنوية؟",
+    "expected_answer": "After 6 months from joining the company.",
+    "must_include": [
+      "6 months"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "After how long can UAE employees use their annual vacation balance?"
+  },
+  {
+    "id": "MHR19-1",
+    "doc": "MHR19_Internship_Policy.pdf",
+    "question": "أي نموذج هو اتفاق التدريب؟",
+    "expected_answer": "F-M-HR-19-02.",
+    "must_include": [
+      "F-M-HR-19-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the internship agreement?"
+  },
+  {
+    "id": "MHR19-2",
+    "doc": "MHR19_Internship_Policy.pdf",
+    "question": "كم عدد الساعات في الأسبوع التي تتطلبها فترة تدريب جزئية؟",
+    "expected_answer": "20 hours per week.",
+    "must_include": [
+      "20 hours"
+    ],
+    "type": "definition",
+    "review": "machine",
+    "question_en": "How many hours per week does a part-time internship require?"
+  },
+  {
+    "id": "MHR19-3",
+    "doc": "MHR19_Internship_Policy.pdf",
+    "question": "كم مرة يتم مراجعة معدل منحة التدريب واعتماده، ومن قبل من؟",
+    "expected_answer": "Every 6 months by the HR manager.",
+    "must_include": [
+      "6 months"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How often is the internship grant rate reviewed and approved, and by whom?"
+  },
+  {
+    "id": "MHR20P-1",
+    "doc": "MHR20_Employees_Performance_Policy.pdf",
+    "question": "كم من الوقت يجب أن تُبلغ نتائج الأداء للموظفين عبر HITS بعد إغلاق كل ربع؟",
+    "expected_answer": "Within a maximum of one month after the closing of each quarter.",
+    "must_include": [
+      "one month"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How soon after each quarter closes must performance results be communicated to employees via HITS?"
+  },
+  {
+    "id": "MHR20P-2",
+    "doc": "MHR20_Employees_Performance_Policy.pdf",
+    "question": "ما هو الحد الأدنى من الخدمة المطلوب لتطبيق زيادات الأداء السنوية؟",
+    "expected_answer": "A minimum of 3 months in service.",
+    "must_include": [
+      "3 months"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "What minimum service is needed for annual performance increments to apply?"
+  },
+  {
+    "id": "MHR20T-1",
+    "doc": "MHR20_Local_Transfer_Policy.pdf",
+    "question": "ما هي النموذج الذي يقدمه المُبدأ لبدء نقل محلي؟",
+    "expected_answer": "The Local Transfer Request, F-M-HR-20-01.",
+    "must_include": [
+      "F-M-HR-20-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form does the initiator submit to start a local transfer?"
+  },
+  {
+    "id": "MHR20T-2",
+    "doc": "MHR20_Local_Transfer_Policy.pdf",
+    "question": "ما هو \"الرسالة المحلية\" وما هو أقصى مدة لها؟",
+    "expected_answer": "A temporary official assignment for company purposes, not exceeding 6 weeks.",
+    "must_include": [
+      "6 weeks"
+    ],
+    "type": "definition",
+    "review": "machine",
+    "question_en": "What is a 'Local Mission' and what is its maximum duration?"
+  },
+  {
+    "id": "MHR22-1",
+    "doc": "MHR22_Company_Car_Transportation_Allowance_Policy.pdf",
+    "question": "ما هي النموذج الذي يُقدّمه الموظف لطلب سيارة شركة؟",
+    "expected_answer": "The Company Car Request form, F-P-LO-01-01.",
+    "must_include": [
+      "F-P-LO-01-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form does an employee submit to request a company car?"
+  },
+  {
+    "id": "PCM01-3",
+    "doc": "PCM01_Customer_Satisfaction_Process.pdf",
+    "question": "من يُعد تقرير التحليل الخاص بجميع استبيانات رضا العملاء المستلمة؟",
+    "expected_answer": "The QA Manager.",
+    "must_include": [
+      "QA Manager"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who prepares the analysis report for all customer satisfaction surveys received?"
+  },
+  {
+    "id": "PCM02-2",
+    "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+    "question": "ما معنى ماركوم في عملية التسويق العلائقي؟",
+    "expected_answer": "Marketing & Communication.",
+    "must_include": [
+      "Marketing"
+    ],
+    "type": "definition",
+    "review": "machine",
+    "question_en": "What does Marcom stand for in the branding process?"
+  },
+  {
+    "id": "PCN01-2",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "كم من الوقت يملك مكتب التقنية لجمع الوثائق المطلوبة لإنهاء اتفاقية التفويض؟",
+    "expected_answer": "Within two weeks from the conducted meeting.",
+    "must_include": [
+      "two weeks"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How long does the Technical Office have to collect the requested documents to finalise the subcontract agreement?"
+  },
+  {
+    "id": "PCN01-3",
+    "doc": "PCN01_Subcontract_Agreement_Process.pdf",
+    "question": "إذا تلقى المدير التنفيذي رسالة تسمية من العميل بعد مرحلة منح الجائزة، كم من الوقت يجب أن يُمرّرها؟",
+    "expected_answer": "Within 24 hours, to Contracts, Finance and Procurement/MEP/H.O. TO.",
+    "must_include": [
+      "24 hours"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "If the PM receives a nomination letter from the client after the awarding phase, how quickly must it be forwarded?"
+  },
+  {
+    "id": "PCN02-2",
+    "doc": "PCN02_Claim_Process.pdf",
+    "question": "ما الذي تعنيه اختصار EOT في عملية المطالبة؟",
+    "expected_answer": "Extension of Time.",
+    "must_include": [
+      "Extension of"
+    ],
+    "type": "definition",
+    "review": "machine",
+    "question_en": "What does EOT stand for in the claim process?"
+  },
+  {
+    "id": "PCN02-3",
+    "doc": "PCN02_Claim_Process.pdf",
+    "question": "في كم من الوقت يجب على الأطراف المعنية تقديم المعلومات الإضافية المطلوبة خلال المطالبة؟",
+    "expected_answer": "Within 3 days from the requested date.",
+    "must_include": [
+      "3 days"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "Within how long must concerned parties provide additional information requested during a claim?"
+  },
+  {
+    "id": "PEN01-2",
+    "doc": "PEN01_Engineering_Process.pdf",
+    "question": "كم من الوقت يجب أن يصدر قسم الهندسة المخططات النهائية بعد تسليم التجارة؟",
+    "expected_answer": "Within one month from the trade handover.",
+    "must_include": [
+      "one month"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How long after trade handover must the Engineering department issue the as-built?"
+  },
+  {
+    "id": "PEQ01-2",
+    "doc": "PEQ01_Equipment_Management_Process.pdf",
+    "question": "من يقرر ما إذا كان سيتم تأجير أو شراء المعدات؟",
+    "expected_answer": "The EDM (Equipment Department Manager), after discussion.",
+    "must_include": [
+      "EDM"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who decides whether to rent or buy equipment?"
+  },
+  {
+    "id": "PEQ01-3",
+    "doc": "PEQ01_Equipment_Management_Process.pdf",
+    "question": "في كم من الوقت يجب أن يوافق المستودع على PR بعد موافقة EDM؟",
+    "expected_answer": "Within 24 hours after EDM's approval.",
+    "must_include": [
+      "24 hours"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "Within how long must the warehouse approve the PR after the EDM's approval?"
+  },
+  {
+    "id": "PFN01-2",
+    "doc": "PFN01_Material_Control_Process.pdf",
+    "question": "كم من الوقت يملك المكتب لتقديم وتوقيع تقرير المخزون الفيزيائي؟",
+    "expected_answer": "Within 48 hours from the physical inventory ending date.",
+    "must_include": [
+      "48 hours"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How long does the committee have to submit and sign the physical inventory report?"
+  },
+  {
+    "id": "PFN01-3",
+    "doc": "PFN01_Material_Control_Process.pdf",
+    "question": "ما هي فترة التحضير لتقديم QS للمشاريع العادية مقارنة بالمشاريع السريعة؟",
+    "expected_answer": "Within a month for normal projects and two weeks for fast-track projects.",
+    "must_include": [
+      "two weeks"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "What is the time frame for preparing the QS for normal versus fast-track projects?"
+  },
+  {
+    "id": "PFN02-1",
+    "doc": "PFN02_Overseas_Petty_Cash_Process.pdf",
+    "question": "أي نموذج يتم استخدامه في عملية صندوق النقد الصغير في الخارج؟",
+    "expected_answer": "F-P-HR-04-03",
+    "must_include": [
+      "F-P-HR-04-03"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Cash Fund Settlement used in the overseas petty cash process?"
+  },
+  {
+    "id": "PFN03-2",
+    "doc": "PFN03_Overseas_Payment_Release_Process.pdf",
+    "question": "ماذا يحدث للدفعات التي لم تُدرج في قائمة الدفعات الأسبوعية المُعتمدة؟",
+    "expected_answer": "They are automatically deferred to the next cycle.",
+    "must_include": [
+      "deferred"
+    ],
+    "type": "fact",
+    "review": "machine",
+    "question_en": "What happens to payments not included in the approved Biweekly Payment List?"
+  },
+  {
+    "id": "PFW01-2",
+    "doc": "PFW01_Formwork_Process.pdf",
+    "question": "في كم من الوقت بعد اجتماع تسليم المناقصة يجب أن تفي الأشكال بالمتطلبات الخاصة بالمهندس المشرف/المقاول العام؟",
+    "expected_answer": "Within two weeks from the tender handover meeting.",
+    "must_include": [
+      "two weeks"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "Within how long after the tender handover meeting must Formwork meet the PM/CM?"
+  },
+  {
+    "id": "PHR01-2",
+    "doc": "PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf",
+    "question": "كم من الوقت يملك المكتب (MPTA) لتقديم مقياس الأجور بعد تلقي خطة موظفي المنظمة؟",
+    "expected_answer": "After one week from receiving the Organization Staff Plan.",
+    "must_include": [
+      "one week"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How long does MPTA have to submit the salary scale after receiving the Organization Staff Plan?"
+  },
+  {
+    "id": "PHR02-1",
+    "doc": "PHR02_Learning_Development_Process.pdf",
+    "question": "ما هو الحد الأدنى من الحضور المطلوب لكل جلسة تدريبية مُعينة؟",
+    "expected_answer": "At least 75% of each assigned training session.",
+    "must_include": [
+      "75%"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "What minimum attendance is required for each assigned training session?"
+  },
+  {
+    "id": "PHR02-2",
+    "doc": "PHR02_Learning_Development_Process.pdf",
+    "question": "ما الذي تعنيه IDP في عملية التعلم والتطوير؟",
+    "expected_answer": "Individual Development Plan.",
+    "must_include": [
+      "Individual Development Plan"
+    ],
+    "type": "definition",
+    "review": "machine",
+    "question_en": "What does IDP stand for in the Learning & Development process?"
+  },
+  {
+    "id": "PHR04-2",
+    "doc": "PHR04_Overseas_Business_Travel_Process.pdf",
+    "question": "متى يكون للإدارة العليا الحق في رحلات الطيران من الدرجة الأولى؟",
+    "expected_answer": "Only for flights exceeding 5 hours in duration.",
+    "must_include": [
+      "5 hours"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "When are Top Management entitled to business-class flights?"
+  },
+  {
+    "id": "PHR04-3",
+    "doc": "PHR04_Overseas_Business_Travel_Process.pdf",
+    "question": "كم عدد الأيام القصوى التي يحصل فيها الموظف على تعويضات يومية لكل رحلة أو دولة؟",
+    "expected_answer": "A maximum of 30 days.",
+    "must_include": [
+      "30 days"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "For how many days maximum does staff receive per-diem compensation per trip or country?"
+  },
+  {
+    "id": "PHR05-1",
+    "doc": "PHR05_KSA_Hiring_Process.pdf",
+    "question": "أي نموذج هو جدول توظيف المملكة العربية السعودية؟",
+    "expected_answer": "F-P-HR-05-02",
+    "must_include": [
+      "F-P-HR-05-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the KSA Hiring Table?"
+  },
+  {
+    "id": "PHR06-1",
+    "doc": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+    "question": "بعد كم من الوقت يجب تقييم العمل غير المباشر؟",
+    "expected_answer": "After 3 months of hiring.",
+    "must_include": [
+      "3 months"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "After how long must direct casual labor be evaluated?"
+  },
+  {
+    "id": "PHR06-2",
+    "doc": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+    "question": "من يجب أن يوقع على طلبات توظيف العمالة العرضية المباشرة؟",
+    "expected_answer": "The Construction Manager and the Project Manager.",
+    "must_include": [
+      "Construction Manager"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who must sign requests for hiring direct casual labor?"
+  },
+  {
+    "id": "PIT01-1",
+    "doc": "PIT01_Information_Technology.pdf",
+    "question": "كم مرة يتم تحديث قائمة أسعار التكنولوجيا المعلومات؟",
+    "expected_answer": "Every 3-6 months, based on market price changes.",
+    "must_include": [
+      "3-6"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How often is the IT price list updated?"
+  },
+  {
+    "id": "PLO01-1",
+    "doc": "PLO01_Logistics_Process.pdf",
+    "question": "ما هو الوقت الأقصى للتحميل/التفريغ للشاحنات المستأجرة مقابل الشاحنات التابعة للشركة؟",
+    "expected_answer": "4 hours for rented trucks and 2 hours for company owned trucks.",
+    "must_include": [
+      "4 hours",
+      "2 hours"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "What is the maximum loading/unloading time for rented trucks versus company-owned trucks?"
+  },
+  {
+    "id": "PMSE01-2",
+    "doc": "PMSE01_MSE_Project_Process.pdf",
+    "question": "من يتخذ القرار النهائي بشأن ما إذا كان سيتم المتابعة بمشروع MSE؟",
+    "expected_answer": "The VP, after the MSE Manager sends the project summary.",
+    "must_include": [
+      "VP"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who takes the final decision on whether to proceed with an MSE project?"
+  },
+  {
+    "id": "POP02-1",
+    "doc": "POP02_Variation_Order_Process.pdf",
+    "question": "في كم من الوقت يجب على PCE تقديم دراسة تأثير الوقت إلى قسم العقود؟",
+    "expected_answer": "Within 5 days.",
+    "must_include": [
+      "5 days"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "Within how long must the PCE submit the time impact study to the Contract Department?"
+  },
+  {
+    "id": "POP03-1",
+    "doc": "POP03_Direct_Award_Projects_Process.pdf",
+    "question": "أي نموذج هو نموذج ميزانية المشروع الأولي للمشاريع التي تُمنح بال直接授标؟",
+    "expected_answer": "F-P-OP-03-01",
+    "must_include": [
+      "F-P-OP-03-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the initial project budget form for direct award projects?"
+  },
+  {
+    "id": "POP04-1",
+    "doc": "POP04_Request_for_Information_Process.pdf",
+    "question": "أي نموذج هو سجل RFI؟",
+    "expected_answer": "F-P-OP-04-01",
+    "must_include": [
+      "F-P-OP-04-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the RFI Log?"
+  },
+  {
+    "id": "POP05-2",
+    "doc": "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+    "question": "من الذي يراجع ويُوافق على حالة العمل المكتملة؟",
+    "expected_answer": "The CM and the PM.",
+    "must_include": [
+      "PM"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who reviews and approves the work completed status?"
+  },
+  {
+    "id": "POP06-1",
+    "doc": "POP06_Client_Invoicing_Process.pdf",
+    "question": "أي نموذج هو IPC في عملية فواتير العميل؟",
+    "expected_answer": "F-P-OP-06-01",
+    "must_include": [
+      "F-P-OP-06-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the IPC in the client invoicing process?"
+  },
+  {
+    "id": "POP07-2",
+    "doc": "POP07_Project_Closeout_Process.pdf",
+    "question": "من يجهز خطة التسريح عند إغلاق المشروع؟",
+    "expected_answer": "The PM.",
+    "must_include": [
+      "PM"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who prepares the demobilization plan at project closeout?"
+  },
+  {
+    "id": "POP08-1",
+    "doc": "POP08_Concrete_Pouring_Process.pdf",
+    "question": "أي نموذج هو خطة صب الخرسانة؟",
+    "expected_answer": "F-P-OP-08-04",
+    "must_include": [
+      "F-P-OP-08-04"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Concrete Pouring Plan?"
+  },
+  {
+    "id": "POP09-1",
+    "doc": "POP09_Earthmoving_Process.pdf",
+    "question": "أي نموذج هو نموذج EM للوكالة في عملية تفريغ التربة؟",
+    "expected_answer": "F-P-OP-09-01",
+    "must_include": [
+      "F-P-OP-09-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the EM Subcontract Template in the earthmoving process?"
+  },
+  {
+    "id": "POP10-2",
+    "doc": "POP10_Technical_Office_Support_Followup.pdf",
+    "question": "كم مرة يجب إعداد حالة QS وتحديثها؟",
+    "expected_answer": "Monthly, based on shop drawing versus contract BOQ.",
+    "must_include": [
+      "monthly"
+    ],
+    "type": "fact",
+    "review": "machine",
+    "question_en": "How often must the QS-status be prepared and updated?"
+  },
+  {
+    "id": "POP11-1",
+    "doc": "POP11_El_Sadat_Factory_Production_Process.pdf",
+    "question": "أي نموذج هو خطة مصنع الإنتاج؟",
+    "expected_answer": "F-P-OP-11-01",
+    "must_include": [
+      "F-P-OP-11-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Production Factory Plan?"
+  },
+  {
+    "id": "PPC01-2",
+    "doc": "PPC01_Planning_Cost_Control_Process.pdf",
+    "question": "كم مرة يجب تحديث خطة العمل وإرسالها إلى الأطراف المعنية؟",
+    "expected_answer": "Weekly.",
+    "must_include": [
+      "weekly"
+    ],
+    "type": "fact",
+    "review": "machine",
+    "question_en": "How often must the action plan be updated and sent to concerned parties?"
+  },
+  {
+    "id": "PPC02-1",
+    "doc": "PPC02_Staff_Hiring_Plan_Process.pdf",
+    "question": "أي نموذج هو خطة موظفي المنظمة؟",
+    "expected_answer": "F-P-PC-02-01",
+    "must_include": [
+      "F-P-PC-02-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Organizational Staff Plan?"
+  },
+  {
+    "id": "PPR02-2",
+    "doc": "PPR02_Evaluation_of_External_Providers.pdf",
+    "question": "كيف يتم تحديد الموردين الجدد أو المُرشحين؟",
+    "expected_answer": "Via the Rowad website, by their tax number.",
+    "must_include": [
+      "tax"
+    ],
+    "type": "fact",
+    "review": "machine",
+    "question_en": "How are new or nominated vendors identified?"
+  },
+  {
+    "id": "PPU01-1",
+    "doc": "PPU01_Purchasing_Process.pdf",
+    "question": "أي نموذج هو مصفوفة سلطة الموافقة على الشراء؟",
+    "expected_answer": "F-P-PU-01-07",
+    "must_include": [
+      "F-P-PU-01-07"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Purchasing Approval Authority Matrix?"
+  },
+  {
+    "id": "PQD01-2",
+    "doc": "PQD01_Internal_Audit_Process.pdf",
+    "question": "من الذي يراجع ويُوافق على برنامج التدقيق الداخلي؟",
+    "expected_answer": "The COO.",
+    "must_include": [
+      "COO"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who reviews and approves the internal audit program?"
+  },
+  {
+    "id": "PQD01-3",
+    "doc": "PQD01_Internal_Audit_Process.pdf",
+    "question": "كيف يحدد عملية المراجعة الداخلية مراجعة؟",
+    "expected_answer": "A systematic, documented and independent verification of the Quality System to determine whether it still complies with requirements.",
+    "must_include": [
+      "systematic"
+    ],
+    "type": "definition",
+    "review": "machine",
+    "question_en": "How does the internal audit process define an audit?"
+  },
+  {
+    "id": "PQD02-1",
+    "doc": "PQD02_Control_of_NonConformity_Process.pdf",
+    "question": "أي نموذج هو نموذج الموقع NCR؟",
+    "expected_answer": "F-P-QD-02-02",
+    "must_include": [
+      "F-P-QD-02-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Site NCR?"
+  },
+  {
+    "id": "PQD03-1",
+    "doc": "PQD03_Control_of_Measuring_Devices_Process.pdf",
+    "question": "أي نموذج هو سجل معايرة معدات القياس؟",
+    "expected_answer": "F-P-QD-03-01",
+    "must_include": [
+      "F-P-QD-03-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Measuring Equipment Calibration Log?"
+  },
+  {
+    "id": "PQD07-1",
+    "doc": "PQD07_Control_of_Production.pdf",
+    "question": "أي نموذج هو طلب الفحص الداخلي؟",
+    "expected_answer": "F-P-QD-07-02",
+    "must_include": [
+      "F-P-QD-07-02"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Internal Inspection Request?"
+  },
+  {
+    "id": "PQD08-2",
+    "doc": "PQD08_Control_of_Records_Filing_Archiving_and_Backup_Process.pdf",
+    "question": "ما الذي تعنيه اختصار \"DC\" في عملية ضبط السجلات؟",
+    "expected_answer": "Document Controller.",
+    "must_include": [
+      "Document Controller"
+    ],
+    "type": "definition",
+    "review": "machine",
+    "question_en": "What does DC stand for in the records control process?"
+  },
+  {
+    "id": "PQD09-2",
+    "doc": "PQD09_Management_Leadership_and_Commitment.pdf",
+    "question": "من يوزع ويشرح سياسة الجودة بعد إصدارها أو تغييرها؟",
+    "expected_answer": "QA distributes it and explains it to all HoDs.",
+    "must_include": [
+      "QA"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who distributes and explains the Quality Policy after it is issued or changed?"
+  },
+  {
+    "id": "PQD11-1",
+    "doc": "PQD11_Material_Inspection_Process.pdf",
+    "question": "أي نموذج هو سجل المير؟",
+    "expected_answer": "F-P-QD-11-01",
+    "must_include": [
+      "F-P-QD-11-01"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the MIR Log?"
+  },
+  {
+    "id": "PSE01-1",
+    "doc": "PSE01_RME_SelfExecution_Process.pdf",
+    "question": "من يرسل نموذج حالة العمل المكتملة المُوافَق عليه ومُوقَّع إلى مكتب التقنية في الموقع، ومن أين يحصل على الموافقة؟",
+    "expected_answer": "The CM sends it after the PM's approval.",
+    "must_include": [
+      "CM"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who sends the approved and signed Work Completed Status form to the Site Technical Office, and after whose approval?"
+  },
+  {
+    "id": "PTN01-2",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "ماذا يحدث إذا لم تتم المتابعة بدراسة مشروع؟",
+    "expected_answer": "The Commercial department sends a letter of apology to the client who sent the RFP/RFQ.",
+    "must_include": [
+      "apology"
+    ],
+    "type": "fact",
+    "review": "machine",
+    "question_en": "What happens if the decision is not to proceed with a project study?"
+  },
+  {
+    "id": "PTN01-3",
+    "doc": "PTN01_Project_Initiation_Process.pdf",
+    "question": "من يبدأ عملية التقدير ويُعين مُنسق المناقصات؟",
+    "expected_answer": "The Tendering Manager.",
+    "must_include": [
+      "Tendering Manager"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who initiates the estimation process and assigns a Tender Coordinator?"
+  },
+  {
+    "id": "PVMO01-1",
+    "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+    "question": "أي نموذج هو استراتيجية شراء المشروع؟",
+    "expected_answer": "F-P-TN-02-05",
+    "must_include": [
+      "F-P-TN-02-05"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Project Sourcing Strategy?"
+  },
+  {
+    "id": "PVMO02-1",
+    "doc": "PVMO02_Procurement_Process.pdf",
+    "question": "أي نموذج هو مصفوفة سلطة الموافقة على المشتريات؟",
+    "expected_answer": "F-P-VMO-01-07",
+    "must_include": [
+      "F-P-VMO-01-07"
+    ],
+    "type": "form_lookup",
+    "review": "machine",
+    "question_en": "Which form is the Procurement Approval Authority Matrix?"
+  },
+  {
+    "id": "QM-1",
+    "doc": "Quality_Manual_2026.pdf",
+    "question": "ما الذي تعنيه تحليل SWOT في دليل الجودة؟",
+    "expected_answer": "Strengths, weaknesses, opportunities and threats.",
+    "must_include": [
+      "Strengths"
+    ],
+    "type": "definition",
+    "review": "machine",
+    "question_en": "What does SWOT analysis stand for in the Quality Manual?"
+  },
+  {
+    "id": "XDOC-1",
+    "doc": "PQD05_Risk_Assessment_Process.pdf",
+    "question": "يقول عدة إجراءات أن المخاطر تُسجَّل على نموذج تحديد المخاطر وتقييمها الذي يُحافظ عليه رئيس القسم. ما هو رقم هذا النموذج؟",
+    "expected_answer": "F-P-QD-05-01, the Risk Register.",
+    "must_include": [
+      "F-P-QD-05-01"
+    ],
+    "type": "fact_crossdoc",
+    "review": "machine",
+    "question_en": "Several processes say risks are recorded on a risk identification and assessment form maintained by the HoD. Which form number is that?"
+  },
+  {
+    "id": "XDOC-2",
+    "doc": "PQD06_Control_of_Documents_Communication_Process.pdf",
+    "question": "تُشير العديد من العمليات إلى نموذج MOM. أي رقم نموذج هو نموذج محضر الاجتماع؟",
+    "expected_answer": "F-P-QD-06-02",
+    "must_include": [
+      "F-P-QD-06-02"
+    ],
+    "type": "fact_crossdoc",
+    "review": "machine",
+    "question_en": "Many processes reference a MOM form. Which form number is the Minutes of Meeting form?"
+  },
+  {
+    "id": "NONE-1",
+    "doc": "none",
+    "question": "ما هو سياسة أرباح RME للمساهمين؟",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine",
+    "question_en": "What is RME's dividend policy for shareholders?"
+  },
+  {
+    "id": "NONE-2",
+    "doc": "none",
+    "question": "كم عدد الموظفين الذين لدى روض مودرن إنجينيرينغ حالياً؟",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine",
+    "question_en": "How many employees does Rowad Modern Engineering currently have?"
+  },
+  {
+    "id": "NONE-3",
+    "doc": "none",
+    "question": "ما هو دخل الشركة للسنة المالية 2025؟",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine",
+    "question_en": "What is the company's revenue for the 2025 financial year?"
+  },
+  {
+    "id": "NONE-4",
+    "doc": "none",
+    "question": "أي علامة تجارية من رافعات البرج تستخدمها RME في مشروع دمياط؟",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine",
+    "question_en": "Which brand of tower crane does RME use on its Damietta project?"
+  },
+  {
+    "id": "NONE-5",
+    "doc": "none",
+    "question": "ما هو رمز WiFi في مقر المكتب الرئيسي؟",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine",
+    "question_en": "What is the WiFi password at the head office?"
+  },
+  {
+    "id": "NONE-6",
+    "doc": "none",
+    "question": "من الذي فاز بال tender لخط مترو القاهرة الجديد؟",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine",
+    "question_en": "Who won the tender for the new Cairo metro line?"
+  },
+  {
+    "id": "NONE-7",
+    "doc": "none",
+    "question": "ما هي نقطة الانصهار للصلب المستخدم في صومعة RME؟",
+    "expected_answer": "Not covered by these documents.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine",
+    "question_en": "What is the melting point of the steel used in RME formwork?"
+  },
+  {
+    "id": "NONE-8",
+    "doc": "none",
+    "question": "كم من إجازة سنوية يحصل عليها الموظفون في فرع قطر؟",
+    "expected_answer": "Not covered by these documents; the corpus has KSA and UAE branch policies but no Qatar branch policy.",
+    "must_include": [],
+    "type": "unanswerable",
+    "review": "machine",
+    "question_en": "How much annual leave do employees get in the Qatar branch?"
+  },
+  {
+    "id": "MHR01-1",
+    "doc": "MHR01_Main_Head_Office_Policy_Procedures.pdf",
+    "question": "من يجب أن يوافق على أي تغيير في خريطة الجلوس لمكتب المديرية؟",
+    "expected_answer": "The Admin department.",
+    "must_include": [
+      "Admin"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who must approve any change to the head office seating plan?"
+  },
+  {
+    "id": "MHR03-1",
+    "doc": "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+    "question": "في أي وقت يجب على المستخدمين أن يكونوا في نقطة الاجتماع قبل وقت استلام الحافلة المخطط له؟",
+    "expected_answer": "At least five minutes before the scheduled pick-up time.",
+    "must_include": [
+      "five minutes"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How early must users be at the meeting point before the scheduled bus pick-up time?"
+  },
+  {
+    "id": "MHR03-2",
+    "doc": "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
+    "question": "كم عدد المشرفين الذين تعيّنهم الإدارة من بين ركاب كل حافلة؟",
+    "expected_answer": "2 supervisors per bus.",
+    "must_include": [
+      "2 supervisors"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "How many supervisors does Administration appoint from the passengers of each bus?"
+  },
+  {
+    "id": "MHR05-1",
+    "doc": "MHR05_HQ_Cafeteria_Services_Office_Support_Team_s_Role_Policy.pdf",
+    "question": "من يعفى من إحضار المشروبات والطعام شخصيًا من المقهى؟",
+    "expected_answer": "The department managers.",
+    "must_include": [
+      "department managers"
+    ],
+    "type": "fact",
+    "review": "machine",
+    "question_en": "Who is exempt from picking up drinks and food personally from the cafeteria?"
+  },
+  {
+    "id": "PHR03-1",
+    "doc": "PHR03_Safe_Work_Environment_Policy.pdf",
+    "question": "من هو الضحية التي تم دعوتها للقاء بموجب سياسة بيئة العمل الآمنة؟",
+    "expected_answer": "The human resources committee, in person.",
+    "must_include": [
+      "human resources committee"
+    ],
+    "type": "role_lookup",
+    "review": "machine",
+    "question_en": "Who is the harassment victim invited to meet under the safe work environment policy?"
+  },
+  {
+    "id": "POP01-1",
+    "doc": "POP01_Subcontractor_Management_Process.pdf",
+    "question": "كم مرة يجب أن يعقد مسؤول السلامة في RME حديث المجموعة (Toolbox Talks) مع المقاولين الفرعيين؟",
+    "expected_answer": "On a weekly basis.",
+    "must_include": [
+      "Toolbox Talks"
+    ],
+    "type": "fact",
+    "review": "machine",
+    "question_en": "How often must the RME safety officer hold Toolbox Talks for subcontractors?"
+  },
+  {
+    "id": "PPC03-1",
+    "doc": "PPC03_Projects_Reward_Scheme_Process.pdf",
+    "question": "لمشروع له ظروف خاصة وتحقيق أقل من 70%، ما هو الحد الأقصى للمكافأة التي يمكن إصدارها ومن يقرر ذلك؟",
+    "expected_answer": "A maximum of 0.50-month reward, decided by the OM or COO.",
+    "must_include": [
+      "70%"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "For a project with special conditions scoring below 70%, what is the maximum reward that can be released and who decides?"
+  },
+  {
+    "id": "PTN02-1",
+    "doc": "PTN02_Project_Launching_Process.pdf",
+    "question": "في كم من الوقت من توقيع العقد يجب تعديل قوالب المقاولين الفرعيين وإرسالها إلى التشغيل وVMO؟",
+    "expected_answer": "Within 45 days from signing the contract.",
+    "must_include": [
+      "45 days"
+    ],
+    "type": "numeric",
+    "review": "machine",
+    "question_en": "Within how long from signing the contract must subcontract templates be modified and sent to Operation and VMO?"
+  }
+]
