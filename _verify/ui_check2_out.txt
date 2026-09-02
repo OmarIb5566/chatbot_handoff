@@ -1,0 +1,52 @@
+ollama_up: True
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 5629.79it/s]
+
+==========================================================================================
+Q: how does the rental equipment variation order workflow go
+workflow_intent=True n_wf=4/4 validator=clean
+----- ANSWER -----
+The workflow begins with Creation.  
+1. Equipment Rental Admin performs Preparation by Equipment Rental Admin.  
+2. The process moves to PM Approval.  
+3. The process moves to Equipment Manager Approval.  
+4. A decision is made:  
+   - If the value is "Approve Above 3M EGP", it moves to VP Approval.  
+   - If the value is "Approve Below 3M EGP", it moves to Finance Review.  
+5. If further action is required, VP Approval performs Approval.  
+6. The process moves to Finance Review.  
+7. A decision is made:  
+   - If the value is "Approve Below 3M EGP", it moves to End.  
+   - If the value is "Approve Above 3M EGP", it moves to End.  
+8. The workflow ends when the process reaches End.  
+
+Source: Subcontract Amendments - Rental Equipment Variation Order WF.pdf
+----- END -----
+
+routes in cited chunk: 12 — endpoint-pair presence (substring, indicative only):
+   YES  VP Approval -> Equipment Manager Approval
+   YES  VP Approval -> Finance Review
+   YES  Creation -> Preparation by Equipment Rental Admin
+   YES  Preparation by Equipment Rental Admin -> PM Approval
+   YES  PM Approval -> Equipment Manager Approval
+   YES  Finance Review -> End
+    no  Finance Review -> Equipment Rental Admin Update
+   YES  PM Approval -> Preparation by Equipment Rental Admin
+    no  Equipment Rental Admin Update -> Finance Review
+   YES  Equipment Manager Approval -> Preparation by Equipment Rental Admin
+   YES  Equipment Manager Approval -> VP Approval
+   YES  Equipment Manager Approval -> Finance Review
+
+filename mentions: 1
+has 'Source:' line: True
+has old headings  : False
+has 'begins with' : True
+
+==========================================================================================
+Q: how many days of annual leave do employees get?
+workflow_intent=False n_wf=0/6 validator=clean
+----- ANSWER -----
+The number of annual leave days is not explicitly specified in the provided documents. The documents mention eligibility for annual leave and conditions related to its usage, such as the requirement to clear remaining vacation balance before the end of the first quarter of the following year, but they do not provide a specific number of days allocated for annual leave.
+
+Source: MHR18_UAE_Branch_Policy.pdf
+----- END -----
+EXIT 0 

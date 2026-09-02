@@ -1,0 +1,138 @@
+PARTC Mon 08/31/2026 21:05:21.20 
+######## C1a eval_set_v2 top-3 
+gold documents outside the process corpus - workflow chunks merged in
+
+eval_set_v2.json: 100 questions, 92 with a gold document, 8 unanswerable (not scored here)
+chunks.json: 1197 chunks over 180 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 11609.20it/s]
+Batches:   0%|          | 0/19 [00:00<?, ?it/s]Batches:   5%|▌         | 1/19 [00:02<00:42,  2.34s/it]Batches:  11%|█         | 2/19 [00:02<00:19,  1.17s/it]Batches:  16%|█▌        | 3/19 [00:03<00:12,  1.24it/s]Batches:  21%|██        | 4/19 [00:03<00:12,  1.17it/s]Batches:  26%|██▋       | 5/19 [00:04<00:09,  1.49it/s]Batches:  32%|███▏      | 6/19 [00:04<00:07,  1.77it/s]Batches:  37%|███▋      | 7/19 [00:05<00:06,  1.96it/s]Batches:  42%|████▏     | 8/19 [00:05<00:05,  2.15it/s]Batches:  47%|████▋     | 9/19 [00:05<00:04,  2.28it/s]Batches:  53%|█████▎    | 10/19 [00:06<00:03,  2.73it/s]Batches:  58%|█████▊    | 11/19 [00:06<00:02,  2.89it/s]Batches:  63%|██████▎   | 12/19 [00:06<00:02,  3.26it/s]Batches:  68%|██████▊   | 13/19 [00:06<00:01,  3.70it/s]Batches:  74%|███████▎  | 14/19 [00:06<00:01,  4.05it/s]Batches:  79%|███████▉  | 15/19 [00:07<00:00,  4.88it/s]Batches:  89%|████████▉ | 17/19 [00:07<00:00,  6.33it/s]Batches:  95%|█████████▍| 18/19 [00:07<00:00,  6.85it/s]Batches: 100%|██████████| 19/19 [00:07<00:00,  2.55it/s]
+document accuracy
+----------------------------------------------------------
+  top-1   77/92 =  83.7%
+  top-3   86/92 =  93.5%
+  top-5   87/92 =  94.6%
+
+  16 ms/query at top-3
+
+by question type (top-3)
+----------------------------------------------------------
+  definition         9/9      100%
+  fact               8/8      100%
+  fact_crossdoc      2/2      100%
+  form_lookup       22/24      92%
+  numeric           34/36      94%
+  role_lookup       11/13      85%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+
+misses at top-3 (6):
+  [PCN01-3   ] If the PM receives a nomination letter from the client after the award
+  [PFN01-3   ] What is the time frame for preparing the QS for normal versus fast-tra
+  [POP05-2   ] Who reviews and approves the work completed status?
+  [PQD07-1   ] Which form is the Internal Inspection Request?
+  [PSE01-1   ] Who sends the approved and signed Work Completed Status form to the Si
+  [PVMO01-1  ] Which form is the Project Sourcing Strategy?
+ 
+######## C1b eval_set top-3 
+gold documents outside the process corpus - workflow chunks merged in
+
+EVAL SET DOES NOT MATCH chunks.json - 4 problem(s):
+    ADV-1: unanswerable but has must_include
+    ADV-2: unanswerable but has must_include
+    ADV-3: unanswerable but has must_include
+    ADV-4: unanswerable but has must_include
+
+Scores below would understate accuracy. Fix the set first.
+
+eval_set.json: 36 questions, 32 with a gold document, 4 unanswerable (not scored here)
+chunks.json: 1197 chunks over 180 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 10705.32it/s]
+document accuracy
+----------------------------------------------------------
+  top-1   20/32 =  62.5%
+  top-3   27/32 =  84.4%
+  top-5   28/32 =  87.5%
+
+  16 ms/query at top-3
+
+by question type (top-3)
+----------------------------------------------------------
+  definition         5/5      100%
+  fact              15/16      94%
+  form_lookup        4/6       67%
+  role_lookup        3/5       60%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+
+misses at top-3 (5):
+  [PSE01-2   ] Who approves staff hiring in the Self-Execution department?
+  [PTN02-3   ] What is the form number for the Project Execution Plan?
+  [PVMO01-1  ] What is the form number for the Request for Quotation (RFQ)?
+  [PVMO02-3  ] Above what advance payment amount must vendors provide a Letter of Gua
+  [PVMO02-4  ] Who approves the Monthly Payment Plan before it goes to Finance?
+ 
+######## C1c eval_set_workflow top-6 
+gold documents outside the process corpus - workflow chunks merged in
+
+EVAL SET DOES NOT MATCH chunks.json - 1 problem(s):
+    WF-14: gold doc not in corpus - Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf
+
+Scores below would understate accuracy. Fix the set first.
+
+eval_set_workflow.json: 18 questions, 18 with a gold document, 0 unanswerable (not scored here)
+chunks.json: 1197 chunks over 180 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 18616.45it/s]
+document accuracy
+----------------------------------------------------------
+  top-1    6/18 =  33.3%
+  top-6   17/18 =  94.4%
+  top-5   17/18 =  94.4%
+
+  17 ms/query at top-6
+
+by question type (top-6)
+----------------------------------------------------------
+  workflow_order    11/11     100%
+  workflow_routing   6/7       86%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+
+misses at top-6 (1):
+  [WF-14     ] In the Subcontract Amendments workflow, where does the request go afte
+ 
+######## C3 min_rel 0.55 vs 0.7 
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 12673.47it/s]
+corpus: 1197 chunks over 180 documents
+eval_set.json: 32 answerable questions, top-6
+
+min_rel=0.55: 30/32 at top-6, mean chunks returned 6.000
+min_rel=0.7: 29/32 at top-6, mean chunks returned 4.875
+
+flipped hit -> miss at 0.7: ['PVMO02-3']
+flipped miss -> hit at 0.7: []
+
+==========================================================================================
+[PVMO02-3] Above what advance payment amount must vendors provide a Letter of Guarantee (LG)?
+  gold doc     : PVMO02_Procurement_Process.pdf
+  must_include : ['1 million']
+  type         : fact   review: None
+  --- min_rel=0.55 (HIT): 6 chunks returned
+      [1.0000] None            PFN03_Overseas_Payment_Release_Process.pdf                 | TERMS AND DEFINITIONS
+      [0.8887] None            PFN03_Overseas_Payment_Release_Process.pdf                 | PROCESS OPERATION
+      [0.7998] None            PFN03_Overseas_Payment_Release_Process.pdf                 | PROCESS RISK ASSESSMENT
+      [0.7343] None            MHR17_KSA_Branch_Policy.pdf                                | UNMATCHED
+      [0.6944] None            MHR18_UAE_Branch_Policy.pdf                                | UNMATCHED
+      [0.6643] None            PVMO02_Procurement_Process.pdf                             | PROCESS OPERATION  <== GOLD
+  --- min_rel=0.70 (MISS): 4 chunks returned
+      [1.0000] None            PFN03_Overseas_Payment_Release_Process.pdf                 | TERMS AND DEFINITIONS
+      [0.8887] None            PFN03_Overseas_Payment_Release_Process.pdf                 | PROCESS OPERATION
+      [0.7998] None            PFN03_Overseas_Payment_Release_Process.pdf                 | PROCESS RISK ASSESSMENT
+      [0.7343] None            MHR17_KSA_Branch_Policy.pdf                                | UNMATCHED
+C1C3 DONE Mon 08/31/2026 21:06:40.34 
+C2 EXIT 0 Mon 08/31/2026 21:09:32.17 

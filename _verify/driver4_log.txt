@@ -1,0 +1,24 @@
+
+--- q1_workflow: what is the approval workflow for a subcontract amendment?
+  wf_intent=True n_wf=4/6 reused=False rewritten=False gate=['no history']
+  query_used='what is the approval workflow for a subcontract amendment?' rewrite_model=None
+    [1.079] pdf_vector      Subcontract Amendments - Subcontract Amendments V1(USD in  | Approval flow 2
+    [0.998] pdf_vector      Subcontract Amendments - Subcontract Amendments V1(USD in  | Approval flow 1
+    [0.994] pdf_vector      Rule of Credit Amendments - ROC Amendments.pdf | Approval flow
+    [0.977] pdf_vector      Subcontract Amendments - Rental Equipment Variation Order  | Approval flow
+    [0.872] None            PCN01_Subcontract_Agreement_Process.pdf | OBJECTIVES
+    [0.812] None            PCN01_Subcontract_Agreement_Process.pdf | PROCESS OUTPUT
+  ANSWER: The approval workflow for a subcontract amendment depends on the specific type of amendment and the associated thresholds. For example, in "Approval flow 1" from the document *Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf*, the workflow includes steps such as VP, Technical Operations Manager, Finance, Adding Line Items, Earthmoving, PM, Review, Revision, Operation Engineer, Contracts Department, PsM, Creation, and S/C Signature. The routing and approval threshol
+
+--- q2_followup: who signs after that?
+  wf_intent=True n_wf=4/6 reused=False rewritten=False gate=['opens like a standalone question, nothing to resolve against history']
+  query_used='who signs after that?' rewrite_model=None
+    [1.047] pdf_vector      Potential Delay Events - NOD Manual WF.pdf | Approval flow
+    [0.998] pdf_vector      Client Contract Lines Modification - WF - Client Contract  | Approval flow
+    [0.992] pdf_vector      Customer Satisfaction - Customer Satisfaction WF.pdf | Approval flow
+    [0.985] pdf_vector      S-C Work Completed Status - TO Work Completed Status.pdf | Approval flow
+    [0.604] None            MHR10_Code_of_Conduct_Policy.pdf | UNMATCHED
+    [0.589] None            MHR16_Employee_Separation_Policy.pdf | DOCUMENT CHANGE HISTORY
+  ANSWER: To answer the question "who signs after that?", we need to refer to the specific approval workflows outlined in the provided documents. The answer depends on the context of the process being referred to. For example:  - In the **"Potential Delay Events - NOD Manual WF.pdf"**, after the **Contracts Department**, the next signatory depends on the value, as outlined in the **"Routing and Approval thresholds"** section of the document. - In the **"Client Contract Lines Modification - WF - Client Con
+
+DRIVER4 DONE

@@ -1,0 +1,3238 @@
+{
+  "0.55": {
+    "PCM01-1": {
+      "ok": true,
+      "found": [
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "Quality_Manual_2026.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9604,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9098,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PERFORMANCE MEASURES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8821,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS INPUT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8709,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.8609,
+          "filename": "Quality_Manual_2026.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.8365,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "RELATED DOCUMENTED INFORMATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM01-2": {
+      "ok": true,
+      "found": [
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "Customer Satisfaction - Customer Satisfaction WF.pdf",
+        "Customer Satisfaction - Creation by PM.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7917,
+          "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 3,
+          "score": 0.7773,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7654,
+          "filename": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.753,
+          "filename": "Customer Satisfaction - Creation by PM.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7477,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PERFORMANCE MEASURES",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM01-3": {
+      "ok": true,
+      "found": [
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PQD02_Control_of_NonConformity_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "Quality_Manual_2026.pdf",
+        "PIT01_Information_Technology.pdf",
+        "Quality_Manual_2026.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9353,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7833,
+          "filename": "PQD02_Control_of_NonConformity_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7091,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6816,
+          "filename": "Quality_Manual_2026.pdf",
+          "section": "LIABLE STAKEHOLDER",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6705,
+          "filename": "PIT01_Information_Technology.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.6265,
+          "filename": "Quality_Manual_2026.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM01-4": {
+      "ok": true,
+      "found": [
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "Customer Satisfaction - Creation by PM.pdf",
+        "POP07_Project_Closeout_Process.pdf",
+        "Customer Satisfaction - Creation by Commercial Dept. V1.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7408,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6925,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6587,
+          "filename": "Customer Satisfaction - Creation by PM.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.6478,
+          "filename": "POP07_Project_Closeout_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.6375,
+          "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PCM02-1": {
+      "ok": true,
+      "found": [
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "PFN03_Overseas_Payment_Release_Process.pdf",
+        "POP07_Project_Closeout_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "MHR16_Employee_Separation_Policy.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.6049,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6017,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6002,
+          "filename": "POP07_Project_Closeout_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.5954,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.5904,
+          "filename": "MHR16_Employee_Separation_Policy.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM02-2": {
+      "ok": true,
+      "found": [
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+        "PQD06_Control_of_Documents_Communication_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9213,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8993,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS INPUT",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7702,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "RELATED DOCUMENTED INFORMATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6452,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.5952,
+          "filename": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.5643,
+          "filename": "PQD06_Control_of_Documents_Communication_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM02-3": {
+      "ok": true,
+      "found": [
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9694,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.6757,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6609,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PERFORMANCE MEASURES",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6367,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS RISK ASSESSMENT",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6255,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.6035,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        }
+      ]
+    },
+    "PCN01-1": {
+      "ok": true,
+      "found": [
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+        "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+        "POP09_Earthmoving_Process.pdf",
+        "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.8922,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8722,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8317,
+          "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+          "section": "Supply & Apply Subcontracts (Civil, Arch, MEP)",
+          "source_type": "vlm_description"
+        },
+        {
+          "rank": 4,
+          "score": 0.8036,
+          "filename": "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+          "section": "Comparison Sheet Signature Matrix",
+          "source_type": "vlm_description"
+        },
+        {
+          "rank": 5,
+          "score": 0.7977,
+          "filename": "POP09_Earthmoving_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7876,
+          "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+          "section": "Apply Subcontracts (Civil, Arch, MEP)",
+          "source_type": "vlm_description"
+        }
+      ]
+    },
+    "PCN01-2": {
+      "ok": true,
+      "found": [
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "Subcontracts - Nominated Subcontractor.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+        "Subcontracts - nominate Subcontractor.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9165,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8078,
+          "filename": "Subcontracts - Nominated Subcontractor.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 3,
+          "score": 0.7542,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS INPUT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7092,
+          "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.7019,
+          "filename": "Subcontracts - nominate Subcontractor.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.6828,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "DOCUMENT CHANGE HISTORY",
+          "source_type": null
+        }
+      ]
+    },
+    "PCN01-3": {
+      "ok": true,
+      "found": [
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+        "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+        "PSE01_RME_SelfExecution_Process.pdf",
+        "Subcontracts - Subcontract Preparation V4.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9924,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS RISK ASSESSMENT",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7224,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "RELATED DOCUMENTED INFORMATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7057,
+          "filename": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+          "section": "Approval flow 2",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 4,
+          "score": 0.6629,
+          "filename": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+          "section": "Approval flow 1",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.6417,
+          "filename": "PSE01_RME_SelfExecution_Process.pdf",
+          "section": "PROCESS INPUT",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.61,
+          "filename": "Subcontracts - Subcontract Preparation V4.pdf",
+          "section": "Approval flow 2",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PCN01-4": {
+      "ok": true,
+      "found": [
+        "PQD05_Risk_Assessment_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PHR04_Overseas_Business_Travel_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.863,
+          "filename": "PQD05_Risk_Assessment_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8087,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7378,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7034,
+          "filename": "PHR04_Overseas_Business_Travel_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6732,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.6674,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        }
+      ]
+    },
+    "PQD12-1": {
+      "ok": true,
+      "found": [
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "PQD07_Control_of_Production.pdf",
+        "POP03_Direct_Award_Projects_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9804,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.9409,
+          "filename": "PQD07_Control_of_Production.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8716,
+          "filename": "POP03_Direct_Award_Projects_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.8548,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.8167,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PQD12-2": {
+      "ok": true,
+      "found": [
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "MHR20_Employees_Performance_Policy.pdf",
+        "PQD07_Control_of_Production.pdf",
+        "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9323,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9227,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7998,
+          "filename": "MHR20_Employees_Performance_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7129,
+          "filename": "PQD07_Control_of_Production.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6901,
+          "filename": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.6288,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PQD12-3": {
+      "ok": true,
+      "found": [
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "Inspection Request (IR) - New - Inspection Request V2.0.pdf",
+        "Inspection Request (IR) - Inspection Request (Client).pdf",
+        "Infrastructure Inspection Request (IIR) - Pipes Inspection Request.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9539,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9287,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "PERFORMANCE MEASURES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8867,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8616,
+          "filename": "Inspection Request (IR) - New - Inspection Request V2.0.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.8356,
+          "filename": "Inspection Request (IR) - Inspection Request (Client).pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7913,
+          "filename": "Infrastructure Inspection Request (IIR) - Pipes Inspection Request.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PQD12-4": {
+      "ok": true,
+      "found": [
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "Department Risk Assessment - Department Risk.pdf",
+        "Quality Objectives (Project) - Quality Objectives PL WF.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9914,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9795,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.9306,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.9094,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7407,
+          "filename": "Department Risk Assessment - Department Risk.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.6868,
+          "filename": "Quality Objectives (Project) - Quality Objectives PL WF.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PSE01-1": {
+      "ok": true,
+      "found": [
+        "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+        "PSE01_RME_SelfExecution_Process.pdf",
+        "S-C Work Completed Status - TO Work Completed Status.pdf",
+        "S-C Work Completed Status - QC Work Completed Status.pdf",
+        "S-C Work Completed Status - Site Work Completed Status.pdf",
+        "PMSE01_MSE_Project_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.929,
+          "filename": "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.919,
+          "filename": "PSE01_RME_SelfExecution_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8371,
+          "filename": "S-C Work Completed Status - TO Work Completed Status.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 4,
+          "score": 0.8136,
+          "filename": "S-C Work Completed Status - QC Work Completed Status.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.8105,
+          "filename": "S-C Work Completed Status - Site Work Completed Status.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7923,
+          "filename": "PMSE01_MSE_Project_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PSE01-2": {
+      "ok": true,
+      "found": [
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+        "PSE01_RME_SelfExecution_Process.pdf",
+        "PHR05_KSA_Hiring_Process.pdf",
+        "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9225,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8968,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8907,
+          "filename": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+          "section": "Approval flow 1",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 4,
+          "score": 0.8243,
+          "filename": "PSE01_RME_SelfExecution_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.8171,
+          "filename": "PHR05_KSA_Hiring_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7936,
+          "filename": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+          "section": "Approval flow 2",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PSE01-3": {
+      "ok": true,
+      "found": [
+        "PSE01_RME_SelfExecution_Process.pdf",
+        "PSE01_RME_SelfExecution_Process.pdf",
+        "MHR20_Employees_Performance_Policy.pdf",
+        "PQD05_Risk_Assessment_Process.pdf",
+        "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+        "Quality_Manual_2026.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9347,
+          "filename": "PSE01_RME_SelfExecution_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9309,
+          "filename": "PSE01_RME_SelfExecution_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.78,
+          "filename": "MHR20_Employees_Performance_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6324,
+          "filename": "PQD05_Risk_Assessment_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.609,
+          "filename": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.5846,
+          "filename": "Quality_Manual_2026.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN01-1": {
+      "ok": true,
+      "found": [
+        "PTN01_Project_Initiation_Process.pdf",
+        "PQD05_Risk_Assessment_Process.pdf",
+        "PCN02_Claim_Process.pdf",
+        "Project Risk Assessment - Risk Assessment.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9634,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.6979,
+          "filename": "PQD05_Risk_Assessment_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6614,
+          "filename": "PCN02_Claim_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.637,
+          "filename": "Project Risk Assessment - Risk Assessment.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.6207,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.6202,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN01-2": {
+      "ok": true,
+      "found": [
+        "PTN01_Project_Initiation_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PPC01_Planning_Cost_Control_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.936,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.5744,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.5615,
+          "filename": "PPC01_Planning_Cost_Control_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.5487,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.5386,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.5329,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN01-3": {
+      "ok": true,
+      "found": [
+        "PTN01_Project_Initiation_Process.pdf",
+        "MHR10_Code_of_Conduct_Policy.pdf",
+        "MHR10_Code_of_Conduct_Policy.pdf",
+        "Project Creation - Competitive Bidding Projects.pdf",
+        "PTN01_Project_Initiation_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.8943,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8555,
+          "filename": "MHR10_Code_of_Conduct_Policy.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8489,
+          "filename": "MHR10_Code_of_Conduct_Policy.pdf",
+          "section": "LIABLE STAKEHOLDER",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8309,
+          "filename": "Project Creation - Competitive Bidding Projects.pdf",
+          "section": "Approval flow 2",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.7909,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7879,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN01-4": {
+      "ok": true,
+      "found": [
+        "PTN01_Project_Initiation_Process.pdf",
+        "PQD05_Risk_Assessment_Process.pdf",
+        "PLO01_Logistics_Process.pdf",
+        "MHR20_Employees_Performance_Policy.pdf",
+        "POP04_Request_for_Information_Process.pdf",
+        "POP08_Concrete_Pouring_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.643,
+          "filename": "PQD05_Risk_Assessment_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6055,
+          "filename": "PLO01_Logistics_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6014,
+          "filename": "MHR20_Employees_Performance_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.5879,
+          "filename": "POP04_Request_for_Information_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.5682,
+          "filename": "POP08_Concrete_Pouring_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN02-1": {
+      "ok": true,
+      "found": [
+        "PTN02_Project_Launching_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PTN01_Project_Initiation_Process.pdf",
+        "Project Launching - WF - Project Launching.pdf",
+        "MHR17_KSA_Branch_Policy.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7418,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6663,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6529,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6396,
+          "filename": "Project Launching - WF - Project Launching.pdf",
+          "section": "Approval flow 3",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.6022,
+          "filename": "MHR17_KSA_Branch_Policy.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN02-2": {
+      "ok": true,
+      "found": [
+        "PTN02_Project_Launching_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PTN01_Project_Initiation_Process.pdf",
+        "PPC01_Planning_Cost_Control_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "PPC01_Planning_Cost_Control_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8319,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7651,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7484,
+          "filename": "PPC01_Planning_Cost_Control_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6569,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.6549,
+          "filename": "PPC01_Planning_Cost_Control_Process.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN02-3": {
+      "ok": true,
+      "found": [
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "POP03_Direct_Award_Projects_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "POP07_Project_Closeout_Process.pdf",
+        "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9573,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8847,
+          "filename": "POP03_Direct_Award_Projects_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8757,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8633,
+          "filename": "POP07_Project_Closeout_Process.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.8569,
+          "filename": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.8426,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO01-1": {
+      "ok": false,
+      "found": [
+        "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+        "Variation Orders Approval - Variation Orders (Auto Creation V2).pdf",
+        "Request for Quotation - Request for Bid WF.pdf",
+        "Request for Quotation - Purchasing RFQ WF – BU in Egypt V1.pdf",
+        "Variation Orders Approval - Auto-Creation V2 (Cote d'lvoire Shell).pdf",
+        "PFW01_Formwork_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9751,
+          "filename": "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 2,
+          "score": 0.8376,
+          "filename": "Variation Orders Approval - Variation Orders (Auto Creation V2).pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 3,
+          "score": 0.8268,
+          "filename": "Request for Quotation - Request for Bid WF.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 4,
+          "score": 0.8104,
+          "filename": "Request for Quotation - Purchasing RFQ WF – BU in Egypt V1.pdf",
+          "section": "Approval flow 3",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.7979,
+          "filename": "Variation Orders Approval - Auto-Creation V2 (Cote d'lvoire Shell).pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7744,
+          "filename": "PFW01_Formwork_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO01-2": {
+      "ok": true,
+      "found": [
+        "PTN02_Project_Launching_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "PPC01_Planning_Cost_Control_Process.pdf",
+        "PVMO02_Procurement_Process.pdf",
+        "PPU01_Purchasing_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9881,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8936,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8525,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.779,
+          "filename": "PPC01_Planning_Cost_Control_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.729,
+          "filename": "PVMO02_Procurement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.722,
+          "filename": "PPU01_Purchasing_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO01-3": {
+      "ok": true,
+      "found": [
+        "MHR20_Employees_Performance_Policy.pdf",
+        "POP10_Technical_Office_Support_Followup.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "POP09_Earthmoving_Process.pdf",
+        "POP10_Technical_Office_Support_Followup.pdf",
+        "S-C Invoice - S-C Invoice Operation.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.8704,
+          "filename": "MHR20_Employees_Performance_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8083,
+          "filename": "POP10_Technical_Office_Support_Followup.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.773,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7673,
+          "filename": "POP09_Earthmoving_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7612,
+          "filename": "POP10_Technical_Office_Support_Followup.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7588,
+          "filename": "S-C Invoice - S-C Invoice Operation.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PVMO02-1": {
+      "ok": true,
+      "found": [
+        "PVMO02_Procurement_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PPC01_Planning_Cost_Control_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PVMO02_Procurement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9665,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8775,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8244,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7762,
+          "filename": "PPC01_Planning_Cost_Control_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7217,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO02-2": {
+      "ok": true,
+      "found": [
+        "PVMO02_Procurement_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.905,
+          "filename": "PVMO02_Procurement_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8734,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8037,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7938,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "RELATED DOCUMENTED INFORMATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7768,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7507,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO02-3": {
+      "ok": true,
+      "found": [
+        "PFN03_Overseas_Payment_Release_Process.pdf",
+        "PFN03_Overseas_Payment_Release_Process.pdf",
+        "PFN03_Overseas_Payment_Release_Process.pdf",
+        "MHR17_KSA_Branch_Policy.pdf",
+        "MHR18_UAE_Branch_Policy.pdf",
+        "PVMO02_Procurement_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8887,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7998,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS RISK ASSESSMENT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7343,
+          "filename": "MHR17_KSA_Branch_Policy.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6944,
+          "filename": "MHR18_UAE_Branch_Policy.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.6643,
+          "filename": "PVMO02_Procurement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO02-4": {
+      "ok": false,
+      "found": [
+        "PFN03_Overseas_Payment_Release_Process.pdf",
+        "Payment Applications - Payment Application V2.pdf",
+        "Payment Applications - Payment Application CD V2.pdf",
+        "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+        "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+        "PFN03_Overseas_Payment_Release_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8444,
+          "filename": "Payment Applications - Payment Application V2.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 3,
+          "score": 0.8012,
+          "filename": "Payment Applications - Payment Application CD V2.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 4,
+          "score": 0.7734,
+          "filename": "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+          "section": "PROCESS RISK ASSESSMENT",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7249,
+          "filename": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7132,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS RISK ASSESSMENT",
+          "source_type": null
+        }
+      ]
+    }
+  },
+  "0.7": {
+    "PCM01-1": {
+      "ok": true,
+      "found": [
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "Quality_Manual_2026.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9604,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9098,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PERFORMANCE MEASURES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8821,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS INPUT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8709,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.8609,
+          "filename": "Quality_Manual_2026.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.8365,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "RELATED DOCUMENTED INFORMATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM01-2": {
+      "ok": true,
+      "found": [
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "Customer Satisfaction - Customer Satisfaction WF.pdf",
+        "Customer Satisfaction - Creation by PM.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7917,
+          "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 3,
+          "score": 0.7773,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7654,
+          "filename": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.753,
+          "filename": "Customer Satisfaction - Creation by PM.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7477,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PERFORMANCE MEASURES",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM01-3": {
+      "ok": true,
+      "found": [
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PQD02_Control_of_NonConformity_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "Quality_Manual_2026.pdf",
+        "PIT01_Information_Technology.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9353,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7833,
+          "filename": "PQD02_Control_of_NonConformity_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7091,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6816,
+          "filename": "Quality_Manual_2026.pdf",
+          "section": "LIABLE STAKEHOLDER",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6705,
+          "filename": "PIT01_Information_Technology.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM01-4": {
+      "ok": true,
+      "found": [
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7408,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6925,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM02-1": {
+      "ok": true,
+      "found": [
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "PFN03_Overseas_Payment_Release_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.6049,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6017,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM02-2": {
+      "ok": true,
+      "found": [
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9213,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8993,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS INPUT",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7702,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "RELATED DOCUMENTED INFORMATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.6452,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        }
+      ]
+    },
+    "PCM02-3": {
+      "ok": true,
+      "found": [
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf",
+        "PCM02_Branding_for_Construction_Sites_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9694,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.6757,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6609,
+          "filename": "PCM02_Branding_for_Construction_Sites_Process.pdf",
+          "section": "PERFORMANCE MEASURES",
+          "source_type": null
+        }
+      ]
+    },
+    "PCN01-1": {
+      "ok": true,
+      "found": [
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+        "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+        "POP09_Earthmoving_Process.pdf",
+        "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.8922,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8722,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8317,
+          "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+          "section": "Supply & Apply Subcontracts (Civil, Arch, MEP)",
+          "source_type": "vlm_description"
+        },
+        {
+          "rank": 4,
+          "score": 0.8036,
+          "filename": "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+          "section": "Comparison Sheet Signature Matrix",
+          "source_type": "vlm_description"
+        },
+        {
+          "rank": 5,
+          "score": 0.7977,
+          "filename": "POP09_Earthmoving_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7876,
+          "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+          "section": "Apply Subcontracts (Civil, Arch, MEP)",
+          "source_type": "vlm_description"
+        }
+      ]
+    },
+    "PCN01-2": {
+      "ok": true,
+      "found": [
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "Subcontracts - Nominated Subcontractor.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+        "Subcontracts - nominate Subcontractor.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9165,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8078,
+          "filename": "Subcontracts - Nominated Subcontractor.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 3,
+          "score": 0.7542,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS INPUT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7092,
+          "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.7019,
+          "filename": "Subcontracts - nominate Subcontractor.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.6828,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "DOCUMENT CHANGE HISTORY",
+          "source_type": null
+        }
+      ]
+    },
+    "PCN01-3": {
+      "ok": true,
+      "found": [
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9924,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS RISK ASSESSMENT",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7224,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "RELATED DOCUMENTED INFORMATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7057,
+          "filename": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+          "section": "Approval flow 2",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PCN01-4": {
+      "ok": true,
+      "found": [
+        "PQD05_Risk_Assessment_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PHR04_Overseas_Business_Travel_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.863,
+          "filename": "PQD05_Risk_Assessment_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8087,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7378,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7034,
+          "filename": "PHR04_Overseas_Business_Travel_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6732,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.6674,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        }
+      ]
+    },
+    "PQD12-1": {
+      "ok": true,
+      "found": [
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "PQD07_Control_of_Production.pdf",
+        "POP03_Direct_Award_Projects_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9804,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.9409,
+          "filename": "PQD07_Control_of_Production.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8716,
+          "filename": "POP03_Direct_Award_Projects_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.8548,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.8167,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PQD12-2": {
+      "ok": true,
+      "found": [
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "MHR20_Employees_Performance_Policy.pdf",
+        "PQD07_Control_of_Production.pdf",
+        "MHR11_Incident_Reporting_Investigation_Policy.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9323,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9227,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7998,
+          "filename": "MHR20_Employees_Performance_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7129,
+          "filename": "PQD07_Control_of_Production.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.6901,
+          "filename": "MHR11_Incident_Reporting_Investigation_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        }
+      ]
+    },
+    "PQD12-3": {
+      "ok": true,
+      "found": [
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "Inspection Request (IR) - New - Inspection Request V2.0.pdf",
+        "Inspection Request (IR) - Inspection Request (Client).pdf",
+        "Infrastructure Inspection Request (IIR) - Pipes Inspection Request.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9539,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9287,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "PERFORMANCE MEASURES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8867,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8616,
+          "filename": "Inspection Request (IR) - New - Inspection Request V2.0.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.8356,
+          "filename": "Inspection Request (IR) - Inspection Request (Client).pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7913,
+          "filename": "Infrastructure Inspection Request (IIR) - Pipes Inspection Request.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PQD12-4": {
+      "ok": true,
+      "found": [
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+        "Department Risk Assessment - Department Risk.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9914,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9795,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.9306,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.9094,
+          "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7407,
+          "filename": "Department Risk Assessment - Department Risk.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PSE01-1": {
+      "ok": true,
+      "found": [
+        "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+        "PSE01_RME_SelfExecution_Process.pdf",
+        "S-C Work Completed Status - TO Work Completed Status.pdf",
+        "S-C Work Completed Status - QC Work Completed Status.pdf",
+        "S-C Work Completed Status - Site Work Completed Status.pdf",
+        "PMSE01_MSE_Project_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.929,
+          "filename": "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.919,
+          "filename": "PSE01_RME_SelfExecution_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8371,
+          "filename": "S-C Work Completed Status - TO Work Completed Status.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 4,
+          "score": 0.8136,
+          "filename": "S-C Work Completed Status - QC Work Completed Status.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.8105,
+          "filename": "S-C Work Completed Status - Site Work Completed Status.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7923,
+          "filename": "PMSE01_MSE_Project_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PSE01-2": {
+      "ok": true,
+      "found": [
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+        "PSE01_RME_SelfExecution_Process.pdf",
+        "PHR05_KSA_Hiring_Process.pdf",
+        "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9225,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8968,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8907,
+          "filename": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+          "section": "Approval flow 1",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 4,
+          "score": 0.8243,
+          "filename": "PSE01_RME_SelfExecution_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.8171,
+          "filename": "PHR05_KSA_Hiring_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7936,
+          "filename": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+          "section": "Approval flow 2",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PSE01-3": {
+      "ok": true,
+      "found": [
+        "PSE01_RME_SelfExecution_Process.pdf",
+        "PSE01_RME_SelfExecution_Process.pdf",
+        "MHR20_Employees_Performance_Policy.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9347,
+          "filename": "PSE01_RME_SelfExecution_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9309,
+          "filename": "PSE01_RME_SelfExecution_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.78,
+          "filename": "MHR20_Employees_Performance_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN01-1": {
+      "ok": true,
+      "found": [
+        "PTN01_Project_Initiation_Process.pdf",
+        "PQD05_Risk_Assessment_Process.pdf",
+        "PCN02_Claim_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9634,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.6979,
+          "filename": "PQD05_Risk_Assessment_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6614,
+          "filename": "PCN02_Claim_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN01-2": {
+      "ok": true,
+      "found": [
+        "PTN01_Project_Initiation_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PPC01_Planning_Cost_Control_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.936,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.5744,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.5615,
+          "filename": "PPC01_Planning_Cost_Control_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN01-3": {
+      "ok": true,
+      "found": [
+        "PTN01_Project_Initiation_Process.pdf",
+        "MHR10_Code_of_Conduct_Policy.pdf",
+        "MHR10_Code_of_Conduct_Policy.pdf",
+        "Project Creation - Competitive Bidding Projects.pdf",
+        "PTN01_Project_Initiation_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.8943,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8555,
+          "filename": "MHR10_Code_of_Conduct_Policy.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8489,
+          "filename": "MHR10_Code_of_Conduct_Policy.pdf",
+          "section": "LIABLE STAKEHOLDER",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8309,
+          "filename": "Project Creation - Competitive Bidding Projects.pdf",
+          "section": "Approval flow 2",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.7909,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS CONTROL",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7879,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN01-4": {
+      "ok": true,
+      "found": [
+        "PTN01_Project_Initiation_Process.pdf",
+        "PQD05_Risk_Assessment_Process.pdf",
+        "PLO01_Logistics_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.643,
+          "filename": "PQD05_Risk_Assessment_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6055,
+          "filename": "PLO01_Logistics_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN02-1": {
+      "ok": true,
+      "found": [
+        "PTN02_Project_Launching_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.7418,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.6663,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN02-2": {
+      "ok": true,
+      "found": [
+        "PTN02_Project_Launching_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PTN01_Project_Initiation_Process.pdf",
+        "PPC01_Planning_Cost_Control_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8319,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7651,
+          "filename": "PTN01_Project_Initiation_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7484,
+          "filename": "PPC01_Planning_Cost_Control_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PTN02-3": {
+      "ok": true,
+      "found": [
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "POP03_Direct_Award_Projects_Process.pdf",
+        "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "POP07_Project_Closeout_Process.pdf",
+        "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9573,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8847,
+          "filename": "POP03_Direct_Award_Projects_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8757,
+          "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8633,
+          "filename": "POP07_Project_Closeout_Process.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.8569,
+          "filename": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.8426,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO01-1": {
+      "ok": false,
+      "found": [
+        "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+        "Variation Orders Approval - Variation Orders (Auto Creation V2).pdf",
+        "Request for Quotation - Request for Bid WF.pdf",
+        "Request for Quotation - Purchasing RFQ WF – BU in Egypt V1.pdf",
+        "Variation Orders Approval - Auto-Creation V2 (Cote d'lvoire Shell).pdf",
+        "PFW01_Formwork_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9751,
+          "filename": "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 2,
+          "score": 0.8376,
+          "filename": "Variation Orders Approval - Variation Orders (Auto Creation V2).pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 3,
+          "score": 0.8268,
+          "filename": "Request for Quotation - Request for Bid WF.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 4,
+          "score": 0.8104,
+          "filename": "Request for Quotation - Purchasing RFQ WF – BU in Egypt V1.pdf",
+          "section": "Approval flow 3",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 5,
+          "score": 0.7979,
+          "filename": "Variation Orders Approval - Auto-Creation V2 (Cote d'lvoire Shell).pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7744,
+          "filename": "PFW01_Formwork_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO01-2": {
+      "ok": true,
+      "found": [
+        "PTN02_Project_Launching_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "PPC01_Planning_Cost_Control_Process.pdf",
+        "PVMO02_Procurement_Process.pdf",
+        "PPU01_Purchasing_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.9881,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8936,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8525,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.779,
+          "filename": "PPC01_Planning_Cost_Control_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.729,
+          "filename": "PVMO02_Procurement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.722,
+          "filename": "PPU01_Purchasing_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO01-3": {
+      "ok": true,
+      "found": [
+        "MHR20_Employees_Performance_Policy.pdf",
+        "POP10_Technical_Office_Support_Followup.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "POP09_Earthmoving_Process.pdf",
+        "POP10_Technical_Office_Support_Followup.pdf",
+        "S-C Invoice - S-C Invoice Operation.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.8704,
+          "filename": "MHR20_Employees_Performance_Policy.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8083,
+          "filename": "POP10_Technical_Office_Support_Followup.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.773,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7673,
+          "filename": "POP09_Earthmoving_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7612,
+          "filename": "POP10_Technical_Office_Support_Followup.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7588,
+          "filename": "S-C Invoice - S-C Invoice Operation.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        }
+      ]
+    },
+    "PVMO02-1": {
+      "ok": true,
+      "found": [
+        "PVMO02_Procurement_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PCN01_Subcontract_Agreement_Process.pdf",
+        "PTN02_Project_Launching_Process.pdf",
+        "PPC01_Planning_Cost_Control_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PVMO02_Procurement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.9665,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8775,
+          "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.8244,
+          "filename": "PTN02_Project_Launching_Process.pdf",
+          "section": "OBJECTIVES",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7762,
+          "filename": "PPC01_Planning_Cost_Control_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7217,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO02-2": {
+      "ok": true,
+      "found": [
+        "PVMO02_Procurement_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+        "PCM01_Customer_Satisfaction_Process.pdf",
+        "PVMO01_Vendor_selection_and_Bidding_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 0.905,
+          "filename": "PVMO02_Procurement_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8734,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.8037,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7938,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "RELATED DOCUMENTED INFORMATION",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7768,
+          "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 6,
+          "score": 0.7507,
+          "filename": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
+          "section": "PROCESS OUTPUT",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO02-3": {
+      "ok": false,
+      "found": [
+        "PFN03_Overseas_Payment_Release_Process.pdf",
+        "PFN03_Overseas_Payment_Release_Process.pdf",
+        "PFN03_Overseas_Payment_Release_Process.pdf",
+        "MHR17_KSA_Branch_Policy.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "TERMS AND DEFINITIONS",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8887,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 3,
+          "score": 0.7998,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS RISK ASSESSMENT",
+          "source_type": null
+        },
+        {
+          "rank": 4,
+          "score": 0.7343,
+          "filename": "MHR17_KSA_Branch_Policy.pdf",
+          "section": "UNMATCHED",
+          "source_type": null
+        }
+      ]
+    },
+    "PVMO02-4": {
+      "ok": false,
+      "found": [
+        "PFN03_Overseas_Payment_Release_Process.pdf",
+        "Payment Applications - Payment Application V2.pdf",
+        "Payment Applications - Payment Application CD V2.pdf",
+        "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+        "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+        "PFN03_Overseas_Payment_Release_Process.pdf"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS OPERATION",
+          "source_type": null
+        },
+        {
+          "rank": 2,
+          "score": 0.8444,
+          "filename": "Payment Applications - Payment Application V2.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 3,
+          "score": 0.8012,
+          "filename": "Payment Applications - Payment Application CD V2.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 4,
+          "score": 0.7734,
+          "filename": "POP05_Subcontractor_Invoicing_and_Supplier_Bills_process.pdf",
+          "section": "PROCESS RISK ASSESSMENT",
+          "source_type": null
+        },
+        {
+          "rank": 5,
+          "score": 0.7249,
+          "filename": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+          "section": "Approval flow",
+          "source_type": "pdf_vector"
+        },
+        {
+          "rank": 6,
+          "score": 0.7132,
+          "filename": "PFN03_Overseas_Payment_Release_Process.pdf",
+          "section": "PROCESS RISK ASSESSMENT",
+          "source_type": null
+        }
+      ]
+    }
+  }
+}

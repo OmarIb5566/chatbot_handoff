@@ -1,0 +1,4 @@
+RUN START Mon 08/31/2026 17:46:04.03 
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 6171.27it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 13005.01it/s]
+RUN EXIT 0 Mon 08/31/2026 17:47:38.90 

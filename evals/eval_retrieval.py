@@ -73,7 +73,40 @@ import re
 import time
 from pathlib import Path
 
-from paths import EVAL_SET_V2 as DEFAULT_EVAL, CHUNKS_JSON as DEFAULT_CHUNKS
+from paths import (EVAL_SET_V2 as DEFAULT_EVAL, CHUNKS_JSON as DEFAULT_CHUNKS,
+                   WORKFLOW_CHUNKS_JSON)
+
+
+def load_chunks(chunks_path, items) -> tuple[list[dict], bool]:
+    """The production corpus, always - not a subset chosen per eval set.
+
+    This used to merge workflow chunks in only when an eval set's gold
+    documents needed them, on the reasoning that skipping the merge was a free
+    optimization. It was not free: it meant eval_set_v2 - a process-only eval
+    set - was never once scored against the corpus production actually serves.
+    Cowork's verification run found the gap directly: top-3 on eval_set_v2 was
+    88/92 against the 1063-chunk process-only index this function used to
+    build, and 86/92 against the real 1200-chunk merged index. Two questions
+    were regressing in a way nothing in this repo could see, because nothing
+    ever tested the corpus that was actually shipped. (The 80/92 figure in
+    this file's own module docstring above predates the workflow corpus
+    entirely and should be read as historical, not current.)
+
+    Calls chatbot.load_corpus() rather than reimplementing the merge, so the
+    degenerate-chunk filter (drop_unreadable) can't drift out of sync between
+    what eval scores and what production serves - that exact kind of drift is
+    what caused this bug in the first place.
+
+    `chunks_path` is kept only for `--chunks` overrides in ad hoc runs (e.g.
+    scoring a chunker experiment before it has been wired into load_corpus);
+    the default path always goes through the real corpus.
+    """
+    if chunks_path == DEFAULT_CHUNKS:
+        import sys
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
+        from chatbot import load_corpus
+        return load_corpus(), True
+    return json.load(open(chunks_path, encoding="utf-8")), False
 
 
 def verify(items: list[dict], chunks: list[dict]) -> list[str]:
@@ -128,7 +161,9 @@ def main() -> None:
     args = ap.parse_args()
 
     items = json.load(open(args.eval, encoding="utf-8"))
-    chunks = json.load(open(args.chunks, encoding="utf-8"))
+    chunks, merged = load_chunks(args.chunks, items)
+    if merged:
+        print("gold documents outside the process corpus - workflow chunks merged in\n")
 
     problems = verify(items, chunks)
     if problems:

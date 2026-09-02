@@ -57,9 +57,13 @@ os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 import numpy as np
 from rank_bm25 import BM25Okapi
 
+import config  # noqa: E402
 from paths import CHUNKS_JSON, EMBED_CACHE as CACHE_DIR  # noqa: E402
 
-DEFAULT_MODEL = "all-MiniLM-L6-v2"
+# The encoder for the dense channel. Read from config so it can be swapped
+# without a diff; changing it invalidates the embedding cache by fingerprint,
+# which is intended - a stale embedding is worse than a slow first load.
+DEFAULT_MODEL = config.EMBED_MODEL
 RRF_K = 60  # standard RRF damping constant
 
 # Query repair (see Retriever.repair_query). Tuned on the 136 eval questions:
@@ -87,6 +91,51 @@ PREFIX_HINTS = {
     "PVMO": ["vendor", "procurement", "purchase", "rfq", "quotation", "sourcing", "supplier"],
     "PCN":  ["subcontract", "subcontractor", "contract", "agreement", "btb", "back-to-back"],
 }
+
+
+# --- workflow-diagram recall -------------------------------------------------
+# The corpus is two populations in one index: 1063 process-text chunks and 137
+# workflow-diagram chunks (data/chunks.json + data/workflow_chunks.json). That
+# is roughly 8:1, and the imbalance is not neutral for ranking.
+#
+# BM25 in particular favours the process side on almost any query, because the
+# process PDFs are long, repetitive prose that restates its own vocabulary many
+# times, while a workflow chunk is a short rendering of a graph. So a question
+# whose real answer is an approval chain ("who signs after the Technical
+# Director") competes against sixty paragraphs that merely CONTAIN the words.
+#
+# The fix here is deliberately NOT a router. Nothing is excluded and no query
+# is confined to one file: a workflow-shaped question gets a soft score boost
+# toward diagram chunks, plus a guaranteed floor of slots in the final top-k so
+# that a relevant diagram cannot be crowded out entirely by a larger corpus.
+# Both are recall protections; a strongly-matching process chunk still wins.
+WORKFLOW_SOURCE_TYPES = {"pdf_vector", "vlm_description"}
+
+# Words that indicate the user wants the ROUTE through a process - who signs,
+# in what order, what happens next - rather than its written policy. Kept
+# deliberately narrow: a false positive only nudges ranking and reserves two
+# slots, but a table this loose fires on everything and the floor stops being
+# a floor and becomes a quota.
+WORKFLOW_HINTS = (
+    "workflow", "work flow", "flow chart", "flowchart", "diagram",
+    "approval chain", "approval cycle", "approval flow", "approval route",
+    "who approves", "who signs", "who authorises", "who authorizes",
+    "sign off", "signs off", "signature matrix", "signatory",
+    "next step", "what happens after", "what happens next", "goes to",
+    "sequence", "order of approval", "routed", "routing", "escalate",
+    "escalation", "sent back", "rejected", "cycle", "steps in",
+)
+
+
+def workflow_intent(query: str) -> bool:
+    """True when the query is asking about a route/approval chain.
+
+    Only ever ENABLES extra recall. A wrong True costs two of top_k slots; a
+    wrong False just leaves ranking as it was. That asymmetry is why the list
+    above errs toward missing a case rather than firing on everything.
+    """
+    q = query.lower()
+    return any(h in q for h in WORKFLOW_HINTS)
 
 
 def load_embedder(model_name: str = DEFAULT_MODEL, device: str | None = None):
@@ -134,7 +183,10 @@ def doc_code_prefix(chunk: dict) -> str | None:
     and matched nothing while this required a literal P.
     """
     code = chunk.get("doc_code") or chunk.get("filename", "")
-    m = re.match(r"([PM])-?([A-Z]{2,3})-?\d", code.upper())
+    # `F-P-VMO-01-07` is a FORM in the P-VMO family, so the optional F- prefix
+    # is stripped rather than failing the match: the three workflow diagrams
+    # that carry a real code route with the process documents they belong to.
+    m = re.match(r"(?:F-)?([PM])-?([A-Z]{2,4})-?\d", code.upper())
     return f"{m.group(1)}{m.group(2)}" if m else None
 
 
@@ -290,6 +342,16 @@ class Retriever:
         # Precompute prefix routing labels once (see doc_code_prefix above).
         self.prefixes = [doc_code_prefix(c) for c in chunks]
         self._present_prefixes = {p for p in self.prefixes if p}
+
+        # Which rows are workflow diagrams rather than process text. Computed
+        # once here rather than per-search: at 1200 chunks the dict lookup is
+        # cheap but it runs inside the ranking loop, and this is the kind of
+        # thing that quietly becomes the hot path when the corpus reaches its
+        # 500-700 document target.
+        self.is_workflow = [
+            c.get("source_type") in WORKFLOW_SOURCE_TYPES for c in chunks
+        ]
+        self._workflow_rows = [i for i, w in enumerate(self.is_workflow) if w]
 
     # ------------------------------------------------------------------ index
     def _corpus_fingerprint(self) -> str:
@@ -472,7 +534,12 @@ class Retriever:
     # ----------------------------------------------------------------- search
     def search(self, query: str, top_k: int = 5, route: bool = True,
                boost_prefixes: list[str] | None = None,
-               boost: float = 0.15) -> list[dict]:
+               boost: float = 0.15,
+               workflow_boost: float = 0.06,
+               workflow_floor: int = 2,
+               min_rel: float = 0.55,
+               min_hits: int = 3,
+               wf_intent: bool | None = None) -> list[dict]:
         """Hybrid search. Same return shape as the old BM25-only version.
 
         `route=True` applies doc-code prefix narrowing first. On this eval set
@@ -530,8 +597,131 @@ class Retriever:
                 if self.prefixes[i] in wanted:
                     fused[i] += bump
 
-        ranked = sorted(fused.items(), key=lambda x: -x[1])[:top_k]
+        # --- workflow recall protection -----------------------------------
+        # Two mechanisms, both soft, both gated on the query actually looking
+        # like a route question. See WORKFLOW_HINTS above for why this is not
+        # a router.
+        wf = workflow_intent(query) if wf_intent is None else wf_intent
+        if wf and self._workflow_rows:
+            if workflow_boost:
+                # Same scaling trick as the family boost: proportional to the
+                # observed score range, so it behaves identically under both
+                # fusion modes instead of dominating RRF's ~1/60 scores.
+                vals = fused.values()
+                span = (max(vals) - min(vals)) or 1.0
+                bump = workflow_boost * span
+                for i in list(fused):
+                    if self.is_workflow[i]:
+                        fused[i] += bump
+
+        order = sorted(fused.items(), key=lambda x: -x[1])
+        ranked = order[:top_k]
+
+        if wf and workflow_floor > 0:
+            # A floor in BOTH directions, and the second half is not symmetry
+            # for its own sake - it is the failure this change introduced.
+            #
+            # Boosting diagrams on a route question made the top-6 come back
+            # ALL diagram on "who approves the request for quotation": a
+            # flowchart states that the CEO signs above a threshold, and the
+            # process document states the conditions under which the threshold
+            # applies at all. An answer built from the graph alone quotes the
+            # first without the second and reads as authoritative. Guaranteeing
+            # a diagram a seat while letting it take every seat just relocates
+            # the recall bug.
+            #
+            # Both floors are capped at a third of top_k, so neither can starve
+            # the other and neither overrides ranking when scores are decisive.
+            cap = max(1, top_k // 3)
+            ranked = self._enforce_mix(ranked, order,
+                                       min_workflow=min(workflow_floor, cap),
+                                       min_process=cap)
+
+        # --- relevance cutoff: top_k is a CEILING, not a quota -------------
+        # Raising top_k from 3 to 6 buys recall, and it also buys noise: when
+        # only four chunks are genuinely relevant, slots five and six fill with
+        # the best of the irrelevant. Measured on "what is the approval
+        # workflow for bid closing", those slots were the Employees'
+        # Performance Policy and the Overseas Business Travel Process, neither
+        # of which has anything to do with bids.
+        #
+        # That is not free. The prompt instructs the model to answer from the
+        # context, so weak context is not ignored context - it is an invitation
+        # to pad an answer with an unrelated document's rules and cite it. A
+        # variable number of strong chunks beats a fixed number of mixed ones.
+        #
+        # `min_hits` is 3 and NOT 2 for a specific reason: this file's own
+        # docstring earlier (repair_query, ~line 424) already reports top-3
+        # accuracy for both eval sets under a different comparison, and that
+        # number was recycled here to justify min_hits=3 WITHOUT independently
+        # re-running it against this code. Cowork's verification run caught the
+        # error: reused here it produced an internally impossible pair (a 92-
+        # question and a 32-question set that could not sum to the recycled
+        # total), and separately, top-3 on eval_set_v2 scored against the
+        # PRODUCTION 1200-chunk merged index - the corpus this code actually
+        # runs against - is 86/92, not whatever this comment previously
+        # implied. That number does not need to be re-derived here; it needs
+        # to be read from evals/, which is now the only source of truth for it.
+        #
+        # The reasoning for min_hits=3 stands regardless of the exact figure:
+        # a cutoff that can return two chunks can drop a gold chunk that sat at
+        # rank 3, which reads as a retrieval regression caused by a change made
+        # to improve retrieval. Holding the floor at 3 keeps that window
+        # closed. But the number that window's SIZE was chosen from was never
+        # actually measured here - only asserted - which is the mistake to not
+        # repeat.
+        #
+        # CALIBRATION: min_rel=0.55 measured against real MiniLM. It let a Code
+        # of Conduct chunk (0.604) and a Document Change History chunk (0.589)
+        # through against a 0.576 bar on a genuine question - the exact noise
+        # class this mechanism exists to stop. 0.7 excludes both, at the cost
+        # of one eval_set question. Not yet raised here pending a look at which
+        # question that is and whether it's a fair loss.
+        if min_rel and ranked:
+            bar = ranked[0][1] * min_rel
+            strong = [(i, s) for i, s in ranked if s >= bar]
+            ranked = strong if len(strong) >= min_hits else ranked[:min_hits]
+
         return [{"score": float(s), **self.chunks[i]} for i, s in ranked]
+
+    def _enforce_mix(self, ranked, order, min_workflow: int, min_process: int,
+                     rel_floor: float = 0.55):
+        """Backfill the top-k so both chunk populations are represented.
+
+        Displaces the WEAKEST members of the over-represented side, never the
+        top hit. Returns `ranked` unchanged when the natural ordering already
+        satisfies both floors, which is the common case - this is a safety net,
+        not a quota.
+
+        THE FLOOR IS ALLOWED TO GO UNMET
+        --------------------------------
+        `rel_floor` is why. A backfilled chunk must still score at least 55% of
+        the top hit; below that the slot is simply left as it was. Without this
+        guard the floor pads the context with whatever ranked highest among the
+        irrelevant - measured, "what is the approval workflow for bid closing"
+        backfilled a chunk of the Employees' Performance Policy at 0.585
+        against a 0.927 top hit. That is not neutral filler. The prompt says to
+        answer from the context, so an unrelated policy in the context is an
+        invitation to blend it into the answer, and a compliance answer that
+        cites the wrong document is worse than one that cites too few.
+        """
+        top = max((s for _, s in ranked), default=0.0)
+        bar = top * rel_floor if top > 0 else float("-inf")
+        for want, is_wf in ((min_workflow, True), (min_process, False)):
+            have = sum(1 for i, _ in ranked if self.is_workflow[i] is is_wf)
+            if have >= want:
+                continue
+            chosen = {i for i, _ in ranked}
+            extra = [(i, s) for i, s in order
+                     if self.is_workflow[i] is is_wf and i not in chosen
+                     and s >= bar][:want - have]
+            if not extra:
+                continue
+            keep = [(i, s) for i, s in ranked if self.is_workflow[i] is is_wf]
+            other = [(i, s) for i, s in ranked if self.is_workflow[i] is not is_wf]
+            other = other[:max(0, len(other) - len(extra))]
+            ranked = sorted(keep + other + extra, key=lambda x: -x[1])
+        return ranked
 
     # --- single-channel variants, kept for ablation/eval comparison ---
     def search_bm25(self, query: str, top_k: int = 5) -> list[dict]:

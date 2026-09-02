@@ -1,0 +1,33 @@
+ollama_up: True
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 14941.84it/s]
+corpus: 1197 chunks
+
+--- Q1: What is the approval workflow for a subcontract amendment?
+  looks_like_followup(has_history=False) -> is_followup=False reasons=['no history']
+  rec: workflow_intent=True n_wf=4/6 reused_sources=False was_rewritten=False
+  rec gate_reasons: ['no history']
+  query_used: 'What is the approval workflow for a subcontract amendment?'  rewrite_model=None
+    [1.0298] pdf_vector      Rule of Credit Amendments - ROC Amendments.pdf               | Approval flow
+    [1.0008] pdf_vector      Subcontract Amendments - Rental Equipment Variation Order WF | Approval flow
+    [0.9282] None            PCN01_Subcontract_Agreement_Process.pdf                      | OBJECTIVES
+    [0.9229] pdf_vector      Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf | Approval flow 3
+    [0.8859] pdf_vector      Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf | Approval flow 2
+    [0.8561] None            PCN01_Subcontract_Agreement_Process.pdf                      | PROCESS OUTPUT
+  ANSWER:
+    The approval workflow for a subcontract amendment involves a series of steps and approvals depending on the specific context and value of the amendment. For example, in the "Subcontract Amendments - Subcontract Amendments BU-V1 WF" document, the approval workflow includes steps such as Procurement/ MEP Engineer, Procurement/ MEP Team Leader, Projects Control Engineer, Project Manager, Business Unit Manager, S/C Signature (1), VP, Finance, and others. The exact route depends on the value of the amendment, with different thresholds requiring approvals from different individuals or departments. For instance, if the value is more than or equal to 10 M EGP, the Business Unit Manager is required to approve, while values less than 10 M EGP may require approval from S/C Signature (1) or Finance, depending on the specific case. For more detailed information, refer to the document: [Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf | Approval flow 3].
+
+--- Q2: who signs after that?
+  looks_like_followup(has_history=True) -> is_followup=True reasons=['back-reference (that)']
+  rec: workflow_intent=True n_wf=4/6 reused_sources=False was_rewritten=True
+  rec gate_reasons: ['back-reference (that)']
+  query_used: 'Who signs the subcontract amendment after the approval workflow is completed?'  rewrite_model=qwen3:14b
+    [1.0223] pdf_vector      Rule of Credit Amendments - ROC Amendments.pdf               | Approval flow
+    [0.9096] pdf_vector      S-C Work Completed Status - TO Work Completed Status.pdf     | Approval flow
+    [0.8964] pdf_vector      Subcontract Amendments - Rental Equipment Variation Order WF | Approval flow
+    [0.8775] pdf_vector      Potential Subcontractor (Post Award) - Potential SCs Post-Aw | Approval flow
+    [0.7887] None            PCN01_Subcontract_Agreement_Process.pdf                      | PROCESS OUTPUT
+    [0.7736] None            PCN01_Subcontract_Agreement_Process.pdf                      | OBJECTIVES
+  ANSWER:
+    The question of who signs the subcontract amendment after the approval workflow is completed is not directly addressed in the provided context. The documents describe various approval workflows for different types of processes, such as Rule of Credit Amendments, S-C Work Completed Status, Subcontract Amendments, and Potential Subcontractor (Post Award). However, none of these documents explicitly mention who signs the subcontract amendment after the approval workflow is completed.
+    
+    For more detailed information, refer to the document: **PCN01_Subcontract_Agreement_Process.pdf**.

@@ -1,0 +1,14 @@
+{
+  "sentence_transformers": "5.6.1",
+  "torch": "2.12.1+xpu",
+  "DEFAULT_MODEL": "all-MiniLM-L6-v2",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "embedding_shape_process": [
+    1063,
+    384
+  ],
+  "embedding_dtype": "float32",
+  "model_repr": "<class 'sentence_transformers.sentence_transformer.model.SentenceTransformer'>",
+  "sanity_paraphrase_cos": 0.6124359965324402,
+  "sanity_unrelated_cos": 0.008656226098537445
+}

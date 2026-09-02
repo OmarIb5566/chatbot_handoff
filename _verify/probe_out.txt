@@ -1,0 +1,124 @@
+================================================================================================
+1) IS RE-EXTRACTION A NO-OP?  (re-run today's code, compare to today's chunks)
+================================================================================================
+
+  identical: 18   differs: 0   errors: 0
+
+================================================================================================
+2) WHY IS THE ORPHAN ORPHANED?  nearest connector endpoint to each orphan box
+   (SNAP_TOL = 30.0)
+================================================================================================
+
+Drawing List (E1 Log) - Drawing List (E1 Log) WF.pdf
+   page 1: 10 boxes, 17 connectors, 19 arrowheads, 3 junctions
+      orphan 'Auto-Creation'                                nearest ends [1.0, 195.0, 526.0]  connector endpoint 1.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'End'                                          nearest ends [571.0, 610.0, 637.0]  NO connector endpoint within 120pt -> arrow absent from the vector layer
+
+Infrastructure Inspection Request (IIR) - Holding Tanks WF.pdf
+   page 1: 6 boxes, 11 connectors, 14 arrowheads, 2 junctions
+      orphan 'End'                                          nearest ends [149.0, 149.0, 170.0]  NO connector endpoint within 120pt -> arrow absent from the vector layer
+
+Infrastructure Inspection Request (IIR) - House Connection Chamber WF.pdf
+   page 1: 6 boxes, 11 connectors, 14 arrowheads, 2 junctions
+      orphan 'End'                                          nearest ends [149.0, 149.0, 170.0]  NO connector endpoint within 120pt -> arrow absent from the vector layer
+
+Infrastructure Inspection Request (IIR) - Inspection Chamber WF.pdf
+   page 1: 6 boxes, 11 connectors, 14 arrowheads, 2 junctions
+      orphan 'End'                                          nearest ends [149.0, 149.0, 170.0]  NO connector endpoint within 120pt -> arrow absent from the vector layer
+
+Infrastructure Inspection Request (IIR) - Manholes Inspection Request.pdf
+   page 1: 6 boxes, 11 connectors, 14 arrowheads, 2 junctions
+      orphan 'End'                                          nearest ends [149.0, 149.0, 170.0]  NO connector endpoint within 120pt -> arrow absent from the vector layer
+
+Infrastructure Inspection Request (IIR) - New_Form-Inspection_Request_WF.pdf
+   page 1: 5 boxes, 8 connectors, 10 arrowheads, 2 junctions
+      orphan 'End'                                          nearest ends [75.0, 75.0, 96.0]  connector endpoint 75.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Infrastructure Inspection Request (IIR) - Pipes Inspection Request.pdf
+   page 1: 6 boxes, 11 connectors, 14 arrowheads, 2 junctions
+      orphan 'End'                                          nearest ends [103.0, 103.0, 124.0]  connector endpoint 103.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Infrastructure Inspection Request (IIR) - Valve Chambers Inspection Request.pdf
+   page 1: 6 boxes, 11 connectors, 14 arrowheads, 2 junctions
+      orphan 'End'                                          nearest ends [90.0, 90.0, 111.0]  connector endpoint 90.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Internal Head Office NCR - New Internal Head Office NCR.pdf
+   page 1: 10 boxes, 12 connectors, 15 arrowheads, 0 junctions
+      orphan 'End'                                          nearest ends [0, 0, 165.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Internal Project NCR - Internal Project NCR WF V2.pdf
+   page 1: 10 boxes, 12 connectors, 15 arrowheads, 0 junctions
+      orphan 'End'                                          nearest ends [0, 0, 246.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Potential Delay Events - NOD Auto Workflow.pdf
+   page 1: 4 boxes, 4 connectors, 5 arrowheads, 0 junctions
+      orphan 'End'                                          nearest ends [0, 0.0, 461.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Request For Information (RFI) - RME to Client V2.pdf
+   page 1: 9 boxes, 20 connectors, 23 arrowheads, 5 junctions
+      orphan 'End'                                          nearest ends [0.0, 0, 159.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Request for Quotation - Purchasing RFQ WF – BU in Egypt V1.pdf
+   page 1: 20 boxes, 102 connectors, 56 arrowheads, 7 junctions
+      orphan 'Purchasing/MEP HoD Approval (1) (Formwork)'   nearest ends [0.0, 0, 1.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Subcontracts - Nominated Subcontractor.pdf
+   page 1: 10 boxes, 19 connectors, 15 arrowheads, 0 junctions
+      orphan 'DC'                                           nearest ends [0, 1.0, 26.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf
+   page 1: 37 boxes, 110 connectors, 81 arrowheads, 6 junctions
+      orphan 'Auto-Creation'                                nearest ends [1.0, 230.0, 251.0]  connector endpoint 1.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf
+   page 1: 72 boxes, 253 connectors, 180 arrowheads, 16 junctions
+      orphan 'Auto-Creation'                                nearest ends [1.0, 230.0, 251.0]  connector endpoint 1.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Subcontracts - nominate Subcontractor.pdf
+   page 1: 10 boxes, 19 connectors, 15 arrowheads, 0 junctions
+      orphan 'DC'                                           nearest ends [0, 1.0, 26.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+Variation Order Flow Chart.pdf
+   page 1: 17 boxes, 55 connectors, 29 arrowheads, 7 junctions
+      orphan 'Contract Department reviews the Merit of VO,' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Contract department submits the Contractual/' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Submit Technical issue to Contract Departmen' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'TOM prepares rough estimated QTY'             nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'PCE give feedback regarding Time Impact (wit' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'PM/TOM submits the Notification form to clie' nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Notify PM&TOM'                                nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Close The Issue'                              nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'PM/TOM submits the Notification form to clie' nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Fill the NOV'                                 nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Issue letter for NOV'                         nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Client / Consultant received   NOV'           nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Refer to Claim Process'                       nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+   page 2: 18 boxes, 64 connectors, 36 arrowheads, 6 junctions
+      orphan 'TOM Prepares the Cost Breakdown, along with ' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'TOM prepares the initial internal form'       nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Update Internal form'                         nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'PMS &TM Approval'                             nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Tender Approval'                              nearest ends [0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'OPM Approval'                                 nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'PMS &TM Approval'                             nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'OPM Approval'                                 nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'PMS &TM Approval'                             nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Send Copy : TOM, PCE and PM. Procu dept. PCD' nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Send Copy : TOM, PCE and PM. Procu. Dept&  P' nearest ends [0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Send Copy : TOM, PCE and PM. Procu. dept. PC' nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Send Copy : Operation dept. & Procu. Dept. &' nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+   page 3: 14 boxes, 45 connectors, 26 arrowheads, 9 junctions
+      orphan 'PCE'                                          nearest ends [0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Submit draft of VO breakdown to Contract. De' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Reviewing for contractual comments if any (w' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'to Client/Consultant within 28 days from VO ' nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'to Client/Consultant  within the time for VO' nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'TOM issue RFV breakdown by use of Contract f' nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'TOM issue RFV breakdown by use of Company  f' nearest ends [0.0, 0.0, 0.0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Submit draft of VO breakdown to Contract. De' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Reviewing for contractual comments if any (w' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+      orphan 'Revise VO. Final Internal Form according to ' nearest ends [0.0, 0.0, 0]  connector endpoint 0.0pt away -> TUNABLE (SNAP_TOL 30.0)
+
+================================================================================================
+orphan boxes examined: 54   tunable (a connector is near): 49   arrow absent: 5
+EXIT 0 

@@ -1,0 +1,46 @@
+ollama_up: True
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 6730.12it/s]
+
+workflow_intent=True n_wf=4/4 validator=clean
+  [1.060] pdf_vector      Subcontract Amendments - Rental Equipment Variation Order  | Approval flow
+  [0.747] pdf_vector      Request for Quotation - Rental Equipment CS.pdf | Approval flow
+  [0.745] pdf_vector      Request for Quotation - Rental Equipment CS-BU-V1.pdf | Approval flow
+  [0.729] pdf_vector      Rented Equipment Timesheet - Rented Equipment Timesheet -  | Approval flow
+
+----- ANSWER -----
+**Main path**  
+1. Creation  
+2. Preparation by Equipment Rental Admin  
+3. PM Approval  
+4. Equipment Manager Approval  
+
+**Branches**  
+- Approve Above 3M EGP -> VP Approval  
+- Approve Below 3M EGP -> Finance Review  
+
+**Send-backs and loops**  
+- VP Approval -> Equipment Manager Approval [Send back with Comments]  
+- Finance Review -> Equipment Rental Admin Update  
+- PM Approval -> Preparation by Equipment Rental Admin [Send back to Creator]  
+- Equipment Manager Approval -> Preparation by Equipment Rental Admin [Send back to Creator]  
+- Equipment Rental Admin Update -> Finance Review [Send to Finance]  
+
+Source: Subcontract Amendments - Rental Equipment Variation Order WF.pdf
+----- END -----
+
+filename mentions in answer: 1
+contains 'Source:' line     : True
+routes in chunk: 12   routes both endpoints named in answer: 12
+   YES  VP Approval -> Equipment Manager Approval
+   YES  VP Approval -> Finance Review
+   YES  Creation -> Preparation by Equipment Rental Admin
+   YES  Preparation by Equipment Rental Admin -> PM Approval
+   YES  PM Approval -> Equipment Manager Approval
+   YES  Finance Review -> End
+   YES  Finance Review -> Equipment Rental Admin Update
+   YES  PM Approval -> Preparation by Equipment Rental Admin
+   YES  Equipment Rental Admin Update -> Finance Review
+   YES  Equipment Manager Approval -> Preparation by Equipment Rental Admin
+   YES  Equipment Manager Approval -> VP Approval
+   YES  Equipment Manager Approval -> Finance Review
+EXIT 0 

@@ -1,0 +1,15 @@
+PARTB Mon 08/31/2026 21:04:00.38 
+### 1 syntax 
+syntax OK
+ 
+### 2 drop_unreadable / load_corpus 
+dropped 3 of 137 workflow chunks (expect 3)
+production corpus: 1197 chunks (expect 1200 - dropped)
+ 
+### 3 looks_like_followup 
+OK   'who signs after that'                     got=True want=True
+OK   'what happens before that'                 got=True want=True
+OK   'which form number is that'                got=False want=False
+OK   'that is not all'                          got=True want=True
+OK   'what is the next step in the RFQ process' got=False want=False
+PARTB DONE Mon 08/31/2026 21:04:02.50 

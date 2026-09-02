@@ -1,0 +1,30 @@
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 13723.86it/s]
+Does the ROC chunk contain the word 'subcontract' at all?
+  ROC BM25 tokens (87): ['rule', 'of', 'credit', 'amendment', 'roc', 'amendment', 'approval', 'flow', 'rule', 'of', 'credit', 'amendment', 'roc', 'amendment', 'approval', 'flow', 'approval', 'workflow', 'approval', 'flow', 'step', 'creation', 'end', 'review', 'revise', 'order', 'of', 'approval', 'so', 'far', 'first', 'to', 'last', 'each', 'one', 'sign', 'after', 'the', 'one', 'before', 'it', 'the', 'route', 'then', 'branche', '1', 'creation', '2', 'review', 'after', 'review', 'the', 'route', 'branche', 'who', 'sign', 'next', 'depend', 'on', 'the', 'value', 'see', 'routing', 'and', 'approval', 'threshold', 'below', 'routing', 'creation', 'review', 'send', 'for', 'review', 'review', 'end', 'closed', 'review', 'revise', 'send', 'for', 'revision', 'revise', 'review', 'send', 'back', 'with', 'comment']
+  'subcontract' present: False
+
+BM25 IDF of the query terms (rank_bm25 Okapi idf table):
+  subcontract  idf= 2.7891  appears in    69 / 1199 chunks
+  amendment    idf= 4.7299  appears in    10 / 1199 chunks
+  approval     idf= 1.3630  appears in   244 / 1199 chunks
+  workflow     idf= 2.0043  appears in   142 / 1199 chunks
+  request      idf= 1.5477  appears in   210 / 1199 chunks
+  prepare      idf= 2.9532  appears in    59 / 1199 chunks
+  sign         idf= 2.2112  appears in   118 / 1199 chunks
+  who          idf= 2.3603  appears in   103 / 1199 chunks
+  after        idf= 1.7184  appears in   182 / 1199 chunks
+  department   idf= 1.1368  appears in   291 / 1199 chunks
+  concerned    idf= 3.3544  appears in    40 / 1199 chunks
+
+  avg chunk length (BM25) = 127.1 tokens;  ROC = 87;  REVO = 250
+
+ROC vs REVO BM25 / fused rank as the query wording changes:
+  variant                    ROC bm25      ROC fused      REVO bm25     REVO fused
+  original                   #1 25.27       #1 0.908       #3 21.10       #3 0.837
+  amendment removed         #32 16.07      #69 0.658      #35 15.95      #17 0.778
+  amendment->change         #37 16.07      #40 0.689      #40 15.95      #12 0.760
+  subcontract only           #5 13.38      #18 0.734      #16 12.08       #9 0.789
+  no domain nouns           #17 13.38      #57 0.666      #65 10.80      #90 0.605
+
+DONE
+EXIT 0 

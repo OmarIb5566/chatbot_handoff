@@ -1,0 +1,35 @@
+ROUND3 Mon 08/31/2026 21:36:56.39 
+### B1 syntax 
+syntax OK
+ 
+### B2 drop_unreadable / load_corpus 
+dropped 1 of 137 (expect exactly 1)
+production corpus: 1199 chunks (expect 1199)
+  DROPPED: Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf | Approval flow 2
+  Damietta chunks retained: ['Approval flow 1', 'Approval flow 2', 'Approval flow', 'Approval flow 1', 'Approval flow 3', 'Approval flow 1', 'Approval flow 2', 'Approval flow 3']
+ 
+### B3 eval_set_workflow top-6 
+gold documents outside the process corpus - workflow chunks merged in
+
+eval_set_workflow.json: 18 questions, 18 with a gold document, 0 unanswerable (not scored here)
+chunks.json: 1199 chunks over 181 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6582.16it/s]
+Batches:   0%|          | 0/19 [00:00<?, ?it/s]Batches:   5%|▌         | 1/19 [00:01<00:33,  1.84s/it]Batches:  11%|█         | 2/19 [00:02<00:15,  1.07it/s]Batches:  16%|█▌        | 3/19 [00:02<00:10,  1.56it/s]Batches:  21%|██        | 4/19 [00:03<00:10,  1.45it/s]Batches:  26%|██▋       | 5/19 [00:03<00:07,  1.83it/s]Batches:  32%|███▏      | 6/19 [00:03<00:05,  2.19it/s]Batches:  37%|███▋      | 7/19 [00:04<00:04,  2.50it/s]Batches:  42%|████▏     | 8/19 [00:04<00:04,  2.75it/s]Batches:  47%|████▋     | 9/19 [00:04<00:03,  2.92it/s]Batches:  53%|█████▎    | 10/19 [00:04<00:02,  3.41it/s]Batches:  58%|█████▊    | 11/19 [00:05<00:02,  3.65it/s]Batches:  63%|██████▎   | 12/19 [00:05<00:01,  3.90it/s]Batches:  68%|██████▊   | 13/19 [00:05<00:01,  4.40it/s]Batches:  74%|███████▎  | 14/19 [00:05<00:01,  4.68it/s]Batches:  84%|████████▍ | 16/19 [00:05<00:00,  6.26it/s]Batches:  89%|████████▉ | 17/19 [00:05<00:00,  6.89it/s]Batches:  95%|█████████▍| 18/19 [00:06<00:00,  7.42it/s]Batches: 100%|██████████| 19/19 [00:06<00:00,  3.12it/s]
+document accuracy
+----------------------------------------------------------
+  top-1    6/18 =  33.3%
+  top-6   18/18 = 100.0%
+  top-5   18/18 = 100.0%
+
+  17 ms/query at top-6
+
+by question type (top-6)
+----------------------------------------------------------
+  workflow_order    11/11     100%
+  workflow_routing   7/7      100%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+PARTB DONE Mon 08/31/2026 21:37:14.53 
+PARTC EXIT 0 Mon 08/31/2026 21:41:15.48 

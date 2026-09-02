@@ -1,0 +1,25 @@
+chunks: 137   reproduced exactly: 97   differ: 40   errors: 0
+   TEXT DIFFERS: Request for Quotation - Purchasing RFQ WF - FC in Da | Approval flow 1
+   TEXT DIFFERS: Request for Quotation - Purchasing RFQ WF - FC in Da | Approval flow 2
+   TEXT DIFFERS: Request for Quotation - Purchasing RFQ WF – BU in Eg | Approval flow 1
+
+first difference — Request for Quotation - Purchasing RFQ WF - FC in Damietta.pdf | Approval flow 1
+   --- stored
+   +++ re-rendered
+   @@ -26,8 +26,3 @@
+      - PsM  Approval -> End [Approved Within Budget]
+      - MEP Purchasing Manager Approval -> MEP Purchasing Manager Approval [Approved]
+      - Analysis and Award -> MEP Purchasing Manager Approval [Submit]
+   -
+   -Approval thresholds:
+   -  - A purchase value of "Send back to Creator Send back to Creator Submit Below 10M EGP" requires approval by PM Approval. PM Approval approves at value: Send back to Creator Send back to Creator Submit Below 10M EGP.
+   -
+Traceback (most recent call last):
+  File "C:\Users\dahab\OneDrive\Documents\GitHub\chatbot_handoff\_verify\corpus_roundtrip.py", line 42, in <module>
+    print("   " + l)
+    ~~~~~^^^^^^^^^^^
+  File "C:\Users\dahab\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2010' in position 179: character maps to <undefined>
+EXIT 1 

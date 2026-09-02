@@ -1,0 +1,779 @@
+[
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set_v2",
+    "min_rel": 0.0,
+    "top3": {
+      "hits": 86,
+      "n": 92,
+      "acc": 0.9348,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "POP05-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.141,
+      "mean_process": 2.859
+    },
+    "top6": {
+      "hits": 89,
+      "n": 92,
+      "acc": 0.9674,
+      "misses": [
+        "PFN01-3",
+        "PQD07-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 0.37,
+      "mean_process": 5.63
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set_v2",
+    "min_rel": 0.4,
+    "top3": {
+      "hits": 86,
+      "n": 92,
+      "acc": 0.9348,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "POP05-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.141,
+      "mean_process": 2.859
+    },
+    "top6": {
+      "hits": 89,
+      "n": 92,
+      "acc": 0.9674,
+      "misses": [
+        "PFN01-3",
+        "PQD07-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 5.989,
+      "mean_workflow": 0.37,
+      "mean_process": 5.62
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set_v2",
+    "min_rel": 0.55,
+    "top3": {
+      "hits": 86,
+      "n": 92,
+      "acc": 0.9348,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "POP05-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.141,
+      "mean_process": 2.859
+    },
+    "top6": {
+      "hits": 89,
+      "n": 92,
+      "acc": 0.9674,
+      "misses": [
+        "PFN01-3",
+        "PQD07-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 5.804,
+      "mean_workflow": 0.37,
+      "mean_process": 5.435
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set_v2",
+    "min_rel": 0.7,
+    "top3": {
+      "hits": 86,
+      "n": 92,
+      "acc": 0.9348,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "POP05-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.141,
+      "mean_process": 2.859
+    },
+    "top6": {
+      "hits": 89,
+      "n": 92,
+      "acc": 0.9674,
+      "misses": [
+        "PFN01-3",
+        "PQD07-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 5.011,
+      "mean_workflow": 0.272,
+      "mean_process": 4.739
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set",
+    "min_rel": 0.0,
+    "top3": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.438,
+      "mean_process": 2.562
+    },
+    "top6": {
+      "hits": 29,
+      "n": 32,
+      "acc": 0.9062,
+      "misses": [
+        "PSE01-2",
+        "PVMO01-1",
+        "PVMO02-4"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 1.344,
+      "mean_process": 4.656
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set",
+    "min_rel": 0.4,
+    "top3": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.438,
+      "mean_process": 2.562
+    },
+    "top6": {
+      "hits": 29,
+      "n": 32,
+      "acc": 0.9062,
+      "misses": [
+        "PSE01-2",
+        "PVMO01-1",
+        "PVMO02-4"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 1.344,
+      "mean_process": 4.656
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set",
+    "min_rel": 0.55,
+    "top3": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.438,
+      "mean_process": 2.562
+    },
+    "top6": {
+      "hits": 29,
+      "n": 32,
+      "acc": 0.9062,
+      "misses": [
+        "PSE01-2",
+        "PVMO01-1",
+        "PVMO02-4"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 1.344,
+      "mean_process": 4.656
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set",
+    "min_rel": 0.7,
+    "top3": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.438,
+      "mean_process": 2.562
+    },
+    "top6": {
+      "hits": 28,
+      "n": 32,
+      "acc": 0.875,
+      "misses": [
+        "PSE01-2",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 4.906,
+      "mean_workflow": 1.094,
+      "mean_process": 3.812
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set_workflow",
+    "min_rel": 0.0,
+    "top3": {
+      "hits": 16,
+      "n": 18,
+      "acc": 0.8889,
+      "misses": [
+        "WF-06",
+        "WF-16"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.5,
+      "mean_process": 0.5
+    },
+    "top6": {
+      "hits": 18,
+      "n": 18,
+      "acc": 1.0,
+      "misses": [],
+      "mean_returned": 6.0,
+      "mean_workflow": 5.111,
+      "mean_process": 0.889
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set_workflow",
+    "min_rel": 0.4,
+    "top3": {
+      "hits": 16,
+      "n": 18,
+      "acc": 0.8889,
+      "misses": [
+        "WF-06",
+        "WF-16"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.5,
+      "mean_process": 0.5
+    },
+    "top6": {
+      "hits": 18,
+      "n": 18,
+      "acc": 1.0,
+      "misses": [],
+      "mean_returned": 6.0,
+      "mean_workflow": 5.111,
+      "mean_process": 0.889
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set_workflow",
+    "min_rel": 0.55,
+    "top3": {
+      "hits": 16,
+      "n": 18,
+      "acc": 0.8889,
+      "misses": [
+        "WF-06",
+        "WF-16"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.5,
+      "mean_process": 0.5
+    },
+    "top6": {
+      "hits": 18,
+      "n": 18,
+      "acc": 1.0,
+      "misses": [],
+      "mean_returned": 5.778,
+      "mean_workflow": 4.889,
+      "mean_process": 0.889
+    }
+  },
+  {
+    "fusion": "weighted",
+    "eval_set": "eval_set_workflow",
+    "min_rel": 0.7,
+    "top3": {
+      "hits": 16,
+      "n": 18,
+      "acc": 0.8889,
+      "misses": [
+        "WF-06",
+        "WF-16"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.5,
+      "mean_process": 0.5
+    },
+    "top6": {
+      "hits": 18,
+      "n": 18,
+      "acc": 1.0,
+      "misses": [],
+      "mean_returned": 4.444,
+      "mean_workflow": 4.278,
+      "mean_process": 0.167
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set_v2",
+    "min_rel": 0.0,
+    "top3": {
+      "hits": 80,
+      "n": 92,
+      "acc": 0.8696,
+      "misses": [
+        "PCN01-3",
+        "PEN01-2",
+        "PEQ01-3",
+        "PFN01-3",
+        "POP02-1",
+        "POP05-2",
+        "POP10-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1",
+        "XDOC-2",
+        "PTN02-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.185,
+      "mean_process": 2.815
+    },
+    "top6": {
+      "hits": 87,
+      "n": 92,
+      "acc": 0.9457,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "PQD07-1",
+        "PSE01-1",
+        "PTN02-1"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 0.402,
+      "mean_process": 5.598
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set_v2",
+    "min_rel": 0.4,
+    "top3": {
+      "hits": 80,
+      "n": 92,
+      "acc": 0.8696,
+      "misses": [
+        "PCN01-3",
+        "PEN01-2",
+        "PEQ01-3",
+        "PFN01-3",
+        "POP02-1",
+        "POP05-2",
+        "POP10-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1",
+        "XDOC-2",
+        "PTN02-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.185,
+      "mean_process": 2.815
+    },
+    "top6": {
+      "hits": 87,
+      "n": 92,
+      "acc": 0.9457,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "PQD07-1",
+        "PSE01-1",
+        "PTN02-1"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 0.402,
+      "mean_process": 5.598
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set_v2",
+    "min_rel": 0.55,
+    "top3": {
+      "hits": 80,
+      "n": 92,
+      "acc": 0.8696,
+      "misses": [
+        "PCN01-3",
+        "PEN01-2",
+        "PEQ01-3",
+        "PFN01-3",
+        "POP02-1",
+        "POP05-2",
+        "POP10-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1",
+        "XDOC-2",
+        "PTN02-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.185,
+      "mean_process": 2.815
+    },
+    "top6": {
+      "hits": 87,
+      "n": 92,
+      "acc": 0.9457,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "PQD07-1",
+        "PSE01-1",
+        "PTN02-1"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 0.402,
+      "mean_process": 5.598
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set_v2",
+    "min_rel": 0.7,
+    "top3": {
+      "hits": 80,
+      "n": 92,
+      "acc": 0.8696,
+      "misses": [
+        "PCN01-3",
+        "PEN01-2",
+        "PEQ01-3",
+        "PFN01-3",
+        "POP02-1",
+        "POP05-2",
+        "POP10-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1",
+        "XDOC-2",
+        "PTN02-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.185,
+      "mean_process": 2.815
+    },
+    "top6": {
+      "hits": 87,
+      "n": 92,
+      "acc": 0.9457,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "PQD07-1",
+        "PSE01-1",
+        "PTN02-1"
+      ],
+      "mean_returned": 5.935,
+      "mean_workflow": 0.391,
+      "mean_process": 5.543
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set",
+    "min_rel": 0.0,
+    "top3": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.469,
+      "mean_process": 2.531
+    },
+    "top6": {
+      "hits": 28,
+      "n": 32,
+      "acc": 0.875,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-4"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 0.906,
+      "mean_process": 5.094
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set",
+    "min_rel": 0.4,
+    "top3": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.469,
+      "mean_process": 2.531
+    },
+    "top6": {
+      "hits": 28,
+      "n": 32,
+      "acc": 0.875,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-4"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 0.906,
+      "mean_process": 5.094
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set",
+    "min_rel": 0.55,
+    "top3": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.469,
+      "mean_process": 2.531
+    },
+    "top6": {
+      "hits": 28,
+      "n": 32,
+      "acc": 0.875,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-4"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 0.906,
+      "mean_process": 5.094
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set",
+    "min_rel": 0.7,
+    "top3": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.469,
+      "mean_process": 2.531
+    },
+    "top6": {
+      "hits": 28,
+      "n": 32,
+      "acc": 0.875,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-4"
+      ],
+      "mean_returned": 5.719,
+      "mean_workflow": 0.844,
+      "mean_process": 4.875
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set_workflow",
+    "min_rel": 0.0,
+    "top3": {
+      "hits": 17,
+      "n": 18,
+      "acc": 0.9444,
+      "misses": [
+        "WF-06"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.222,
+      "mean_process": 0.778
+    },
+    "top6": {
+      "hits": 18,
+      "n": 18,
+      "acc": 1.0,
+      "misses": [],
+      "mean_returned": 6.0,
+      "mean_workflow": 4.5,
+      "mean_process": 1.5
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set_workflow",
+    "min_rel": 0.4,
+    "top3": {
+      "hits": 17,
+      "n": 18,
+      "acc": 0.9444,
+      "misses": [
+        "WF-06"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.222,
+      "mean_process": 0.778
+    },
+    "top6": {
+      "hits": 18,
+      "n": 18,
+      "acc": 1.0,
+      "misses": [],
+      "mean_returned": 6.0,
+      "mean_workflow": 4.5,
+      "mean_process": 1.5
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set_workflow",
+    "min_rel": 0.55,
+    "top3": {
+      "hits": 17,
+      "n": 18,
+      "acc": 0.9444,
+      "misses": [
+        "WF-06"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.222,
+      "mean_process": 0.778
+    },
+    "top6": {
+      "hits": 18,
+      "n": 18,
+      "acc": 1.0,
+      "misses": [],
+      "mean_returned": 6.0,
+      "mean_workflow": 4.5,
+      "mean_process": 1.5
+    }
+  },
+  {
+    "fusion": "rrf",
+    "eval_set": "eval_set_workflow",
+    "min_rel": 0.7,
+    "top3": {
+      "hits": 17,
+      "n": 18,
+      "acc": 0.9444,
+      "misses": [
+        "WF-06"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.222,
+      "mean_process": 0.778
+    },
+    "top6": {
+      "hits": 18,
+      "n": 18,
+      "acc": 1.0,
+      "misses": [],
+      "mean_returned": 5.444,
+      "mean_workflow": 4.5,
+      "mean_process": 0.944
+    }
+  }
+]

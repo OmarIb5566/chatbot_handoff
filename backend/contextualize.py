@@ -129,7 +129,13 @@ from dataclasses import dataclass, field
 
 import requests
 
-OLLAMA_HOST = "http://localhost:11434"
+import config
+import logs
+
+# Read from config so a second copy of the host cannot drift from chatbot.py's.
+OLLAMA_HOST = config.OLLAMA_HOST
+
+_log = logs.get("contextualize")
 
 # The rewrite model. Kept as its own constant, separate from the generation
 # model, so it can be swapped without touching anything else - that separation
@@ -146,7 +152,7 @@ OLLAMA_HOST = "http://localhost:11434"
 #   ollama pull phi3.5   then   REWRITE_MODEL = "phi3.5:latest"
 # and re-check the PM/QA case above - the rewrite probes in __main__ cover it,
 # and a small model failing it is what they are there to catch.
-REWRITE_MODEL = "qwen3:14b"
+REWRITE_MODEL = config.REWRITE_MODEL
 
 MAX_TURNS = 4              # rolling window, within the 3-5 asked for
 ANSWER_SUMMARY_CHARS = 200  # store a gist, never the full generation
@@ -330,6 +336,21 @@ def _vocab(q: str) -> tuple[list[str], set[str]]:
     return words, vocab
 
 
+# Prepositions that put "this"/"that" outside the sentence rather than inside
+# it. "which form number is that" is self-contained - "that" is the predicate
+# of a copula whose subject is named two words earlier, in the same question.
+# "who signs after that" is not - "after" takes an object, and the object is
+# whichever step the PREVIOUS answer ended on, which this sentence never
+# names. Same bare-trailing shape, opposite resolution, and the difference is
+# exactly the word before it. Found by exercising the two questions this
+# module's own docstring uses as its worked examples against each other -
+# they returned the same (wrong, for one of them) answer before this existed.
+_SEQUENCE_PREPOSITIONS = frozenset((
+    "after", "before", "following", "since", "given", "besides", "beyond",
+    "past", "until", "till",
+))
+
+
 def _anaphora_hits(words: list[str], acronyms: frozenset[str] = frozenset()) -> list[str]:
     """Back-references that actually point BACKWARDS, out of this query.
 
@@ -372,7 +393,8 @@ def _anaphora_hits(words: list[str], acronyms: frozenset[str] = frozenset()) -> 
             # end of the sentence ("which form number is that?") is a pronoun
             # too, but one this query answers itself, so it does not count.
             prev = words[i - 1].split("'")[0] if i else ""
-            if contracted or nxt in _AUX or nxt in _NEGATIONS or (prev in _AUX and nxt):
+            if (contracted or nxt in _AUX or nxt in _NEGATIONS
+                    or (prev in _AUX and nxt) or prev in _SEQUENCE_PREPOSITIONS):
                 hits.append(stem)
         elif stem in _ANAPHORA:
             hits.append(stem)
@@ -561,8 +583,14 @@ def rewrite_query(query: str, turns: list[Turn], model: str = REWRITE_MODEL,
             r = requests.post(f"{host}/api/generate", json=payload, timeout=timeout)
         r.raise_for_status()
         return _clean_rewrite(r.json()["response"], query)
-    except Exception:
+    except Exception as e:
         # Ollama down, model not pulled, timeout: retrieval still has to run.
+        # Degrading quietly is right - a follow-up answered from the literal
+        # question beats no answer - but degrading INVISIBLY is not: the only
+        # symptom is follow-ups resolving worse than they did yesterday, which
+        # is indistinguishable from the model getting worse.
+        _log.warning("rewrite failed (%s: %s); using the question as typed",
+                     type(e).__name__, e)
         return query
 
 
@@ -642,9 +670,13 @@ def classify_followup(query: str, turns: list[Turn], model: str = REWRITE_MODEL,
             r = requests.post(f"{host}/api/generate", json=payload, timeout=timeout)
         r.raise_for_status()
         return _clean_label(r.json()["response"])
-    except Exception:
+    except Exception as e:
         # Ollama down, model not pulled, timeout: the turn still has to be
-        # answered, and the answerable path is the old one.
+        # answered, and the answerable path is the old one. Logged for the
+        # same reason as the rewrite fallback: silent degradation looks like
+        # a quality regression, not an outage.
+        _log.warning("classify failed (%s: %s); assuming FOLLOWUP",
+                     type(e).__name__, e)
         return "FOLLOWUP"
 
 
@@ -660,8 +692,10 @@ Your previous answer was:
 
 That answer was incomplete. Using only the source context above, list the
 remaining items that were not included in the previous answer. Do not repeat
-items already listed. Always cite the doc filename. If the source context
-contains no further items, say so plainly rather than inventing any."""
+items already listed. Cite the source document ONCE, on its own line at the end,
+as: Source: <filename>. Never repeat a filename after individual bullet points.
+If the source context contains no further items, say so plainly rather than
+inventing any."""
 
 
 # ------------------------------------------------------------- orchestration

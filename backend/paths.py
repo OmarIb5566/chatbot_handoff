@@ -42,7 +42,11 @@ WORKFLOWS = ROOT / "Workflows"
 
 # --- generated corpus ------------------------------------------------------
 CHUNKS_JSON = DATA / "chunks.json"                     # adaptive_chunker.py
-WORKFLOW_CHUNKS_JSON = DATA / "workflow_chunks.json"   # workflow_vector.py
+WORKFLOW_CHUNKS_JSON = DATA / "workflow_chunks.json"   # workflow_vector.py (raw)
+# The corpus the pipeline actually serves: the raw extraction with the
+# duplicate-label collapse applied and the text re-rendered by render_prose.
+# Kept as its own file so the raw extraction stays available to diff against.
+WORKFLOW_CHUNKS_ACTIVE = DATA / "workflow_chunks_fixed.json"
 WORKFLOW_CHUNKS_SCANNED = DATA / "workflow_chunks_scanned.json"
 WORKFLOW_AUDIT = DATA / "workflow_audit.json"
 WORKFLOW_VECTOR_AUDIT = DATA / "workflow_vector_audit.json"

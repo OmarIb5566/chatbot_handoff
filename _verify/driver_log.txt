@@ -1,0 +1,145 @@
+driver start Mon Aug 31 17:46:04 2026
+retriever imported
+chunks 1063 process, 137 workflow
+  eval_set_v2: 100 questions, 92 answerable
+  eval_set: 36 questions, 32 answerable
+  eval_set_workflow: 18 questions, 18 answerable
+building retriever: process-only ...
+  built in 0.7s
+building retriever: merged ...
+  built in 0.2s
+  wrote 00_environment.json
+environment: {"sentence_transformers": "5.6.1", "torch": "2.12.1+xpu", "DEFAULT_MODEL": "all-MiniLM-L6-v2", "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]", "embedding_shape_process": [1063, 384], "embedding_dtype": "float32", "model_repr": "<class 'sentence_transformers.sentence_transformer.model.SentenceTransformer'>", "sanity_paraphrase_cos": 0.6124359965324402, "sanity_unrelated_cos": 0.008656226098537445}
+
+=== STEP 1: regression ===
+  eval_set_v2 top-1: 79/92 = 85.9% (mean returned 1.0)
+  eval_set_v2 top-3: 88/92 = 95.7% (mean returned 3.0)
+  eval_set_v2 top-5: 89/92 = 96.7% (mean returned 4.826)
+  eval_set_v2 top-3 min_rel=0: 88/92 = 95.7%
+  eval_set_v2 top-3 all-off: 88/92 = 95.7%
+  eval_set_v2 top-3 on MERGED index: 86/92 = 93.5%
+  eval_set top-1: 20/32 = 62.5% (mean returned 1.0)
+  eval_set top-3: 27/32 = 84.4% (mean returned 3.0)
+  eval_set top-5: 27/32 = 84.4% (mean returned 4.906)
+  eval_set top-3 min_rel=0: 27/32 = 84.4%
+  eval_set top-3 all-off: 27/32 = 84.4%
+  eval_set top-3 on MERGED index: 27/32 = 84.4%
+  COMBINED top-3: 115/124  (baseline 113/124)
+  wrote 01_step1_regression.json
+
+=== STEP 2: workflow baseline ===
+  fused top-1: 6/18 = 33.3% (mean returned 1.0, wf 0.5)
+  fused top-3: 16/18 = 88.9% (mean returned 3.0, wf 2.5)
+  fused top-6: 18/18 = 100.0% (mean returned 5.778, wf 4.889)
+  fused top-10: 18/18 = 100.0% (mean returned 9.222, wf 8.0)
+  fused top-1 (min_rel=0): 6/18 = 33.3%
+  fused top-3 (min_rel=0): 16/18 = 88.9%
+  fused top-6 (min_rel=0): 18/18 = 100.0%
+  fused top-10 (min_rel=0): 18/18 = 100.0%
+  bm25 top-6: 17/18 = 94.4%
+  dense top-6: 17/18 = 94.4%
+  [v2 reference] bm25 top-6: 88/92
+  [v2 reference] dense top-6: 81/92
+  wrote 02_step2_workflow.json
+
+=== STEP 3: min_rel sweep ===
+  weighted eval_set_v2        min_rel=0.0   top3=88/92 (95.7%) top6=91/92 (98.9%) ret6=6.0
+  weighted eval_set_v2        min_rel=0.4   top3=88/92 (95.7%) top6=91/92 (98.9%) ret6=5.967
+  weighted eval_set_v2        min_rel=0.55  top3=88/92 (95.7%) top6=91/92 (98.9%) ret6=5.696
+  weighted eval_set_v2        min_rel=0.7   top3=88/92 (95.7%) top6=91/92 (98.9%) ret6=4.674
+  weighted eval_set           min_rel=0.0   top3=27/32 (84.4%) top6=28/32 (87.5%) ret6=6.0
+  weighted eval_set           min_rel=0.4   top3=27/32 (84.4%) top6=28/32 (87.5%) ret6=6.0
+  weighted eval_set           min_rel=0.55  top3=27/32 (84.4%) top6=28/32 (87.5%) ret6=5.844
+  weighted eval_set           min_rel=0.7   top3=27/32 (84.4%) top6=28/32 (87.5%) ret6=4.594
+  weighted eval_set_workflow  min_rel=0.0   top3=16/18 (88.9%) top6=18/18 (100.0%) ret6=6.0
+  weighted eval_set_workflow  min_rel=0.4   top3=16/18 (88.9%) top6=18/18 (100.0%) ret6=6.0
+  weighted eval_set_workflow  min_rel=0.55  top3=16/18 (88.9%) top6=18/18 (100.0%) ret6=5.778
+  weighted eval_set_workflow  min_rel=0.7   top3=16/18 (88.9%) top6=18/18 (100.0%) ret6=4.444
+  rrf      eval_set_v2        min_rel=0.0   top3=86/92 (93.5%) top6=89/92 (96.7%) ret6=6.0
+  rrf      eval_set_v2        min_rel=0.4   top3=86/92 (93.5%) top6=89/92 (96.7%) ret6=6.0
+  rrf      eval_set_v2        min_rel=0.55  top3=86/92 (93.5%) top6=89/92 (96.7%) ret6=6.0
+  rrf      eval_set_v2        min_rel=0.7   top3=86/92 (93.5%) top6=89/92 (96.7%) ret6=5.967
+  rrf      eval_set           min_rel=0.0   top3=28/32 (87.5%) top6=30/32 (93.8%) ret6=6.0
+  rrf      eval_set           min_rel=0.4   top3=28/32 (87.5%) top6=30/32 (93.8%) ret6=6.0
+  rrf      eval_set           min_rel=0.55  top3=28/32 (87.5%) top6=30/32 (93.8%) ret6=6.0
+  rrf      eval_set           min_rel=0.7   top3=28/32 (87.5%) top6=30/32 (93.8%) ret6=5.906
+  rrf      eval_set_workflow  min_rel=0.0   top3=17/18 (94.4%) top6=18/18 (100.0%) ret6=6.0
+  rrf      eval_set_workflow  min_rel=0.4   top3=17/18 (94.4%) top6=18/18 (100.0%) ret6=6.0
+  rrf      eval_set_workflow  min_rel=0.55  top3=17/18 (94.4%) top6=18/18 (100.0%) ret6=6.0
+  rrf      eval_set_workflow  min_rel=0.7   top3=17/18 (94.4%) top6=18/18 (100.0%) ret6=5.444
+  wrote 03_step3_min_rel_sweep.json
+
+=== STEP 4: retrieval evidence at default config ===
+  WF-01 hit=True n=6
+  WF-02 hit=True n=6
+  WF-03 hit=True n=6
+  WF-04 hit=True n=6
+  WF-05 hit=True n=5
+  WF-06 hit=True n=6
+  WF-07 hit=True n=6
+  WF-08 hit=True n=6
+  WF-09 hit=True n=6
+  WF-10 hit=True n=6
+  WF-11 hit=True n=6
+  WF-12 hit=True n=6
+  WF-13 hit=True n=6
+  WF-14 hit=True n=6
+  WF-15 hit=True n=6
+  WF-16 hit=True n=6
+  WF-17 hit=True n=3
+  WF-18 hit=True n=6
+  wrote 04_step4_evidence.json
+  wrote 04_gold_docs.json
+
+=== STEP 5: boost x floor sweep ===
+  boost=0     floor=0 eval_set_workflow  17/18 (94.4%) ret=5.5 wf_intent_q=18 proc_on_wf=0.556
+  boost=0     floor=0 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0     floor=0 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0     floor=1 eval_set_workflow  17/18 (94.4%) ret=5.5 wf_intent_q=18 proc_on_wf=1.333
+  boost=0     floor=1 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0     floor=1 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0     floor=2 eval_set_workflow  17/18 (94.4%) ret=5.5 wf_intent_q=18 proc_on_wf=1.333
+  boost=0     floor=2 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0     floor=2 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0     floor=3 eval_set_workflow  17/18 (94.4%) ret=5.5 wf_intent_q=18 proc_on_wf=1.333
+  boost=0     floor=3 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0     floor=3 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.06  floor=0 eval_set_workflow  18/18 (100.0%) ret=5.722 wf_intent_q=18 proc_on_wf=0.222
+  boost=0.06  floor=0 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.06  floor=0 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.06  floor=1 eval_set_workflow  18/18 (100.0%) ret=5.722 wf_intent_q=18 proc_on_wf=1.111
+  boost=0.06  floor=1 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.06  floor=1 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.06  floor=2 eval_set_workflow  18/18 (100.0%) ret=5.722 wf_intent_q=18 proc_on_wf=1.111
+  boost=0.06  floor=2 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.06  floor=2 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.06  floor=3 eval_set_workflow  18/18 (100.0%) ret=5.722 wf_intent_q=18 proc_on_wf=1.111
+  boost=0.06  floor=3 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.06  floor=3 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.12  floor=0 eval_set_workflow  18/18 (100.0%) ret=5.778 wf_intent_q=18 proc_on_wf=0.056
+  boost=0.12  floor=0 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.12  floor=0 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.12  floor=1 eval_set_workflow  18/18 (100.0%) ret=5.778 wf_intent_q=18 proc_on_wf=0.889
+  boost=0.12  floor=1 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.12  floor=1 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.12  floor=2 eval_set_workflow  18/18 (100.0%) ret=5.778 wf_intent_q=18 proc_on_wf=0.889
+  boost=0.12  floor=2 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.12  floor=2 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.12  floor=3 eval_set_workflow  18/18 (100.0%) ret=5.778 wf_intent_q=18 proc_on_wf=0.889
+  boost=0.12  floor=3 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.12  floor=3 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.2   floor=0 eval_set_workflow  18/18 (100.0%) ret=5.833 wf_intent_q=18 proc_on_wf=0.0
+  boost=0.2   floor=0 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.2   floor=0 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.2   floor=1 eval_set_workflow  18/18 (100.0%) ret=5.833 wf_intent_q=18 proc_on_wf=0.667
+  boost=0.2   floor=1 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.2   floor=1 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.2   floor=2 eval_set_workflow  18/18 (100.0%) ret=5.833 wf_intent_q=18 proc_on_wf=0.667
+  boost=0.2   floor=2 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.2   floor=2 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  boost=0.2   floor=3 eval_set_workflow  18/18 (100.0%) ret=5.833 wf_intent_q=18 proc_on_wf=0.667
+  boost=0.2   floor=3 eval_set_v2        91/92 (98.9%) ret=5.696 wf_intent_q=0 proc_on_wf=None
+  boost=0.2   floor=3 eval_set           28/32 (87.5%) ret=5.844 wf_intent_q=6 proc_on_wf=6.0
+  wrote 05_step5_boost_floor.json
+
+DRIVER DONE in 93s

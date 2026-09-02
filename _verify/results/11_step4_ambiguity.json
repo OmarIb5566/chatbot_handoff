@@ -1,0 +1,1050 @@
+[
+  {
+    "id": "WF-01",
+    "question": "In the Go Or No Go approval workflow, who signs after Log Project Details & Prepare Project's brief?",
+    "gold": "Go Or No Go - Go or No Go - Competitive Bidding.pdf",
+    "pred": "Log Project Details & Prepare Project's brief",
+    "succ": "Commercial Department Manager",
+    "gold_edge_present": true,
+    "gold_rank": 2,
+    "n_returned": 6,
+    "siblings_same_edge": [],
+    "siblings_retrieved": [],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Go Or No Go - Go or No Go - Direct Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.0603,
+        "filename": "Go Or No Go - Go or No Go - Competitive Bidding.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.832,
+        "filename": "Go Or No Go - Go or No Go - RME FIT-OUT.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.6907,
+        "filename": "Project Budget - Project Budget.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.69,
+        "filename": "Material List ( E2 Log ) - E2 Log.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 6,
+        "score": 0.632,
+        "filename": "PTN01_Project_Initiation_Process.pdf",
+        "section": "PROCESS CONTROL",
+        "source_type": null
+      }
+    ]
+  },
+  {
+    "id": "WF-02",
+    "question": "In the Inspection Request (IR) approval workflow, who signs after Creation by Site Engineer?",
+    "gold": "Inspection Request (IR) - Inspection Request (Client).pdf",
+    "pred": "Creation by Site Engineer",
+    "succ": "Inspection by QC (Internal)",
+    "gold_edge_present": true,
+    "gold_rank": 2,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Inspection Request (IR) - New - Inspection Request V2.0.pdf"
+    ],
+    "siblings_retrieved": [
+      "Inspection Request (IR) - New - Inspection Request V2.0.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Inspection Request (IR) - New - Inspection Request V2.0.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.0966,
+        "filename": "Inspection Request (IR) - Inspection Request (Client).pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 1.0604,
+        "filename": "Infrastructure Inspection Request (IIR) - New_Form-Inspection_Request_WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 1.0479,
+        "filename": "Inspection Request (IR) - Formwork IR.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.9353,
+        "filename": "Infrastructure Inspection Request (IIR) - Pipes Inspection Request.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 6,
+        "score": 0.6263,
+        "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      }
+    ]
+  },
+  {
+    "id": "WF-03",
+    "question": "In the Subcontract Amendments workflow, where does the request go after PsM Aproval?",
+    "gold": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf",
+    "pred": "PsM Aproval",
+    "succ": "VMO HoD Approval (1)",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 6,
+    "siblings_same_edge": [],
+    "siblings_retrieved": [],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1195,
+        "filename": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 0.9258,
+        "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+        "section": "Supply & Apply Subcontracts (Civil, Arch, MEP)",
+        "source_type": "vlm_description"
+      },
+      {
+        "rank": 3,
+        "score": 0.904,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.9023,
+        "filename": "Rule of Credit Amendments - ROC Amendments.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.6501,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      },
+      {
+        "rank": 6,
+        "score": 0.6194,
+        "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "section": "PROCESS OUTPUT",
+        "source_type": null
+      }
+    ]
+  },
+  {
+    "id": "WF-04",
+    "question": "In the Request for Quotation approval workflow, who signs after Creation by ETO Engineer?",
+    "gold": "Request for Quotation - Equipment Purchasing CS.pdf",
+    "pred": "Creation by ETO Engineer",
+    "succ": "ETO Manager Review",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "BOQ Quantity Modification - WF - BOQ Quantity Modification.pdf",
+      "Client Contract Lines Modification - WF - Client Contract Lines Modification.pdf",
+      "Financial Documents Changes - Financial Document Changes WF.pdf",
+      "Incident Reports - Creation Workflow - Incident Reports.pdf",
+      "Project Budget - Project Budget.pdf",
+      "Rule of Credit Amendments - ROC Amendments.pdf"
+    ],
+    "siblings_retrieved": [],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Request for Quotation - Equipment Purchasing CS.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 0.922,
+        "filename": "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.9086,
+        "filename": "Request for Quotation - Rental Equipment CS.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.893,
+        "filename": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.8269,
+        "filename": "Request for Quotation - Request for Bid (Operation).pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 6,
+        "score": 0.8251,
+        "filename": "Material List ( E2 Log ) - E2 Log.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ]
+  },
+  {
+    "id": "WF-05",
+    "question": "In the Meeting Minutes workflow, where does the request go after Documentation of Meeting Results?",
+    "gold": "Meeting Minutes - Meeting Minutes WF.pdf",
+    "pred": "Documentation of Meeting Results",
+    "succ": "Review",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 5,
+    "siblings_same_edge": [
+      "Management Leadership Meeting - Management Leadership Meeting.pdf"
+    ],
+    "siblings_retrieved": [
+      "Management Leadership Meeting - Management Leadership Meeting.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Meeting Minutes - Meeting Minutes WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 0.9516,
+        "filename": "Management Leadership Meeting - Management Leadership Meeting.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.6745,
+        "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.657,
+        "filename": "Project Closeout - Project Closeout WF V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.6307,
+        "filename": "Project Launching - WF - Project Launching.pdf",
+        "section": "Approval flow 2",
+        "source_type": "pdf_vector"
+      }
+    ]
+  },
+  {
+    "id": "WF-06",
+    "question": "In the Customer Satisfaction workflow, where does the request go after QAM No?",
+    "gold": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+    "pred": "QAM No",
+    "succ": "COO",
+    "gold_edge_present": true,
+    "gold_rank": 3,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Customer Satisfaction - Creation by PM.pdf",
+      "Customer Satisfaction - Customer Satisfaction WF.pdf"
+    ],
+    "siblings_retrieved": [
+      "Customer Satisfaction - Creation by PM.pdf",
+      "Customer Satisfaction - Customer Satisfaction WF.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.0642,
+        "filename": "Customer Satisfaction - Creation by PM.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 1.0456,
+        "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 1.0132,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF V1.pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.6896,
+        "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      },
+      {
+        "rank": 6,
+        "score": 0.6681,
+        "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+        "section": "PERFORMANCE MEASURES",
+        "source_type": null
+      }
+    ]
+  },
+  {
+    "id": "WF-07",
+    "question": "In the Material List ( E2 Log ) approval workflow, who signs after Creation by VMO Representative?",
+    "gold": "Material List ( E2 Log ) - Manual Material List WF.pdf",
+    "pred": "Creation by VMO Representative",
+    "succ": "VMO & Planning Department Inputs",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Potential Delay Events - NOD Manual WF.pdf"
+    ],
+    "siblings_retrieved": [],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1193,
+        "filename": "Material List ( E2 Log ) - Manual Material List WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 0.9986,
+        "filename": "Material List - Material List WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.9448,
+        "filename": "Material List ( E2 Log ) - E2 Log.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.667,
+        "filename": "RFQ Material Reference - RFQ_Material_Reference_WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.6551,
+        "filename": "External Material Inspection Request - External Material Inspection Request.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 6,
+        "score": 0.6484,
+        "filename": "Inspection Request (IR) - Formwork IR.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ]
+  },
+  {
+    "id": "WF-08",
+    "question": "In the Document Submittal approval workflow, who signs after Preparation by QCM?",
+    "gold": "Document Submittal - ITP WF.pdf",
+    "pred": "Preparation by QCM",
+    "succ": "Review by CM",
+    "gold_edge_present": true,
+    "gold_rank": 2,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Document Submittal - ITP (Client) WF.pdf"
+    ],
+    "siblings_retrieved": [
+      "Document Submittal - ITP (Client) WF.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Document Submittal - ITP (Client) WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.1104,
+        "filename": "Document Submittal - ITP WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 1.0801,
+        "filename": "Document Submittal - Method Statement WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 1.0755,
+        "filename": "Document Submittal - Method Statement Client WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.9764,
+        "filename": "Document Submittal - Document Submittals WF V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 6,
+        "score": 0.9642,
+        "filename": "Document Submittal - Document Submittal Client WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ]
+  },
+  {
+    "id": "WF-09",
+    "question": "In the Subcontracts workflow, where does the request go after Creation by Commercial Debt?",
+    "gold": "Subcontracts - nominate Subcontractor.pdf",
+    "pred": "Creation by Commercial Debt",
+    "succ": "Contracts",
+    "gold_edge_present": true,
+    "gold_rank": 2,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Subcontracts - Nominated Subcontractor.pdf"
+    ],
+    "siblings_retrieved": [
+      "Subcontracts - Nominated Subcontractor.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1196,
+        "filename": "Subcontracts - Nominated Subcontractor.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.106,
+        "filename": "Subcontracts - nominate Subcontractor.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.9559,
+        "filename": "Bonds Request - Bonds Request WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.951,
+        "filename": "Bonds Request - Bond Request Revision WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.7826,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      },
+      {
+        "rank": 6,
+        "score": 0.7479,
+        "filename": "PTN01_Project_Initiation_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      }
+    ]
+  },
+  {
+    "id": "WF-10",
+    "question": "In the Customer Satisfaction approval workflow, who signs after Commercial Dept?",
+    "gold": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+    "pred": "Commercial Dept",
+    "succ": "QAM",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+      "Customer Satisfaction - Creation by PM.pdf",
+      "Customer Satisfaction - Customer Satisfaction WF V1.pdf"
+    ],
+    "siblings_retrieved": [
+      "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+      "Customer Satisfaction - Creation by PM.pdf",
+      "Customer Satisfaction - Customer Satisfaction WF V1.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1196,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.0987,
+        "filename": "Customer Satisfaction - Creation by PM.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 1.0868,
+        "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.9459,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF V1.pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.694,
+        "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      },
+      {
+        "rank": 6,
+        "score": 0.6771,
+        "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+        "section": "PROCESS CONTROL",
+        "source_type": null
+      }
+    ]
+  },
+  {
+    "id": "WF-11",
+    "question": "In the Document Submittal approval workflow, who signs after Preparation by DC?",
+    "gold": "Document Submittal - Document Submittal Client WF.pdf",
+    "pred": "Preparation by DC",
+    "succ": "Client/Consultant’ s Reply",
+    "gold_edge_present": true,
+    "gold_rank": 3,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Document Submittal - Documents Submittal.pdf"
+    ],
+    "siblings_retrieved": [
+      "Document Submittal - Documents Submittal.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.0683,
+        "filename": "Document Submittal - Documents Submittal.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.0661,
+        "filename": "Document Submittal - Document Submittals WF V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 1.0441,
+        "filename": "Document Submittal - Document Submittal Client WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.9458,
+        "filename": "Document Submittal - Method Statement WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.9417,
+        "filename": "Document Submittal - ITP WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 6,
+        "score": 0.8524,
+        "filename": "Document Submittal - ITP (Client) WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ]
+  },
+  {
+    "id": "WF-12",
+    "question": "In the Request for Quotation approval workflow, who signs after ERA Preparation for Budgeted Items?",
+    "gold": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+    "pred": "ERA Preparation for Budgeted Items",
+    "succ": "ETO Manager Review",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Request for Quotation - Rental Equipment CS.pdf"
+    ],
+    "siblings_retrieved": [
+      "Request for Quotation - Rental Equipment CS.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.0936,
+        "filename": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.0783,
+        "filename": "Request for Quotation - Rental Equipment CS.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.878,
+        "filename": "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.8085,
+        "filename": "Request for Quotation - Request for Bid WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.7918,
+        "filename": "Request for Quotation - Request for Bid (Operation).pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 6,
+        "score": 0.7675,
+        "filename": "Request for Quotation - Equipment Purchasing CS.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ]
+  },
+  {
+    "id": "WF-13",
+    "question": "In the Potential Delay Events approval workflow, who signs after Contracts Department?",
+    "gold": "Potential Delay Events - NOD Auto Workflow.pdf",
+    "pred": "Contracts Department",
+    "succ": "Review",
+    "gold_edge_present": true,
+    "gold_rank": 2,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Potential Delay Events - NOD Manual WF.pdf"
+    ],
+    "siblings_retrieved": [
+      "Potential Delay Events - NOD Manual WF.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Potential Delay Events - NOD Manual WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.1143,
+        "filename": "Potential Delay Events - NOD Auto Workflow.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.8194,
+        "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.7738,
+        "filename": "Request For Proposal (RFP) - RFP WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.6872,
+        "filename": "Request For Proposal (RFP) - RFP WF V2.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 6,
+        "score": 0.6858,
+        "filename": "Client Contracts - Client Contracts WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ]
+  },
+  {
+    "id": "WF-14",
+    "question": "In the Subcontract Amendments workflow, where does the request go after S/C Signature?",
+    "gold": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+    "pred": "S/C Signature",
+    "succ": "Technical Operations Manager",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf",
+      "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+      "Subcontracts - Subcontract Preparation V4.pdf"
+    ],
+    "siblings_retrieved": [],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.0812,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 2",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.0359,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.9591,
+        "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+        "section": "Supply & Apply Subcontracts (Civil, Arch, MEP)",
+        "source_type": "vlm_description"
+      },
+      {
+        "rank": 4,
+        "score": 0.9177,
+        "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.7753,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      },
+      {
+        "rank": 6,
+        "score": 0.7156,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "OBJECTIVES",
+        "source_type": null
+      }
+    ]
+  },
+  {
+    "id": "WF-15",
+    "question": "In the Subcontracts workflow, where does the request go after Technical Affairs Mngr/Technical Direct Award?",
+    "gold": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "pred": "Technical Affairs Mngr/Technical Direct Award",
+    "succ": "PsM",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf"
+    ],
+    "siblings_retrieved": [
+      "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1056,
+        "filename": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.0228,
+        "filename": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 1.0182,
+        "filename": "Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 1.0074,
+        "filename": "Go Or No Go - Go or No Go - Direct Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.7682,
+        "filename": "POP03_Direct_Award_Projects_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      },
+      {
+        "rank": 6,
+        "score": 0.6607,
+        "filename": "PEN01_Engineering_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      }
+    ]
+  },
+  {
+    "id": "WF-16",
+    "question": "In the Request For Information (RFI) workflow, where does the request go after Review & Approval?",
+    "gold": "Request For Information (RFI) - RME to Client ( Manual Rev. ) V2.pdf",
+    "pred": "Review & Approval",
+    "succ": "Site DC (Client/Consultant ’s Reply)",
+    "gold_edge_present": true,
+    "gold_rank": 3,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Request For Information (RFI) - RME to Client V2.pdf"
+    ],
+    "siblings_retrieved": [],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1047,
+        "filename": "Request For Information (RFI) - From SC.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 0.9719,
+        "filename": "Go Or No Go - Go or No Go - Direct Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.9506,
+        "filename": "Request For Information (RFI) - RME to Client ( Manual Rev. ) V2.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.9268,
+        "filename": "Request For Proposal (RFP) - RFP WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.9039,
+        "filename": "POP04_Request_for_Information_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      },
+      {
+        "rank": 6,
+        "score": 0.8818,
+        "filename": "POP04_Request_for_Information_Process.pdf",
+        "section": "PROCESS CONTROL",
+        "source_type": null
+      }
+    ]
+  },
+  {
+    "id": "WF-17",
+    "question": "In the Notice of Variation ( NOV ) approval workflow, who signs after Identify Affected Items & Prepare Estimated QTY?",
+    "gold": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation.pdf",
+    "pred": "Identify Affected Items & Prepare Estimated QTY",
+    "succ": "Contracts Dept",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 3,
+    "siblings_same_edge": [
+      "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Manual Creation.pdf"
+    ],
+    "siblings_retrieved": [
+      "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Manual Creation.pdf"
+    ],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1128,
+        "filename": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.0967,
+        "filename": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Manual Creation.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.7721,
+        "filename": "Variation Order Flow Chart.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ]
+  },
+  {
+    "id": "WF-18",
+    "question": "In the Bonds Request approval workflow, who signs after Creation by Commercial Engineer?",
+    "gold": "Bonds Request - Bonds Request WF.pdf",
+    "pred": "Creation by Commercial Engineer",
+    "succ": "Commercial Manager Approval Send",
+    "gold_edge_present": true,
+    "gold_rank": 1,
+    "n_returned": 6,
+    "siblings_same_edge": [
+      "Bid Closing & Approval Internal Process - WF.pdf",
+      "Request For Quotation Date - WF - Request For Quotation Date.pdf"
+    ],
+    "siblings_retrieved": [],
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1178,
+        "filename": "Bonds Request - Bonds Request WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 2,
+        "score": 1.1156,
+        "filename": "Bonds Request - Bond Request Revision WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 3,
+        "score": 0.8139,
+        "filename": "Customer Satisfaction - Creation by PM.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 4,
+        "score": 0.7909,
+        "filename": "Project Launching - WF - Project Launching.pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 5,
+        "score": 0.7885,
+        "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "rank": 6,
+        "score": 0.7641,
+        "filename": "Material List ( E2 Log ) - E2 Log.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ]
+  }
+]

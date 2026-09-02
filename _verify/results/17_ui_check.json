@@ -1,0 +1,30 @@
+{
+  "question": "how does the rental equipment variation order workflow go",
+  "answer": "**Main path**  \n1. Creation  \n2. Preparation by Equipment Rental Admin  \n3. PM Approval  \n4. Equipment Manager Approval  \n\n**Branches**  \n- Approve Above 3M EGP -> VP Approval  \n- Approve Below 3M EGP -> Finance Review  \n\n**Send-backs and loops**  \n- VP Approval -> Equipment Manager Approval [Send back with Comments]  \n- Finance Review -> Equipment Rental Admin Update  \n- PM Approval -> Preparation by Equipment Rental Admin [Send back to Creator]  \n- Equipment Manager Approval -> Preparation by Equipment Rental Admin [Send back to Creator]  \n- Equipment Rental Admin Update -> Finance Review [Send to Finance]  \n\nSource: Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+  "hits": [
+    {
+      "score": 1.06,
+      "filename": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+      "section": "Approval flow",
+      "source_type": "pdf_vector"
+    },
+    {
+      "score": 0.747,
+      "filename": "Request for Quotation - Rental Equipment CS.pdf",
+      "section": "Approval flow",
+      "source_type": "pdf_vector"
+    },
+    {
+      "score": 0.7449,
+      "filename": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+      "section": "Approval flow",
+      "source_type": "pdf_vector"
+    },
+    {
+      "score": 0.7293,
+      "filename": "Rented Equipment Timesheet - Rented Equipment Timesheet - New - WF.pdf",
+      "section": "Approval flow",
+      "source_type": "pdf_vector"
+    }
+  ]
+}

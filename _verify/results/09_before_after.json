@@ -1,0 +1,128 @@
+{
+  "eval_set_workflow": {
+    "old_top3_no_mechanisms": {
+      "hits": 17,
+      "n": 18,
+      "acc": 0.9444,
+      "misses": [
+        "WF-16"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.889,
+      "mean_process": 0.111
+    },
+    "new_top6_defaults": {
+      "hits": 18,
+      "n": 18,
+      "acc": 1.0,
+      "misses": [],
+      "mean_returned": 5.778,
+      "mean_workflow": 4.889,
+      "mean_process": 0.889
+    },
+    "new_top3_defaults": {
+      "hits": 16,
+      "n": 18,
+      "acc": 0.8889,
+      "misses": [
+        "WF-06",
+        "WF-16"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 2.5,
+      "mean_process": 0.5
+    }
+  },
+  "eval_set_v2": {
+    "old_top3_no_mechanisms": {
+      "hits": 86,
+      "n": 92,
+      "acc": 0.9348,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "POP05-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.141,
+      "mean_process": 2.859
+    },
+    "new_top6_defaults": {
+      "hits": 89,
+      "n": 92,
+      "acc": 0.9674,
+      "misses": [
+        "PFN01-3",
+        "PQD07-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 5.804,
+      "mean_workflow": 0.37,
+      "mean_process": 5.435
+    },
+    "new_top3_defaults": {
+      "hits": 86,
+      "n": 92,
+      "acc": 0.9348,
+      "misses": [
+        "PCN01-3",
+        "PFN01-3",
+        "POP05-2",
+        "PQD07-1",
+        "PSE01-1",
+        "PVMO01-1"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.141,
+      "mean_process": 2.859
+    }
+  },
+  "eval_set": {
+    "old_top3_no_mechanisms": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.25,
+      "mean_process": 2.75
+    },
+    "new_top6_defaults": {
+      "hits": 29,
+      "n": 32,
+      "acc": 0.9062,
+      "misses": [
+        "PSE01-2",
+        "PVMO01-1",
+        "PVMO02-4"
+      ],
+      "mean_returned": 6.0,
+      "mean_workflow": 1.344,
+      "mean_process": 4.656
+    },
+    "new_top3_defaults": {
+      "hits": 27,
+      "n": 32,
+      "acc": 0.8438,
+      "misses": [
+        "PSE01-2",
+        "PTN02-3",
+        "PVMO01-1",
+        "PVMO02-3",
+        "PVMO02-4"
+      ],
+      "mean_returned": 3.0,
+      "mean_workflow": 0.438,
+      "mean_process": 2.562
+    }
+  }
+}

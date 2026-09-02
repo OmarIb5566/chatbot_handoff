@@ -1,0 +1,416 @@
+[
+  {
+    "model": "qwen3:14b",
+    "prompt": "P1_current",
+    "q": "how does the rental equipment variation order workflow go",
+    "secs": 79.0,
+    "cited": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+    "answer": "The workflow begins with Creation.  \n1. Equipment Rental Admin performs Preparation by Equipment Rental Admin.  \n2. The process moves to PM Approval.  \n3. The process moves to Equipment Manager Approval.  \n4. A decision is made:  \n   - If the value is \"Approve Above 3M EGP\", it moves to VP Approval.  \n   - If the value is \"Approve Below 3M EGP\", it moves to Finance Review.  \n5. If further action is required, VP Approval performs Approval.  \n6. The process moves to Finance Review.  \n7. A decision is made:  \n   - If the value is \"Approve Below 3M EGP\", it moves to End.  \n   - If the value is \"Approve Above 3M EGP\", it moves to End.  \n8. The workflow ends when the process reaches End.  \n\nSource: Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+    "gold": 12,
+    "covered": 7,
+    "pct": 58.3,
+    "missing": [
+      [
+        "Equipment Manager Approval",
+        "Preparation by Equipment Rental Admin"
+      ],
+      [
+        "Equipment Rental Admin Update",
+        "Finance Review"
+      ],
+      [
+        "Finance Review",
+        "Equipment Rental Admin Update"
+      ],
+      [
+        "PM Approval",
+        "Preparation by Equipment Rental Admin"
+      ],
+      [
+        "VP Approval",
+        "Equipment Manager Approval"
+      ]
+    ],
+    "extra": [],
+    "borrowed": [
+      [
+        "Finance Review",
+        "Approve Below 3M EGP"
+      ],
+      [
+        "Finance Review",
+        "Approve Above 3M EGP"
+      ]
+    ],
+    "wrong_target": [],
+    "pdf_mentions": 1
+  },
+  {
+    "model": "qwen3:14b",
+    "prompt": "P1_current",
+    "q": "what is the document submittal ITP approval workflow",
+    "secs": 68.1,
+    "cited": "Document Submittal - ITP (Client) WF.pdf",
+    "answer": "The workflow begins with Preparation by QCM.  \n1. QCM performs Preparation by QCM.  \n2. The process moves to Review by CM.  \n3. A decision is made:  \n   - If Send for (Site TO) Review, the process moves to Review by Site TO.  \n   - If Send back with Comments, the process returns to QCM.  \n4. If further action is required, QCM performs Submit to Site TO.  \n5. The workflow ends when Client/Consultant’s Reply moves to End.  \n\nSource: Document Submittal - ITP (Client) WF.pdf",
+    "gold": 8,
+    "covered": 4,
+    "pct": 50.0,
+    "missing": [
+      [
+        "QCM",
+        "Review by CM"
+      ],
+      [
+        "QCM",
+        "Review by Site TO"
+      ],
+      [
+        "Review by Site TO",
+        "Client/Consultant’ s Reply"
+      ],
+      [
+        "Review by Site TO",
+        "QCM"
+      ]
+    ],
+    "extra": [
+      [
+        "Preparation by QCM",
+        "QCM"
+      ],
+      [
+        "QCM",
+        "Client/Consultant’ s Reply"
+      ],
+      [
+        "QCM",
+        "Preparation by QCM"
+      ]
+    ],
+    "borrowed": [],
+    "wrong_target": [],
+    "pdf_mentions": 1
+  },
+  {
+    "model": "qwen3:14b",
+    "prompt": "P1_current",
+    "q": "how does the bonds request approval workflow go",
+    "secs": 57.5,
+    "cited": "Bonds Request - Bonds Request WF.pdf",
+    "answer": "The workflow begins with Creation by Commercial Engineer.  \n1. Commercial Engineer performs Creation by Commercial Engineer.  \n2. The process moves to Commercial Manager Approval Send.  \n3. A decision is made:  \n   - If [value], it moves to Clients & Trade Department.  \n   - If [value], it moves to Clients & Trade Manager.  \n   - If [value], it moves to Commercial Engineer Revision.  \n4. If further action is required, Commercial Engineer performs Commercial Engineer Edits/Cancels.  \n5. The workflow ends when it reaches End.  \n\nSource: Bonds Request - Bonds Request WF.pdf",
+    "gold": 16,
+    "covered": 3,
+    "pct": 18.8,
+    "missing": [
+      [
+        "CFO Approval",
+        "Clients & Trade Department"
+      ],
+      [
+        "CFO Approval",
+        "Clients & Trade Manager"
+      ],
+      [
+        "Clients & Trade Department",
+        "Clients & Trade Manager"
+      ],
+      [
+        "Clients & Trade Department",
+        "Commercial Engineer Edits/Cancels"
+      ],
+      [
+        "Clients & Trade Department",
+        "Commercial Engineer Revision"
+      ],
+      [
+        "Clients & Trade Department",
+        "End"
+      ],
+      [
+        "Clients & Trade Manager",
+        "CFO Approval"
+      ],
+      [
+        "Clients & Trade Manager",
+        "Clients & Trade Department"
+      ],
+      [
+        "Clients & Trade Manager",
+        "Commercial Engineer Modification"
+      ],
+      [
+        "Commercial Engineer",
+        "Commercial Manager Approval Send"
+      ],
+      [
+        "Commercial Engineer Edits/Cancels",
+        "Clients & Trade Department"
+      ],
+      [
+        "Commercial Engineer Modification",
+        "Clients & Trade Manager"
+      ],
+      [
+        "Commercial Engineer Revision",
+        "Clients & Trade Department"
+      ]
+    ],
+    "extra": [
+      [
+        "Commercial Engineer",
+        "Commercial Engineer Edits/Cancels"
+      ],
+      [
+        "Commercial Engineer",
+        "Creation by Commercial Engineer"
+      ],
+      [
+        "Commercial Engineer Edits/Cancels",
+        "End"
+      ],
+      [
+        "Commercial Manager Approval Send",
+        "Clients & Trade Manager"
+      ],
+      [
+        "Commercial Manager Approval Send",
+        "Commercial Engineer Revision"
+      ],
+      [
+        "Creation by Commercial Engineer",
+        "Commercial Engineer"
+      ]
+    ],
+    "borrowed": [],
+    "wrong_target": [
+      [
+        "Commercial Manager Approval Send",
+        "Clients & Trade Manager"
+      ],
+      [
+        "Commercial Manager Approval Send",
+        "Commercial Engineer Revision"
+      ]
+    ],
+    "pdf_mentions": 1
+  },
+  {
+    "model": "qwen3:14b",
+    "prompt": "P2_returns_line",
+    "q": "how does the rental equipment variation order workflow go",
+    "secs": 74.5,
+    "cited": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+    "answer": "The workflow begins with Creation.  \n1. The process moves to Preparation by Equipment Rental Admin.  \n2. The process moves to PM Approval.  \n3. The process moves to Equipment Manager Approval.  \n4. A decision is made:  \n   - If Approve Above 3M EGP, it moves to VP Approval.  \n   - If Approve Below 3M EGP, it moves to Finance Review.  \n5. If further action is required, VP Approval performs Send back with Comments.  \n6. The workflow ends when Finance Review moves to End.  \n\nReturns and loops:  \n- VP Approval -> Equipment Manager Approval (Send back with Comments)  \n- PM Approval -> Preparation by Equipment Rental Admin (Send back to Creator)  \n- Equipment Manager Approval -> Preparation by Equipment Rental Admin (Send back to Creator)  \n- Finance Review -> Equipment Rental Admin Update (Send to Finance)  \n- Equipment Rental Admin Update -> Finance Review (Send to Finance)  \n\nSource: Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+    "gold": 12,
+    "covered": 12,
+    "pct": 100.0,
+    "missing": [],
+    "extra": [
+      [
+        "End",
+        "Equipment Manager Approval"
+      ],
+      [
+        "End",
+        "Equipment Rental Admin Update"
+      ],
+      [
+        "End",
+        "Finance Review"
+      ],
+      [
+        "End",
+        "PM Approval"
+      ],
+      [
+        "End",
+        "VP Approval"
+      ]
+    ],
+    "borrowed": [],
+    "wrong_target": [],
+    "pdf_mentions": 1
+  },
+  {
+    "model": "qwen3:14b",
+    "prompt": "P2_returns_line",
+    "q": "what is the document submittal ITP approval workflow",
+    "secs": 87.6,
+    "cited": "Document Submittal - ITP (Client) WF.pdf",
+    "answer": "The workflow begins with Preparation by QCM.  \n1. QCM performs Preparation by QCM.  \n2. The process moves to Review by CM.  \n3. A decision is made:  \n   - If Send for (Site TO) Review, the process moves to Review by Site TO.  \n   - If Send back with Comments, the process returns to QCM.  \n4. If further action is required, QCM performs Submit to Site TO.  \n5. The workflow ends when Client/Consultant’s Reply moves to End.  \n\nReturns and loops:  \n- Review by CM -> QCM (Send back with Comments)  \n- QCM -> Review by CM (Submit to CM)  \n- Review by Site TO -> QCM  \n- QCM -> Review by Site TO (Submit to Site TO)  \n- Client/Consultant’s Reply -> End (Close)  \n\nSource: Document Submittal - ITP (Client) WF.pdf",
+    "gold": 8,
+    "covered": 7,
+    "pct": 87.5,
+    "missing": [
+      [
+        "Review by Site TO",
+        "Client/Consultant’ s Reply"
+      ]
+    ],
+    "extra": [
+      [
+        "End",
+        "Client/Consultant’ s Reply"
+      ],
+      [
+        "End",
+        "QCM"
+      ],
+      [
+        "End",
+        "Review by CM"
+      ],
+      [
+        "End",
+        "Review by Site TO"
+      ],
+      [
+        "Preparation by QCM",
+        "QCM"
+      ],
+      [
+        "QCM",
+        "Client/Consultant’ s Reply"
+      ],
+      [
+        "QCM",
+        "Preparation by QCM"
+      ]
+    ],
+    "borrowed": [],
+    "wrong_target": [],
+    "pdf_mentions": 1
+  },
+  {
+    "model": "qwen3:14b",
+    "prompt": "P2_returns_line",
+    "q": "how does the bonds request approval workflow go",
+    "secs": 90.4,
+    "cited": "Bonds Request - Bonds Request WF.pdf",
+    "answer": "The workflow begins with Creation by Commercial Engineer.  \n1. Commercial Engineer performs Creation by Commercial Engineer.  \n2. The process moves to Commercial Manager Approval Send.  \n3. A decision is made:  \n   - If [value], it moves to Clients & Trade Department.  \n   - If [value], it moves to Clients & Trade Manager.  \n   - If [value], it moves to Commercial Engineer Revision.  \n4. If further action is required, Commercial Engineer performs Commercial Engineer Edits/Cancels.  \n5. The workflow ends when it reaches End.  \n\nReturns and loops:  \n- Commercial Engineer -> Commercial Manager Approval Send (Resend for Send back with comments Approval)  \n- Clients & Trade Manager -> Clients & Trade Department (Send back with comments to Clients & Trade Manager)  \n- Commercial Manager Approval Send -> Commercial Engineer  \n- Commercial Engineer Revision -> Clients & Trade Department (Send Resend for Approval Send back with comments)  \n- Commercial Engineer Modification -> Clients & Trade Manager (Send Resend for Approval Return to Commercial Engineer)  \n- Commercial Engineer Edits/Cancels -> Clients & Trade Department (Send Resend for Approval Send back with comments)  \n\nSource: Bonds Request - Bonds Request WF.pdf",
+    "gold": 16,
+    "covered": 9,
+    "pct": 56.2,
+    "missing": [
+      [
+        "CFO Approval",
+        "Clients & Trade Department"
+      ],
+      [
+        "CFO Approval",
+        "Clients & Trade Manager"
+      ],
+      [
+        "Clients & Trade Department",
+        "Commercial Engineer Edits/Cancels"
+      ],
+      [
+        "Clients & Trade Department",
+        "Commercial Engineer Revision"
+      ],
+      [
+        "Clients & Trade Department",
+        "End"
+      ],
+      [
+        "Clients & Trade Manager",
+        "CFO Approval"
+      ],
+      [
+        "Clients & Trade Manager",
+        "Commercial Engineer Modification"
+      ]
+    ],
+    "extra": [
+      [
+        "Clients & Trade Manager",
+        "Commercial Engineer"
+      ],
+      [
+        "Commercial Engineer",
+        "Commercial Engineer Edits/Cancels"
+      ],
+      [
+        "Commercial Engineer",
+        "Creation by Commercial Engineer"
+      ],
+      [
+        "Commercial Engineer Edits/Cancels",
+        "End"
+      ],
+      [
+        "Commercial Manager Approval Send",
+        "Clients & Trade Manager"
+      ],
+      [
+        "Commercial Manager Approval Send",
+        "Commercial Engineer Revision"
+      ],
+      [
+        "Creation by Commercial Engineer",
+        "Commercial Engineer"
+      ],
+      [
+        "End",
+        "Clients & Trade Manager"
+      ],
+      [
+        "End",
+        "Commercial Engineer"
+      ],
+      [
+        "End",
+        "Commercial Engineer Edits/Cancels"
+      ],
+      [
+        "End",
+        "Commercial Engineer Modification"
+      ],
+      [
+        "End",
+        "Commercial Engineer Revision"
+      ],
+      [
+        "End",
+        "Commercial Manager Approval Send"
+      ]
+    ],
+    "borrowed": [],
+    "wrong_target": [
+      [
+        "Commercial Manager Approval Send",
+        "Clients & Trade Manager"
+      ],
+      [
+        "Commercial Manager Approval Send",
+        "Commercial Engineer Revision"
+      ]
+    ],
+    "pdf_mentions": 1
+  },
+  {
+    "model": "qwen3.6:27b",
+    "prompt": "P1_current",
+    "q": "how does the rental equipment variation order workflow go",
+    "secs": 219.0,
+    "cited": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+    "answer": "To understand the rental equipment variation order workflow, one must refer to the approval flow diagram which outlines the sequence of actions and decision points.\n\nThe workflow begins with Creation.\n1. The process moves to Preparation by Equipment Rental Admin.\n2. The process moves to PM Approval.\n3. The process moves to Equipment Manager Approval.\n4. A decision is made:\n   - If Approve Above 3M EGP, it moves to VP Approval.\n   - If Approve Below 3M EGP, it moves to Finance Review.\n   - If Send back to Creator, it returns to Preparation by Equipment Rental Admin.\n5. If further action is required at VP Approval:\n   - If Approve, it moves to Finance Review.\n   - If Send back with Comments, it returns to Equipment Manager Approval.\n6. If further action is required at Finance Review:\n   - If Close, the workflow ends.\n   - If no specific condition is listed for moving forward but a route exists to Equipment Rental Admin Update, it moves to Equipment Rental Admin Update.\n7. The process moves to Equipment Rental Admin Update.\n8. The process moves to Finance Review.\n9. The workflow ends when Finance Review closes the process.\n\nSource: Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+    "gold": 12,
+    "covered": 10,
+    "pct": 83.3,
+    "missing": [
+      [
+        "Finance Review",
+        "End"
+      ],
+      [
+        "PM Approval",
+        "Preparation by Equipment Rental Admin"
+      ]
+    ],
+    "extra": [],
+    "borrowed": [],
+    "wrong_target": [],
+    "pdf_mentions": 1
+  }
+]

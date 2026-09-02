@@ -183,9 +183,10 @@ def _polyline(d: dict) -> list[fitz.Point]:
 
 
 FRAGMENT_EPS = 1.5       # points within this of each other are the same corner
+THROUGH_BOX_TOL = 5.0    # a merged chain vertex this close to a box IS that box
 
 
-def merge_fragments(connectors: list[dict]) -> list[dict]:
+def merge_fragments(connectors: list[dict], boxes: list[dict] | None = None) -> list[dict]:
     """Join connector fragments that share an endpoint into whole polylines.
 
     Visio does not always emit an elbow connector as one drawing. On the
@@ -247,13 +248,95 @@ def merge_fragments(connectors: list[dict]) -> list[dict]:
             for i in members:
                 out.append({**connectors[i], "label": label})
             continue
-        segs = [sg for i in members for sg in connectors[i]["segments"]]
-        anchor = next(p for i in members for p in connectors[i]["points"]
-                      if key(p) == free[0])
-        far = next(p for i in members for p in connectors[i]["points"]
-                   if key(p) == free[1])
-        out.append({"points": [anchor, far], "segments": segs, "label": label})
+        # Two free ends is necessary but not sufficient. On the NOD Auto sheet
+        # TWO arrows leave Contracts Department from the same point on its edge
+        # - one routed above the page, one below - and both arrive at End.
+        # Union-find sees one path End(bottom) -> Contracts Department ->
+        # End(top); every interior vertex has degree 2, so the fan-out guard
+        # above does not fire. Merged into a single polyline it begins and ends
+        # on the SAME box, direct_edges discards it at `ia == ib`, and BOTH
+        # arrows are lost - which is what orphaned End on eleven sheets.
+        #
+        # Splitting the chain wherever it passes THROUGH a box recovers them: a
+        # connector that touches a node is two connections meeting there, never
+        # one that runs on past it.
+        chain = _chain_vertices(members, connectors, key)
+        if chain is None:
+            # Not a simple path (a crossing somewhere in the group). Fall back
+            # to what this function always did - one polyline between the two
+            # free ends. Emitting the loose fragments instead was measured at
+            # 193 edges lost against 16 gained: fragments snap to nothing.
+            segs = [sg for i in members for sg in connectors[i]["segments"]]
+            anchor = next(p for i in members for p in connectors[i]["points"]
+                          if key(p) == free[0])
+            far = next(p for i in members for p in connectors[i]["points"]
+                       if key(p) == free[1])
+            out.append({"points": [anchor, far], "segments": segs, "label": label})
+            continue
+        # Split ONLY when the merge is about to be useless. A first version cut
+        # every chain wherever it passed near a box and measured badly: 223
+        # edges lost against 134 gained, because a connector that merely routes
+        # along a box edge got cut into two stubs that reach nothing. The
+        # failure this fixes is narrow and has a precise signature - both free
+        # ends of the merged polyline snap to the SAME box - so that is the
+        # only case that gets cut. Every chain that already produced an edge is
+        # left exactly as it was.
+        cuts = [0]
+        if boxes:
+            def _snap(pt):
+                near = [(_box_distance(pt, b["rect"]), j) for j, b in enumerate(boxes)]
+                near.sort()
+                return near[0][1] if near and near[0][0] <= SNAP_TOL else None
+            a_box, b_box = _snap(chain[0][0]), _snap(chain[-1][0])
+            if a_box is not None and a_box == b_box:
+                for idx in range(1, len(chain) - 1):
+                    if any(_box_distance(chain[idx][0], b["rect"]) <= THROUGH_BOX_TOL
+                           for b in boxes):
+                        cuts.append(idx)
+        cuts.append(len(chain) - 1)
+        for a_i, b_i in zip(cuts, cuts[1:]):
+            if b_i <= a_i:
+                continue
+            mem = {m for _, ms in chain[a_i + 1:b_i + 1] for m in ms}
+            segs = [sg for i in mem for sg in connectors[i]["segments"]]
+            sub = " ".join(dict.fromkeys(
+                c for c in (connectors[i]["label"] for i in sorted(mem)) if c)).strip()
+            out.append({"points": [chain[a_i][0], chain[b_i][0]], "segments": segs,
+                        "label": sub or (label if len(cuts) == 2 else "")})
     return out
+
+
+def _chain_vertices(members, connectors, key):
+    """Ordered vertices of a fragment group, free end to free end.
+
+    Returns [(point, {member ids arriving there}), ...], or None when the group
+    is not a simple path - a branch or a cycle - which the caller then leaves
+    as loose fragments rather than guessing how the arms pair up.
+    """
+    adj: dict[tuple, list[tuple[tuple, int]]] = defaultdict(list)
+    rep: dict[tuple, fitz.Point] = {}
+    for i in members:
+        a, b = connectors[i]["points"][0], connectors[i]["points"][-1]
+        ka, kb = key(a), key(b)
+        rep.setdefault(ka, a)
+        rep.setdefault(kb, b)
+        adj[ka].append((kb, i))
+        adj[kb].append((ka, i))
+    free = [k for k, v in adj.items() if len(v) == 1]
+    if len(free) != 2 or any(len(v) > 2 for v in adj.values()):
+        return None
+    order, used, cur = [(rep[free[0]], set())], set(), free[0]
+    while True:
+        nxt = [(o, i) for o, i in adj[cur] if i not in used]
+        if not nxt:
+            break
+        o, i = nxt[0]
+        used.add(i)
+        order.append((rep[o], {i}))
+        cur = o
+    if len(used) != len(members):
+        return None
+    return order
 
 
 def extract_shapes(page) -> dict:
@@ -602,7 +685,8 @@ def detect_lanes(page, boxes: list[dict], edges: list[dict],
 def page_graph(page, title_hint: str | None = None) -> tuple[dict, dict]:
     """One page -> (graph, coverage). No model call anywhere in here."""
     shapes = extract_shapes(page)
-    shapes["connectors"] = merge_fragments(shapes["connectors"])
+    shapes["connectors"] = merge_fragments(
+        shapes["connectors"], shapes["nodes"] + shapes["diamonds"])
     spans = page_spans(page)
     loose = assign_text(spans, shapes)
     clusters = cluster_loose(loose)

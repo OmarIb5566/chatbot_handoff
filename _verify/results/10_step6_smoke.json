@@ -1,0 +1,336 @@
+[
+  {
+    "workflow_intent": true,
+    "n_workflow_hits": 4,
+    "route": [],
+    "boost_prefixes": [
+      "PCN"
+    ],
+    "lang": "en",
+    "model": "qwen3:14b",
+    "retrieval_s": 1.1539195999503136,
+    "generation_s": 63.00768679997418,
+    "total_s": 64.16173999989405,
+    "had_reasoning": false,
+    "was_rewritten": false,
+    "reused_sources": false,
+    "gate_reasons": [
+      "no history"
+    ],
+    "query_used": "what is the approval workflow for a subcontract amendment?",
+    "question_en": "what is the approval workflow for a subcontract amendment?",
+    "spelling_repairs": [],
+    "rewrite_model": null,
+    "label": "workflow",
+    "question": "what is the approval workflow for a subcontract amendment?",
+    "validator": {
+      "cited": [],
+      "unknown": [],
+      "ungrounded": [],
+      "unknown_doc_codes": [],
+      "ok": true,
+      "verdict": "clean",
+      "display_answer": "The approval workflow for a subcontract amendment depends on the specific type of amendment and the associated thresholds. For example, in \"Approval flow 1\" from the document *Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf*, the workflow includes steps such as VP, Technical Operations Manager, Finance, Adding Line Items, Earthmoving, PM, Review, Revision, Operation Engineer, Contracts Department, PsM, Creation, and S/C Signature. The routing and approval thresholds are also defined based on the value and type of the subcontract (e.g., RME Self Execution or not). For more specific details, refer to the document *Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf*."
+    },
+    "n_hits": 6,
+    "hits": [
+      {
+        "score": 1.0788,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 2",
+        "source_type": "pdf_vector",
+        "doc_code": null
+      },
+      {
+        "score": 0.9984,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector",
+        "doc_code": null
+      },
+      {
+        "score": 0.9939,
+        "filename": "Rule of Credit Amendments - ROC Amendments.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "doc_code": null
+      },
+      {
+        "score": 0.9768,
+        "filename": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "doc_code": null
+      },
+      {
+        "score": 0.8715,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "OBJECTIVES",
+        "source_type": null,
+        "doc_code": "P-CN-01"
+      },
+      {
+        "score": 0.8119,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OUTPUT",
+        "source_type": null,
+        "doc_code": "P-CN-01"
+      }
+    ],
+    "answer": "The approval workflow for a subcontract amendment depends on the specific type of amendment and the associated thresholds. For example, in \"Approval flow 1\" from the document *Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf*, the workflow includes steps such as VP, Technical Operations Manager, Finance, Adding Line Items, Earthmoving, PM, Review, Revision, Operation Engineer, Contracts Department, PsM, Creation, and S/C Signature. The routing and approval thresholds are also defined based on the value and type of the subcontract (e.g., RME Self Execution or not). For more specific details, refer to the document *Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf*."
+  },
+  {
+    "label": "workflow",
+    "question": "what is the approval workflow for a subcontract amendment?",
+    "error": "Traceback (most recent call last):\n  File \"C:\\Users\\dahab\\OneDrive\\Documents\\GitHub\\chatbot_handoff\\_verify\\driver3.py\", line 46, in <module>\n    log(f\"    [{h['score']:.3f}] {h['source_type']:15s} {h['filename'][:60]} | {h['section']}\")\n                                 ^^^^^^^^^^^^^^^^^^^^^^\nTypeError: unsupported format string passed to NoneType.__format__\n"
+  },
+  {
+    "workflow_intent": false,
+    "n_workflow_hits": 0,
+    "route": [],
+    "boost_prefixes": [],
+    "lang": "en",
+    "model": "qwen3:14b",
+    "retrieval_s": 0.044091699994169176,
+    "generation_s": 62.266004999983124,
+    "total_s": 62.310287899919786,
+    "had_reasoning": false,
+    "was_rewritten": false,
+    "reused_sources": false,
+    "gate_reasons": [
+      "opens like a standalone question, nothing to resolve against history"
+    ],
+    "query_used": "how many days of annual leave do employees get?",
+    "question_en": "how many days of annual leave do employees get?",
+    "spelling_repairs": [],
+    "rewrite_model": null,
+    "label": "hr_policy",
+    "question": "how many days of annual leave do employees get?",
+    "validator": {
+      "cited": [],
+      "unknown": [],
+      "ungrounded": [],
+      "unknown_doc_codes": [],
+      "ok": true,
+      "verdict": "clean",
+      "display_answer": "The number of annual leave days employees receive is not explicitly specified in the provided documents. The documents mention eligibility for annual leave and conditions related to its usage, such as being eligible after 6 months of employment and needing to clear remaining vacation balance by the end of the first quarter of the following year. However, the exact number of annual leave days is not stated. \n\nRefer to the document: **MHR18_UAE_Branch_Policy.pdf**."
+    },
+    "n_hits": 6,
+    "hits": [
+      {
+        "score": 0.9579,
+        "filename": "MHR18_UAE_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-18"
+      },
+      {
+        "score": 0.8572,
+        "filename": "MHR17_KSA_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-17"
+      },
+      {
+        "score": 0.8555,
+        "filename": "MHR18_UAE_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-18"
+      },
+      {
+        "score": 0.8511,
+        "filename": "MHR17_KSA_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-17"
+      },
+      {
+        "score": 0.8484,
+        "filename": "MHR18_UAE_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-18"
+      },
+      {
+        "score": 0.8483,
+        "filename": "MHR18_UAE_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-18"
+      }
+    ],
+    "answer": "The number of annual leave days employees receive is not explicitly specified in the provided documents. The documents mention eligibility for annual leave and conditions related to its usage, such as being eligible after 6 months of employment and needing to clear remaining vacation balance by the end of the first quarter of the following year. However, the exact number of annual leave days is not stated. \n\nRefer to the document: **MHR18_UAE_Branch_Policy.pdf**."
+  },
+  {
+    "label": "hr_policy",
+    "question": "how many days of annual leave do employees get?",
+    "error": "Traceback (most recent call last):\n  File \"C:\\Users\\dahab\\OneDrive\\Documents\\GitHub\\chatbot_handoff\\_verify\\driver3.py\", line 46, in <module>\n    log(f\"    [{h['score']:.3f}] {h['source_type']:15s} {h['filename'][:60]} | {h['section']}\")\n                                 ^^^^^^^^^^^^^^^^^^^^^^\nTypeError: unsupported format string passed to NoneType.__format__\n"
+  },
+  {
+    "workflow_intent": false,
+    "n_workflow_hits": 0,
+    "route": [],
+    "boost_prefixes": [],
+    "lang": "ar",
+    "model": "qwen3:14b",
+    "retrieval_s": 0.011118900030851364,
+    "generation_s": 57.051939900033176,
+    "total_s": 66.16284920007456,
+    "had_reasoning": false,
+    "was_rewritten": false,
+    "reused_sources": false,
+    "gate_reasons": [
+      "opens like a standalone question, nothing to resolve against history"
+    ],
+    "query_used": "What is the annual leave duration for employees?",
+    "question_en": "What is the annual leave duration for employees?",
+    "spelling_repairs": [],
+    "rewrite_model": null,
+    "label": "arabic",
+    "question": "ما هي مدة الإجازة السنوية للموظفين؟",
+    "validator": {
+      "cited": [],
+      "unknown": [],
+      "ungrounded": [],
+      "unknown_doc_codes": [],
+      "ok": true,
+      "verdict": "clean",
+      "display_answer": "يحدد مدة الإجازة السنوية للموظفين وفقًا للقوانين المنظمة، ولكن لا توجد معلومات محددة في وثائق العمليات هذه حول مدة الإجازة السنوية بالضبط. يرجى الرجوع إلى الوثيقة للاطلاع على التفاصيل."
+    },
+    "n_hits": 6,
+    "hits": [
+      {
+        "score": 0.9769,
+        "filename": "MHR18_UAE_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-18"
+      },
+      {
+        "score": 0.9239,
+        "filename": "MHR17_KSA_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-17"
+      },
+      {
+        "score": 0.8257,
+        "filename": "MHR17_KSA_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-17"
+      },
+      {
+        "score": 0.8203,
+        "filename": "MHR17_KSA_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-17"
+      },
+      {
+        "score": 0.8133,
+        "filename": "MHR18_UAE_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-18"
+      },
+      {
+        "score": 0.8125,
+        "filename": "MHR17_KSA_Branch_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-17"
+      }
+    ],
+    "answer": "يحدد مدة الإجازة السنوية للموظفين وفقًا للقوانين المنظمة، ولكن لا توجد معلومات محددة في وثائق العمليات هذه حول مدة الإجازة السنوية بالضبط. يرجى الرجوع إلى الوثيقة للاطلاع على التفاصيل."
+  },
+  {
+    "label": "arabic",
+    "question": "ما هي مدة الإجازة السنوية للموظفين؟",
+    "error": "Traceback (most recent call last):\n  File \"C:\\Users\\dahab\\OneDrive\\Documents\\GitHub\\chatbot_handoff\\_verify\\driver3.py\", line 46, in <module>\n    log(f\"    [{h['score']:.3f}] {h['source_type']:15s} {h['filename'][:60]} | {h['section']}\")\n                                 ^^^^^^^^^^^^^^^^^^^^^^\nTypeError: unsupported format string passed to NoneType.__format__\n"
+  },
+  {
+    "workflow_intent": true,
+    "n_workflow_hits": 4,
+    "route": [],
+    "boost_prefixes": [],
+    "lang": "en",
+    "model": "qwen3:14b",
+    "retrieval_s": 0.012961299973540008,
+    "generation_s": 85.17031830002088,
+    "total_s": 85.1833349999506,
+    "had_reasoning": false,
+    "was_rewritten": false,
+    "reused_sources": false,
+    "gate_reasons": [
+      "opens like a standalone question, nothing to resolve against history"
+    ],
+    "query_used": "who signs after that?",
+    "question_en": "who signs after that?",
+    "spelling_repairs": [],
+    "rewrite_model": null,
+    "label": "followup",
+    "question": "who signs after that?",
+    "validator": {
+      "cited": [],
+      "unknown": [],
+      "ungrounded": [],
+      "unknown_doc_codes": [],
+      "ok": true,
+      "verdict": "clean",
+      "display_answer": "To answer the question \"who signs after that?\", we need to refer to the specific approval workflows outlined in the provided documents. The answer depends on the context of the process being referred to. For example:\n\n- In the **\"Potential Delay Events - NOD Manual WF.pdf\"**, after the **Contracts Department**, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n- In the **\"Client Contract Lines Modification - WF - Client Contract Lines Modification.pdf\"**, after the **Review** step, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n- In the **\"Customer Satisfaction - Customer Satisfaction WF.pdf\"**, after the **QAM**, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n- In the **\"S-C Work Completed Status - TO Work Completed Status.pdf\"**, after the **Review by TOM**, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n\nSince the question \"who signs after that?\" is not specific to a particular process or step, and no specific step or document is referenced, the answer is:\n\n**Not specified in these process documents.**"
+    },
+    "n_hits": 6,
+    "hits": [
+      {
+        "score": 1.047,
+        "filename": "Potential Delay Events - NOD Manual WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "doc_code": null
+      },
+      {
+        "score": 0.9978,
+        "filename": "Client Contract Lines Modification - WF - Client Contract Lines Modification.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "doc_code": null
+      },
+      {
+        "score": 0.9915,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "doc_code": null
+      },
+      {
+        "score": 0.9846,
+        "filename": "S-C Work Completed Status - TO Work Completed Status.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "doc_code": null
+      },
+      {
+        "score": 0.6042,
+        "filename": "MHR10_Code_of_Conduct_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null,
+        "doc_code": "M-HR-10"
+      },
+      {
+        "score": 0.5894,
+        "filename": "MHR16_Employee_Separation_Policy.pdf",
+        "section": "DOCUMENT CHANGE HISTORY",
+        "source_type": null,
+        "doc_code": "M-HR-16"
+      }
+    ],
+    "answer": "To answer the question \"who signs after that?\", we need to refer to the specific approval workflows outlined in the provided documents. The answer depends on the context of the process being referred to. For example:\n\n- In the **\"Potential Delay Events - NOD Manual WF.pdf\"**, after the **Contracts Department**, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n- In the **\"Client Contract Lines Modification - WF - Client Contract Lines Modification.pdf\"**, after the **Review** step, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n- In the **\"Customer Satisfaction - Customer Satisfaction WF.pdf\"**, after the **QAM**, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n- In the **\"S-C Work Completed Status - TO Work Completed Status.pdf\"**, after the **Review by TOM**, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n\nSince the question \"who signs after that?\" is not specific to a particular process or step, and no specific step or document is referenced, the answer is:\n\n**Not specified in these process documents.**"
+  },
+  {
+    "label": "followup",
+    "question": "who signs after that?",
+    "error": "Traceback (most recent call last):\n  File \"C:\\Users\\dahab\\OneDrive\\Documents\\GitHub\\chatbot_handoff\\_verify\\driver3.py\", line 46, in <module>\n    log(f\"    [{h['score']:.3f}] {h['source_type']:15s} {h['filename'][:60]} | {h['section']}\")\n                                 ^^^^^^^^^^^^^^^^^^^^^^\nTypeError: unsupported format string passed to NoneType.__format__\n"
+  }
+]

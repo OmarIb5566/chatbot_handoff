@@ -1,0 +1,1068 @@
+[
+  {
+    "id": "WF-01",
+    "question": "In the Go Or No Go approval workflow, who signs after Log Project Details & Prepare Project's brief?",
+    "gold": "Go Or No Go - Go or No Go - Competitive Bidding.pdf",
+    "must_include": [
+      "Commercial Department Manager"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Go Or No Go - Go or No Go - Direct Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Go Or No Go - Go or No Go - Direct Award - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Revise Project Details; Log Project Details & Prepare Project's  brief; End; Regional Business Development Manager; COO; Regional Business Development Manager; Commercial Review; CEO Decision; Project’s Information Inquiry; Technical Director.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Log Project Details & Prepare Project's  brief\n  2. Commercial Review\n  After Commercial Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - CEO Decision -> COO [Send Back With Comments to COO]\n  - Technical Director -> COO [Send to COO]\n  - Technical Director -> Regional Business Development Manager [Send Back To Regional Business Development Manager]\n  - Regional Busines"
+      },
+      {
+        "rank": 2,
+        "score": 1.0603,
+        "filename": "Go Or No Go - Go or No Go - Competitive Bidding.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Go Or No Go - Go or No Go - Competitive Bidding - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Revise Project Details; COO; Commercial Manager; Commercial Department Manager; Log Project Details & Prepare Project's  brief; End; Commercial Department Manager; Send Internal RFQ; Apology Letter; CEO Decision; Technical Director.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Log Project Details & Prepare Project's  brief\n  2. Commercial Department Manager\n  After Commercial Department Manager the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Technical Director -> COO [Send to COO]\n  - Technical Director -> Commercial Department Manager [Send to Technical Director Send Back To Commercial Department]\n  - COO -> CEO Decision [Submit to CEO]\n  - CEO Decisi"
+      },
+      {
+        "rank": 3,
+        "score": 0.832,
+        "filename": "Go Or No Go - Go or No Go - RME FIT-OUT.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Go Or No Go - Go or No Go - RME FIT-OUT - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by FIT OUT BD Engineers; End; Approval by RME FIT OUT Manager.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Creation by FIT OUT BD Engineers\n  2. Approval by RME FIT OUT Manager\n  3. End\n\nRouting:\n  - Creation by FIT OUT BD Engineers -> Approval by RME FIT OUT Manager [Send]\n  - Approval by RME FIT OUT Manager -> End [Submit No Bid Submit Initiate Project]"
+      },
+      {
+        "rank": 4,
+        "score": 0.6907,
+        "filename": "Project Budget - Project Budget.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Project Budget - Project Budget - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation; End; Review; Review.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation\n  2. Review\n  After Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Creation -> Review [Submit]\n  - Review -> End [Budget Closed]\n  - Review -> Review [Update Budget]\n  - Review -> Review [Update Budget]"
+      },
+      {
+        "rank": 5,
+        "score": 0.69,
+        "filename": "Material List ( E2 Log ) - E2 Log.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Material List ( E2 Log ) - E2 Log - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by Planning Engineer; End; Planning Manager Review; E2 Log Update.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Planning Engineer\n  2. Planning Manager Review\n  After Planning Manager Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Creation by Planning Engineer -> Planning Manager Review [Send for Planning Manager Review]\n  - Planning Manager Review -> E2 Log Update [Send for Update]\n  - E2 Log Update -> Planning Manager Review [Send for Planning Manager Review]\n  - Planning Manager Review -> Planning Manager Review [Submit Send Back to (Planning Manager Review)]\n  - Planning Manager Review -> End [Submit Close]"
+      },
+      {
+        "rank": 6,
+        "score": 0.632,
+        "filename": "PTN01_Project_Initiation_Process.pdf",
+        "section": "PROCESS CONTROL",
+        "source_type": null,
+        "text": "7.\nPROCESS CONTROL\n-\nSignature of Go or No Go form by Commercial Director, Technical Director, COO and\nCEO.\n-\nRecords shall be maintained by the Commercial for 1 year.\n-\nFor awarded projects, Tender Top Sheet shall be reviewed and approved by Tendering\nManager, COO, and CEO."
+      }
+    ]
+  },
+  {
+    "id": "WF-02",
+    "question": "In the Inspection Request (IR) approval workflow, who signs after Creation by Site Engineer?",
+    "gold": "Inspection Request (IR) - Inspection Request (Client).pdf",
+    "must_include": [
+      "Inspection by QC (Internal)"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Inspection Request (IR) - New - Inspection Request V2.0.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Inspection Request (IR) - New - Inspection Request V2.0 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by Site Engineer; End; Inspection by QC (External); Site DC (Client/Consultant ’s Reply); Inspection by QC (Internal); Site Engineer Edit - 1; Site Engineer Edit - 2.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Site Engineer\n  2. Inspection by QC (Internal)\n  After Inspection by QC (Internal) the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Site DC (Client/Consultant ’s Reply) -> Inspection by QC (External) [Send Send Back to Inspection by QC (External).]\n  - Inspection by QC (Internal) -> Site Engineer Edit - 2 [Send back with comments]\n  - Site DC (Client/Consultant ’s Reply) -> End [Close]\n  - Inspection by QC (External)"
+      },
+      {
+        "rank": 2,
+        "score": 1.0966,
+        "filename": "Inspection Request (IR) - Inspection Request (Client).pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Inspection Request (IR) - Inspection Request (Client) - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Client/Consultant Review; Creation by Site Engineer; End; Inspection by QC (External); Client/Consultant’ s Reply; Inspection by QC (Internal); Site Engineer Edit - 1; Site Engineer Edit - 2.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Site Engineer\n  2. Inspection by QC (Internal)\n  After Inspection by QC (Internal) the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Client/Consultant’ s Reply -> Client/Consultant Review [Send For Review]\n  - Client/Consultant’ s Reply -> Inspection by QC (External) [Send Send Back to Inspection by QC (External).]\n  - Client/Consultant Review -> Client/Consultant’ s Reply [Send back with comments]\n  - C"
+      },
+      {
+        "rank": 3,
+        "score": 1.0604,
+        "filename": "Infrastructure Inspection Request (IIR) - New_Form-Inspection_Request_WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Infrastructure Inspection Request (IIR) - New_Form-Inspection_Request_WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: IR Creation; End; QC; Site QC DC; IR Creator.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. IR Creation\n  2. QC\n  After QC the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - IR Creation -> QC [Send To QC]\n  - QC -> IR Creator [Send Back with Comments]\n  - IR Creator -> QC [Send to QC]\n  - QC -> Site QC DC [Send Send to DC Send Not Required Revision Required Not Required Revision Required Send to DC]\n  - Site QC DC -> Site QC DC [Close Not Required Revision Required Send to DC]"
+      },
+      {
+        "rank": 4,
+        "score": 1.0479,
+        "filename": "Inspection Request (IR) - Formwork IR.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Inspection Request (IR) - Formwork IR - Approval flow\nApproval workflow: Approval flow.\n\nSteps: IR Creation; End; QC; IR Creator; Formwork.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. IR Creation\n  2. QC\n  After QC the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - IR Creation -> QC [Send To QC]\n  - Formwork -> QC [Send back with Comments]\n  - QC -> IR Creator [Send Back with Comments]\n  - IR Creator -> QC [Send to QC]\n  - Formwork -> End [Send Not Required Send Close]\n  - QC -> Formwork [Send Send to Formwork Engineer]\n  - QC -> End [Send Revision Required Revision Required Not Required Send Revision Required Revision Required Close]"
+      },
+      {
+        "rank": 5,
+        "score": 0.9353,
+        "filename": "Infrastructure Inspection Request (IIR) - Pipes Inspection Request.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Infrastructure Inspection Request (IIR) - Pipes Inspection Request - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by Site Engineer; End; QC Comments; Site QC DC; Site Engineer; RE Consultant Comments.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Creation by Site Engineer\n  2. QC Comments\n  3. Site QC DC\n  4. RE Consultant Comments\n\nRouting:\n  - Site QC DC -> QC Comments [Send back to Site Engineer Send back with Comments Send back to QC]\n  - Site QC DC -> RE Consultant Comments [Send to RE Consultant Comments]\n  - RE Consultant Comments -> Site QC DC [Send Back with Comments Close Revision required Revision Required Send to DC]\n  - Creation by Site Engineer -> QC Comments [Send To QC]\n  - Site Engineer -> QC Comments [Send to QC]\n  - QC Comments -> Site QC DC [Send Send to DC Send No Revision required No Revision required Revision r"
+      },
+      {
+        "rank": 6,
+        "score": 0.6263,
+        "filename": "PQD12_Quality_Plan_Inspection_and_Testing_Plan_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "5.2 Process Operations\nSr.\nProcess Cycle Description\nResponsibility\nForm\n1\nPreparation and Approval of Project Quality Plan (PQP)\nQC Manager shall prepare the project’s quality plan\nwithin 15 days from the operation coordination meeting,\nand as per PQP 01 template and forms (last revision at\nthe company server). The minimum requirements of\nPQP shall include the following:\n•\nQuality Policy\n•\nQuality Objectives\n•\nProject’s Organization Chart\n•\nJob description of key staff\n•\nIncoming Material Control\n•\nInspection and Testing Procedures\n•\nQuality Reports (Daily - Weekly - Monthly)\n•\nData and Document Control\n•\nInternal Audit Process\n•\nEvaluation of Subcontractors and Suppliers\nQCM\nPQP-01\nQuality Plan, Inspection and Testing\nEffective Date: June, 2026\nRev. no.: 01\nDoc. no.: P-QD-12\nPage 3 of 8\nSr.\nProcess Cycle Description\nResponsibility\nForm\n•\nList of Method Statements\n•\nList of ITPs and rel"
+      }
+    ]
+  },
+  {
+    "id": "WF-03",
+    "question": "In the Subcontract Amendments workflow, where does the request go after PsM Aproval?",
+    "gold": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf",
+    "must_include": [
+      "VMO HoD Approval (1)"
+    ],
+    "type": "workflow_routing",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1195,
+        "filename": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Subcontract Amendments - Subcontract Amendments for (TA) New - Approval flow\nApproval workflow: Approval flow.\n\nSteps: KSA General Manager; VMO HoD Approval (2); PsM Aproval (3); Technical Affairs Mngr/Technical Direct Award; Finance; Adding Line Items; PM; KSA GM Approval (2); PsM Aproval (4); Contracts Dept. Approval (2); COO Approval (2); Review; KSA GM/ CEO Approval (2); Revision; Contracts Dept. Approval (1); Site Technical Office Engineer; Procurement/ MEP Engineer; Contracts Department; Procurement/ MEP Team Leader; Projects Control Engineer; COO Approval (1); Creator Final Input; VMO HoD Approval (1); Creation; End; Site TOM; PsM Aproval; KSA General Manager / CEO; KSA GM Approval (1); COO; PsM; KSA GM/ CEO Approval (1); PsM Aproval (2).\n\nRouting:\n  - PsM Aproval -> VMO HoD Approval (1) [Send Back to Creator Send Back With Comments]\n  - VMO HoD Approval (2) -> Procurement/ MEP En"
+      },
+      {
+        "rank": 2,
+        "score": 0.9258,
+        "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+        "section": "Supply & Apply Subcontracts (Civil, Arch, MEP)",
+        "source_type": "vlm_description",
+        "text": "Subcontract Agreement Signature Matrix - Supply & Apply Subcontracts (Civil, Arch, MEP)\nApproval workflow: Supply & Apply Subcontracts (Civil, Arch, MEP).\n\nSteps: Supply & Apply Subcontracts (Civil, Arch, MEP) (Initiate Subcontract); PM Initials; Direct Award Manager Initials; Subcontractor Signature; PsM Signature; Subcontractor Signature; PsM initials; VMO Manager Signature; Subcontractor Signature; PsM initials; VMO Manager Initials; COO Initial; VP Signature; PsM initials; VMO Manager initials; Contracts Initials; Subcontractor Signature; COO Initial; CEO Signature.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Supply & Apply Subcontracts (Civil, Arch, MEP) (Initiate Subcontract)\n  2. PM Initials\n  After PM Initials the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRo"
+      },
+      {
+        "rank": 3,
+        "score": 0.904,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector",
+        "text": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project) - Approval flow 1\nApproval workflow: Approval flow 1.\n\nSteps: VP; Technical Operations Manager; Finance; Adding Line Items; Earthmoving; PM; Review; Revision; Operation Engineer; Contracts Department; PsM; Creation; S/C Signature; S/C Signature (2); Operation Engineer; COO; CEO.\n\nRouting:\n  - S/C Signature -> Technical Operations Manager [Submit]\n  - Contracts Department -> S/C Signature (2) [Send for S/C Signature]\n  - S/C Signature (2) -> COO [Send for COO Approval]\n  - Operation Engineer -> Earthmoving [Send to Earthmoving Dept. for Review]\n  - Operation Engineer -> PM [Submit to PM]\n  - PM -> Operation Engineer [Send Back With Comments]\n  - Earthmoving -> Operation Engineer [Send Back With Comments]\n  - COO -> PsM [Send back With comments to PsM]\n  - COO -> VP [Send for VP Approval]\n  - VP -> CEO [Send back t"
+      },
+      {
+        "rank": 4,
+        "score": 0.9023,
+        "filename": "Rule of Credit Amendments - ROC Amendments.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Rule of Credit Amendments - ROC Amendments - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation; End; Review; Revise.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation\n  2. Review\n  After Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Creation -> Review [Send for Review]\n  - Review -> End [Closed]\n  - Review -> Revise [Send for Revision]\n  - Revise -> Review [Send Back with Comments]"
+      },
+      {
+        "rank": 5,
+        "score": 0.6501,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "6.2 Process Operations\nSr.\nProcess Cycle Description\nResponsibility\nForm\nCase 1: Potential Subcontractor (Pre-bid agreement)\n1\nTendering shall provide contracts with the Pre-bid\nagreement request showing the following:\n•\nSingle or Multi phase agreement\n•\nPrice offer (Consultant/Subcontractor)\n•\nDOR\n•\nScope of works (for the Single or the Multi phase)\nTendering\n2\nBefore Project Awarding\nContracts shall finalize the Pre-bid agreement along\nwith all special conditions (if any), with the selected\nsubcontractor before project awarding.\nContracts\n3\nAfter Project Awarding to ROWAD\nTendering & Commercial shall conduct a S/C\ndocuments handover meeting with Procurement/MEP.\nH.O. T.O & Contracts shall provide them with the\ncommercial and technical offers including the detailed\nSoW, DOR, and Terms & Conditions, etc.\nProcurement/MEP shall arrange a meeting with the\nSubcontractor to finalize the subco"
+      },
+      {
+        "rank": 6,
+        "score": 0.6194,
+        "filename": "PPC02_Staff_Hiring_Plan_Process.pdf",
+        "section": "PROCESS OUTPUT",
+        "source_type": null,
+        "text": "6.3 PROCESS OUTPUT\n−\nFinal approved and updated priced Organizational Staff Plan.\n−\nFinal approved and updated Top-Level Manpower Summary Form.\n−\nHired employees.\n−\nOngoing Project Status Report.\nThen the Projects Control shall provide for the\nsignature of the final Top-Level Manpower Summary\nForm based on the applicable scenario in the hiring\napproval matrix and where its content is based on the\nfinal signed Organizational Staff Plan.\nPM\nHR\nTop-Level\nManpower\nSummary Form\nF-P-PC-02-03\nHiring Approval\nMatrix\nF-P-PC-02-02\n6\nPM shall start to create a hiring request via CRM.\nInternal transfer to be considered prior to proceeding\nwith new hires.\nRefer to Manpower Planning & Talent Acquisition\nProcess (P-HR-01).\nPM\nHiring Request\n(CRM)\nProject Execution:\n7\nThroughout the project execution, the Organizational\nStaff Plan shall be updated by the Projects Control\nevery three months or before if "
+      }
+    ]
+  },
+  {
+    "id": "WF-04",
+    "question": "In the Request for Quotation approval workflow, who signs after Creation by ETO Engineer?",
+    "gold": "Request for Quotation - Equipment Purchasing CS.pdf",
+    "must_include": [
+      "ETO Manager Review"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Request for Quotation - Equipment Purchasing CS.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request for Quotation - Equipment Purchasing CS - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Site Visit; Creation by ETO Engineer; Project Controls Approval; End; ETO Manager Review; ETO Package Revision; Bid Invitation; Analysis & Award; EDM Site Visit Decision; ETOM / EDM Approval.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by ETO Engineer\n  2. ETO Manager Review\n  3. Bid Invitation\n  4. Analysis & Award\n  5. EDM Site Visit Decision\n  After EDM Site Visit Decision the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Bid Invitation -> ETO Manager Review [Send back with comments]\n  - EDM Site Visit Decision -> End [Send for PC Approval Cancel]\n  - Project Controls Approval -> End [Approve]\n  - ETOM / EDM Approval -> Project Controls Appr"
+      },
+      {
+        "rank": 2,
+        "score": 0.922,
+        "filename": "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request For Quotation Date - WF - Request For Quotation Date - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation; End.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Creation\n  2. End\n\nRouting:\n  - Creation -> End [Submit]"
+      },
+      {
+        "rank": 3,
+        "score": 0.9086,
+        "filename": "Request for Quotation - Rental Equipment CS.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request for Quotation - Rental Equipment CS - Approval flow\nApproval workflow: Approval flow.\n\nSteps: ERA Preparation for Budgeted Items; End; ETO Manager Review; Analysis and Award; ETO Package Revision; Equipment Department Manager; Bid Invitation; Operation Manager Approval; ETO Manager; Technical Affairs Manager Approval; Site Cost Control Approval.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. ERA Preparation for Budgeted Items\n  2. ETO Manager Review\n  3. Bid Invitation\n  4. Analysis and Award\n  After Analysis and Award the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Equipment Department Manager -> Analysis and Award [Send back to Creator]\n  - Operation Manager Approval -> End [Approve]\n  - Technical Affairs Manager Approval -> Analysis and Award [Sen"
+      },
+      {
+        "rank": 4,
+        "score": 0.893,
+        "filename": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request for Quotation - Rental Equipment CS-BU-V1 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: ERA Preparation for Budgeted Items; End; ETO Manager Review; Analysis and Award; ERA Package Revision; Equipment Department Manager; Bid Invitation; Business Unit Manager; ETO Manager; Site Cost Control Approval.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. ERA Preparation for Budgeted Items\n  2. ETO Manager Review\n  3. Bid Invitation\n  4. Analysis and Award\n  After Analysis and Award the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Equipment Department Manager -> Analysis and Award [Send back to Creator]\n  - Analysis and Award -> Bid Invitation [Send Back to Bid Invitation]\n  - Business Unit Manager -> End [Approve]\n  - ERA Preparation for Budgeted I"
+      },
+      {
+        "rank": 5,
+        "score": 0.8269,
+        "filename": "Request for Quotation - Request for Bid (Operation).pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request for Quotation - Request for Bid (Operation) - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Site TO Engineer Preparation; PM; End; Analysis and Award; Cost Control Engineer; Country Manager; Bid Invitation; Site Technical office Manager; COO.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Site TO Engineer Preparation\n  2. Bid Invitation\n  3. Analysis and Award\n  4. Site Technical office Manager\n  5. Cost Control Engineer\n  6. PM\n  7. Country Manager\n  After Country Manager the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End [Approve]\n  - COO -> Country Manager [Send Back with Comments]\n  - Country Manager -> Cost Control Engineer [Send Back With Comments to Cost Control]\n  - Site TO Engineer Preparation -> Bid Invitation [Invite Bids"
+      },
+      {
+        "rank": 6,
+        "score": 0.8251,
+        "filename": "Material List ( E2 Log ) - E2 Log.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Material List ( E2 Log ) - E2 Log - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by Planning Engineer; End; Planning Manager Review; E2 Log Update.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Planning Engineer\n  2. Planning Manager Review\n  After Planning Manager Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Creation by Planning Engineer -> Planning Manager Review [Send for Planning Manager Review]\n  - Planning Manager Review -> E2 Log Update [Send for Update]\n  - E2 Log Update -> Planning Manager Review [Send for Planning Manager Review]\n  - Planning Manager Review -> Planning Manager Review [Submit Send Back to (Planning Manager Review)]\n  - Planning Manager Review -> End [Submit Close]"
+      }
+    ]
+  },
+  {
+    "id": "WF-05",
+    "question": "In the Meeting Minutes workflow, where does the request go after Documentation of Meeting Results?",
+    "gold": "Meeting Minutes - Meeting Minutes WF.pdf",
+    "must_include": [
+      "Review"
+    ],
+    "type": "workflow_routing",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Meeting Minutes - Meeting Minutes WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Meeting Minutes - Meeting Minutes WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Meeting Planning; End; Documentation of Meeting Results; Review.\n\nRouting:\n  - Documentation of Meeting Results -> Review [Review]\n  - Meeting Planning -> Documentation of Meeting Results [Submit]\n  - Review -> End [Complete]\n  - Review -> Documentation of Meeting Results [Revise]\n  - Meeting Planning -> End [Complete]\n  - Documentation of Meeting Results -> End [For Information]"
+      },
+      {
+        "rank": 2,
+        "score": 0.9516,
+        "filename": "Management Leadership Meeting - Management Leadership Meeting.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Management Leadership Meeting - Management Leadership Meeting - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Meeting Planning; End; Documentation of Meeting Results; Review.\n\nRouting:\n  - Documentation of Meeting Results -> Review [Review]\n  - Meeting Planning -> Documentation of Meeting Results [Submit]\n  - Review -> End [Complete]\n  - Review -> Documentation of Meeting Results [Revise]\n  - Meeting Planning -> End [Complete]\n  - Documentation of Meeting Results -> End [For Information]"
+      },
+      {
+        "rank": 3,
+        "score": 0.6745,
+        "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Potential Subcontractor (Post Award) - Potential SCs Post-Award - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Meeting with Subcontractor; End; Contracts; MEP/ Operation; COO; Input from Departments; Departments Signatures.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Meeting with Subcontractor\n  2. Contracts\n  After Contracts the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> MEP/ Operation [Send Back with Comments Send Back with Comments]\n  - Meeting with Subcontractor -> Contracts [S Draft the Subcontract]\n  - Contracts -> Input from Departments\n  - Input from Departments -> Contracts [Send Back to Contracts Dept.]\n  - Contracts -> MEP/ Operation [Submit Final SC Agreement]\n  - MEP/ Operation -> COO [Send to COO to Sign]\n  - COO -> End [S"
+      },
+      {
+        "rank": 4,
+        "score": 0.657,
+        "filename": "Project Closeout - Project Closeout WF V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Project Closeout - Project Closeout WF V1 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Auto-Creation; End; Closeout Meeting & Checklist Creation; PM Notification; Hold.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Auto-Creation\n  2. PM Notification\n  After PM Notification the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Auto-Creation -> PM Notification [Start]\n  - Closeout Meeting & Checklist Creation -> End [Close]\n  - Hold -> Closeout Meeting & Checklist Creation [S Start]\n  - PM Notification -> Closeout Meeting & Checklist Creation [Submit Start S]\n  - PM Notification -> Hold [Submit Hold]"
+      },
+      {
+        "rank": 5,
+        "score": 0.6307,
+        "filename": "Project Launching - WF - Project Launching.pdf",
+        "section": "Approval flow 2",
+        "source_type": "pdf_vector",
+        "text": "Project Launching - WF - Project Launching - Approval flow 2\nApproval workflow: Approval flow 2.\n\nSteps: Budget Zero Meeting; End; Operation Coordination Meeting; Project Kick off Meeting.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Operation Coordination Meeting\n  2. Project Kick off Meeting\n  3. Budget Zero Meeting\n  4. End\n\nRouting:\n  - Budget Zero Meeting -> End [Close S]\n  - Operation Coordination Meeting -> Project Kick off Meeting [S Project Kick-off Meeting]\n  - Project Kick off Meeting -> Budget Zero Meeting [S Budget Zero Meeting]"
+      }
+    ]
+  },
+  {
+    "id": "WF-06",
+    "question": "In the Customer Satisfaction workflow, where does the request go after QAM No?",
+    "gold": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+    "must_include": [
+      "COO"
+    ],
+    "type": "workflow_routing",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Customer Satisfaction WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Commercial Dept.; End; QAM; COO.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Commercial Dept.\n  2. QAM\n  After QAM the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End [Close]\n  - Commercial Dept. -> QAM [Submit to QAM]\n  - QAM -> COO [Submit Send to COO]\n  - QAM -> End [Submit Closed]"
+      },
+      {
+        "rank": 2,
+        "score": 1.0642,
+        "filename": "Customer Satisfaction - Creation by PM.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Creation by PM - Approval flow\nApproval workflow: Approval flow.\n\nSteps: PM; End; Commercial Dept.; QAM; COO.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. PM\n  2. Commercial Dept.\n  3. QAM\n  After QAM the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End\n  - PM -> Commercial Dept. [Update the customer satisfaction log accordingly]\n  - Commercial Dept. -> QAM [Send to QA Dept.]\n  - QAM -> COO [Submit]\n  - QAM -> End [Submit Close Closed]"
+      },
+      {
+        "rank": 3,
+        "score": 1.0456,
+        "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Creation by Commercial Dept. V1 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: PM; End; Commercial Dept.; QAM No; COO; QAM Yes.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. PM\n  2. Commercial Dept.\n  After Commercial Dept. the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End\n  - PM -> Commercial Dept. [Update the customer satisfaction log accordingly]\n  - QAM No -> COO [Submit Issue NCR & Send to COO]\n  - QAM No -> End [Submit Close Closed]\n  - QAM Yes -> COO [Submit Issue NCR & Send to COO]\n  - QAM Yes -> End [Submit Closed]\n  - Commercial Dept. -> QAM Yes [Submit Send to QA Dept. Yes]\n  - Commercial Dept. -> QAM No [Submit Send to QA Dept. No]"
+      },
+      {
+        "rank": 4,
+        "score": 1.0132,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF V1.pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Customer Satisfaction WF V1 - Approval flow 1\nApproval workflow: Approval flow 1.\n\nSteps: Commercial Dept.; QAM No; QAM Yes.\n\nRouting:\n  - Commercial Dept. -> QAM Yes [Submit Submit to QAM Yes]\n  - Commercial Dept. -> QAM No [Submit Submit to QAM No]"
+      },
+      {
+        "rank": 5,
+        "score": 0.6896,
+        "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "6.2. PROCESS OPERATION\nSr.\nProcess Cycle description\nResponsibility\nForm\n1\nCustomer Satisfaction Survey\nCommercial dept shall send the customer\nsatisfaction survey to the clients twice during the\nproject’s life cycle (mid and at the end of the\nproject), or minimum once a year if the duration of\nthe project exceeds 12 months.\nCommercial\nCustomer\nSatisfaction\nSurvey\nF-P-CM-01-01\n2\nIn case of delay in the customer’s response for a\nmaximum period of a month or difficulty in reaching\nthe customer, Commercial dept may ask the PM to\ncommunicate with the customer, and collect the\ncustomer satisfaction form, if required.\nCommercial\nPM\nCustomer\nSatisfaction\nSurvey\nF-P-CM-01-01\n3\nUpon receiving the customer satisfaction survey,\nCommercial dept shall update the customer\nsatisfaction log accordingly, and send it to the QA\ndept by the end of Q2 & Q4 of each year.\nCommercial\nCustomer\nSatisfaction Log\nF"
+      },
+      {
+        "rank": 6,
+        "score": 0.6681,
+        "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+        "section": "PERFORMANCE MEASURES",
+        "source_type": null,
+        "text": "9. PERFORMANCE MEASURE\nThe Customer satisfaction monitoring and measuring will be done for the main customers\nby three methods:\nCustomer Satisfaction Process\nEffective Date: Nov 2021\nRev. No.: 01\nDoc. No.: P-CM-01\nPage 6 of 6\n•\nQA manger shall prepare the analysis reports for the customer satisfaction surveys\nand the customer complaints.\n•\nThe continuity of cooperation with RME in new projects can be considered a\nmethod for measuring customer satisfaction.\n•\nCustomer visits and verbal discussions performed by the CEO or Commercial\nManager."
+      }
+    ]
+  },
+  {
+    "id": "WF-07",
+    "question": "In the Material List ( E2 Log ) approval workflow, who signs after Creation by VMO Representative?",
+    "gold": "Material List ( E2 Log ) - Manual Material List WF.pdf",
+    "must_include": [
+      "VMO & Planning Department Inputs"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1193,
+        "filename": "Material List ( E2 Log ) - Manual Material List WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Material List ( E2 Log ) - Manual Material List WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by VMO Representative; End; VMO & Planning Department Inputs; Material List Updates.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Creation by VMO Representative\n  2. VMO & Planning Department Inputs\n  3. Material List Updates\n  4. End\n\nRouting:\n  - Material List Updates -> End [Approved]\n  - Creation by VMO Representative -> VMO & Planning Department Inputs [Send for Departments Input]\n  - VMO & Planning Department Inputs -> Material List Updates [Send for Updates]\n  - Material List Updates -> VMO & Planning Department Inputs [Send back with comments]"
+      },
+      {
+        "rank": 2,
+        "score": 0.9986,
+        "filename": "Material List - Material List WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Material List - Material List WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by VMO Representative; End; Planner Review; Material List Update.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by VMO Representative\n  2. Planner Review\n  After Planner Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Creation by VMO Representative -> Planner Review [Send for Planner Review]\n  - Planner Review -> Material List Update [Update Material]\n  - Material List Update -> Planner Review [Send for Planner Review]\n  - Planner Review -> Planner Review [Submit Send back to Planner]\n  - Planner Review -> End [Submit Close]"
+      },
+      {
+        "rank": 3,
+        "score": 0.9448,
+        "filename": "Material List ( E2 Log ) - E2 Log.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Material List ( E2 Log ) - E2 Log - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by Planning Engineer; End; Planning Manager Review; E2 Log Update.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Planning Engineer\n  2. Planning Manager Review\n  After Planning Manager Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Creation by Planning Engineer -> Planning Manager Review [Send for Planning Manager Review]\n  - Planning Manager Review -> E2 Log Update [Send for Update]\n  - E2 Log Update -> Planning Manager Review [Send for Planning Manager Review]\n  - Planning Manager Review -> Planning Manager Review [Submit Send Back to (Planning Manager Review)]\n  - Planning Manager Review -> End [Submit Close]"
+      },
+      {
+        "rank": 4,
+        "score": 0.667,
+        "filename": "RFQ Material Reference - RFQ_Material_Reference_WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "RFQ Material Reference - RFQ_Material_Reference_WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by Procurement/ Purchasing; End; Update Dates; Material Lines Revision.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Creation by Procurement/ Purchasing\n  2. Update Dates\n\nRouting:\n  - Creation by Procurement/ Purchasing -> Update Dates [Update Dates]\n  - Update Dates -> Material Lines Revision [Revise Lines]\n  - Material Lines Revision -> Update Dates [Update Dates]\n  - Material Lines Revision -> End [submit Close]\n  - Material Lines Revision -> Material Lines Revision [submit Update Dates]"
+      },
+      {
+        "rank": 5,
+        "score": 0.6551,
+        "filename": "External Material Inspection Request - External Material Inspection Request.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "External Material Inspection Request - External Material Inspection Request - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by QC; End; Client/Consultant’ s Reply; Edit by QC.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Creation by QC\n  2. Client/Consultant’ s Reply\n  3. End\n\nRouting:\n  - Creation by QC -> Client/Consultant’ s Reply [Send to Client]\n  - Edit by QC -> End [S Close with Revision Send Back to QC]\n  - Edit by QC -> Client/Consultant’ s Reply [Send to Client]\n  - Client/Consultant’ s Reply -> End [Submit Close]"
+      },
+      {
+        "rank": 6,
+        "score": 0.6484,
+        "filename": "Inspection Request (IR) - Formwork IR.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Inspection Request (IR) - Formwork IR - Approval flow\nApproval workflow: Approval flow.\n\nSteps: IR Creation; End; QC; IR Creator; Formwork.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. IR Creation\n  2. QC\n  After QC the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - IR Creation -> QC [Send To QC]\n  - Formwork -> QC [Send back with Comments]\n  - QC -> IR Creator [Send Back with Comments]\n  - IR Creator -> QC [Send to QC]\n  - Formwork -> End [Send Not Required Send Close]\n  - QC -> Formwork [Send Send to Formwork Engineer]\n  - QC -> End [Send Revision Required Revision Required Not Required Send Revision Required Revision Required Close]"
+      }
+    ]
+  },
+  {
+    "id": "WF-08",
+    "question": "In the Document Submittal approval workflow, who signs after Preparation by QCM?",
+    "gold": "Document Submittal - ITP WF.pdf",
+    "must_include": [
+      "Review by CM"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Document Submittal - ITP (Client) WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - ITP (Client) WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by QCM; End; Review by Site TO; Client/Consultant’ s Reply; Review by CM; QCM.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Preparation by QCM\n  2. Review by CM\n  After Review by CM the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Preparation by QCM -> Review by CM [Send for Review]\n  - Review by Site TO -> Client/Consultant’ s Reply [Send for Client/Consulta nt]\n  - Review by CM -> QCM [Send back with Comments]\n  - QCM -> Review by CM [Submit to CM]\n  - Review by Site TO -> QCM\n  - Client/Consultant’ s Reply -> End [Close]\n  - QCM -> Review by Site TO [Submit to Site TO]\n  - Review by CM -> Review by Site TO [Send for (Site TO) Review]"
+      },
+      {
+        "rank": 2,
+        "score": 1.1104,
+        "filename": "Document Submittal - ITP WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - ITP WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by QCM; End; Review by Site TO; Site DC (Client/Consultant ’s Reply); Review by CM; QCM.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Preparation by QCM\n  2. Review by CM\n  After Review by CM the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Preparation by QCM -> Review by CM [Send for Review]\n  - Review by Site TO -> Site DC (Client/Consultant ’s Reply) [Send for Official Submission]\n  - Review by CM -> QCM [Send back with Comments]\n  - QCM -> Review by CM [Submit to CM]\n  - Review by Site TO -> QCM\n  - Site DC (Client/Consultant ’s Reply) -> End [Close]\n  - QCM -> Review by Site TO [Submit to Site TO]\n  - Review by CM -> Review by Site TO [Send for (Site TO) R"
+      },
+      {
+        "rank": 3,
+        "score": 1.0801,
+        "filename": "Document Submittal - Method Statement WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - Method Statement WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by CM; End; Review by Site TO; Approval by QCM; Site DC (Client/Consultant ’s Reply); CM.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Preparation by CM\n  2. Review by Site TO\n  After Review by Site TO the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Approval by QCM -> Review by Site TO [Send Back with Comments]\n  - Preparation by CM -> Review by Site TO [Send for Review]\n  - Review by Site TO -> CM [Send back to CM with Comments]\n  - CM -> Review by Site TO [Submit]\n  - Review by Site TO -> Approval by QCM [Send for QCM Approval]\n  - Approval by QCM -> Site DC (Client/Consultant ’s Reply) [Send for Official Submission]\n  - Site DC (Client/Consulta"
+      },
+      {
+        "rank": 4,
+        "score": 1.0755,
+        "filename": "Document Submittal - Method Statement Client WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - Method Statement Client WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by CM; End; Review by Site TO; Approval by QCM; Client/Consultant’ s Reply; CM.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Preparation by CM\n  2. Review by Site TO\n  After Review by Site TO the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Approval by QCM -> Review by Site TO [Send Back with Comments]\n  - Preparation by CM -> Review by Site TO [Send for Review]\n  - Review by Site TO -> CM [Send back to CM with Comments]\n  - CM -> Review by Site TO [Submit]\n  - Review by Site TO -> Approval by QCM [Send for QCM Approval]\n  - Approval by QCM -> Client/Consultant’ s Reply [Send for Client/Consulta nt]\n  - Client/Consultant’ s Reply -> End [Clo"
+      },
+      {
+        "rank": 5,
+        "score": 0.9764,
+        "filename": "Document Submittal - Document Submittals WF V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - Document Submittals WF V1 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by DC; End; DC; Dates Update.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Preparation by DC\n  2. DC\n  After DC the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Preparation by DC -> DC [Send]\n  - DC -> End [Cancel Update All other Submittal Types Code (A or B) Code (C) Update All other Submittal Types Code (A or B) Code (D)]\n  - DC -> Dates Update [Update Submittal Type = Material Sample Submittal]\n  - Dates Update -> End [Submit Code (C) Submit Code (D)]"
+      },
+      {
+        "rank": 6,
+        "score": 0.9642,
+        "filename": "Document Submittal - Document Submittal Client WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - Document Submittal Client WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by DC; End; Client/Consultant’ s Reply.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Preparation by DC\n  2. Client/Consultant’ s Reply\n  3. End\n\nRouting:\n  - Preparation by DC -> Client/Consultant’ s Reply [Send for Client/Consulta nt]\n  - Client/Consultant’ s Reply -> End [Close]"
+      }
+    ]
+  },
+  {
+    "id": "WF-09",
+    "question": "In the Subcontracts workflow, where does the request go after Creation by Commercial Debt?",
+    "gold": "Subcontracts - nominate Subcontractor.pdf",
+    "must_include": [
+      "Contracts"
+    ],
+    "type": "workflow_routing",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1196,
+        "filename": "Subcontracts - Nominated Subcontractor.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Subcontracts - Nominated Subcontractor - Approval flow\nApproval workflow: Approval flow.\n\nSteps: DC; Creation by Commercial Debt.; Contracts; End; Contracts; Finance; Project Control; Operation/ MEP; Departments Signatures; COO.\n\nRouting:\n  - Creation by Commercial Debt. -> Contracts [Send Nomination Letter]\n  - Contracts -> Operation/ MEP [Submit Final SC Agreement]\n  - Operation/ MEP -> Contracts [Send signed/ Submit Final stamped copies SC Agreement to Contracts]\n  - Operation/ MEP -> Departments Signatures [Request Signatures Send Back]\n  - Contracts -> Operation/ MEP\n  - COO -> Departments Signatures [Send Back with Comments]\n  - Operation/ MEP -> COO [Send to COO to Sign]\n  - Contracts -> Finance [Send for Finance Review]\n  - Finance -> Contracts [Send Back with Comments]\n  - Contracts -> Project Control [Request Input from PC]\n  - COO -> End [Close]\n  - Project Control -> Contract"
+      },
+      {
+        "rank": 2,
+        "score": 1.106,
+        "filename": "Subcontracts - nominate Subcontractor.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Subcontracts - nominate Subcontractor - Approval flow\nApproval workflow: Approval flow.\n\nSteps: DC; Creation by Commercial Debt.; Contracts; End; Contracts; Finance; Project Control; Operation/ MEP; Departments Signatures; COO.\n\nRouting:\n  - Creation by Commercial Debt. -> Contracts [Send Nomination Letter]\n  - Contracts -> Operation/ MEP [Submit Final SC Agreement]\n  - Operation/ MEP -> Contracts [Send signed/ Submit Final stamped copies SC Agreement to Contracts]\n  - Operation/ MEP -> Departments Signatures [Request Signatures Send Back]\n  - Contracts -> Operation/ MEP\n  - COO -> Departments Signatures [Send Back with Comments]\n  - Operation/ MEP -> COO [Send to COO to Sign]\n  - Contracts -> Finance [Send for Finance Review]\n  - Finance -> Contracts [Send Back with Comments]\n  - Contracts -> Project Control [Request Input from PC]\n  - COO -> End [Close]\n  - Project Control -> Contracts"
+      },
+      {
+        "rank": 3,
+        "score": 0.9559,
+        "filename": "Bonds Request - Bonds Request WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Bonds Request - Bonds Request WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: CFO Approval; Creation by Commercial Engineer; End; Commercial Manager Approval Send; Clients & Trade Department; Commercial Engineer; Clients & Trade Manager; Clients & Trade Department; Commercial Engineer Revision; Commercial Engineer Edits/Cancels; Commercial Engineer Modification.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Commercial Engineer\n  2. Commercial Manager Approval Send\n  After Commercial Manager Approval Send the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Clients & Trade Department -> Clients & Trade Manager [Send back with comments to Clients & Trade Manager]\n  - Clients & Trade Department -> Commercial Engineer Revision\n  - Clients & "
+      },
+      {
+        "rank": 4,
+        "score": 0.951,
+        "filename": "Bonds Request - Bond Request Revision WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Bonds Request - Bond Request Revision WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Clients & Trade Manager; Commercial Engineer Modification; CFO Approval; Creation by Commercial Engineer; End; Commercial Manager Send Approval; Clients & Trade Department; Commercial Engineer; Clients & Trade Department; Commercial Engineer Revision; Commercial Engineer Edits/Cancels.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Commercial Engineer\n  2. Commercial Manager Send Approval\n  After Commercial Manager Send Approval the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Clients & Trade Manager -> Commercial Engineer Modification\n  - CFO Approval -> Clients & Trade Manager [Send to Finance Send Back With Comments to Clients & Trade Managerl]\n  "
+      },
+      {
+        "rank": 5,
+        "score": 0.7826,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "6.2 Process Operations\nSr.\nProcess Cycle Description\nResponsibility\nForm\nCase 1: Potential Subcontractor (Pre-bid agreement)\n1\nTendering shall provide contracts with the Pre-bid\nagreement request showing the following:\n•\nSingle or Multi phase agreement\n•\nPrice offer (Consultant/Subcontractor)\n•\nDOR\n•\nScope of works (for the Single or the Multi phase)\nTendering\n2\nBefore Project Awarding\nContracts shall finalize the Pre-bid agreement along\nwith all special conditions (if any), with the selected\nsubcontractor before project awarding.\nContracts\n3\nAfter Project Awarding to ROWAD\nTendering & Commercial shall conduct a S/C\ndocuments handover meeting with Procurement/MEP.\nH.O. T.O & Contracts shall provide them with the\ncommercial and technical offers including the detailed\nSoW, DOR, and Terms & Conditions, etc.\nProcurement/MEP shall arrange a meeting with the\nSubcontractor to finalize the subco"
+      },
+      {
+        "rank": 6,
+        "score": 0.7479,
+        "filename": "PTN01_Project_Initiation_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "5.2. PROCESS OPERATION\nSr.\nProcess Cycle Description\nResponsibility\nForm\n1\nGO or No GO\nAfter receiving RFQ/ RFP/tender announcement/\ninvitation from the client, the Commercial shall\nprepare the Go or No Go form within 24 hrs. from\nreceiving the documents and send it to Tendering,\nCOO and CEO for decision.\nCommercial\ndept.\nGo or No Go\nF-P-TN-01-06\n2\nIf the decision is not to proceed with the project\nstudy, the Commercial shall send a letter of apology\nto the client who sent the RFP/RFQ.\nIf the decision is to study the project, the commercial\nshall upload Contract documents on Head office\nserver and notify Tendering and Contracts\nCommercial\ndept.\nLetter Template\nF-P-QD-06-04\n3\nThe Tendering Manager shall initiate the estimation\nprocess and assign a Tender Coordinator.\nSubsequently, relevant information will be collected\nfrom various departments to facilitate the project\nstudy, and a site v"
+      }
+    ]
+  },
+  {
+    "id": "WF-10",
+    "question": "In the Customer Satisfaction approval workflow, who signs after Commercial Dept?",
+    "gold": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+    "must_include": [
+      "QAM"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1196,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Customer Satisfaction WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Commercial Dept.; End; QAM; COO.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Commercial Dept.\n  2. QAM\n  After QAM the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End [Close]\n  - Commercial Dept. -> QAM [Submit to QAM]\n  - QAM -> COO [Submit Send to COO]\n  - QAM -> End [Submit Closed]"
+      },
+      {
+        "rank": 2,
+        "score": 1.0987,
+        "filename": "Customer Satisfaction - Creation by PM.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Creation by PM - Approval flow\nApproval workflow: Approval flow.\n\nSteps: PM; End; Commercial Dept.; QAM; COO.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. PM\n  2. Commercial Dept.\n  3. QAM\n  After QAM the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End\n  - PM -> Commercial Dept. [Update the customer satisfaction log accordingly]\n  - Commercial Dept. -> QAM [Send to QA Dept.]\n  - QAM -> COO [Submit]\n  - QAM -> End [Submit Close Closed]"
+      },
+      {
+        "rank": 3,
+        "score": 1.0868,
+        "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Creation by Commercial Dept. V1 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: PM; End; Commercial Dept.; QAM No; COO; QAM Yes.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. PM\n  2. Commercial Dept.\n  After Commercial Dept. the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End\n  - PM -> Commercial Dept. [Update the customer satisfaction log accordingly]\n  - QAM No -> COO [Submit Issue NCR & Send to COO]\n  - QAM No -> End [Submit Close Closed]\n  - QAM Yes -> COO [Submit Issue NCR & Send to COO]\n  - QAM Yes -> End [Submit Closed]\n  - Commercial Dept. -> QAM Yes [Submit Send to QA Dept. Yes]\n  - Commercial Dept. -> QAM No [Submit Send to QA Dept. No]"
+      },
+      {
+        "rank": 4,
+        "score": 0.9459,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF V1.pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Customer Satisfaction WF V1 - Approval flow 1\nApproval workflow: Approval flow 1.\n\nSteps: Commercial Dept.; QAM No; QAM Yes.\n\nRouting:\n  - Commercial Dept. -> QAM Yes [Submit Submit to QAM Yes]\n  - Commercial Dept. -> QAM No [Submit Submit to QAM No]"
+      },
+      {
+        "rank": 5,
+        "score": 0.694,
+        "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "6.2. PROCESS OPERATION\nSr.\nProcess Cycle description\nResponsibility\nForm\n1\nCustomer Satisfaction Survey\nCommercial dept shall send the customer\nsatisfaction survey to the clients twice during the\nproject’s life cycle (mid and at the end of the\nproject), or minimum once a year if the duration of\nthe project exceeds 12 months.\nCommercial\nCustomer\nSatisfaction\nSurvey\nF-P-CM-01-01\n2\nIn case of delay in the customer’s response for a\nmaximum period of a month or difficulty in reaching\nthe customer, Commercial dept may ask the PM to\ncommunicate with the customer, and collect the\ncustomer satisfaction form, if required.\nCommercial\nPM\nCustomer\nSatisfaction\nSurvey\nF-P-CM-01-01\n3\nUpon receiving the customer satisfaction survey,\nCommercial dept shall update the customer\nsatisfaction log accordingly, and send it to the QA\ndept by the end of Q2 & Q4 of each year.\nCommercial\nCustomer\nSatisfaction Log\nF"
+      },
+      {
+        "rank": 6,
+        "score": 0.6771,
+        "filename": "PCM01_Customer_Satisfaction_Process.pdf",
+        "section": "PROCESS CONTROL",
+        "source_type": null,
+        "text": "8. PROCESS CONTROL\n•\nCollecting customer satisfaction surveys by Commercial dept on time.\n•\nFollow up for the proper corrective action taken to close the issued NCR in timely\nmanner."
+      }
+    ]
+  },
+  {
+    "id": "WF-11",
+    "question": "In the Document Submittal approval workflow, who signs after Preparation by DC?",
+    "gold": "Document Submittal - Document Submittal Client WF.pdf",
+    "must_include": [
+      "Client/Consultant’ s Reply"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.0683,
+        "filename": "Document Submittal - Documents Submittal.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - Documents Submittal - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by DC; End; Site DC (Client/Consultant ’s Reply).\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Preparation by DC\n  2. Site DC (Client/Consultant ’s Reply)\n  3. End\n\nRouting:\n  - Preparation by DC -> Site DC (Client/Consultant ’s Reply) [Send]\n  - Site DC (Client/Consultant ’s Reply) -> End [Cancel Close]"
+      },
+      {
+        "rank": 2,
+        "score": 1.0661,
+        "filename": "Document Submittal - Document Submittals WF V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - Document Submittals WF V1 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by DC; End; DC; Dates Update.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Preparation by DC\n  2. DC\n  After DC the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Preparation by DC -> DC [Send]\n  - DC -> End [Cancel Update All other Submittal Types Code (A or B) Code (C) Update All other Submittal Types Code (A or B) Code (D)]\n  - DC -> Dates Update [Update Submittal Type = Material Sample Submittal]\n  - Dates Update -> End [Submit Code (C) Submit Code (D)]"
+      },
+      {
+        "rank": 3,
+        "score": 1.0441,
+        "filename": "Document Submittal - Document Submittal Client WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - Document Submittal Client WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by DC; End; Client/Consultant’ s Reply.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Preparation by DC\n  2. Client/Consultant’ s Reply\n  3. End\n\nRouting:\n  - Preparation by DC -> Client/Consultant’ s Reply [Send for Client/Consulta nt]\n  - Client/Consultant’ s Reply -> End [Close]"
+      },
+      {
+        "rank": 4,
+        "score": 0.9458,
+        "filename": "Document Submittal - Method Statement WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - Method Statement WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by CM; End; Review by Site TO; Approval by QCM; Site DC (Client/Consultant ’s Reply); CM.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Preparation by CM\n  2. Review by Site TO\n  After Review by Site TO the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Approval by QCM -> Review by Site TO [Send Back with Comments]\n  - Preparation by CM -> Review by Site TO [Send for Review]\n  - Review by Site TO -> CM [Send back to CM with Comments]\n  - CM -> Review by Site TO [Submit]\n  - Review by Site TO -> Approval by QCM [Send for QCM Approval]\n  - Approval by QCM -> Site DC (Client/Consultant ’s Reply) [Send for Official Submission]\n  - Site DC (Client/Consulta"
+      },
+      {
+        "rank": 5,
+        "score": 0.9417,
+        "filename": "Document Submittal - ITP WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - ITP WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by QCM; End; Review by Site TO; Site DC (Client/Consultant ’s Reply); Review by CM; QCM.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Preparation by QCM\n  2. Review by CM\n  After Review by CM the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Preparation by QCM -> Review by CM [Send for Review]\n  - Review by Site TO -> Site DC (Client/Consultant ’s Reply) [Send for Official Submission]\n  - Review by CM -> QCM [Send back with Comments]\n  - QCM -> Review by CM [Submit to CM]\n  - Review by Site TO -> QCM\n  - Site DC (Client/Consultant ’s Reply) -> End [Close]\n  - QCM -> Review by Site TO [Submit to Site TO]\n  - Review by CM -> Review by Site TO [Send for (Site TO) R"
+      },
+      {
+        "rank": 6,
+        "score": 0.8524,
+        "filename": "Document Submittal - ITP (Client) WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Document Submittal - ITP (Client) WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Preparation by QCM; End; Review by Site TO; Client/Consultant’ s Reply; Review by CM; QCM.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Preparation by QCM\n  2. Review by CM\n  After Review by CM the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Preparation by QCM -> Review by CM [Send for Review]\n  - Review by Site TO -> Client/Consultant’ s Reply [Send for Client/Consulta nt]\n  - Review by CM -> QCM [Send back with Comments]\n  - QCM -> Review by CM [Submit to CM]\n  - Review by Site TO -> QCM\n  - Client/Consultant’ s Reply -> End [Close]\n  - QCM -> Review by Site TO [Submit to Site TO]\n  - Review by CM -> Review by Site TO [Send for (Site TO) Review]"
+      }
+    ]
+  },
+  {
+    "id": "WF-12",
+    "question": "In the Request for Quotation approval workflow, who signs after ERA Preparation for Budgeted Items?",
+    "gold": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+    "must_include": [
+      "ETO Manager Review"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.0936,
+        "filename": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request for Quotation - Rental Equipment CS-BU-V1 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: ERA Preparation for Budgeted Items; End; ETO Manager Review; Analysis and Award; ERA Package Revision; Equipment Department Manager; Bid Invitation; Business Unit Manager; ETO Manager; Site Cost Control Approval.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. ERA Preparation for Budgeted Items\n  2. ETO Manager Review\n  3. Bid Invitation\n  4. Analysis and Award\n  After Analysis and Award the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Equipment Department Manager -> Analysis and Award [Send back to Creator]\n  - Analysis and Award -> Bid Invitation [Send Back to Bid Invitation]\n  - Business Unit Manager -> End [Approve]\n  - ERA Preparation for Budgeted I"
+      },
+      {
+        "rank": 2,
+        "score": 1.0783,
+        "filename": "Request for Quotation - Rental Equipment CS.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request for Quotation - Rental Equipment CS - Approval flow\nApproval workflow: Approval flow.\n\nSteps: ERA Preparation for Budgeted Items; End; ETO Manager Review; Analysis and Award; ETO Package Revision; Equipment Department Manager; Bid Invitation; Operation Manager Approval; ETO Manager; Technical Affairs Manager Approval; Site Cost Control Approval.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. ERA Preparation for Budgeted Items\n  2. ETO Manager Review\n  3. Bid Invitation\n  4. Analysis and Award\n  After Analysis and Award the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Equipment Department Manager -> Analysis and Award [Send back to Creator]\n  - Operation Manager Approval -> End [Approve]\n  - Technical Affairs Manager Approval -> Analysis and Award [Sen"
+      },
+      {
+        "rank": 3,
+        "score": 0.878,
+        "filename": "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request For Quotation Date - WF - Request For Quotation Date - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation; End.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Creation\n  2. End\n\nRouting:\n  - Creation -> End [Submit]"
+      },
+      {
+        "rank": 4,
+        "score": 0.8085,
+        "filename": "Request for Quotation - Request for Bid WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request for Quotation - Request for Bid WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Assemble Initial Bid Package; End; Analysis and Award; Bid Invitation.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Assemble Initial Bid Package\n  2. Bid Invitation\n  3. Analysis and Award\n  4. End\n\nRouting:\n  - Assemble Initial Bid Package -> Bid Invitation [Invite Bids]\n  - Analysis and Award -> Bid Invitation [Send Back with Comments]\n  - Analysis and Award -> End [Award and Close Cancel]\n  - Bid Invitation -> Analysis and Award [Analyze]"
+      },
+      {
+        "rank": 5,
+        "score": 0.7918,
+        "filename": "Request for Quotation - Request for Bid (Operation).pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request for Quotation - Request for Bid (Operation) - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Site TO Engineer Preparation; PM; End; Analysis and Award; Cost Control Engineer; Country Manager; Bid Invitation; Site Technical office Manager; COO.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Site TO Engineer Preparation\n  2. Bid Invitation\n  3. Analysis and Award\n  4. Site Technical office Manager\n  5. Cost Control Engineer\n  6. PM\n  7. Country Manager\n  After Country Manager the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End [Approve]\n  - COO -> Country Manager [Send Back with Comments]\n  - Country Manager -> Cost Control Engineer [Send Back With Comments to Cost Control]\n  - Site TO Engineer Preparation -> Bid Invitation [Invite Bids"
+      },
+      {
+        "rank": 6,
+        "score": 0.7675,
+        "filename": "Request for Quotation - Equipment Purchasing CS.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request for Quotation - Equipment Purchasing CS - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Site Visit; Creation by ETO Engineer; Project Controls Approval; End; ETO Manager Review; ETO Package Revision; Bid Invitation; Analysis & Award; EDM Site Visit Decision; ETOM / EDM Approval.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by ETO Engineer\n  2. ETO Manager Review\n  3. Bid Invitation\n  4. Analysis & Award\n  5. EDM Site Visit Decision\n  After EDM Site Visit Decision the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Bid Invitation -> ETO Manager Review [Send back with comments]\n  - EDM Site Visit Decision -> End [Send for PC Approval Cancel]\n  - Project Controls Approval -> End [Approve]\n  - ETOM / EDM Approval -> Project Controls Appr"
+      }
+    ]
+  },
+  {
+    "id": "WF-13",
+    "question": "In the Potential Delay Events approval workflow, who signs after Contracts Department?",
+    "gold": "Potential Delay Events - NOD Auto Workflow.pdf",
+    "must_include": [
+      "Review"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.12,
+        "filename": "Potential Delay Events - NOD Manual WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Potential Delay Events - NOD Manual WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation; End; Planning Department; Contracts Department; Review.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation\n  2. Planning Department\n  3. Contracts Department\n  After Contracts Department the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Creation -> Planning Department [Send to Planning Dept.]\n  - Planning Department -> Contracts Department [Send to Contracts Dept.]\n  - Contracts Department -> Planning Department [Send Back with Comments]\n  - Contracts Department -> Review [Send for Review]\n  - Review -> Contracts Department [Send Back with Comments]\n  - Contracts Department -> End [Close]"
+      },
+      {
+        "rank": 2,
+        "score": 1.1143,
+        "filename": "Potential Delay Events - NOD Auto Workflow.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Potential Delay Events - NOD Auto Workflow - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Auto-Creation; End; Contracts Department; Review.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Auto-Creation\n  2. Contracts Department\n  3. Review\n\nRouting:\n  - Auto-Creation -> Contracts Department [Submit]\n  - Contracts Department -> Review [Send for Review Send Back with Comments]\n  - Review -> Contracts Department"
+      },
+      {
+        "rank": 3,
+        "score": 0.8194,
+        "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Potential Subcontractor (Post Award) - Potential SCs Post-Award - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Meeting with Subcontractor; End; Contracts; MEP/ Operation; COO; Input from Departments; Departments Signatures.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Meeting with Subcontractor\n  2. Contracts\n  After Contracts the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> MEP/ Operation [Send Back with Comments Send Back with Comments]\n  - Meeting with Subcontractor -> Contracts [S Draft the Subcontract]\n  - Contracts -> Input from Departments\n  - Input from Departments -> Contracts [Send Back to Contracts Dept.]\n  - Contracts -> MEP/ Operation [Submit Final SC Agreement]\n  - MEP/ Operation -> COO [Send to COO to Sign]\n  - COO -> End [S"
+      },
+      {
+        "rank": 4,
+        "score": 0.7738,
+        "filename": "Request For Proposal (RFP) - RFP WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request For Proposal (RFP) - RFP WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Start (Site TO); End; TOM; Review & Approval By TOM; DC; Site TO.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Start (Site TO)\n  2. Review & Approval By TOM\n  3. DC\n  After DC the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Review & Approval By TOM -> DC [Send to DC to Submit]\n  - Site TO -> Review & Approval By TOM [Resubmit]\n  - Start (Site TO) -> Review & Approval By TOM [Submit]\n  - DC -> Review & Approval By TOM [Send Back with Comments to Review & Approval By TOM Send Back with Comments Send Back with Comments to Site TO]\n  - TOM -> End [S Close]\n  - DC -> End [Submit Potential Delay Event Auto- Creation S]\n  - DC -> TOM [Submit Send Response to TOM (No Dela"
+      },
+      {
+        "rank": 5,
+        "score": 0.6872,
+        "filename": "Request For Proposal (RFP) - RFP WF V2.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request For Proposal (RFP) - RFP WF V2 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Start (Site TO); End; TOM; Review & Approval By TOM; DC; Site TO.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Start (Site TO)\n  2. Review & Approval By TOM\n  3. DC\n  4. TOM\n  5. End\n\nRouting:\n  - Review & Approval By TOM -> DC [Send to DC to Submit]\n  - Site TO -> Review & Approval By TOM [Resubmit]\n  - Start (Site TO) -> Review & Approval By TOM [Submit]\n  - DC -> Review & Approval By TOM [Send Back with Comments to Review & Approval By TOM Send Back with Comments Send Back with Comments to Site TO]\n  - TOM -> End [S Close]\n  - DC -> TOM [Submit Potential Delay Event Auto- Creation S Submit Send Response to TOM (No Delay)]"
+      },
+      {
+        "rank": 6,
+        "score": 0.6858,
+        "filename": "Client Contracts - Client Contracts WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Client Contracts - Client Contracts WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation; End; Site Technical Office; Contracts Department; Finance Department; Commercial Department.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Creation\n  2. Commercial Department\n  3. Contracts Department\n  4. Finance Department\n  5. Site Technical Office\n  6. End\n\nRouting:\n  - Contracts Department -> Commercial Department [Send to Contracts Dept. Send Back with Comments]\n  - Creation -> Commercial Department [Send to Commercial Dept.]\n  - Finance Department -> Site Technical Office [Approved]\n  - Contracts Department -> Finance Department [Send to Finance Dept.]\n  - Finance Department -> Contracts Department [Send Back with Comments]\n  - Site Technical Office -> End [Closed]\n  - Commercial Department -> Contracts Department"
+      }
+    ]
+  },
+  {
+    "id": "WF-14",
+    "question": "In the Subcontract Amendments workflow, where does the request go after S/C Signature?",
+    "gold": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+    "must_include": [
+      "Technical Operations Manager"
+    ],
+    "type": "workflow_routing",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.0812,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 2",
+        "source_type": "pdf_vector",
+        "text": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project) - Approval flow 2\nApproval workflow: Approval flow 2.\n\nSteps: ; .\n\nRouting:\n  -  -> \n  -  -> \n\nThresholds recorded on this page but not tied to this flow: Approve Above 3M EGP -> VP Approval; Approve Below 3M EGP -> Finance Review; Submit >=10 M EGP and Subcontract Type = RME Self Execution -> S/C Signature (2); Submit >=10M EGP and Subcontract Type is not RME Self Execution -> Contracts Department; Submit <10M EGP -> S/C Signature; Submit >=10M EGP -> Technical Operations Manager; Submit Below 15M EGP -> S/C Signature (1)"
+      },
+      {
+        "rank": 2,
+        "score": 1.0359,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector",
+        "text": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project) - Approval flow 1\nApproval workflow: Approval flow 1.\n\nSteps: VP; Technical Operations Manager; Finance; Adding Line Items; Earthmoving; PM; Review; Revision; Operation Engineer; Contracts Department; PsM; Creation; S/C Signature; S/C Signature (2); Operation Engineer; COO; CEO.\n\nRouting:\n  - S/C Signature -> Technical Operations Manager [Submit]\n  - Contracts Department -> S/C Signature (2) [Send for S/C Signature]\n  - S/C Signature (2) -> COO [Send for COO Approval]\n  - Operation Engineer -> Earthmoving [Send to Earthmoving Dept. for Review]\n  - Operation Engineer -> PM [Submit to PM]\n  - PM -> Operation Engineer [Send Back With Comments]\n  - Earthmoving -> Operation Engineer [Send Back With Comments]\n  - COO -> PsM [Send back With comments to PsM]\n  - COO -> VP [Send for VP Approval]\n  - VP -> CEO [Send back t"
+      },
+      {
+        "rank": 3,
+        "score": 0.9591,
+        "filename": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+        "section": "Supply & Apply Subcontracts (Civil, Arch, MEP)",
+        "source_type": "vlm_description",
+        "text": "Subcontract Agreement Signature Matrix - Supply & Apply Subcontracts (Civil, Arch, MEP)\nApproval workflow: Supply & Apply Subcontracts (Civil, Arch, MEP).\n\nSteps: Supply & Apply Subcontracts (Civil, Arch, MEP) (Initiate Subcontract); PM Initials; Direct Award Manager Initials; Subcontractor Signature; PsM Signature; Subcontractor Signature; PsM initials; VMO Manager Signature; Subcontractor Signature; PsM initials; VMO Manager Initials; COO Initial; VP Signature; PsM initials; VMO Manager initials; Contracts Initials; Subcontractor Signature; COO Initial; CEO Signature.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Supply & Apply Subcontracts (Civil, Arch, MEP) (Initiate Subcontract)\n  2. PM Initials\n  After PM Initials the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRo"
+      },
+      {
+        "rank": 4,
+        "score": 0.9177,
+        "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Potential Subcontractor (Post Award) - Potential SCs Post-Award - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Meeting with Subcontractor; End; Contracts; MEP/ Operation; COO; Input from Departments; Departments Signatures.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Meeting with Subcontractor\n  2. Contracts\n  After Contracts the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> MEP/ Operation [Send Back with Comments Send Back with Comments]\n  - Meeting with Subcontractor -> Contracts [S Draft the Subcontract]\n  - Contracts -> Input from Departments\n  - Input from Departments -> Contracts [Send Back to Contracts Dept.]\n  - Contracts -> MEP/ Operation [Submit Final SC Agreement]\n  - MEP/ Operation -> COO [Send to COO to Sign]\n  - COO -> End [S"
+      },
+      {
+        "rank": 5,
+        "score": 0.7753,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "6.2 Process Operations\nSr.\nProcess Cycle Description\nResponsibility\nForm\nCase 1: Potential Subcontractor (Pre-bid agreement)\n1\nTendering shall provide contracts with the Pre-bid\nagreement request showing the following:\n•\nSingle or Multi phase agreement\n•\nPrice offer (Consultant/Subcontractor)\n•\nDOR\n•\nScope of works (for the Single or the Multi phase)\nTendering\n2\nBefore Project Awarding\nContracts shall finalize the Pre-bid agreement along\nwith all special conditions (if any), with the selected\nsubcontractor before project awarding.\nContracts\n3\nAfter Project Awarding to ROWAD\nTendering & Commercial shall conduct a S/C\ndocuments handover meeting with Procurement/MEP.\nH.O. T.O & Contracts shall provide them with the\ncommercial and technical offers including the detailed\nSoW, DOR, and Terms & Conditions, etc.\nProcurement/MEP shall arrange a meeting with the\nSubcontractor to finalize the subco"
+      },
+      {
+        "rank": 6,
+        "score": 0.7156,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "OBJECTIVES",
+        "source_type": null,
+        "text": "1. OBJECTIVES\nThe objective of this process is to formalize the steps of creating a subcontract in Rowad. In\naddition to highlighting the categories of the subcontracts and the signature matrix for each\ncategory."
+      }
+    ]
+  },
+  {
+    "id": "WF-15",
+    "question": "In the Subcontracts workflow, where does the request go after Technical Affairs Mngr/Technical Direct Award?",
+    "gold": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "must_include": [
+      "PsM"
+    ],
+    "type": "workflow_routing",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1056,
+        "filename": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector",
+        "text": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell) - Approval flow 1\nApproval workflow: Approval flow 1.\n\nSteps: VP; Technical Affairs Mngr/Technical Direct Award; PsM; Operation; COO (2); Auto-Creation; Earthmoving; PM; Operation HOD Approval; Contracts; COO; CEO.\n\nRouting:\n  - VP -> Operation HOD Approval [Send Back to Operation HOD With Comments]\n  - Technical Affairs Mngr/Technical Direct Award -> PsM [Send to PsM]\n  - PsM -> Technical Affairs Mngr/Technical Direct Award [Send Back with Comments]\n  - CEO -> COO\n  - Operation -> Earthmoving [Send to Earthmoving Dept. for Review]\n  - Earthmoving -> Operation [Send Back with Comments]\n  - Operation HOD Approval -> COO [Send to COO]\n  - Operation -> PM [Submit to PM]\n  - Technical Affairs Mngr/Technical Direct Award -> Operation [Send Back to PM With Comments Send Back With Comments]\n  - PM -> Technical Affairs Mngr/Technical"
+      },
+      {
+        "rank": 2,
+        "score": 1.0228,
+        "filename": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Subcontract Amendments - Subcontract Amendments for (TA) New - Approval flow\nApproval workflow: Approval flow.\n\nSteps: KSA General Manager; VMO HoD Approval (2); PsM Aproval (3); Technical Affairs Mngr/Technical Direct Award; Finance; Adding Line Items; PM; KSA GM Approval (2); PsM Aproval (4); Contracts Dept. Approval (2); COO Approval (2); Review; KSA GM/ CEO Approval (2); Revision; Contracts Dept. Approval (1); Site Technical Office Engineer; Procurement/ MEP Engineer; Contracts Department; Procurement/ MEP Team Leader; Projects Control Engineer; COO Approval (1); Creator Final Input; VMO HoD Approval (1); Creation; End; Site TOM; PsM Aproval; KSA General Manager / CEO; KSA GM Approval (1); COO; PsM; KSA GM/ CEO Approval (1); PsM Aproval (2).\n\nRouting:\n  - PsM Aproval -> VMO HoD Approval (1) [Send Back to Creator Send Back With Comments]\n  - VMO HoD Approval (2) -> Procurement/ MEP En"
+      },
+      {
+        "rank": 3,
+        "score": 1.0182,
+        "filename": "Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector",
+        "text": "Subcontract Amendments - Subcontract Amendments BU-V1 WF - Approval flow 1\nApproval workflow: Approval flow 1.\n\nSteps: VP; Technical Affairs Mngr/Technical Direct Award; Adding Line Items; Business Unit Manager Approval; MEP Manager Approval; S/C Signature (2); Technical Operations Manager; Finance; Operation/MEP/Si te TO Engineer; Review; Revision; Operation/ MEP/ Site TO Engineer; Creation; Earthmoving HoD; PM Approval; Contracts Dept Approval; MEP Technical Affairs Manager Approval; S/C Signature; COO Approval; CEO.\n\nRouting:\n  - MEP Technical Affairs Manager Approval -> Technical Affairs Mngr/Technical Direct Award [Submit]\n  - MEP Technical Affairs Manager Approval -> PM Approval [Send Back with Comments]\n  - Technical Affairs Mngr/Technical Direct Award -> PM Approval [Send Back with Comments]\n  - Adding Line Items -> Review [Send for Review]\n  - Finance -> Operation/MEP/Si te TO E"
+      },
+      {
+        "rank": 4,
+        "score": 1.0074,
+        "filename": "Go Or No Go - Go or No Go - Direct Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Go Or No Go - Go or No Go - Direct Award - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Revise Project Details; Log Project Details & Prepare Project's  brief; End; Regional Business Development Manager; COO; Regional Business Development Manager; Commercial Review; CEO Decision; Project’s Information Inquiry; Technical Director.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Log Project Details & Prepare Project's  brief\n  2. Commercial Review\n  After Commercial Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - CEO Decision -> COO [Send Back With Comments to COO]\n  - Technical Director -> COO [Send to COO]\n  - Technical Director -> Regional Business Development Manager [Send Back To Regional Business Development Manager]\n  - Regional Busines"
+      },
+      {
+        "rank": 5,
+        "score": 0.7682,
+        "filename": "POP03_Direct_Award_Projects_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "6.2 Process Operations\nSr.\nProcess Cycle Description\nResponsibility\nForm\n1\nRowad receives from the client direct order\nnotification/LOI, design drawings, guidance price list &\nBOQ (if any).\nDirect Award department to notify the Commercial\ndepartment to announce for the awarded project.\nDirect Award\nCommercial\n2\nIn case BOQ is not received, Direct Award department\nto create initial BOQ based on the received drawings or\nhistorical database.\nIn case of design build projects, service provider to be\nconsidered.\n(Refer to P-VMO-01 Vendor Selection and Bidding\nProcess)\nDirect Award\n3\nWithin one week from the LOI/direct order notification,\nDirect Award department shall study & prepare the initial\nproject budget form “Part (A)” and invite for an initial\nbudget meeting with all concerned parties to agree and\nissue the form Part (B, C & D) by the Direct Award\ncommittee headed by Technical Director "
+      },
+      {
+        "rank": 6,
+        "score": 0.6607,
+        "filename": "PEN01_Engineering_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "6.2. PROCESS OPERATION\nSr.\nProcess Cycle Description\nResponsibility\nForm\n1\nWhen a new project is awarded, Tendering/Direct\nAward shall send an email specifying the location of\nthe project directory on e-filing sever which shall\ninclude the IFT and contract drawing in CAD format,\nIf any.\nRefer to Project Launching Process (P-TN-02).\nTendering/Direct\nAward\n2\nAfter Tender hand-over meeting, in case of 2D shop\ndrawing, Technical Office (Civil, Arch & MEP) shall\nprepare the Drawing List and in case of BIM,\nEngineering department shall prepare the same\nwithin 5 working days and send it to the Planning &\nCost Control to define the planning dates (E1 Log)\nwithin 25 working days according to the initial\nTechnical Office\nEngineering\nPlanning & Cost\nControl\nDrawing list/E1 log\nF-P-EN-01-01\nEngineering Process\nEffective Date: November, 2023\nRev. No.: 02\nDoc. No.: P-EN-01\nPage 4 of 9\nSr.\nProcess Cycl"
+      }
+    ]
+  },
+  {
+    "id": "WF-16",
+    "question": "In the Request For Information (RFI) workflow, where does the request go after Review & Approval?",
+    "gold": "Request For Information (RFI) - RME to Client ( Manual Rev. ) V2.pdf",
+    "must_include": [
+      "Site DC (Client/Consultant ’s Reply)"
+    ],
+    "type": "workflow_routing",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1047,
+        "filename": "Request For Information (RFI) - From SC.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request For Information (RFI) - From SC - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Start; End; TOM; Site Technical Office; Review & Approval; Distribute to Concerned Parties; DC; Site TOM; DC; DC.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Start\n  2. Site Technical Office\n  After Site Technical Office the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Review & Approval -> DC [Send to DC to Submit]\n  - TOM -> DC [Send Back to DC]\n  - Start -> Site Technical Office [Send to Site TO]\n  - Distribute to Concerned Parties -> Site TOM [Reply to Site TOM]\n  - Site TOM -> DC [Send to DC]\n  - DC -> End [RFI is provoking VO S RFI is not provoking VO Confirm and Close]\n  - Review & Approval -> Site Technical Office [Send Back with Comments]\n  - DC -> Dis"
+      },
+      {
+        "rank": 2,
+        "score": 0.9719,
+        "filename": "Go Or No Go - Go or No Go - Direct Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Go Or No Go - Go or No Go - Direct Award - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Revise Project Details; Log Project Details & Prepare Project's  brief; End; Regional Business Development Manager; COO; Regional Business Development Manager; Commercial Review; CEO Decision; Project’s Information Inquiry; Technical Director.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Log Project Details & Prepare Project's  brief\n  2. Commercial Review\n  After Commercial Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - CEO Decision -> COO [Send Back With Comments to COO]\n  - Technical Director -> COO [Send to COO]\n  - Technical Director -> Regional Business Development Manager [Send Back To Regional Business Development Manager]\n  - Regional Busines"
+      },
+      {
+        "rank": 3,
+        "score": 0.9506,
+        "filename": "Request For Information (RFI) - RME to Client ( Manual Rev. ) V2.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request For Information (RFI) - RME to Client ( Manual Rev. ) V2 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Start; End; Revise by DRE; Review & Approval; TOM; Site Technical Office; Review & Approval; Site DC (Client/Consultant ’s Reply); Review by DRE.\n\nRouting:\n  - Review & Approval -> Site DC (Client/Consultant ’s Reply) [Send to DC to Submit]\n  - Revise by DRE -> Review & Approval [Send to HoD]\n  - Review by DRE -> Site Technical Office\n  - Start -> Review & Approval [Send to HoD for Review]\n  - Review & Approval -> Site Technical Office [Submit to Site TO]\n  - TOM -> Site Technical Office [Send back with Comments to DC Send Back with Comments Send Back with Comments]\n  - Site DC (Client/Consultant ’s Reply) -> Review & Approval [Send back with Comments to TOM]\n  - Review & Approval -> End [Cancel RFI is provoking VO S RFI is not provoking VO]\n  - Start -> Site Technic"
+      },
+      {
+        "rank": 4,
+        "score": 0.9268,
+        "filename": "Request For Proposal (RFP) - RFP WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Request For Proposal (RFP) - RFP WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Start (Site TO); End; TOM; Review & Approval By TOM; DC; Site TO.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Start (Site TO)\n  2. Review & Approval By TOM\n  3. DC\n  After DC the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Review & Approval By TOM -> DC [Send to DC to Submit]\n  - Site TO -> Review & Approval By TOM [Resubmit]\n  - Start (Site TO) -> Review & Approval By TOM [Submit]\n  - DC -> Review & Approval By TOM [Send Back with Comments to Review & Approval By TOM Send Back with Comments Send Back with Comments to Site TO]\n  - TOM -> End [S Close]\n  - DC -> End [Submit Potential Delay Event Auto- Creation S]\n  - DC -> TOM [Submit Send Response to TOM (No Dela"
+      },
+      {
+        "rank": 5,
+        "score": 0.9039,
+        "filename": "POP04_Request_for_Information_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null,
+        "text": "6.2 Process Operations\nSr.\nProcess Cycle Description\nResponsibility\nForm\n1\nCase I: RFI Submitted by RME to Client\nAll parties in RME are authorised to initiate RFI\nDepartment\nRepresentative\nEngineer\n2\nThe engineer who initiated the RFI, will submit it to the\ndepartment manager for review & approval, if needed.\nDepartment\nRepresentative\nEngineer\nRFI\n(F-PQP-01-03)\n3\nRFI to be sent to Site technical office for review and\ndecision whether to submit or reply internally, within\nrequired duration (7-10 working days).\nSite Technical\nOffice\n4\nRFI to be officially submitted to the external party by the\nSite technical office manager.\nSite Technical\nOffice\n5\nIf no reply on the RFI as per the contractual duration\nclauses (or 14 days in case it’s not mentioned),\nnotification to be sent to the following;"
+      },
+      {
+        "rank": 6,
+        "score": 0.8818,
+        "filename": "POP04_Request_for_Information_Process.pdf",
+        "section": "PROCESS CONTROL",
+        "source_type": null,
+        "text": "8. PROCESS CONTROL\nTOM shall review the RFI reply to check if it provokes variation."
+      }
+    ]
+  },
+  {
+    "id": "WF-17",
+    "question": "In the Notice of Variation ( NOV ) approval workflow, who signs after Identify Affected Items & Prepare Estimated QTY?",
+    "gold": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation.pdf",
+    "must_include": [
+      "Contracts Dept"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1128,
+        "filename": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Official Submission of NOV; Auto-Creation; End; DC; Contracts Dept.; Identify Affected Items & Prepare Estimated QTY; Project Control Engineer; Technical Office Manager; Contracts Dept.; Technical Office Manager.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Auto-Creation\n  2. Identify Affected Items & Prepare Estimated QTY\n  3. Contracts Dept.\n  After Contracts Dept. the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Technical Office Manager -> End [Close Close]\n  - Technical Office Manager -> Contracts Dept. [Vo is not Merited Send Back to Contracts Dept.]\n  - Project Control Engineer -> Contracts Dept. [Send Back with Comments "
+      },
+      {
+        "rank": 2,
+        "score": 1.0967,
+        "filename": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Manual Creation.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Manual Creation - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Official Submission of NOV; Identify Affected Items & Prepare Estimated QTY; End; DC; Contracts Dept.; Project Control Engineer; Contracts Dept.; Technical Office Manager; Technical Office Manager.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Identify Affected Items & Prepare Estimated QTY\n  2. Contracts Dept.\n  3. Project Control Engineer\n  After Project Control Engineer the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Technical Office Manager -> End [Close Close]\n  - Technical Office Manager -> Contracts Dept. [Vo is not Merited Send Back to Contracts Dept.]\n  - Contracts Dept. -> Project Control Engineer [Send to PCE]\n  - "
+      },
+      {
+        "rank": 3,
+        "score": 0.7721,
+        "filename": "Variation Order Flow Chart.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Variation Order Flow Chart - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Variation Order (Page:P1 ) NOV; Legend Start/End A Close No Process Contract Department Document (Input) Document (Output) Are VO is Yes Decision merited ? Predefined Process Connector No; Source of Variation End TOM identify the effected items Start TOM & PM A Are there Yes form of NOV ?; Yes PCE No; Contract Department reviews the Merit of VO, and verify the contractual case with Contract ( within 7 days ); Contract department submits the Contractual/Legal Merits to PM/TOM within 5 days; Submit Technical issue to Contract Department; TOM prepares rough estimated QTY; PCE give feedback regarding Time Impact (within 5 days ); PM/TOM submits the Notification form to client within 14 days of Source of variation; Notify PM&TOM; Close The Issue; PM/TOM submits the Notification form to client within the time "
+      }
+    ]
+  },
+  {
+    "id": "WF-18",
+    "question": "In the Bonds Request approval workflow, who signs after Creation by Commercial Engineer?",
+    "gold": "Bonds Request - Bonds Request WF.pdf",
+    "must_include": [
+      "Commercial Manager Approval Send"
+    ],
+    "type": "workflow_order",
+    "wf_intent": true,
+    "hit": true,
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": 1.1178,
+        "filename": "Bonds Request - Bonds Request WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Bonds Request - Bonds Request WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: CFO Approval; Creation by Commercial Engineer; End; Commercial Manager Approval Send; Clients & Trade Department; Commercial Engineer; Clients & Trade Manager; Clients & Trade Department; Commercial Engineer Revision; Commercial Engineer Edits/Cancels; Commercial Engineer Modification.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Commercial Engineer\n  2. Commercial Manager Approval Send\n  After Commercial Manager Approval Send the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Clients & Trade Department -> Clients & Trade Manager [Send back with comments to Clients & Trade Manager]\n  - Clients & Trade Department -> Commercial Engineer Revision\n  - Clients & "
+      },
+      {
+        "rank": 2,
+        "score": 1.1156,
+        "filename": "Bonds Request - Bond Request Revision WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Bonds Request - Bond Request Revision WF - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Clients & Trade Manager; Commercial Engineer Modification; CFO Approval; Creation by Commercial Engineer; End; Commercial Manager Send Approval; Clients & Trade Department; Commercial Engineer; Clients & Trade Department; Commercial Engineer Revision; Commercial Engineer Edits/Cancels.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Commercial Engineer\n  2. Commercial Manager Send Approval\n  After Commercial Manager Send Approval the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Clients & Trade Manager -> Commercial Engineer Modification\n  - CFO Approval -> Clients & Trade Manager [Send to Finance Send Back With Comments to Clients & Trade Managerl]\n  "
+      },
+      {
+        "rank": 3,
+        "score": 0.8139,
+        "filename": "Customer Satisfaction - Creation by PM.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Creation by PM - Approval flow\nApproval workflow: Approval flow.\n\nSteps: PM; End; Commercial Dept.; QAM; COO.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. PM\n  2. Commercial Dept.\n  3. QAM\n  After QAM the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End\n  - PM -> Commercial Dept. [Update the customer satisfaction log accordingly]\n  - Commercial Dept. -> QAM [Send to QA Dept.]\n  - QAM -> COO [Submit]\n  - QAM -> End [Submit Close Closed]"
+      },
+      {
+        "rank": 4,
+        "score": 0.7909,
+        "filename": "Project Launching - WF - Project Launching.pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector",
+        "text": "Project Launching - WF - Project Launching - Approval flow 1\nApproval workflow: Approval flow 1.\n\nSteps: Creation; Commercial Department.\n\nOrder of approval, first to last (each one signs after the one before it):\n  1. Creation\n  2. Commercial Department\n\nRouting:\n  - Creation -> Commercial Department [Send to Commercial Department]"
+      },
+      {
+        "rank": 5,
+        "score": 0.7885,
+        "filename": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Customer Satisfaction - Creation by Commercial Dept. V1 - Approval flow\nApproval workflow: Approval flow.\n\nSteps: PM; End; Commercial Dept.; QAM No; COO; QAM Yes.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. PM\n  2. Commercial Dept.\n  After Commercial Dept. the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - COO -> End\n  - PM -> Commercial Dept. [Update the customer satisfaction log accordingly]\n  - QAM No -> COO [Submit Issue NCR & Send to COO]\n  - QAM No -> End [Submit Close Closed]\n  - QAM Yes -> COO [Submit Issue NCR & Send to COO]\n  - QAM Yes -> End [Submit Closed]\n  - Commercial Dept. -> QAM Yes [Submit Send to QA Dept. Yes]\n  - Commercial Dept. -> QAM No [Submit Send to QA Dept. No]"
+      },
+      {
+        "rank": 6,
+        "score": 0.7641,
+        "filename": "Material List ( E2 Log ) - E2 Log.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector",
+        "text": "Material List ( E2 Log ) - E2 Log - Approval flow\nApproval workflow: Approval flow.\n\nSteps: Creation by Planning Engineer; End; Planning Manager Review; E2 Log Update.\n\nOrder of approval so far, first to last (each one signs after the one before it); the route then branches:\n  1. Creation by Planning Engineer\n  2. Planning Manager Review\n  After Planning Manager Review the route branches; who signs next depends on the value, see Routing and Approval thresholds below.\n\nRouting:\n  - Creation by Planning Engineer -> Planning Manager Review [Send for Planning Manager Review]\n  - Planning Manager Review -> E2 Log Update [Send for Update]\n  - E2 Log Update -> Planning Manager Review [Send for Planning Manager Review]\n  - Planning Manager Review -> Planning Manager Review [Submit Send Back to (Planning Manager Review)]\n  - Planning Manager Review -> End [Submit Close]"
+      }
+    ]
+  }
+]

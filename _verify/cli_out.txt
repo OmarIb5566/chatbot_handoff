@@ -1,0 +1,180 @@
+CLI START Mon 08/31/2026 18:01:20.16 
+############ eval_set_v2 --top-k 3 
+eval_set_v2.json: 100 questions, 92 with a gold document, 8 unanswerable (not scored here)
+chunks.json: 1063 chunks over 71 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 15631.14it/s]
+document accuracy
+----------------------------------------------------------
+  top-1   79/92 =  85.9%
+  top-3   88/92 =  95.7%
+  top-5   89/92 =  96.7%
+
+  15 ms/query at top-3
+
+by question type (top-3)
+----------------------------------------------------------
+  definition         9/9      100%
+  fact               8/8      100%
+  fact_crossdoc      2/2      100%
+  form_lookup       22/24      92%
+  numeric           34/36      94%
+  role_lookup       13/13     100%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+
+misses at top-3 (4):
+  [PCN01-3   ] If the PM receives a nomination letter from the client after the award
+  [PFN01-3   ] What is the time frame for preparing the QS for normal versus fast-tra
+  [PQD07-1   ] Which form is the Internal Inspection Request?
+  [PVMO01-1  ] Which form is the Project Sourcing Strategy?
+ 
+############ eval_set --top-k 3 
+EVAL SET DOES NOT MATCH chunks.json - 4 problem(s):
+    ADV-1: unanswerable but has must_include
+    ADV-2: unanswerable but has must_include
+    ADV-3: unanswerable but has must_include
+    ADV-4: unanswerable but has must_include
+
+Scores below would understate accuracy. Fix the set first.
+
+eval_set.json: 36 questions, 32 with a gold document, 4 unanswerable (not scored here)
+chunks.json: 1063 chunks over 71 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 14086.78it/s]
+document accuracy
+----------------------------------------------------------
+  top-1   20/32 =  62.5%
+  top-3   27/32 =  84.4%
+  top-5   27/32 =  84.4%
+
+  16 ms/query at top-3
+
+by question type (top-3)
+----------------------------------------------------------
+  definition         4/5       80%
+  fact              15/16      94%
+  form_lookup        4/6       67%
+  role_lookup        4/5       80%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+
+misses at top-3 (5):
+  [PTN02-3   ] What is the form number for the Project Execution Plan?
+  [PVMO01-1  ] What is the form number for the Request for Quotation (RFQ)?
+  [PVMO01-3  ] What does HO-TO stand for?
+  [PVMO02-3  ] Above what advance payment amount must vendors provide a Letter of Gua
+  [PVMO02-4  ] Who approves the Monthly Payment Plan before it goes to Finance?
+ 
+############ eval_set_workflow --top-k 6 --misses 
+gold documents outside the process corpus - workflow chunks merged in
+
+eval_set_workflow.json: 18 questions, 18 with a gold document, 0 unanswerable (not scored here)
+chunks.json: 1200 chunks over 181 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 14630.14it/s]
+document accuracy
+----------------------------------------------------------
+  top-1    6/18 =  33.3%
+  top-6   18/18 = 100.0%
+  top-5   18/18 = 100.0%
+
+  17 ms/query at top-6
+
+by question type (top-6)
+----------------------------------------------------------
+  workflow_order    11/11     100%
+  workflow_routing   7/7      100%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+ 
+############ eval_set_workflow --top-k 1 
+gold documents outside the process corpus - workflow chunks merged in
+
+eval_set_workflow.json: 18 questions, 18 with a gold document, 0 unanswerable (not scored here)
+chunks.json: 1200 chunks over 181 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 12261.61it/s]
+document accuracy
+----------------------------------------------------------
+  top-1    6/18 =  33.3%
+  top-1    6/18 =  33.3%
+  top-5   18/18 = 100.0%
+
+  18 ms/query at top-1
+
+by question type (top-1)
+----------------------------------------------------------
+  workflow_order     5/11      45%
+  workflow_routing   1/7       14%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+
+misses at top-1 (12):
+  [WF-01     ] In the Go Or No Go approval workflow, who signs after Log Project Deta
+  [WF-02     ] In the Inspection Request (IR) approval workflow, who signs after Crea
+  [WF-03     ] In the Subcontract Amendments workflow, where does the request go afte
+  [WF-06     ] In the Customer Satisfaction workflow, where does the request go after
+  [WF-08     ] In the Document Submittal approval workflow, who signs after Preparati
+  [WF-09     ] In the Subcontracts workflow, where does the request go after Creation
+  [WF-10     ] In the Customer Satisfaction approval workflow, who signs after Commer
+  [WF-11     ] In the Document Submittal approval workflow, who signs after Preparati
+  [WF-13     ] In the Potential Delay Events approval workflow, who signs after Contr
+  [WF-14     ] In the Subcontract Amendments workflow, where does the request go afte
+  [WF-15     ] In the Subcontracts workflow, where does the request go after Technica
+  [WF-16     ] In the Request For Information (RFI) workflow, where does the request 
+ 
+############ eval_set_workflow --top-k 3 
+gold documents outside the process corpus - workflow chunks merged in
+
+eval_set_workflow.json: 18 questions, 18 with a gold document, 0 unanswerable (not scored here)
+chunks.json: 1200 chunks over 181 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 13470.95it/s]
+document accuracy
+----------------------------------------------------------
+  top-1    6/18 =  33.3%
+  top-3   16/18 =  88.9%
+  top-5   18/18 = 100.0%
+
+  17 ms/query at top-3
+
+by question type (top-3)
+----------------------------------------------------------
+  workflow_order    11/11     100%
+  workflow_routing   5/7       71%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+
+misses at top-3 (2):
+  [WF-06     ] In the Customer Satisfaction workflow, where does the request go after
+  [WF-16     ] In the Request For Information (RFI) workflow, where does the request 
+ 
+############ eval_set_workflow --top-k 10 
+gold documents outside the process corpus - workflow chunks merged in
+
+eval_set_workflow.json: 18 questions, 18 with a gold document, 0 unanswerable (not scored here)
+chunks.json: 1200 chunks over 181 documents
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 18303.32it/s]
+document accuracy
+----------------------------------------------------------
+  top-1    6/18 =  33.3%
+  top-10  18/18 = 100.0%
+  top-5   18/18 = 100.0%
+
+  17 ms/query at top-10
+
+by question type (top-10)
+----------------------------------------------------------
+  workflow_order    11/11     100%
+  workflow_routing   7/7      100%
+
+  All questions are review=machine: grounded in chunk text and
+  verified verbatim, but not confirmed fair by a person.
+CLI DONE Mon 08/31/2026 18:02:21.96 

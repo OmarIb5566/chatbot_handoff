@@ -1,0 +1,160 @@
+{
+  "firing": {
+    "eval_set_v2": [],
+    "eval_set": [
+      "PCM01-2",
+      "PCM02-3",
+      "PCN01-1",
+      "PQD12-4",
+      "PSE01-2",
+      "PVMO02-4"
+    ],
+    "eval_set_workflow": [
+      "WF-01",
+      "WF-02",
+      "WF-03",
+      "WF-04",
+      "WF-05",
+      "WF-06",
+      "WF-07",
+      "WF-08",
+      "WF-09",
+      "WF-10",
+      "WF-11",
+      "WF-12",
+      "WF-13",
+      "WF-14",
+      "WF-15",
+      "WF-16",
+      "WF-17",
+      "WF-18"
+    ]
+  },
+  "questions": {
+    "eval_set_v2": [],
+    "eval_set": [
+      {
+        "id": "PCM01-2",
+        "q": "How often does the Commercial dept send the customer satisfaction survey during a project's lifecycle?",
+        "doc": "PCM01_Customer_Satisfaction_Process.pdf"
+      },
+      {
+        "id": "PCM02-3",
+        "q": "Who approves branding locations, and in coordination with whom?",
+        "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf"
+      },
+      {
+        "id": "PCN01-1",
+        "q": "What is the form number for the SC Agreement Signature Matrix?",
+        "doc": "PCN01_Subcontract_Agreement_Process.pdf"
+      },
+      {
+        "id": "PQD12-4",
+        "q": "Who approves the Project Quality Plan (PQP)?",
+        "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf"
+      },
+      {
+        "id": "PSE01-2",
+        "q": "Who approves staff hiring in the Self-Execution department?",
+        "doc": "PSE01_RME_SelfExecution_Process.pdf"
+      },
+      {
+        "id": "PVMO02-4",
+        "q": "Who approves the Monthly Payment Plan before it goes to Finance?",
+        "doc": "PVMO02_Procurement_Process.pdf"
+      }
+    ],
+    "eval_set_workflow": [
+      {
+        "id": "WF-01",
+        "q": "In the Go Or No Go approval workflow, who signs after Log Project Details & Prepare Project's brief?",
+        "doc": "Go Or No Go - Go or No Go - Competitive Bidding.pdf"
+      },
+      {
+        "id": "WF-02",
+        "q": "In the Inspection Request (IR) approval workflow, who signs after Creation by Site Engineer?",
+        "doc": "Inspection Request (IR) - Inspection Request (Client).pdf"
+      },
+      {
+        "id": "WF-03",
+        "q": "In the Subcontract Amendments workflow, where does the request go after PsM Aproval?",
+        "doc": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf"
+      },
+      {
+        "id": "WF-04",
+        "q": "In the Request for Quotation approval workflow, who signs after Creation by ETO Engineer?",
+        "doc": "Request for Quotation - Equipment Purchasing CS.pdf"
+      },
+      {
+        "id": "WF-05",
+        "q": "In the Meeting Minutes workflow, where does the request go after Documentation of Meeting Results?",
+        "doc": "Meeting Minutes - Meeting Minutes WF.pdf"
+      },
+      {
+        "id": "WF-06",
+        "q": "In the Customer Satisfaction workflow, where does the request go after QAM No?",
+        "doc": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf"
+      },
+      {
+        "id": "WF-07",
+        "q": "In the Material List ( E2 Log ) approval workflow, who signs after Creation by VMO Representative?",
+        "doc": "Material List ( E2 Log ) - Manual Material List WF.pdf"
+      },
+      {
+        "id": "WF-08",
+        "q": "In the Document Submittal approval workflow, who signs after Preparation by QCM?",
+        "doc": "Document Submittal - ITP WF.pdf"
+      },
+      {
+        "id": "WF-09",
+        "q": "In the Subcontracts workflow, where does the request go after Creation by Commercial Debt?",
+        "doc": "Subcontracts - nominate Subcontractor.pdf"
+      },
+      {
+        "id": "WF-10",
+        "q": "In the Customer Satisfaction approval workflow, who signs after Commercial Dept?",
+        "doc": "Customer Satisfaction - Customer Satisfaction WF.pdf"
+      },
+      {
+        "id": "WF-11",
+        "q": "In the Document Submittal approval workflow, who signs after Preparation by DC?",
+        "doc": "Document Submittal - Document Submittal Client WF.pdf"
+      },
+      {
+        "id": "WF-12",
+        "q": "In the Request for Quotation approval workflow, who signs after ERA Preparation for Budgeted Items?",
+        "doc": "Request for Quotation - Rental Equipment CS-BU-V1.pdf"
+      },
+      {
+        "id": "WF-13",
+        "q": "In the Potential Delay Events approval workflow, who signs after Contracts Department?",
+        "doc": "Potential Delay Events - NOD Auto Workflow.pdf"
+      },
+      {
+        "id": "WF-14",
+        "q": "In the Subcontract Amendments workflow, where does the request go after S/C Signature?",
+        "doc": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf"
+      },
+      {
+        "id": "WF-15",
+        "q": "In the Subcontracts workflow, where does the request go after Technical Affairs Mngr/Technical Direct Award?",
+        "doc": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf"
+      },
+      {
+        "id": "WF-16",
+        "q": "In the Request For Information (RFI) workflow, where does the request go after Review & Approval?",
+        "doc": "Request For Information (RFI) - RME to Client ( Manual Rev. ) V2.pdf"
+      },
+      {
+        "id": "WF-17",
+        "q": "In the Notice of Variation ( NOV ) approval workflow, who signs after Identify Affected Items & Prepare Estimated QTY?",
+        "doc": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation.pdf"
+      },
+      {
+        "id": "WF-18",
+        "q": "In the Bonds Request approval workflow, who signs after Creation by Commercial Engineer?",
+        "doc": "Bonds Request - Bonds Request WF.pdf"
+      }
+    ]
+  }
+}

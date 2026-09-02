@@ -1,0 +1,26 @@
+[
+  {
+    "q": "how does the rental equipment variation order workflow go",
+    "answer": "The workflow begins with Creation.  \n1. Equipment Rental Admin performs Preparation by Equipment Rental Admin.  \n2. The process moves to PM Approval.  \n3. The process moves to Equipment Manager Approval.  \n4. A decision is made:  \n   - If the value is \"Approve Above 3M EGP\", it moves to VP Approval.  \n   - If the value is \"Approve Below 3M EGP\", it moves to Finance Review.  \n5. If further action is required, VP Approval performs Approval.  \n6. The process moves to Finance Review.  \n7. A decision is made:  \n   - If the value is \"Approve Below 3M EGP\", it moves to End.  \n   - If the value is \"Approve Above 3M EGP\", it moves to End.  \n8. The workflow ends when the process reaches End.  \n\nSource: Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+    "n_workflow_hits": 4,
+    "hits": [
+      "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+      "Request for Quotation - Rental Equipment CS.pdf",
+      "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+      "Rented Equipment Timesheet - Rented Equipment Timesheet - New - WF.pdf"
+    ]
+  },
+  {
+    "q": "how many days of annual leave do employees get?",
+    "answer": "The number of annual leave days is not explicitly specified in the provided documents. The documents mention eligibility for annual leave and conditions related to its usage, such as the requirement to clear remaining vacation balance before the end of the first quarter of the following year, but they do not provide a specific number of days allocated for annual leave.\n\nSource: MHR18_UAE_Branch_Policy.pdf",
+    "n_workflow_hits": 0,
+    "hits": [
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR17_KSA_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf",
+      "MHR18_UAE_Branch_Policy.pdf"
+    ]
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "WF-01",
+    "doc": "Go Or No Go - Go or No Go - Competitive Bidding.pdf",
+    "question": "In the Go Or No Go approval workflow, who signs after Log Project Details & Prepare Project's brief?",
+    "must_include": [
+      "Commercial Department Manager"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-02",
+    "doc": "Inspection Request (IR) - Inspection Request (Client).pdf",
+    "question": "In the Inspection Request (IR) approval workflow, who signs after Creation by Site Engineer?",
+    "must_include": [
+      "Inspection by QC (Internal)"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-03",
+    "doc": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf",
+    "question": "In the Subcontract Amendments workflow, where does the request go after PsM Aproval?",
+    "must_include": [
+      "VMO HoD Approval (1)"
+    ],
+    "type": "workflow_routing",
+    "review": "machine"
+  },
+  {
+    "id": "WF-04",
+    "doc": "Request for Quotation - Equipment Purchasing CS.pdf",
+    "question": "In the Request for Quotation approval workflow, who signs after Creation by ETO Engineer?",
+    "must_include": [
+      "ETO Manager Review"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-05",
+    "doc": "Meeting Minutes - Meeting Minutes WF.pdf",
+    "question": "In the Meeting Minutes workflow, where does the request go after Documentation of Meeting Results?",
+    "must_include": [
+      "Review"
+    ],
+    "type": "workflow_routing",
+    "review": "machine"
+  },
+  {
+    "id": "WF-06",
+    "doc": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+    "question": "In the Customer Satisfaction workflow, where does the request go after QAM No?",
+    "must_include": [
+      "COO"
+    ],
+    "type": "workflow_routing",
+    "review": "machine"
+  },
+  {
+    "id": "WF-07",
+    "doc": "Material List ( E2 Log ) - Manual Material List WF.pdf",
+    "question": "In the Material List ( E2 Log ) approval workflow, who signs after Creation by VMO Representative?",
+    "must_include": [
+      "VMO & Planning Department Inputs"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-08",
+    "doc": "Document Submittal - ITP WF.pdf",
+    "question": "In the Document Submittal approval workflow, who signs after Preparation by QCM?",
+    "must_include": [
+      "Review by CM"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-09",
+    "doc": "Subcontracts - nominate Subcontractor.pdf",
+    "question": "In the Subcontracts workflow, where does the request go after Creation by Commercial Debt?",
+    "must_include": [
+      "Contracts"
+    ],
+    "type": "workflow_routing",
+    "review": "machine"
+  },
+  {
+    "id": "WF-10",
+    "doc": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+    "question": "In the Customer Satisfaction approval workflow, who signs after Commercial Dept?",
+    "must_include": [
+      "QAM"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-11",
+    "doc": "Document Submittal - Document Submittal Client WF.pdf",
+    "question": "In the Document Submittal approval workflow, who signs after Preparation by DC?",
+    "must_include": [
+      "Client/Consultant’ s Reply"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-12",
+    "doc": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+    "question": "In the Request for Quotation approval workflow, who signs after ERA Preparation for Budgeted Items?",
+    "must_include": [
+      "ETO Manager Review"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-13",
+    "doc": "Potential Delay Events - NOD Auto Workflow.pdf",
+    "question": "In the Potential Delay Events approval workflow, who signs after Contracts Department?",
+    "must_include": [
+      "Review"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-14",
+    "doc": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+    "question": "In the Subcontract Amendments workflow, where does the request go after S/C Signature?",
+    "must_include": [
+      "Technical Operations Manager"
+    ],
+    "type": "workflow_routing",
+    "review": "machine"
+  },
+  {
+    "id": "WF-15",
+    "doc": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "question": "In the Subcontracts workflow, where does the request go after Technical Affairs Mngr/Technical Direct Award?",
+    "must_include": [
+      "PsM"
+    ],
+    "type": "workflow_routing",
+    "review": "machine"
+  },
+  {
+    "id": "WF-16",
+    "doc": "Request For Information (RFI) - RME to Client ( Manual Rev. ) V2.pdf",
+    "question": "In the Request For Information (RFI) workflow, where does the request go after Review & Approval?",
+    "must_include": [
+      "Site DC (Client/Consultant ’s Reply)"
+    ],
+    "type": "workflow_routing",
+    "review": "machine"
+  },
+  {
+    "id": "WF-17",
+    "doc": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation.pdf",
+    "question": "In the Notice of Variation ( NOV ) approval workflow, who signs after Identify Affected Items & Prepare Estimated QTY?",
+    "must_include": [
+      "Contracts Dept"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  },
+  {
+    "id": "WF-18",
+    "doc": "Bonds Request - Bonds Request WF.pdf",
+    "question": "In the Bonds Request approval workflow, who signs after Creation by Commercial Engineer?",
+    "must_include": [
+      "Commercial Manager Approval Send"
+    ],
+    "type": "workflow_order",
+    "review": "machine"
+  }
+]

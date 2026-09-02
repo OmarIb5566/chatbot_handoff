@@ -1,0 +1,45 @@
+==============================================================================================
+Internal Head Office NCR - New Internal Head Office NCR.pdf
+   boxes=10 junctions=0 connectors=12
+   'End' box rect: Rect(1399.0, 213.0, 1519.0, 273.0)
+   connector #0: 2 pts, label=''
+      end A -> nearest 'End' at 0.0pt
+      end B -> nearest 'End' at 0.0pt
+      -> BOTH ENDS SNAP TO THE SAME SHAPE: direct_edges drops it (ia == ib)
+   direct_edges produced 11 edges; touching End: 0
+   after contract_junctions: 11; touching End: 0
+   after _dedupe: 11; touching End: 0
+   detect_lanes -> 1 group(s); End in group: [0]
+==============================================================================================
+Potential Delay Events - NOD Auto Workflow.pdf
+   boxes=4 junctions=0 connectors=4
+   'End' box rect: Rect(976.0, 139.0, 1096.0, 199.0)
+   connector #3: 2 pts, label=''
+      end A -> nearest 'End' at 0.0pt
+      end B -> nearest 'End' at 0.0pt
+      -> BOTH ENDS SNAP TO THE SAME SHAPE: direct_edges drops it (ia == ib)
+   direct_edges produced 3 edges; touching End: 0
+   after contract_junctions: 3; touching End: 0
+   after _dedupe: 3; touching End: 0
+   detect_lanes -> 1 group(s); End in group: [0]
+==============================================================================================
+Request For Information (RFI) - RME to Client V2.pdf
+   boxes=9 junctions=5 connectors=20
+   'End' box rect: Rect(2174.0, 312.0, 2294.0, 372.0)
+   connector #9: 2 pts, label=''
+      end A -> nearest 'End' at 0.0pt
+      end B -> nearest 'End' at 0.0pt
+      -> BOTH ENDS SNAP TO THE SAME SHAPE: direct_edges drops it (ia == ib)
+   direct_edges produced 19 edges; touching End: 0
+   after contract_junctions: 16; touching End: 0
+   after _dedupe: 15; touching End: 0
+   detect_lanes -> 1 group(s); End in group: [0]
+==============================================================================================
+Infrastructure Inspection Request (IIR) - Holding Tanks WF.pdf
+   boxes=6 junctions=2 connectors=11
+   'End' box rect: Rect(1431.0, 425.0, 1551.0, 485.0)
+   direct_edges produced 11 edges; touching End: 0
+   after contract_junctions: 9; touching End: 0
+   after _dedupe: 6; touching End: 0
+   detect_lanes -> 1 group(s); End in group: [0]
+EXIT 0 

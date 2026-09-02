@@ -2,17 +2,18 @@
 
 A retrieval-augmented chatbot over RME's ISO process documents and approval workflow diagrams.
 Ask a question in **English or Arabic**, get an answer built only from the corpus, with the
-source documents cited and every form number checked against what actually occurs in the
+source document cited and every form number checked against what actually occurs in the
 documents.
 
 Everything runs locally — PDF extraction, retrieval, and generation through Ollama. Nothing
 leaves the machine.
 
-> This file is the repository-level map: what is here, how the pieces connect, what regenerates.
-> **[files/README_HANDOFF.md](files/README_HANDOFF.md) is the operating manual** — install, model
-> choice, latency, Arabic path, and the measured reasoning behind each design decision. Read that
-> one to *run* the thing. Note that it predates the `Workflows/` corpus and still describes a
-> 9-document `processes_pdf/`, so where the two disagree on corpus size, this file is current.
+> This file is the repository-level map: what is here, how the pieces connect, what regenerates,
+> and what is currently known to be broken.
+> **[README_HANDOFF.md](README_HANDOFF.md) is the operating manual** — install, model choice,
+> latency, Arabic path, and the measured reasoning behind each early design decision. It predates
+> both the folder split and the vector extraction path, so where the two disagree, **this file is
+> current**.
 
 ---
 
@@ -20,26 +21,36 @@ leaves the machine.
 
 ```
 chatbot_handoff/
-  files/                  code, notebook, eval sets, committed extraction artifacts
-  processes_pdf/          71 ISO process documents  ->  adaptive_chunker.py
-    other/                64 forms, matrices, annexes — parked, in neither pipeline
-  Workflows/              110 approval flowcharts   ->  workflow_extractor.py
-    overseas/             29 more, KSA / UAE / Côte d'Ivoire variants
-  workflow_audit_full.json    per-page graphs + warnings from the full 131-document run
-  workflow_audit_new.json     the same, for a 5-document follow-up run
+  backend/            the pipeline (extraction, retrieval, generation, validation)
+  evals/              eval harnesses and eval sets
+  data/               committed extraction artifacts (chunks, audits, embed cache)
+  eval_results/       recorded eval output
+  processes_pdf/      71 ISO process documents      -> adaptive_chunker.py
+    other/            59 forms, matrices, annexes — parked, in neither pipeline
+  Workflows/          110 approval flowcharts       -> workflow_vector.py
+  app.py              Streamlit front end
+  demo_chatbot.ipynb  the explanation notebook
 ```
 
-`files/` resolves the corpus as `../processes_pdf` and `../Workflows`, so the folders have to
-stay siblings.
+`backend/paths.py` resolves every path from the repository root, so the folders have to stay
+where they are. The PDFs are **deliberately tracked** (see `.gitignore`) so a clone has the
+deduplicated corpus and extraction can be re-run.
 
-The PDFs are **deliberately tracked** right now (see the note in `.gitignore`) so a clone has the
-deduplicated corpus and the extraction can be re-run on a machine with the vision model pulled.
+**Corpus as served.** `data/chunks.json` — 1063 chunks over 71 process documents.
+`data/workflow_chunks_fixed.json` — 137 chunks over 110 workflow diagrams (134 `pdf_vector`,
+3 `vlm_description`), of which `drop_unreadable()` excludes one that carries no step names.
+`chatbot.load_corpus()` merges them into **one index of 1199 chunks**; a user does not know
+which kind of document answers their question.
 
-## 2. The two extraction paths
+`data/workflow_chunks.json` is the raw extraction, kept so the repaired corpus can be diffed
+against it. `paths.WORKFLOW_CHUNKS_ACTIVE` names the one actually loaded, and `load_corpus()`
+falls back to the raw file if it has not been built on a given checkout.
+
+## 2. The three readers
 
 The corpus holds two kinds of document that need completely different readers, and sending one
-to the other's reader fails *silently* in both directions. [`document_router.py`](files/document_router.py)
-decides which is which — on ISO section headings and page count, two orthogonal signals, with
+to the other's reader fails *silently* in both directions. `backend/document_router.py` decides
+which is which — on ISO section headings and page count, two orthogonal signals, with
 disagreements reported rather than resolved.
 
 ```
@@ -47,277 +58,290 @@ disagreements reported rather than resolved.
                         /                      \
           process document                   workflow diagram
                  |                                  |
-        adaptive_chunker.py                 workflow_extractor.py
-        layout-aware sectioning             vision model reads the topology
+        adaptive_chunker.py                 workflow_vector.py
+        layout-aware sectioning             reads the PDF's own vector layer:
+                 |                          shapes, arrows, arrowheads
                  |                                  |
-            chunks.json (152)              workflow_chunks.json (175)
+                 |                          (no text layer? fall back to)
+                 |                          workflow_extractor.py — vision model
+                 |                                  |
+         chunks.json (1063)              workflow_chunks.json (137)
                  \                                  /
                   \------> retriever.py <----------/
-                        BM25 + MiniLM/FAISS hybrid
+                        BM25 + MiniLM/FAISS hybrid, one index
                                   |
                             chatbot.py  ->  app.py / demo_chatbot.ipynb
 ```
 
 Why the split matters: a flowchart's meaning is in the **edges** — which arrow points where,
-which diamond loops back on "Not Approved", which red monetary label decides who signs. A text
+which diamond loops back on "Not Approved", which monetary label decides who signs. A text
 extractor returns the labels with every relationship destroyed, which reads like content and
 answers nothing.
 
+**`workflow_vector.py` is the primary workflow reader and involves no model at all.** It reads
+shapes and connector polylines out of the PDF's vector layer and derives the topology
+geometrically, so every token in a workflow chunk is verbatim from the file. The vision path
+(`workflow_extractor.py`) now handles only the two image-only signature matrices that have no
+text layer to read — 3 chunks of 137.
+
 ```bash
-python document_router.py
+python backend/document_router.py
 ```
 
 ## 3. Modules
 
 | File | What it does |
 |---|---|
-| [`document_router.py`](files/document_router.py) | Routes each PDF to its extractor; reports files where the two signals disagree |
-| [`adaptive_chunker.py`](files/adaptive_chunker.py) | Process PDFs → `chunks.json`. Finds section boundaries from layout, labels them against a canonical taxonomy. Audits itself on every run |
-| [`workflow_extractor.py`](files/workflow_extractor.py) | Workflow PDFs → `workflow_chunks.json`, one chunk per lane. VLM emits a structured graph; the embedded prose is rendered deterministically from it |
-| [`extract_pipeline.py`](files/extract_pipeline.py) | Independent OCR-health audit — which pages carry no embedded text |
-| [`retriever.py`](files/retriever.py) | Hybrid BM25 + MiniLM/FAISS retrieval, doc-code routing, embeddings cached in `.embed_cache/` |
-| [`contextualize.py`](files/contextualize.py) | Follow-up resolution — rewrites "in the self execution process" into a standalone query, only when a cheap gate fires |
-| [`translate.py`](files/translate.py) | Arabic in (Egyptian dialect), MSA out. Form numbers masked before translation, restored after |
-| [`validator.py`](files/validator.py) | Hallucination proxy: extracts form numbers from each answer, checks them against those occurring in the corpus. Flags, does not block |
-| [`chatbot.py`](files/chatbot.py) | The pipeline itself — one copy of the prompt text, the reasoning-strip regex, the validation order |
-| [`app.py`](files/app.py) | Streamlit front end |
-| [`demo_chatbot.ipynb`](files/demo_chatbot.ipynb) | The explanation — rebuilds the pipeline end to end and shows the reasoning |
+| `backend/paths.py` | Every path in the repo, resolved from the root. Import this rather than recomputing |
+| `backend/document_router.py` | Routes each PDF to its extractor; reports files where the two signals disagree |
+| `backend/adaptive_chunker.py` | Process PDFs → `chunks.json`. Finds section boundaries from layout, labels them against a canonical taxonomy. Audits itself on every run |
+| `backend/workflow_vector.py` | Workflow PDFs → `workflow_chunks.json`, geometrically, no model. Shapes → nodes, connector polylines → edges, arrowheads → direction |
+| `backend/workflow_extractor.py` | Vision fallback for scanned pages, plus `render_prose()` — the single place a graph becomes the text that gets embedded |
+| `backend/extract_pipeline.py` | Independent OCR-health audit — which pages carry no embedded text |
+| `backend/retriever.py` | Hybrid BM25 + MiniLM/FAISS retrieval, doc-code routing, workflow-intent boost and mix floor, relevance cutoff. Embeddings cached in `data/.embed_cache/` |
+| `backend/contextualize.py` | Follow-up resolution — rewrites "who signs after that" into a standalone query, only when a cheap gate fires |
+| `backend/translate.py` | Arabic in (Egyptian dialect), MSA out. Form numbers masked before translation, restored after |
+| `backend/validator.py` | Hallucination proxy: extracts form numbers from each answer, checks them against those occurring in the corpus. Flags, does not block |
+| `backend/config.py` | Every tunable in one place, each overridable by an `RME_*` environment variable. The defaults are the tuned ones |
+| `backend/errors.py` | The expected runtime failures as distinct types, each carrying the sentence the UI shows |
+| `backend/logs.py` | One logging setup, and the one-line-per-answer operational record. Question and answer text is opt-in, not default |
+| `backend/chatbot.py` | The pipeline itself — corpus loading, prompt text, context budget, the validation order |
+| `app.py` | Streamlit front end. Product view by default; diagnostics behind **Developer view** in the sidebar |
+| `demo_chatbot.ipynb` | The explanation — rebuilds the pipeline end to end and shows the reasoning |
 
 ## 4. Quick start
 
 ```bash
-pip install -r files/requirements.txt
-```
-
-```bash
+pip install -r requirements.txt
 ollama pull qwen3:14b
+streamlit run app.py
 ```
+
+First question is slow: it builds the MiniLM index. After that, retrieval is ~15 ms and
+generation is 60–110 s on `qwen3:14b`.
+
+Nothing above needs configuring, but nothing above is hardcoded either. Every setting reads an
+environment variable and falls back to the tuned default (`backend/config.py`), so a different
+host or model is a prefix rather than a diff:
 
 ```bash
-streamlit run files/app.py
+RME_OLLAMA_HOST=http://gpu-box:11434 RME_MODEL=qwen3.6:27b streamlit run app.py
 ```
 
-Full install, model choice, latency figures and the Arabic evaluation are in
-[files/README_HANDOFF.md](files/README_HANDOFF.md).
+| Variable | Default | Notes |
+|---|---|---|
+| `RME_OLLAMA_HOST` | `http://localhost:11434` | |
+| `RME_MODEL` | `qwen3:14b` | Smallest size tested that holds the workflow answer format |
+| `RME_REWRITE_MODEL` | same as `RME_MODEL` | Follow-up rewriting only |
+| `RME_TOP_K` | `6` | Tuned against `evals/`; a workflow mix floor depends on it |
+| `RME_CONTEXT_BUDGET_CHARS` | `18000` | Over this, Ollama drops the *instruction*, not the tail |
+| `RME_GEN_TIMEOUT` | `1800` | Seconds. Long workflow answers legitimately run for minutes |
+| `RME_POLICY` | `flag` | `block` withholds answers citing an unverifiable form number |
+| `RME_LOG_LEVEL` / `RME_LOG_FILE` | `INFO` / stderr | |
+| `RME_LOG_CONTENT` | `0` | Off: operational logs record shape and timing, not what was asked |
+
+An unparseable value falls back to the default and is reported at startup rather than crashing
+the import or being silently ignored.
+
+### Tests
+
+```bash
+pytest
+```
+
+48 tests, under a second, no model and no network. They cover the logic *between* retrieval and
+generation — the context budget, the two workflow caveats, version-collision detection, the
+failure mapping at the model boundary — which is where every regression found so far has
+actually lived. Answer and retrieval quality are not testable this way; that is what `evals/`
+is for.
 
 ## 5. Rebuilding the artifacts
 
 Both chunk files ship prebuilt, so **you can skip this**.
 
 ```bash
-python adaptive_chunker.py --audit audit.json          # ../processes_pdf -> chunks.json
+python backend/adaptive_chunker.py --audit audit.json     # processes_pdf -> chunks.json
+python backend/workflow_vector.py                          # Workflows     -> workflow_chunks.json
 ```
 
-```bash
-python workflow_extractor.py --src ../Workflows --audit workflow_audit_full.json --resume
-```
+`workflow_vector.py` is deterministic geometry — same PDFs and same code give byte-identical
+output, verified across all 110 files. Re-extraction is therefore only worth running after the
+extractor itself changes.
 
-The workflow run is the expensive one: one vision-model call per page over 133 pages. It
-checkpoints the audit file after **every document**, and `--resume` skips what is already in
-there — a run of this length will be interrupted. To re-render the prose without touching the
-model:
+**Workflow chunks are not ground truth.** They carry `review: "machine"`, they are excluded from
+the validator's form whitelist, and the app labels any answer built from them. The tokens are
+verbatim from the PDF, but *which arrow points where* is inferred, and `coverage` plus
+`audit_warnings` on each chunk record how much of the page the extractor could account for.
 
-```bash
-python workflow_extractor.py --from-audit workflow_audit_full.json
-```
+## 6. Retrieval and answer shape
 
-**The workflow chunks are the only part of the corpus that is not ground truth.** They carry
-`source_type: "vlm_description"` and `review: "machine"`, they are excluded from the validator's
-form whitelist, and the app labels any answer built from them. 71 of 133 pages extracted with no
-audit warning at all; the rest are tracked in `workflow_warnings_report.pdf`, and the failure is
-concentrated and understood — see below.
+Two populations share one index, roughly 8:1 in favour of process text. Left alone, BM25 favours
+the process side on almost any query, because process PDFs are long repetitive prose while a
+workflow chunk is a short rendering of a graph. Four mechanisms address that, and **none of them
+is a router** — nothing is excluded from the candidate pool on the basis of `source_type`:
 
-## 6. Known issue: dense diagrams are under-extracted
+| Mechanism | Default | What it does |
+|---|---|---|
+| `workflow_intent()` | — | Keyword test for route-shaped questions ("who signs", "what happens after") |
+| `workflow_boost` | `0.06` | Soft score nudge toward diagram chunks when the intent fires |
+| `workflow_floor` | `2` | Guarantees both populations a minimum share of top-k, capped at a third each |
+| `min_rel` / `min_hits` | `0.55` / `3` | Relevance cutoff: `top_k` becomes a ceiling, not a quota |
+| `top_k` | `6` | Raised from 3; `fit_context()` keeps 6 large workflow chunks from overflowing `num_ctx` |
 
-60 of 131 workflow documents carry at least one audit warning, and the distribution is not
-uniform. Grouping pages by the size of the PDF canvas:
+`workflow_boost` was lowered from 0.12 to 0.06 on measurement: 0.12 cost a process question on
+`eval_set` (30/32 → 29/32) and bought nothing back on the workflow set.
 
-| longest page edge | pages | clean | mean warnings |
-|---|---|---|---|
-| under 1700 pt (A4/A3) | 85 | 58 | 0.4 |
-| 1700–3000 pt | 27 | 12 | 0.8 |
-| over 3000 pt | 21 | **1** | **8.9** |
+**Answer shape.** When a diagram is in the retrieved context, the prompt asks for a narrative
+walk — a lead-in, numbered steps, `A decision is made:` with one sub-bullet per branch, an
+explicit ending, and a trailing `Returns and loops:` list. The source document is cited **once**,
+on its own line at the end.
 
-These are Visio exports on canvases up to 7082 × 4642 pt — roughly 66 × 64 inches. Rendered at
-`RENDER_DPI = 140` and then downscaled by the vision model's own preprocessing, a 16 pt label
-lands at a couple of pixels tall. The model does not hallucinate on these pages so much as it
-stops seeing them: on one 399-line diagram it returned 16 nodes and 21 edges, and 136 printed
-labels plus 27 monetary thresholds never made it into the graph.
-
-**Two fixes are implemented, both built on the fact that the missing content is already available
-exactly**: 130 of 133 pages carry a native text layer with word-level coordinates, and the
-extractor previously used it only as an after-the-fact audit channel.
-
-1. **Tiling** (`plan_tiles`, `render_tiles`). What matters is not render DPI but the ratio of
-   label height to page extent, because the model's input size is fixed regardless of what it is
-   sent. So an oversized page is cut into tiles small enough that a label survives that
-   downscale. Cuts are placed in **gutters** — empty runs no box or line crosses — so a boundary
-   never bisects a node; tiles then overlap, because an *arrow* crossing a boundary is
-   unavoidable and the overlap keeps both endpoints visible somewhere. `merge_graphs` rejoins
-   the tile graphs on **normalised label text**, not on ids, which the model slugs per call.
-2. **Checklist seeding** (`build_prompt`). The text-layer strings for each tile are handed to the
-   model up front as a list it must place — turning the audit's post-hoc complaint into a
-   constraint. It is explicitly *not* a transcription source: the text layer carries labels with
-   every relationship destroyed, so it can say what is on the page and never where an arrow
-   points.
-
-Planning across all 133 pages: 92 stay single-tile, and 61 of the 71 previously-clean pages are
-untouched. The worst offenders split into 6–12. Total vision calls go 133 → 230.
-
-```bash
-python workflow_extractor.py --src ../Workflows --no-tile   # the pre-tiling behaviour, for A/B
-```
-
-**Measured on one document so far** — `Request for Quotation - Purchasing RFQ WF - FC in
-Damietta.pdf`, a 4046 pt page that split into 3 tiles:
-
-| | nodes | edges | thresholds | warnings |
-|---|---|---|---|---|
-| before | 14 | 22 | 5 | 10 |
-| after | 68 | 112 | 9 | 7 |
-
-Roughly five times the topology recovered, and the warning count fell rather than rose — the
-extra nodes are not extra noise. It cost 1775 s for the page, all of it CPU (see 6b).
-
-**Not yet measured across the corpus.** Until a full re-run is compared against
-`workflow_audit_full.json`, treat any answer sourced from a document listed in
-`workflow_warnings_report.pdf` as unverified — the warnings are advisory, and a partially-read
-graph still becomes chunks.
-
-One quality issue surfaced by that run, since **fixed**: the merged graph kept a lane named after
-the whole page ("Construction Company Approval Routing Flowchart") alongside the six real flows.
-`resolve_shared_lanes` drops such a pseudo-lane by comparing its name to `graph["title"]`, and
-that comparison cannot fire when the model returns a null title — which it does on tiled pages.
-It now also matches the filename stem, and, more importantly, treats **full absorption alone** as
-sufficient when the model reported no title: a lane whose every node was pulled into sibling
-lanes has no content that is not already elsewhere, so dropping it cannot lose anything. Replayed
-over all 133 existing pages the change is inert (175 lanes before and after), so it carries no
-regression risk for the untiled corpus.
-
-Two further options, not implemented: closing the loop (re-prompt with exactly the labels
-`audit()` reports missing, merge, re-audit), and skipping the VLM entirely on native pages by
-reconstructing the graph from the vector layer — rects → nodes, polylines → edges, arrowhead
-triangles → direction. The latter would make these chunks ground truth rather than
-`review: "machine"`.
-
-## 6b. Running on an Intel Arc GPU
-
-Ollama ships a Vulkan backend (`lib/ollama/vulkan/ggml-vulkan.dll`) but gates it behind two
-environment variables, and skips integrated GPUs by default even when a backend is present:
-
-```bash
-setx OLLAMA_VULKAN 1 && setx OLLAMA_IGPU_ENABLE 1
-```
-
-Restart the Ollama server fully afterwards — `setx` only affects new processes. Confirm with
-`/api/ps`, which is the only reliable check: `torch` cannot tell you, because Ollama ships its
-own runtime.
-
-Measured on an Arc 140T (integrated, shared system memory): `qwen3:14b` loads at
-`vram=9.6GB / total=9.6GB`, fully resident. An iGPU shares memory bandwidth with the CPU and
-token generation is bandwidth-bound, so this is a real speedup but not a discrete-GPU speedup —
-do not calibrate against the GPU column of the latency table in `README_HANDOFF.md`, which was
-written for a dedicated card.
-
-**The vision model cannot use it.** `qwen3.6:27b` loads at 94% on the GPU and then dies partway
-through every request:
-
-```
-slot process_mtmd: id 0 | task 0 | encoding mtmd batch from idx = 4
-[GIN] 500 | POST "/api/generate"
-```
-
-The LLM half runs fine; Vulkan cannot execute the multimodal projector. llama.cpp has
-`--no-mmproj-offload` for exactly this and the flag is present inside the Ollama binary, but no
-`OLLAMA_*` variable exposes it, so the projector cannot be placed separately. `workflow_extractor.py`
-therefore pins **only the vision requests** to the CPU with `VISION_NUM_GPU = 0` — set per
-request, because `OLLAMA_VULKAN` is global and the interactive path wants it. Set it to `None`
-on a CUDA machine.
-
-Consequence for the extraction: it stays a CPU job, at roughly **9 minutes per tile**. Tiling
-takes the corpus from 133 calls to 230, so a full re-run is on the order of a day and a half.
-That cost is the strongest argument for the vector-layer extraction described above, which needs
-no model at all.
-
-`retriever.py` passes `device=None` and lets sentence-transformers choose; `Retriever(device="xpu")`
-pins MiniLM to the Arc, which is worth doing only for full corpus re-embeds.
+The returns line is not cosmetic. Measured on three diagrams, routes represented against
+`graph.edges`: **14/36 without it, 28/36 with it**. It also stopped the model inventing a
+threshold — on the rental-equipment flow it had been manufacturing a decision at `Finance Review`
+using condition labels borrowed from a different step.
 
 ## 7. Evaluation
 
-`eval_set_v2.json` — 100 questions over 68 of the 71 process documents. Every question was
-built from chunk text and every `must_include` string verified to occur verbatim in its gold
-document; that check runs *inside* the harness, because an eval set that has drifted from the
-corpus reports a low score rather than an error. All records are `review: "machine"`.
-
 ```bash
-python eval_retrieval.py     # retrieval only, no Ollama, ~13 ms/question
+python evals/eval_retrieval.py --eval evals/eval_set_v2.json --top-k 3
+python evals/eval_retrieval.py --eval evals/eval_set.json --top-k 3
+python evals/eval_retrieval.py --eval evals/eval_set_workflow.json --top-k 6
 ```
 
-```bash
-python eval_generation.py    # end to end, needs Ollama, ~47 min on an Arc iGPU
-```
+Current, against the production corpus:
 
-| | before router fix | after |
+| Eval set | Questions | Score |
 |---|---|---|
-| retrieval, gold doc in top-3 | 79/92 = 85.9% | **87/92 = 94.6%** |
-| answer, all `must_include` found | 75/92 = 81.5% | not re-run |
-| refusal on unanswerable | 8/8 = 100% | not re-run |
+| `eval_set_v2.json` | 92 answerable | **86/92** top-3 |
+| `eval_set.json` | 32 answerable | **27/32** top-3 |
+| `eval_set_workflow.json` | 18 | **18/18** top-6, 16/18 top-3, 6/18 top-1 |
 
-Do not compare against the old `model_eval_results.json` (100% on 36 questions over 9 documents).
-Top-3 of 9 is a ~33% chance baseline; this is 68 documents.
+`eval_retrieval.py` now calls `chatbot.load_corpus()` and **always scores against the corpus
+production actually serves**. It used to merge workflow chunks only when an eval set's gold
+documents needed them, which meant `eval_set_v2` was never once scored against the real index —
+88/92 against the process-only index it built, 86/92 against the real merged one. Two questions
+were regressing where nothing in the repo could see it.
 
-> `generation_eval_results.json` was produced **before** the router fix below. Its retrieval
-> column is superseded; re-run `eval_generation.py` (~47 min) for current end-to-end numbers.
+`evals/make_workflow_eval.py` generates the workflow eval set from the diagrams' own graphs.
 
-### What the first run found
+## 8. What works, and what does not
 
-The 17 misses attributed cleanly, which is the point of scoring retrieval and generation apart:
-**11 retrieval**, **2 chunk-granularity** (right document, wrong chunk, model correctly refused),
-**4 generation**.
+### Works, measured
 
-**8 of the 11 retrieval failures were one bug.** `route_prefixes` hard-restricted the search to a
-doc-code family chosen from `PREFIX_HINTS`, a keyword table covering 6 families. The 9-document
-corpus had 6; the full corpus has 19. So a keyword that used to be unambiguous now excludes most
-of the index — `"handover"` routed to PTN and dropped PEN/PFW/PLO, `"subcontract"` routed to PCN
-and dropped POP. Explicit codes were broken too: `"what is P-OP-02"` intersected with the stale
-six-family list and routed nowhere.
+- **Retrieval.** 86/92 and 27/32 top-3 on the process sets, 18/18 top-6 on workflow. Dense and
+  BM25 are at parity on graph-rendered text (17/18 each at top-6); fusion beats both.
+- **Arabic.** Question translated to English for retrieval, answer generated in Arabic.
+- **Follow-up resolution.** "who signs after that?" resolves against the previous turn — the
+  gate fires on `back-reference (that)` and the rewriter binds the pronoun to the step the
+  previous *answer* named.
+- **The workflow answer format**, including loops and send-backs (see §6).
+- **Extraction is reproducible.** Byte-identical across all 110 workflow PDFs.
 
-Fixed by making hard routing fire **only on an explicit doc code** in the query, which cannot be
-ambiguous, and leaving keyword hints to `soft_prefixes`, which boosts without excluding. Prefix
-validity is now checked against the loaded corpus rather than a module constant, so the list
-cannot silently go stale again. Retrieval went 87.0% → 94.6%, and `numeric` — the weakest type —
-went 81% → 94%.
+### Does not work, or is not verified
 
-The remaining open item is unchanged and is now measured: **no chunk carries a step number**, so
-a duration sits inside one large `PROCESS OPERATION` chunk with no term distinctive to its
-document. That is what the 2 chunk-granularity misses are, and step-level chunking is the fix.
+- **~30% of workflow graphs are structurally defective.** 78 of 137 chunks are structurally
+  clean. The rest have duplicate node labels (the extractor emits `x` and `x_2` for one box),
+  self-loops, or a node connected to nothing.
+- **18 files have an orphaned node** — usually `End`, sometimes `Auto-Creation`. On 17 of them
+  the arrow is **absent from the PDF's vector layer**: the only thing near the box is a 2-point
+  stub, or the nearest connector endpoint is 75–149 pt away. No extractor change recovers an
+  arrow that was never drawn as one. This is now **said out loud**: an answer built from such a
+  diagram carries a caveat naming the steps that connect to nothing (`chatbot.workflow_gaps`,
+  rendered by `app.reliability_notes`). The gap is not closed — it is no longer silent.
+- **`Variation Order Flow Chart.pdf` is in the wrong pipeline.** 36 of its nodes are whole
+  sentences ("Contract Department reviews the Merit of VO … within 7 days"). It is a text-heavy
+  process document being parsed as a box-and-arrow flowchart.
+- **Threshold text is garbled on some diagrams.** Condition strings are concatenated arrow
+  labels: `"Below 3M SAR Above 3M SAR"` collapses both branches of a decision into one string,
+  so even a correctly retrieved document cannot tell you which side an approver is on.
+- **Near-duplicate documents make eval scores softer than they look.** Of the 18 workflow
+  questions, only 2 have a unique correct answer in the corpus; 16 have another diagram carrying
+  the identical predecessor → successor edge. Document-level scoring is the wrong metric for
+  this population.
+- **A sibling-document mix-up reached a user.** Asked about the general subcontract amendment
+  process, the bot answered with the **rental-equipment variation-order** threshold
+  (3M EGP → VP Approval). The general process turns on 5M/10M/20M EGP with different approvers,
+  and the KSA variant is in SAR. Every workflow chunk now carries `family` and `variant`
+  (see §9), and those fields are now used: when the retrieved chunks span two documents of one
+  family, the context labels each chunk with its version, a prompt rule requires the answer to
+  come from one of them and to name it, and the UI lists the versions it did *not* use
+  (`chatbot.variant_conflicts`). Measured on the case that produced this failure — "subcontract
+  preparation approval steps", which returns V1 at 1.036 and V3 at 0.960 — the answer now opens
+  by naming V1 and closes by listing V3, instead of merging them.
 
-### The validator's limit, with evidence
+  **Nothing is dropped**, deliberately: `workflow@1` is 6/18, so collapsing to the top-scoring
+  variant would trade a visible ambiguity for a silent wrong pick. It also does not try to
+  separate superseding *versions* (`Subcontract Preparation V1/V3/V4`) from distinct *scopes*
+  (`IIR – Manholes / Pipes / Valve Chambers`); the filenames do not carry enough to tell them
+  apart, and both want the same handling.
+- **The Streamlit UI has never been visually verified** by the automated checks — only the
+  record fields behind it.
 
-On `PVMO01-1` the model answered `F-P-TN-02-04`; the correct form is `F-P-TN-02-05`. Both are
-real, so the whitelist passed it as `clean`.
+## 9. The repaired corpus, and the metadata on it
 
-`validate_answer` now takes the retrieved chunks and reports a third verdict, **`ungrounded`** —
-a form that exists in the corpus but was not in the context the answer was built from, which the
-prompt forbids. That is strictly stronger than the whitelist.
+`data/workflow_chunks_fixed.json` is **live** — re-extracted with the `merge_fragments` fix and
+then duplicate-label collapsed. Measured against the raw extraction:
 
-**It does not catch `PVMO01-1`**, and it is worth being precise about why. The source lists the
-two forms two lines apart:
+| | current | fixed |
+|---|---|---|
+| structurally clean | 78/137 (56.9%) | **96/137 (70.1%)** |
+| duplicate-label chunks | 34 | **4** |
+| self-loops | 25 | **0** |
+| route coverage on a deterministic walk | 78.1% | **83.6%** |
+| retrieval (all four measures) | — | **identical** |
 
-```
-Tender sourcing strategy   F-P-TN-02-04
-Project sourcing strategy  F-P-TN-02-05
-```
+Text is re-rendered with the extractor's own `render_prose()`, and the threshold tail is spliced
+from the original verbatim — thresholds live on a page-level `escalation` list that chunks do not
+store. That splice was gated: with the graph left unmodified, re-render + splice had to equal the
+stored text **byte for byte** on all 137 chunks before anything was written.
 
-Both were in the retrieved context, so the model picked the adjacent, confusable entry out of
-material it was genuinely shown. No form-number check can close that gap. **Read a `clean`
-verdict as "cited nothing impossible", never as "correct"** — and note that `policy="block"`
-would not have caught this either.
+**Still open:** three files lose 5 edges each (`RFI - RME to Client V2`, `S-C Invoice MEP`,
+`S-C Invoice Operation`) against 13 gained elsewhere. Net positive, and retrieval is unchanged
+on all four eval measures, but that cluster has not been explained.
 
-## 8. Repository conventions
+### Metadata on workflow chunks
+
+| Field | Coverage | Where it comes from |
+|---|---|---|
+| `family` | 136/136 | Filename before `" - "` — e.g. `Subcontract Amendments` |
+| `variant` | 133/136 | Filename after `" - "` — e.g. `Rental Equipment Variation Order WF` |
+| `doc_code` | 6 chunks / 3 documents | A code actually printed in the filename or on the page |
+
+**Only 3 of 110 workflow documents carry a real document code**, so `doc_code` cannot be
+populated for the rest and is left `None`. It was not invented: minting plausible-looking RME
+document numbers into a compliance corpus is how a fabricated identifier ends up cited to a user.
+Mapping each diagram onto its process document automatically was tried and rejected on
+measurement — only 3 of 59 families matched confidently, and the near-misses were wrong in
+exactly the dangerous way (`Internal Head Office NCR` → `Head Office Dress Code Policy`).
+
+`doc_code_prefix()` now strips an optional `F-`, because `F-P-VMO-01-07` is a form in the
+`P-VMO` family. Those three documents route with their process family; before, **no workflow
+chunk could be routed at all**.
+
+### The extractor bug that was fixed
+
+`merge_fragments()` joins connector fragments that share an endpoint. On the NOD Auto sheet two
+arrows leave `Contracts Department` from the same point on its edge — one routed above the page,
+one below — and both arrive at `End`. Union-find saw a single path
+`End(bottom) → Contracts Department → End(top)`; every interior vertex had degree 2, so the
+fan-out guard did not fire. Merged into one polyline it began and ended on the *same* box, and
+`direct_edges` discarded it at `ia == ib`. Both arrows were lost.
+
+The fix splits a merged chain wherever it passes **through** a box — but only when the merge is
+about to be useless, i.e. both free ends snap to the same box. A first version split every chain
+near a box and measured badly: 223 edges lost against 134 gained. The narrow version fixes one
+file and regresses none.
+
+## 10. Repository conventions
 
 - `.gitattributes` pins line endings (LF in the repo) and marks every binary type, because the
   repo is worked on from Windows and tracks 400+ PDFs.
-- Machine-produced records are tagged `"review": "machine"` — in `eval_set_ar.json` and in every
-  workflow chunk — and become `"human"` only after a person has checked them.
+- Machine-produced records are tagged `"review": "machine"` — in `eval_set_ar.json`,
+  `eval_set_workflow.json` and every workflow chunk — and become `"human"` only after a person
+  has checked them.
 - Regenerated files are listed in `.gitignore` with the command that writes them.
+- Expected runtime failures raise a `PipelineError` subclass carrying a user-facing sentence;
+  anything else is a bug and is allowed to propagate, so the two are never flattened together.
+- `_verify/` holds the scripts and recorded output behind the numbers in §6–§9. Read-only
+  diagnostics; nothing in the pipeline imports them.

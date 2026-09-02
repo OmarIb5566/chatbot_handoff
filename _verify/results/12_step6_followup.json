@@ -1,0 +1,122 @@
+[
+  {
+    "label": "q1_workflow",
+    "question": "what is the approval workflow for a subcontract amendment?",
+    "workflow_intent": true,
+    "n_workflow_hits": 4,
+    "route": [],
+    "boost_prefixes": [
+      "PCN"
+    ],
+    "lang": "en",
+    "reused_sources": false,
+    "was_rewritten": false,
+    "gate_reasons": [
+      "no history"
+    ],
+    "query_used": "what is the approval workflow for a subcontract amendment?",
+    "rewrite_model": null,
+    "retrieval_s": 1.216965000028722,
+    "generation_s": 36.906057300046086,
+    "total_s": 38.12316020007711,
+    "validator_verdict": "clean",
+    "hits": [
+      {
+        "score": 1.0788,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 2",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.9984,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.9939,
+        "filename": "Rule of Credit Amendments - ROC Amendments.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.9768,
+        "filename": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.8715,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "OBJECTIVES",
+        "source_type": null
+      },
+      {
+        "score": 0.8119,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OUTPUT",
+        "source_type": null
+      }
+    ],
+    "answer": "The approval workflow for a subcontract amendment depends on the specific type of amendment and the associated thresholds. For example, in \"Approval flow 1\" from the document *Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf*, the workflow includes steps such as VP, Technical Operations Manager, Finance, Adding Line Items, Earthmoving, PM, Review, Revision, Operation Engineer, Contracts Department, PsM, Creation, and S/C Signature. The routing and approval thresholds are also defined based on the value and type of the subcontract (e.g., RME Self Execution or not). For more specific details, refer to the document *Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf*."
+  },
+  {
+    "label": "q2_followup",
+    "question": "who signs after that?",
+    "workflow_intent": true,
+    "n_workflow_hits": 4,
+    "route": [],
+    "boost_prefixes": [],
+    "lang": "en",
+    "reused_sources": false,
+    "was_rewritten": false,
+    "gate_reasons": [
+      "opens like a standalone question, nothing to resolve against history"
+    ],
+    "query_used": "who signs after that?",
+    "rewrite_model": null,
+    "retrieval_s": 0.039349299971945584,
+    "generation_s": 66.13331179996021,
+    "total_s": 66.17282859992702,
+    "validator_verdict": "clean",
+    "hits": [
+      {
+        "score": 1.047,
+        "filename": "Potential Delay Events - NOD Manual WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.9978,
+        "filename": "Client Contract Lines Modification - WF - Client Contract Lines Modification.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.9915,
+        "filename": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.9846,
+        "filename": "S-C Work Completed Status - TO Work Completed Status.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.6042,
+        "filename": "MHR10_Code_of_Conduct_Policy.pdf",
+        "section": "UNMATCHED",
+        "source_type": null
+      },
+      {
+        "score": 0.5894,
+        "filename": "MHR16_Employee_Separation_Policy.pdf",
+        "section": "DOCUMENT CHANGE HISTORY",
+        "source_type": null
+      }
+    ],
+    "answer": "To answer the question \"who signs after that?\", we need to refer to the specific approval workflows outlined in the provided documents. The answer depends on the context of the process being referred to. For example:\n\n- In the **\"Potential Delay Events - NOD Manual WF.pdf\"**, after the **Contracts Department**, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n- In the **\"Client Contract Lines Modification - WF - Client Contract Lines Modification.pdf\"**, after the **Review** step, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n- In the **\"Customer Satisfaction - Customer Satisfaction WF.pdf\"**, after the **QAM**, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n- In the **\"S-C Work Completed Status - TO Work Completed Status.pdf\"**, after the **Review by TOM**, the next signatory depends on the value, as outlined in the **\"Routing and Approval thresholds\"** section of the document.\n\nSince the question \"who signs after that?\" is not specific to a particular process or step, and no specific step or document is referenced, the answer is:\n\n**Not specified in these process documents.**"
+  }
+]

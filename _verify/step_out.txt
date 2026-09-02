@@ -1,0 +1,19 @@
+load_corpus() -> 1199 chunks (1063 process + 136 workflow)
+  workflow chunks with family : 136/136
+  workflow chunks with variant: 133/136
+  workflow chunks with doc_code: 6/136
+  workflow chunks that now yield a routing prefix: 6/136
+     POP    P-OP-02          Variation Order Flow Chart.pdf
+     POP    P-OP-02          Variation Order Flow Chart.pdf
+     POP    P-OP-02          Variation Order Flow Chart.pdf
+     PVMO   F-P-VMO-01-07    Rowad Authority - F-P-VMO-01-07 Procurement Compar
+     PCN    F-P-CN-01-11     Rowad Authority - F-P-CN-01-11 SC Agreement Signat
+     PCN    F-P-CN-01-11     Rowad Authority - F-P-CN-01-11 SC Agreement Signat
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 11131.21it/s]
+Batches:   0%|          | 0/19 [00:00<?, ?it/s]Batches:   5%|▌         | 1/19 [00:01<00:30,  1.71s/it]Batches:  11%|█         | 2/19 [00:02<00:15,  1.13it/s]Batches:  16%|█▌        | 3/19 [00:02<00:09,  1.63it/s]Batches:  21%|██        | 4/19 [00:02<00:09,  1.58it/s]Batches:  26%|██▋       | 5/19 [00:03<00:07,  1.95it/s]Batches:  32%|███▏      | 6/19 [00:03<00:05,  2.27it/s]Batches:  37%|███▋      | 7/19 [00:03<00:04,  2.56it/s]Batches:  42%|████▏     | 8/19 [00:04<00:03,  2.79it/s]Batches:  47%|████▋     | 9/19 [00:04<00:03,  2.95it/s]Batches:  53%|█████▎    | 10/19 [00:04<00:02,  3.46it/s]Batches:  58%|█████▊    | 11/19 [00:04<00:02,  3.67it/s]Batches:  63%|██████▎   | 12/19 [00:05<00:01,  4.00it/s]Batches:  68%|██████▊   | 13/19 [00:05<00:01,  4.46it/s]Batches:  74%|███████▎  | 14/19 [00:05<00:01,  4.80it/s]Batches:  84%|████████▍ | 16/19 [00:05<00:00,  6.35it/s]Batches:  89%|████████▉ | 17/19 [00:05<00:00,  6.97it/s]Batches: 100%|██████████| 19/19 [00:05<00:00,  8.39it/s]Batches: 100%|██████████| 19/19 [00:05<00:00,  3.24it/s]
+
+RETRIEVAL on the live corpus
+  eval_set_v2          top-3: 86/92
+  eval_set             top-3: 27/32
+  eval_set_workflow    top-1: 6/18   top-3: 16/18   top-6: 18/18
+EXIT 0 

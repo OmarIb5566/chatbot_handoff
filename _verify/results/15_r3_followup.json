@@ -1,0 +1,124 @@
+[
+  {
+    "label": "Q1",
+    "question": "Who prepares the subcontract amendment request?",
+    "gate_is_followup": false,
+    "workflow_intent": false,
+    "n_workflow_hits": 3,
+    "route": [],
+    "boost_prefixes": [
+      "PCN"
+    ],
+    "reused_sources": false,
+    "was_rewritten": false,
+    "gate_reasons": [
+      "no history"
+    ],
+    "query_used": "Who prepares the subcontract amendment request?",
+    "rewrite_model": null,
+    "retrieval_s": 1.043246200075373,
+    "generation_s": 107.34149220003746,
+    "total_s": 108.38484990003053,
+    "validator_verdict": "clean",
+    "hits": [
+      {
+        "score": 0.9258,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      },
+      {
+        "score": 0.919,
+        "filename": "Rule of Credit Amendments - ROC Amendments.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.897,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS RISK ASSESSMENT",
+        "source_type": null
+      },
+      {
+        "score": 0.8646,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "OBJECTIVES",
+        "source_type": null
+      },
+      {
+        "score": 0.834,
+        "filename": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+        "section": "Approval flow 1",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.8328,
+        "filename": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ],
+    "answer": "The subcontract amendment request is prepared by the concerned department, as specified in the document \"PCN01_Subcontract_Agreement_Process.pdf\". This is outlined in the section related to \"Case 6: Service Provider Subcontracts,\" where it states that the concerned department prepares the service provider subcontracts according to Rowad’s needs and requirements. \n\nFor more details, refer to the document: **PCN01_Subcontract_Agreement_Process.pdf**."
+  },
+  {
+    "label": "Q2",
+    "question": "who signs after that?",
+    "gate_is_followup": true,
+    "workflow_intent": true,
+    "n_workflow_hits": 4,
+    "route": [],
+    "boost_prefixes": [
+      "PCN"
+    ],
+    "reused_sources": false,
+    "was_rewritten": true,
+    "gate_reasons": [
+      "back-reference (that)"
+    ],
+    "query_used": "Who signs the subcontract amendment request after it is prepared by the concerned department?",
+    "rewrite_model": "qwen3:14b",
+    "retrieval_s": 0.2581006999826059,
+    "generation_s": 102.6613811000716,
+    "total_s": 123.05852260009851,
+    "validator_verdict": "clean",
+    "hits": [
+      {
+        "score": 0.9629,
+        "filename": "Rule of Credit Amendments - ROC Amendments.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.9242,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS OPERATION",
+        "source_type": null
+      },
+      {
+        "score": 0.9203,
+        "filename": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.8923,
+        "filename": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      },
+      {
+        "score": 0.8856,
+        "filename": "PCN01_Subcontract_Agreement_Process.pdf",
+        "section": "PROCESS RISK ASSESSMENT",
+        "source_type": null
+      },
+      {
+        "score": 0.8642,
+        "filename": "Request For Information (RFI) - From SC.pdf",
+        "section": "Approval flow",
+        "source_type": "pdf_vector"
+      }
+    ],
+    "answer": "After the subcontract amendment request is prepared by the concerned department, the next step in the approval process depends on the value of the amendment. If the value is above 3M EGP, the request is sent to the **VP Approval** for signing. If the value is below 3M EGP, the request is sent to **Finance Review** for signing. This is specified in the document **Subcontract Amendments - Rental Equipment Variation Order WF.pdf**."
+  }
+]

@@ -1,0 +1,95 @@
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 6940.42it/s]
+corpus: 1199 chunks over 181 documents
+
+========================================================================================================
+A2 — per-channel raw score and rank (full corpus, no routing)
+========================================================================================================
+
+--- R2-Q1: What is the approval workflow for a subcontract amendment?
+    workflow_intent(query) = True
+    chunk                                                                    BM25              dense              fused
+    Rule of Credit (ROC Amendments)                                    #2 17.8151          #8 0.5947          #2 0.9581
+    Rental Equipment Variation Order                                   #3 16.6535          #4 0.6193          #3 0.9345
+    BU-V1 flow 1                                                       #7 13.2690         #10 0.5891          #7 0.8053
+    BU-V1 flow 2                                                       #6 13.5485          #7 0.6002          #6 0.8211
+    BU-V1 flow 3                                                       #5 14.7736          #9 0.5932          #5 0.8573
+    query terms                : ['a', 'amendment', 'approval', 'for', 'is', 'subcontract', 'the', 'what', 'workflow']
+    ROC  chunk covers          : ['amendment', 'approval', 'for', 'the', 'workflow']
+    REVO chunk covers          : ['a', 'amendment', 'approval', 'for', 'subcontract', 'the', 'workflow']
+    doc length (BM25 tokens)   : ROC=87  REVO=250  BU-V1 f1=988
+
+--- R3-Q1: Who prepares the subcontract amendment request?
+    workflow_intent(query) = False
+    chunk                                                                    BM25              dense              fused
+    Rule of Credit (ROC Amendments)                                    #1 14.6378         #36 0.3863          #1 0.9190
+    Rental Equipment Variation Order                                   #2 11.9432         #16 0.4233          #3 0.8328
+    BU-V1 flow 1                                                       #67 6.1134         #24 0.4023         #32 0.5801
+    BU-V1 flow 2                                                       #21 8.1087         #14 0.4351         #15 0.6833
+    BU-V1 flow 3                                                       #19 8.4213         #13 0.4368         #11 0.6972
+    query terms                : ['amendment', 'prepare', 'request', 'subcontract', 'the', 'who']
+    ROC  chunk covers          : ['amendment', 'the', 'who']
+    REVO chunk covers          : ['amendment', 'subcontract', 'the', 'who']
+    doc length (BM25 tokens)   : ROC=87  REVO=250  BU-V1 f1=988
+
+--- R3-Q2: Who signs the subcontract amendment request after it is prepared by the concerned department?
+    workflow_intent(query) = True
+    chunk                                                                    BM25              dense              fused
+    Rule of Credit (ROC Amendments)                                    #1 25.2656         #49 0.3935          #1 0.9078
+    Rental Equipment Variation Order                                   #3 21.1027         #18 0.4351          #3 0.8373
+    BU-V1 flow 1                                                      #231 9.9017         #40 0.4047        #107 0.5506
+    BU-V1 flow 2                                                      #96 13.5076         #16 0.4453         #26 0.6638
+    BU-V1 flow 3                                                     #147 11.9145         #13 0.4488         #50 0.6284
+    query terms                : ['after', 'amendment', 'by', 'concerned', 'department', 'is', 'it', 'prepared', 'request', 'sign', 'subcontract', 'the', 'who']
+    ROC  chunk covers          : ['after', 'amendment', 'it', 'sign', 'the', 'who']
+    REVO chunk covers          : ['after', 'amendment', 'by', 'it', 'sign', 'subcontract', 'the', 'who']
+    doc length (BM25 tokens)   : ROC=87  REVO=250  BU-V1 f1=988
+
+========================================================================================================
+A3 — is the Rule of Credit chunk a hub?
+========================================================================================================
+
+(a) ROC chunk's own text as query, fused top-10:
+    1. [1.0000] Rule of Credit Amendments - ROC Amendments.pdf                   | Approval flow
+    2. [0.7784] Client Contract Lines Modification - WF - Client Contract Lines  | Approval flow
+    3. [0.7697] BOQ Quantity Modification - WF - BOQ Quantity Modification.pdf   | Approval flow
+    4. [0.7482] S-C Work Completed Status - TO Work Completed Status.pdf         | Approval flow
+    5. [0.7388] Financial Documents Changes - Financial Document Changes WF.pdf  | Approval flow
+    6. [0.7377] S-C Work Completed Status - Site Work Completed Status.pdf       | Approval flow
+    7. [0.7353] S-C Work Completed Status - QC Work Completed Status.pdf         | Approval flow
+    8. [0.7316] Rented Equipment Timesheet - Rented Equipment Timesheet - New -  | Approval flow
+    9. [0.6834] Project Budget - Project Budget.pdf                              | Approval flow
+   10. [0.6709] Material List - Material List WF.pdf                             | Approval flow
+
+(b) appearances in fused top-10 across eval sets (production defaults):
+   eval_set_workflow    ROC in top-10 on   1/ 18 questions (mean rank when present 4.0, rank-1 on 0)
+   eval_set_v2          ROC in top-10 on   0/ 92 questions (mean rank when present -, rank-1 on 0)
+   eval_set             ROC in top-10 on   0/ 32 questions (mean rank when present -, rank-1 on 0)
+
+(c) same measure for comparison chunks (eval_set_workflow, top-10):
+     1/18  mean rank   4.0   Rule of Credit Amendments - ROC Amendments.pdf
+     0/18  mean rank     -   Subcontract Amendments - Rental Equipment Variation Order WF.pdf
+     2/18  mean rank   4.0   Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf
+     0/18  mean rank     -   Memos - Memos WF.pdf
+     1/18  mean rank   8.0   Bid Closing & Approval Internal Process - WF.pdf
+
+(d) mean cosine to all 18 workflow questions — top 12 chunks in the whole corpus:
+    1. 0.4813  Inspection Request (IR) - Formwork IR.pdf                    | Approval flow
+    2. 0.4704  Infrastructure Inspection Request (IIR) - New_Form-Inspectio | Approval flow
+    3. 0.4659  Potential Delay Events - NOD Manual WF.pdf                   | Approval flow
+    4. 0.4613  Inspection Request (IR) - New - Inspection Request V2.0.pdf  | Approval flow
+    5. 0.4601  Document Submittal - ITP WF.pdf                              | Approval flow
+    6. 0.4548  Inspection Request (IR) - Inspection Request (Client).pdf    | Approval flow
+    7. 0.4542  Document Submittal - ITP (Client) WF.pdf                     | Approval flow
+    8. 0.4541  Document Submittal - Documents Submittal.pdf                 | Approval flow
+    9. 0.4495  Document Submittal - Method Statement WF.pdf                 | Approval flow
+   10. 0.4480  Material List - Material List WF.pdf                         | Approval flow
+   11. 0.4444  Document Submittal - Document Submittal Client WF.pdf        | Approval flow
+   12. 0.4438  Request For Information (RFI) - From SC.pdf                  | Approval flow
+
+   ROC  mean-cosine rank in corpus: 102 of 1199  (mean 0.3749)
+   REVO mean-cosine rank in corpus: 94 of 1199  (mean 0.3815)
+   corpus mean of mean-cosine     : 0.2368   std 0.0933
+   ROC is 1.48 sigma above the corpus mean
+
+DONE
+R4 EXIT 0 Mon 08/31/2026 22:03:15.36 

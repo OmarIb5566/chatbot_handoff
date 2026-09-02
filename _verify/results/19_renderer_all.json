@@ -1,0 +1,1362 @@
+[
+  {
+    "file": "Bid Closing & Approval Internal Process - WF.pdf",
+    "sec": "Approval flow",
+    "gold": 12,
+    "cov": 5,
+    "pct": 41.7,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Bonds Request - Bond Request Revision WF.pdf",
+    "sec": "Approval flow",
+    "gold": 17,
+    "cov": 16,
+    "pct": 94.1,
+    "extra": 4,
+    "borrowed": 0,
+    "wrong": 2
+  },
+  {
+    "file": "Bonds Request - Bonds Request WF.pdf",
+    "sec": "Approval flow",
+    "gold": 16,
+    "cov": 15,
+    "pct": 93.8,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "BOQ Quantity Modification - WF - BOQ Quantity Modification.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Client Contract Lines Modification - WF - Client Contract Lines Modification.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Client Contract VO - Client Variation Order WF.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 6,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Client Contracts - Client Contracts WF.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Cost Report Narrative - WF - Cost Report Narrative.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 6,
+    "pct": 100.0,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Customer Satisfaction - Creation by Commercial Dept. V1.pdf",
+    "sec": "Approval flow",
+    "gold": 8,
+    "cov": 8,
+    "pct": 100.0,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Customer Satisfaction - Creation by PM.pdf",
+    "sec": "Approval flow",
+    "gold": 5,
+    "cov": 5,
+    "pct": 100.0,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Customer Satisfaction - Customer Satisfaction WF V1.pdf",
+    "sec": "Approval flow 1",
+    "gold": 2,
+    "cov": 2,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Customer Satisfaction - Customer Satisfaction WF V1.pdf",
+    "sec": "Approval flow 2",
+    "gold": 1,
+    "cov": 1,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Customer Satisfaction - Customer Satisfaction WF.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Department Risk Assessment - Department Risk.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Document Submittal - Document Submittal Client WF.pdf",
+    "sec": "Approval flow",
+    "gold": 2,
+    "cov": 2,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Document Submittal - Document Submittals WF V1.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Document Submittal - Documents Submittal.pdf",
+    "sec": "Approval flow",
+    "gold": 2,
+    "cov": 2,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Document Submittal - ITP (Client) WF.pdf",
+    "sec": "Approval flow",
+    "gold": 8,
+    "cov": 8,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Document Submittal - ITP WF.pdf",
+    "sec": "Approval flow",
+    "gold": 8,
+    "cov": 8,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Document Submittal - Method Statement Client WF.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Document Submittal - Method Statement WF.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Drawing List (E1 Log) - Drawing List (E1 Log) WF.pdf",
+    "sec": "Approval flow",
+    "gold": 8,
+    "cov": 0,
+    "pct": 0.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Drawings Submittal - Drawings Submittal WF.pdf",
+    "sec": "Approval flow",
+    "gold": 8,
+    "cov": 8,
+    "pct": 100.0,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "External Material Inspection Request - External Material Inspection Request.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 2,
+    "pct": 50.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Financial Documents Changes - Financial Document Changes WF.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Formwork Initial Evaluation - Initial Evaluation.pdf",
+    "sec": "Approval flow",
+    "gold": 2,
+    "cov": 2,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Go Or No Go - Go or No Go - Competitive Bidding.pdf",
+    "sec": "Approval flow",
+    "gold": 17,
+    "cov": 16,
+    "pct": 94.1,
+    "extra": 6,
+    "borrowed": 0,
+    "wrong": 2
+  },
+  {
+    "file": "Go Or No Go - Go or No Go - Direct Award.pdf",
+    "sec": "Approval flow",
+    "gold": 13,
+    "cov": 13,
+    "pct": 100.0,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Go Or No Go - Go or No Go - RME FIT-OUT.pdf",
+    "sec": "Approval flow",
+    "gold": 2,
+    "cov": 2,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Incident Reports - Creation Workflow - Incident Reports.pdf",
+    "sec": "Approval flow",
+    "gold": 5,
+    "cov": 5,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Infrastructure Inspection Request (IIR) - Holding Tanks WF.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 5,
+    "pct": 83.3,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Infrastructure Inspection Request (IIR) - House Connection Chamber WF.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 5,
+    "pct": 83.3,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Infrastructure Inspection Request (IIR) - Inspection Chamber WF.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 5,
+    "pct": 83.3,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Infrastructure Inspection Request (IIR) - Manholes Inspection Request.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 5,
+    "pct": 83.3,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Infrastructure Inspection Request (IIR) - New_Form-Inspection_Request_WF.pdf",
+    "sec": "Approval flow",
+    "gold": 5,
+    "cov": 4,
+    "pct": 80.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Infrastructure Inspection Request (IIR) - Pipes Inspection Request.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 5,
+    "pct": 83.3,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Infrastructure Inspection Request (IIR) - Valve Chambers Inspection Request.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 5,
+    "pct": 83.3,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Inspection Request (IR) - Formwork IR.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Inspection Request (IR) - Inspection Request (Client).pdf",
+    "sec": "Approval flow",
+    "gold": 15,
+    "cov": 15,
+    "pct": 100.0,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Inspection Request (IR) - New - Inspection Request V2.0.pdf",
+    "sec": "Approval flow",
+    "gold": 12,
+    "cov": 12,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Internal Head Office NCR - New Internal Head Office NCR.pdf",
+    "sec": "Approval flow",
+    "gold": 11,
+    "cov": 7,
+    "pct": 63.6,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "Internal Project NCR - Internal Project NCR WF V2.pdf",
+    "sec": "Approval flow",
+    "gold": 11,
+    "cov": 7,
+    "pct": 63.6,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "Legal Initial Evaluation - Legal Initial Evaluation.pdf",
+    "sec": "Approval flow",
+    "gold": 2,
+    "cov": 2,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Management Leadership Meeting - Management Leadership Meeting.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 5,
+    "pct": 83.3,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Material List ( E2 Log ) - E2 Log.pdf",
+    "sec": "Approval flow",
+    "gold": 5,
+    "cov": 4,
+    "pct": 80.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Material List ( E2 Log ) - Manual Material List WF.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Material List - Material List WF.pdf",
+    "sec": "Approval flow",
+    "gold": 5,
+    "cov": 4,
+    "pct": 80.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Meeting Minutes - Meeting Minutes WF.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 5,
+    "pct": 83.3,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Memos - Memos WF.pdf",
+    "sec": "Approval flow",
+    "gold": 1,
+    "cov": 1,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation.pdf",
+    "sec": "Approval flow",
+    "gold": 12,
+    "cov": 10,
+    "pct": 83.3,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Manual Creation.pdf",
+    "sec": "Approval flow",
+    "gold": 11,
+    "cov": 9,
+    "pct": 81.8,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Payment Applications - Payment Application CD V2.pdf",
+    "sec": "Approval flow",
+    "gold": 21,
+    "cov": 21,
+    "pct": 100.0,
+    "extra": 7,
+    "borrowed": 0,
+    "wrong": 2
+  },
+  {
+    "file": "Payment Applications - Payment Application V2.pdf",
+    "sec": "Approval flow",
+    "gold": 18,
+    "cov": 15,
+    "pct": 83.3,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "Potential Delay Events - NOD Auto Workflow.pdf",
+    "sec": "Approval flow",
+    "gold": 3,
+    "cov": 3,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Potential Delay Events - NOD Manual WF.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 6,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Potential Subcontractor (Post Award) - Potential SCs Post-Award.pdf",
+    "sec": "Approval flow",
+    "gold": 9,
+    "cov": 9,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Project Budget - Project Budget.pdf",
+    "sec": "Approval flow",
+    "gold": 3,
+    "cov": 2,
+    "pct": 66.7,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Project Closeout - Project Closeout WF V1.pdf",
+    "sec": "Approval flow",
+    "gold": 5,
+    "cov": 5,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Project Closeout - Weekly Update for Project Checklist V1.pdf",
+    "sec": "Approval flow",
+    "gold": 1,
+    "cov": 1,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Project Creation - Competitive Bidding Projects.pdf",
+    "sec": "Approval flow 1",
+    "gold": 14,
+    "cov": 14,
+    "pct": 100.0,
+    "extra": 6,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Project Creation - Competitive Bidding Projects.pdf",
+    "sec": "Approval flow 2",
+    "gold": 2,
+    "cov": 1,
+    "pct": 50.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Project Launching - WF - Project Launching.pdf",
+    "sec": "Approval flow 1",
+    "gold": 1,
+    "cov": 1,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Project Launching - WF - Project Launching.pdf",
+    "sec": "Approval flow 2",
+    "gold": 3,
+    "cov": 3,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Project Launching - WF - Project Launching.pdf",
+    "sec": "Approval flow 3",
+    "gold": 5,
+    "cov": 4,
+    "pct": 80.0,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Project Risk Assessment - Risk Assessment.pdf",
+    "sec": "Approval flow",
+    "gold": 3,
+    "cov": 3,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "QC Initial Evaluation - Initial Evaluation WF.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Quality Objectives (Project) - Quality Objectives PL WF.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 1,
+    "pct": 14.3,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Quality Objectives - Quarterly Quality Objectives WF.pdf",
+    "sec": "Approval flow",
+    "gold": 23,
+    "cov": 23,
+    "pct": 100.0,
+    "extra": 4,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Rented Equipment Timesheet - Rented Equipment Timesheet - New - WF.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 6,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request For Information (RFI) - From SC.pdf",
+    "sec": "Approval flow",
+    "gold": 12,
+    "cov": 11,
+    "pct": 91.7,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request For Information (RFI) - RME to Client ( Manual Rev. ) V2.pdf",
+    "sec": "Approval flow",
+    "gold": 15,
+    "cov": 14,
+    "pct": 93.3,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "Request For Information (RFI) - RME to Client V2.pdf",
+    "sec": "Approval flow",
+    "gold": 15,
+    "cov": 9,
+    "pct": 60.0,
+    "extra": 8,
+    "borrowed": 2,
+    "wrong": 4
+  },
+  {
+    "file": "Request For Proposal (RFP) - RFP WF V2.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 6,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request For Proposal (RFP) - RFP WF.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Equipment Purchasing CS.pdf",
+    "sec": "Approval flow",
+    "gold": 15,
+    "cov": 14,
+    "pct": 93.3,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Purchasing RFQ WF - FC in Damietta.pdf",
+    "sec": "Approval flow 1",
+    "gold": 18,
+    "cov": 1,
+    "pct": 5.6,
+    "extra": 4,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Purchasing RFQ WF - FC in Damietta.pdf",
+    "sec": "Approval flow 2",
+    "gold": 13,
+    "cov": 13,
+    "pct": 100.0,
+    "extra": 6,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Purchasing RFQ WF – BU in Egypt V1.pdf",
+    "sec": "Approval flow 1",
+    "gold": 6,
+    "cov": 5,
+    "pct": 83.3,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Purchasing RFQ WF – BU in Egypt V1.pdf",
+    "sec": "Approval flow 2",
+    "gold": 13,
+    "cov": 3,
+    "pct": 23.1,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Purchasing RFQ WF – BU in Egypt V1.pdf",
+    "sec": "Approval flow 3",
+    "gold": 1,
+    "cov": 1,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Rental Equipment CS-BU-V1.pdf",
+    "sec": "Approval flow",
+    "gold": 22,
+    "cov": 21,
+    "pct": 95.5,
+    "extra": 4,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Rental Equipment CS.pdf",
+    "sec": "Approval flow",
+    "gold": 23,
+    "cov": 22,
+    "pct": 95.7,
+    "extra": 4,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Request for Bid (Operation).pdf",
+    "sec": "Approval flow",
+    "gold": 17,
+    "cov": 16,
+    "pct": 94.1,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Request for Bid (VMO) CD V2.pdf",
+    "sec": "Approval flow",
+    "gold": 22,
+    "cov": 21,
+    "pct": 95.5,
+    "extra": 6,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Request for Bid WF (VMO) V1-FC in Damietta.pdf",
+    "sec": "Approval flow",
+    "gold": 29,
+    "cov": 28,
+    "pct": 96.6,
+    "extra": 6,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - Request for Bid WF.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request for Quotation - RFQ - Apply works (Operation & MEP) - BU - V1.pdf",
+    "sec": "Approval flow",
+    "gold": 43,
+    "cov": 39,
+    "pct": 90.7,
+    "extra": 15,
+    "borrowed": 0,
+    "wrong": 3
+  },
+  {
+    "file": "Request for Quotation - VMO RFQ WF – BU in Egypt V1.pdf",
+    "sec": "Approval flow",
+    "gold": 30,
+    "cov": 29,
+    "pct": 96.7,
+    "extra": 6,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Request For Quotation Date - WF - Request For Quotation Date.pdf",
+    "sec": "Approval flow",
+    "gold": 1,
+    "cov": 1,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Requests for Bid (Commercial Offers) - Request for Bid WF (Creation by VMO).pdf",
+    "sec": "Approval flow",
+    "gold": 14,
+    "cov": 2,
+    "pct": 14.3,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "RFQ Material Reference - RFQ_Material_Reference_WF.pdf",
+    "sec": "Approval flow",
+    "gold": 5,
+    "cov": 4,
+    "pct": 80.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Rule of Credit Amendments - ROC Amendments.pdf",
+    "sec": "Approval flow",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "S-C Invoice - S-C Invoice MEP.pdf",
+    "sec": "Approval flow",
+    "gold": 23,
+    "cov": 18,
+    "pct": 78.3,
+    "extra": 12,
+    "borrowed": 1,
+    "wrong": 3
+  },
+  {
+    "file": "S-C Invoice - S-C Invoice Operation.pdf",
+    "sec": "Approval flow",
+    "gold": 21,
+    "cov": 14,
+    "pct": 66.7,
+    "extra": 14,
+    "borrowed": 1,
+    "wrong": 5
+  },
+  {
+    "file": "S-C Work Completed Status - QC Work Completed Status.pdf",
+    "sec": "Approval flow",
+    "gold": 8,
+    "cov": 8,
+    "pct": 100.0,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "S-C Work Completed Status - Site Work Completed Status.pdf",
+    "sec": "Approval flow",
+    "gold": 8,
+    "cov": 8,
+    "pct": 100.0,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "S-C Work Completed Status - TO Work Completed Status.pdf",
+    "sec": "Approval flow",
+    "gold": 6,
+    "cov": 6,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Site NCR - New - Site Project NCR V1.pdf",
+    "sec": "Approval flow",
+    "gold": 15,
+    "cov": 15,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Snagging and De-snagging - Snagging and De-snagging WF V1.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Snagging and De-snagging - Snagging and De-snagging WF.pdf",
+    "sec": "Approval flow",
+    "gold": 8,
+    "cov": 8,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Start New Activity (SNA) - Start New Activity - WF.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontract Amendments - Rental Equipment Variation Order WF.pdf",
+    "sec": "Approval flow",
+    "gold": 12,
+    "cov": 12,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf",
+    "sec": "Approval flow 1",
+    "gold": 34,
+    "cov": 31,
+    "pct": 91.2,
+    "extra": 11,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf",
+    "sec": "Approval flow 2",
+    "gold": 41,
+    "cov": 27,
+    "pct": 65.9,
+    "extra": 13,
+    "borrowed": 0,
+    "wrong": 2
+  },
+  {
+    "file": "Subcontract Amendments - Subcontract Amendments BU-V1 WF.pdf",
+    "sec": "Approval flow 3",
+    "gold": 23,
+    "cov": 12,
+    "pct": 52.2,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontract Amendments - Subcontract Amendments for (TA) New.pdf",
+    "sec": "Approval flow",
+    "gold": 55,
+    "cov": 37,
+    "pct": 67.3,
+    "extra": 19,
+    "borrowed": 0,
+    "wrong": 2
+  },
+  {
+    "file": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+    "sec": "Approval flow 1",
+    "gold": 27,
+    "cov": 24,
+    "pct": 88.9,
+    "extra": 12,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontract Amendments - Subcontract Amendments V1(USD in Damietta Project).pdf",
+    "sec": "Approval flow 3",
+    "gold": 29,
+    "cov": 2,
+    "pct": 6.9,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - nominate Subcontractor.pdf",
+    "sec": "Approval flow",
+    "gold": 11,
+    "cov": 11,
+    "pct": 100.0,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Nominated Subcontractor.pdf",
+    "sec": "Approval flow",
+    "gold": 11,
+    "cov": 11,
+    "pct": 100.0,
+    "extra": 2,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+    "sec": "Approval flow 1",
+    "gold": 33,
+    "cov": 14,
+    "pct": 42.4,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+    "sec": "Approval flow 2",
+    "gold": 4,
+    "cov": 4,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V1 (USD in Damietta Proj).pdf",
+    "sec": "Approval flow 3",
+    "gold": 15,
+    "cov": 15,
+    "pct": 100.0,
+    "extra": 6,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "sec": "Approval flow 1",
+    "gold": 19,
+    "cov": 10,
+    "pct": 52.6,
+    "extra": 6,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "sec": "Approval flow 2",
+    "gold": 19,
+    "cov": 19,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "sec": "Approval flow 3",
+    "gold": 14,
+    "cov": 10,
+    "pct": 71.4,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "sec": "Approval flow 4",
+    "gold": 7,
+    "cov": 6,
+    "pct": 85.7,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "sec": "Approval flow 5",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "sec": "Approval flow 6",
+    "gold": 12,
+    "cov": 12,
+    "pct": 100.0,
+    "extra": 3,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "sec": "Approval flow 7",
+    "gold": 15,
+    "cov": 15,
+    "pct": 100.0,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "sec": "Approval flow 8",
+    "gold": 3,
+    "cov": 3,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V3 (USD in Egypt shell).pdf",
+    "sec": "Approval flow 9",
+    "gold": 8,
+    "cov": 8,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V4.pdf",
+    "sec": "Approval flow 1",
+    "gold": 20,
+    "cov": 20,
+    "pct": 100.0,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V4.pdf",
+    "sec": "Approval flow 2",
+    "gold": 57,
+    "cov": 18,
+    "pct": 31.6,
+    "extra": 8,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V4.pdf",
+    "sec": "Approval flow 3",
+    "gold": 28,
+    "cov": 2,
+    "pct": 7.1,
+    "extra": 0,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Subcontracts - Subcontract Preparation V4.pdf",
+    "sec": "Approval flow 4",
+    "gold": 15,
+    "cov": 15,
+    "pct": 100.0,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "SVS Pre-qualification - 01 WF.pdf",
+    "sec": "Approval flow",
+    "gold": 18,
+    "cov": 6,
+    "pct": 33.3,
+    "extra": 4,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "SVS Secondary department - SVS Secondary department.pdf",
+    "sec": "Approval flow",
+    "gold": 15,
+    "cov": 6,
+    "pct": 40.0,
+    "extra": 4,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Variation Order Flow Chart.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Variation Order Flow Chart.pdf",
+    "sec": "Approval flow",
+    "gold": 10,
+    "cov": 10,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Variation Order Flow Chart.pdf",
+    "sec": "Approval flow",
+    "gold": 7,
+    "cov": 7,
+    "pct": 100.0,
+    "extra": 1,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Variation Orders Approval - Auto-Creation V2 (Cote d'lvoire Shell).pdf",
+    "sec": "Approval flow",
+    "gold": 29,
+    "cov": 21,
+    "pct": 72.4,
+    "extra": 21,
+    "borrowed": 0,
+    "wrong": 3
+  },
+  {
+    "file": "Variation Orders Approval - Variation Orders (Auto Creation V2).pdf",
+    "sec": "Approval flow",
+    "gold": 29,
+    "cov": 21,
+    "pct": 72.4,
+    "extra": 21,
+    "borrowed": 0,
+    "wrong": 3
+  },
+  {
+    "file": "Rowad Authority - F-P-VMO-01-07 Procurement Comparison Sheet Signature Matrix.pdf",
+    "sec": "Comparison Sheet Signature Matrix",
+    "gold": 16,
+    "cov": 10,
+    "pct": 62.5,
+    "extra": 5,
+    "borrowed": 0,
+    "wrong": 0
+  },
+  {
+    "file": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+    "sec": "Apply Subcontracts (Civil, Arch, MEP)",
+    "gold": 23,
+    "cov": 17,
+    "pct": 73.9,
+    "extra": 17,
+    "borrowed": 0,
+    "wrong": 1
+  },
+  {
+    "file": "Rowad Authority - F-P-CN-01-11 SC Agreement Signature Matrix.pdf",
+    "sec": "Supply & Apply Subcontracts (Civil, Arch, MEP)",
+    "gold": 15,
+    "cov": 13,
+    "pct": 86.7,
+    "extra": 10,
+    "borrowed": 0,
+    "wrong": 0
+  }
+]

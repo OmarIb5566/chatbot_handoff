@@ -1,0 +1,53 @@
+ollama_up: True
+models: ['qwen3.6:27b', 'qwen3:14b', 'llama3.2:latest']
+chatbot ready; corpus 1200
+
+--- workflow: what is the approval workflow for a subcontract amendment?
+  ok in 64.2s  wf_intent=True n_wf=4/6 route=[] validator=clean
+    [1.079] pdf_vector      Subcontract Amendments - Subcontract Amendments V1(USD in Da | Approval flow 2
+    [0.998] pdf_vector      Subcontract Amendments - Subcontract Amendments V1(USD in Da | Approval flow 1
+    [0.994] pdf_vector      Rule of Credit Amendments - ROC Amendments.pdf | Approval flow
+    [0.977] pdf_vector      Subcontract Amendments - Rental Equipment Variation Order WF | Approval flow
+  FAILED
+Traceback (most recent call last):
+  File "C:\Users\dahab\OneDrive\Documents\GitHub\chatbot_handoff\_verify\driver3.py", line 46, in <module>
+    log(f"    [{h['score']:.3f}] {h['source_type']:15s} {h['filename'][:60]} | {h['section']}")
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+
+
+--- hr_policy: how many days of annual leave do employees get?
+  ok in 62.3s  wf_intent=False n_wf=0/6 route=[] validator=clean
+  FAILED
+Traceback (most recent call last):
+  File "C:\Users\dahab\OneDrive\Documents\GitHub\chatbot_handoff\_verify\driver3.py", line 46, in <module>
+    log(f"    [{h['score']:.3f}] {h['source_type']:15s} {h['filename'][:60]} | {h['section']}")
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+
+
+--- arabic: ما هي مدة الإجازة السنوية للموظفين؟
+  ok in 66.2s  wf_intent=False n_wf=0/6 route=[] validator=clean
+  FAILED
+Traceback (most recent call last):
+  File "C:\Users\dahab\OneDrive\Documents\GitHub\chatbot_handoff\_verify\driver3.py", line 46, in <module>
+    log(f"    [{h['score']:.3f}] {h['source_type']:15s} {h['filename'][:60]} | {h['section']}")
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+
+
+--- followup: who signs after that?
+  ok in 85.2s  wf_intent=True n_wf=4/6 route=[] validator=clean
+    [1.047] pdf_vector      Potential Delay Events - NOD Manual WF.pdf | Approval flow
+    [0.998] pdf_vector      Client Contract Lines Modification - WF - Client Contract Li | Approval flow
+    [0.992] pdf_vector      Customer Satisfaction - Customer Satisfaction WF.pdf | Approval flow
+    [0.985] pdf_vector      S-C Work Completed Status - TO Work Completed Status.pdf | Approval flow
+  FAILED
+Traceback (most recent call last):
+  File "C:\Users\dahab\OneDrive\Documents\GitHub\chatbot_handoff\_verify\driver3.py", line 46, in <module>
+    log(f"    [{h['score']:.3f}] {h['source_type']:15s} {h['filename'][:60]} | {h['section']}")
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+
+
+DRIVER3 DONE

@@ -1,0 +1,21 @@
+GATE  splice fidelity on UNMODIFIED lanes: 137/137 exact, 0 mismatched
+
+wrote workflow_chunks_repaired.json  (137 chunks)
+  chunks changed : 53 / 137
+  nodes  1206 -> 1122
+  edges  1664 -> 1606   (self-edges dropped 34, duplicate edges dropped 24)
+
+  first 12 changed chunks:
+    Bid Closing & Approval Internal Process - WF.pdf | Approval flow
+    Bonds Request - Bond Request Revision WF.pdf | Approval flow
+    Bonds Request - Bonds Request WF.pdf | Approval flow
+    Drawing List (E1 Log) - Drawing List (E1 Log) WF.pdf | Approval flow
+    Drawings Submittal - Drawings Submittal WF.pdf | Approval flow
+    Go Or No Go - Go or No Go - Competitive Bidding.pdf | Approval flow
+    Go Or No Go - Go or No Go - Direct Award.pdf | Approval flow
+    Infrastructure Inspection Request (IIR) - New_Form-Inspection_Request_WF.pdf | Approval flow
+    Material List ( E2 Log ) - E2 Log.pdf | Approval flow
+    Material List - Material List WF.pdf | Approval flow
+    Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Auto Creation.pdf | Approval flow
+    Notice of Variation ( NOV ) - Notice of Variation ( NOV ) - Manual Creation.pdf | Approval flow
+EXIT 0 

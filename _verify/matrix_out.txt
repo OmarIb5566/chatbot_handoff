@@ -1,0 +1,10 @@
+ollama_up: True
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 14695.33it/s]
+qwen3:14b    P1_current       58.3% (7/12) borrowed=2 extra=0 pdfs=1 79.0s  | how does the rental equipment variation orde
+qwen3:14b    P1_current       50.0% (4/8) borrowed=0 extra=3 pdfs=1 68.1s  | what is the document submittal ITP approval 
+qwen3:14b    P1_current       18.8% (3/16) borrowed=0 extra=6 pdfs=1 57.5s  | how does the bonds request approval workflow
+qwen3:14b    P2_returns_line  100.0% (12/12) borrowed=0 extra=5 pdfs=1 74.5s  | how does the rental equipment variation orde
+qwen3:14b    P2_returns_line  87.5% (7/8) borrowed=0 extra=7 pdfs=1 87.6s  | what is the document submittal ITP approval 
+qwen3:14b    P2_returns_line  56.2% (9/16) borrowed=0 extra=13 pdfs=1 90.4s  | how does the bonds request approval workflow
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 5971.16it/s]
+qwen3.6:27b  P1_current       83.3% (10/12) borrowed=0 extra=0 pdfs=1 219.0s  | how does the rental equipment variation orde

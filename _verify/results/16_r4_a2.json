@@ -1,0 +1,152 @@
+[
+  {
+    "query": "R2-Q1",
+    "chunk": "Rule of Credit (ROC Amendments)",
+    "bm25_rank": 2,
+    "bm25_score": 17.815053278756636,
+    "dense_rank": 8,
+    "dense_score": 0.5947049856185913,
+    "fused_rank": 2,
+    "fused_score": 0.9581293545825154
+  },
+  {
+    "query": "R2-Q1",
+    "chunk": "Rental Equipment Variation Order",
+    "bm25_rank": 3,
+    "bm25_score": 16.653543656600025,
+    "dense_rank": 4,
+    "dense_score": 0.6193148493766785,
+    "fused_rank": 3,
+    "fused_score": 0.9344930171584412
+  },
+  {
+    "query": "R2-Q1",
+    "chunk": "BU-V1 flow 1",
+    "bm25_rank": 7,
+    "bm25_score": 13.26901352316926,
+    "dense_rank": 10,
+    "dense_score": 0.5890796184539795,
+    "fused_rank": 7,
+    "fused_score": 0.8053266420411878
+  },
+  {
+    "query": "R2-Q1",
+    "chunk": "BU-V1 flow 2",
+    "bm25_rank": 6,
+    "bm25_score": 13.548518229502786,
+    "dense_rank": 7,
+    "dense_score": 0.6002276539802551,
+    "fused_rank": 6,
+    "fused_score": 0.8211099814613456
+  },
+  {
+    "query": "R2-Q1",
+    "chunk": "BU-V1 flow 3",
+    "bm25_rank": 5,
+    "bm25_score": 14.773578948098322,
+    "dense_rank": 9,
+    "dense_score": 0.5932440757751465,
+    "fused_rank": 5,
+    "fused_score": 0.8572603343744813
+  },
+  {
+    "query": "R3-Q1",
+    "chunk": "Rule of Credit (ROC Amendments)",
+    "bm25_rank": 1,
+    "bm25_score": 14.63782546292929,
+    "dense_rank": 36,
+    "dense_score": 0.38633471727371216,
+    "fused_rank": 1,
+    "fused_score": 0.9189843420788097
+  },
+  {
+    "query": "R3-Q1",
+    "chunk": "Rental Equipment Variation Order",
+    "bm25_rank": 2,
+    "bm25_score": 11.943165971911814,
+    "dense_rank": 16,
+    "dense_score": 0.42333877086639404,
+    "fused_rank": 3,
+    "fused_score": 0.8327963668513468
+  },
+  {
+    "query": "R3-Q1",
+    "chunk": "BU-V1 flow 1",
+    "bm25_rank": 67,
+    "bm25_score": 6.113359245165614,
+    "dense_rank": 24,
+    "dense_score": 0.4023447036743164,
+    "fused_rank": 32,
+    "fused_score": 0.5800675721921835
+  },
+  {
+    "query": "R3-Q1",
+    "chunk": "BU-V1 flow 2",
+    "bm25_rank": 21,
+    "bm25_score": 8.108700937277542,
+    "dense_rank": 14,
+    "dense_score": 0.4350799024105072,
+    "fused_rank": 15,
+    "fused_score": 0.6833220260849466
+  },
+  {
+    "query": "R3-Q1",
+    "chunk": "BU-V1 flow 3",
+    "bm25_rank": 19,
+    "bm25_score": 8.421294750654317,
+    "dense_rank": 13,
+    "dense_score": 0.43675991892814636,
+    "fused_rank": 11,
+    "fused_score": 0.6972368168333544
+  },
+  {
+    "query": "R3-Q2",
+    "chunk": "Rule of Credit (ROC Amendments)",
+    "bm25_rank": 1,
+    "bm25_score": 25.265625378002014,
+    "dense_rank": 49,
+    "dense_score": 0.3934876620769501,
+    "fused_rank": 1,
+    "fused_score": 0.9078259946178562
+  },
+  {
+    "query": "R3-Q2",
+    "chunk": "Rental Equipment Variation Order",
+    "bm25_rank": 3,
+    "bm25_score": 21.1027381675952,
+    "dense_rank": 18,
+    "dense_score": 0.43511128425598145,
+    "fused_rank": 3,
+    "fused_score": 0.8372536944207547
+  },
+  {
+    "query": "R3-Q2",
+    "chunk": "BU-V1 flow 1",
+    "bm25_rank": 231,
+    "bm25_score": 9.901663684968858,
+    "dense_rank": 40,
+    "dense_score": 0.40466153621673584,
+    "fused_rank": 107,
+    "fused_score": 0.5505610911500892
+  },
+  {
+    "query": "R3-Q2",
+    "chunk": "BU-V1 flow 2",
+    "bm25_rank": 96,
+    "bm25_score": 13.507597361004159,
+    "dense_rank": 16,
+    "dense_score": 0.4453220069408417,
+    "fused_rank": 26,
+    "fused_score": 0.6638257282422019
+  },
+  {
+    "query": "R3-Q2",
+    "chunk": "BU-V1 flow 3",
+    "bm25_rank": 147,
+    "bm25_score": 11.914467644023192,
+    "dense_rank": 13,
+    "dense_score": 0.44880473613739014,
+    "fused_rank": 50,
+    "fused_score": 0.628359388642731
+  }
+]

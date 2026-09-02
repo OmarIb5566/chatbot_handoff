@@ -1,0 +1,133 @@
+merged index: 1200 chunks
+workflow_intent fires on: {"eval_set_v2": [], "eval_set": ["PCM01-2", "PCM02-3", "PCN01-1", "PQD12-4", "PSE01-2", "PVMO02-4"], "eval_set_workflow": ["WF-01", "WF-02", "WF-03", "WF-04", "WF-05", "WF-06", "WF-07", "WF-08", "WF-09", "WF-10", "WF-11", "WF-12", "WF-13", "WF-14", "WF-15", "WF-16", "WF-17", "WF-18"]}
+
+=== boost x floor, MERGED index ===
+  b=0     f=0 k=3 eval_set_workflow   17/18 (94.4%) ret=3.0 proc=0.111 | intent-subset 17/18 proc=0.111
+  b=0     f=0 k=6 eval_set_workflow   17/18 (94.4%) ret=5.5 proc=0.556 | intent-subset 17/18 proc=0.556
+  b=0     f=0 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0     f=0 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0     f=0 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.75 | intent-subset 4/6 proc=2.667
+  b=0     f=0 k=6 eval_set            30/32 (93.8%) ret=6.0 proc=5.0 | intent-subset 5/6 proc=4.667
+  b=0     f=1 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.667 | intent-subset 16/18 proc=0.667
+  b=0     f=1 k=6 eval_set_workflow   17/18 (94.4%) ret=5.5 proc=1.333 | intent-subset 17/18 proc=1.333
+  b=0     f=1 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0     f=1 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0     f=1 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.656 | intent-subset 4/6 proc=2.167
+  b=0     f=1 k=6 eval_set            30/32 (93.8%) ret=6.0 proc=4.969 | intent-subset 5/6 proc=4.5
+  b=0     f=2 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.667 | intent-subset 16/18 proc=0.667
+  b=0     f=2 k=6 eval_set_workflow   17/18 (94.4%) ret=5.5 proc=1.333 | intent-subset 17/18 proc=1.333
+  b=0     f=2 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0     f=2 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0     f=2 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.656 | intent-subset 4/6 proc=2.167
+  b=0     f=2 k=6 eval_set            30/32 (93.8%) ret=6.0 proc=4.906 | intent-subset 5/6 proc=4.167
+  b=0     f=3 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.667 | intent-subset 16/18 proc=0.667
+  b=0     f=3 k=6 eval_set_workflow   17/18 (94.4%) ret=5.5 proc=1.333 | intent-subset 17/18 proc=1.333
+  b=0     f=3 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0     f=3 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0     f=3 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.656 | intent-subset 4/6 proc=2.167
+  b=0     f=3 k=6 eval_set            30/32 (93.8%) ret=6.0 proc=4.906 | intent-subset 5/6 proc=4.167
+  b=0.06  f=0 k=3 eval_set_workflow   17/18 (94.4%) ret=3.0 proc=0.056 | intent-subset 17/18 proc=0.056
+  b=0.06  f=0 k=6 eval_set_workflow   18/18 (100.0%) ret=5.722 proc=0.222 | intent-subset 18/18 proc=0.222
+  b=0.06  f=0 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.06  f=0 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.06  f=0 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.656 | intent-subset 4/6 proc=2.167
+  b=0.06  f=0 k=6 eval_set            30/32 (93.8%) ret=6.0 proc=4.938 | intent-subset 5/6 proc=4.333
+  b=0.06  f=1 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.556 | intent-subset 16/18 proc=0.556
+  b=0.06  f=1 k=6 eval_set_workflow   18/18 (100.0%) ret=5.722 proc=1.111 | intent-subset 18/18 proc=1.111
+  b=0.06  f=1 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.06  f=1 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.06  f=1 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.625 | intent-subset 4/6 proc=2.0
+  b=0.06  f=1 k=6 eval_set            30/32 (93.8%) ret=6.0 proc=4.906 | intent-subset 5/6 proc=4.167
+  b=0.06  f=2 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.556 | intent-subset 16/18 proc=0.556
+  b=0.06  f=2 k=6 eval_set_workflow   18/18 (100.0%) ret=5.722 proc=1.111 | intent-subset 18/18 proc=1.111
+  b=0.06  f=2 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.06  f=2 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.06  f=2 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.625 | intent-subset 4/6 proc=2.0
+  b=0.06  f=2 k=6 eval_set            30/32 (93.8%) ret=6.0 proc=4.844 | intent-subset 5/6 proc=3.833
+  b=0.06  f=3 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.556 | intent-subset 16/18 proc=0.556
+  b=0.06  f=3 k=6 eval_set_workflow   18/18 (100.0%) ret=5.722 proc=1.111 | intent-subset 18/18 proc=1.111
+  b=0.06  f=3 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.06  f=3 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.06  f=3 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.625 | intent-subset 4/6 proc=2.0
+  b=0.06  f=3 k=6 eval_set            30/32 (93.8%) ret=6.0 proc=4.844 | intent-subset 5/6 proc=3.833
+  b=0.12  f=0 k=3 eval_set_workflow   18/18 (100.0%) ret=3.0 proc=0.0 | intent-subset 18/18 proc=0.0
+  b=0.12  f=0 k=6 eval_set_workflow   18/18 (100.0%) ret=5.778 proc=0.056 | intent-subset 18/18 proc=0.056
+  b=0.12  f=0 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.12  f=0 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.12  f=0 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.625 | intent-subset 4/6 proc=2.0
+  b=0.12  f=0 k=6 eval_set            29/32 (90.6%) ret=6.0 proc=4.75 | intent-subset 4/6 proc=3.333
+  b=0.12  f=1 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.5 | intent-subset 16/18 proc=0.5
+  b=0.12  f=1 k=6 eval_set_workflow   18/18 (100.0%) ret=5.778 proc=0.889 | intent-subset 18/18 proc=0.889
+  b=0.12  f=1 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.12  f=1 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.12  f=1 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.562 | intent-subset 4/6 proc=1.667
+  b=0.12  f=1 k=6 eval_set            29/32 (90.6%) ret=6.0 proc=4.688 | intent-subset 4/6 proc=3.0
+  b=0.12  f=2 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.5 | intent-subset 16/18 proc=0.5
+  b=0.12  f=2 k=6 eval_set_workflow   18/18 (100.0%) ret=5.778 proc=0.889 | intent-subset 18/18 proc=0.889
+  b=0.12  f=2 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.12  f=2 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.12  f=2 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.562 | intent-subset 4/6 proc=1.667
+  b=0.12  f=2 k=6 eval_set            29/32 (90.6%) ret=6.0 proc=4.656 | intent-subset 4/6 proc=2.833
+  b=0.12  f=3 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.5 | intent-subset 16/18 proc=0.5
+  b=0.12  f=3 k=6 eval_set_workflow   18/18 (100.0%) ret=5.778 proc=0.889 | intent-subset 18/18 proc=0.889
+  b=0.12  f=3 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.12  f=3 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.12  f=3 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.562 | intent-subset 4/6 proc=1.667
+  b=0.12  f=3 k=6 eval_set            29/32 (90.6%) ret=6.0 proc=4.656 | intent-subset 4/6 proc=2.833
+  b=0.2   f=0 k=3 eval_set_workflow   18/18 (100.0%) ret=3.0 proc=0.0 | intent-subset 18/18 proc=0.0
+  b=0.2   f=0 k=6 eval_set_workflow   18/18 (100.0%) ret=5.833 proc=0.0 | intent-subset 18/18 proc=0.0
+  b=0.2   f=0 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.2   f=0 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.2   f=0 k=3 eval_set            26/32 (81.2%) ret=3.0 proc=2.531 | intent-subset 3/6 proc=1.5
+  b=0.2   f=0 k=6 eval_set            29/32 (90.6%) ret=6.0 proc=4.656 | intent-subset 4/6 proc=2.833
+  b=0.2   f=1 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.333 | intent-subset 16/18 proc=0.333
+  b=0.2   f=1 k=6 eval_set_workflow   18/18 (100.0%) ret=5.833 proc=0.667 | intent-subset 18/18 proc=0.667
+  b=0.2   f=1 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.2   f=1 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.2   f=1 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.5 | intent-subset 4/6 proc=1.333
+  b=0.2   f=1 k=6 eval_set            29/32 (90.6%) ret=6.0 proc=4.688 | intent-subset 4/6 proc=3.0
+  b=0.2   f=2 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.333 | intent-subset 16/18 proc=0.333
+  b=0.2   f=2 k=6 eval_set_workflow   18/18 (100.0%) ret=5.833 proc=0.667 | intent-subset 18/18 proc=0.667
+  b=0.2   f=2 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.2   f=2 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.2   f=2 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.5 | intent-subset 4/6 proc=1.333
+  b=0.2   f=2 k=6 eval_set            29/32 (90.6%) ret=6.0 proc=4.625 | intent-subset 4/6 proc=2.667
+  b=0.2   f=3 k=3 eval_set_workflow   16/18 (88.9%) ret=3.0 proc=0.333 | intent-subset 16/18 proc=0.333
+  b=0.2   f=3 k=6 eval_set_workflow   18/18 (100.0%) ret=5.833 proc=0.667 | intent-subset 18/18 proc=0.667
+  b=0.2   f=3 k=3 eval_set_v2         86/92 (93.5%) ret=3.0 proc=2.859 | intent-subset n/a
+  b=0.2   f=3 k=6 eval_set_v2         89/92 (96.7%) ret=5.804 proc=5.435 | intent-subset n/a
+  b=0.2   f=3 k=3 eval_set            27/32 (84.4%) ret=3.0 proc=2.5 | intent-subset 4/6 proc=1.333
+  b=0.2   f=3 k=6 eval_set            29/32 (90.6%) ret=6.0 proc=4.625 | intent-subset 4/6 proc=2.667
+
+=== min_rel x fusion, MERGED index ===
+  weighted eval_set_v2        min_rel=0.0   top3=86/92 top6=89/92 ret6=6.0 proc6=5.63
+  weighted eval_set_v2        min_rel=0.4   top3=86/92 top6=89/92 ret6=5.989 proc6=5.62
+  weighted eval_set_v2        min_rel=0.55  top3=86/92 top6=89/92 ret6=5.804 proc6=5.435
+  weighted eval_set_v2        min_rel=0.7   top3=86/92 top6=89/92 ret6=5.011 proc6=4.739
+  weighted eval_set           min_rel=0.0   top3=27/32 top6=29/32 ret6=6.0 proc6=4.656
+  weighted eval_set           min_rel=0.4   top3=27/32 top6=29/32 ret6=6.0 proc6=4.656
+  weighted eval_set           min_rel=0.55  top3=27/32 top6=29/32 ret6=6.0 proc6=4.656
+  weighted eval_set           min_rel=0.7   top3=27/32 top6=28/32 ret6=4.906 proc6=3.812
+  weighted eval_set_workflow  min_rel=0.0   top3=16/18 top6=18/18 ret6=6.0 proc6=0.889
+  weighted eval_set_workflow  min_rel=0.4   top3=16/18 top6=18/18 ret6=6.0 proc6=0.889
+  weighted eval_set_workflow  min_rel=0.55  top3=16/18 top6=18/18 ret6=5.778 proc6=0.889
+  weighted eval_set_workflow  min_rel=0.7   top3=16/18 top6=18/18 ret6=4.444 proc6=0.167
+  rrf      eval_set_v2        min_rel=0.0   top3=80/92 top6=87/92 ret6=6.0 proc6=5.598
+  rrf      eval_set_v2        min_rel=0.4   top3=80/92 top6=87/92 ret6=6.0 proc6=5.598
+  rrf      eval_set_v2        min_rel=0.55  top3=80/92 top6=87/92 ret6=6.0 proc6=5.598
+  rrf      eval_set_v2        min_rel=0.7   top3=80/92 top6=87/92 ret6=5.935 proc6=5.543
+  rrf      eval_set           min_rel=0.0   top3=27/32 top6=28/32 ret6=6.0 proc6=5.094
+  rrf      eval_set           min_rel=0.4   top3=27/32 top6=28/32 ret6=6.0 proc6=5.094
+  rrf      eval_set           min_rel=0.55  top3=27/32 top6=28/32 ret6=6.0 proc6=5.094
+  rrf      eval_set           min_rel=0.7   top3=27/32 top6=28/32 ret6=5.719 proc6=4.875
+  rrf      eval_set_workflow  min_rel=0.0   top3=17/18 top6=18/18 ret6=6.0 proc6=1.5
+  rrf      eval_set_workflow  min_rel=0.4   top3=17/18 top6=18/18 ret6=6.0 proc6=1.5
+  rrf      eval_set_workflow  min_rel=0.55  top3=17/18 top6=18/18 ret6=6.0 proc6=1.5
+  rrf      eval_set_workflow  min_rel=0.7   top3=17/18 top6=18/18 ret6=5.444 proc6=0.944
+
+=== before/after on merged index ===
+  eval_set_workflow  OLD top-3 17/18  ->  NEW top-6 18/18 (proc 0.889)  | NEW top-3 16/18
+  eval_set_v2        OLD top-3 86/92  ->  NEW top-6 89/92 (proc 5.435)  | NEW top-3 86/92
+  eval_set           OLD top-3 27/32  ->  NEW top-6 29/32 (proc 4.656)  | NEW top-3 27/32
+
+DRIVER2 DONE

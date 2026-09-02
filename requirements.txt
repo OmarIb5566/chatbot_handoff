@@ -20,3 +20,9 @@ streamlit>=1.40            # app.py, the web front end (not needed for the noteb
 # continues on native text. Retrieval results are identical either way.
 # pytesseract>=0.3.10
 # pillow>=10.0
+
+# --- development only ------------------------------------------------------
+# The suite in tests/ runs without a model, a corpus or a network: it covers
+# the logic between retrieval and generation, which is where every regression
+# found so far actually lived. `pytest` from the repo root, under a second.
+pytest>=8.0
