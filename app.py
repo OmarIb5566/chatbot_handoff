@@ -3,6 +3,9 @@ Streamlit front end for the RME process assistant.
 
     streamlit run app.py
 
+Running it as a plain script (`python app.py`, or the editor's Run button)
+works too - it re-launches itself under Streamlit.
+
 Ask in English or Arabic; the language is detected, not selected. This is a
 thin rendering layer - the pipeline lives in backend/chatbot.py, which the
 notebook imports too, so there is exactly one copy of the prompt text and the
@@ -46,6 +49,22 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent / "backend"))
 
 import streamlit as st
+
+# Running this file as a plain script - the editor's Run button, or
+# `python app.py` - would execute the module with no Streamlit runtime behind
+# it, so every st.* call becomes a no-op and the process exits having drawn
+# nothing. Rather than leave that as a documented gotcha, re-launch ourselves
+# under `streamlit run` and hand over. Under the real runtime this is false
+# and the module continues normally.
+if not st.runtime.exists():
+    import subprocess
+
+    _cmd = [sys.executable, "-m", "streamlit", "run", str(Path(__file__).resolve())]
+    # Pass anything the caller added through, so `python app.py
+    # --server.port 8502` still means what it says.
+    if sys.argv[1:]:
+        _cmd += sys.argv[1:]
+    raise SystemExit(subprocess.call(_cmd))
 
 import config
 import logs
