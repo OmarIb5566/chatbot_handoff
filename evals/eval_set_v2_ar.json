@@ -2,7 +2,7 @@
   {
     "id": "MHR04-1",
     "doc": "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
-    "question": "في كم من الوقت يجب على الموظف تقديم شكوى مكتوبة إلى مكتب الموارد البشرية بموجب سياسة المساواة والتنوع والاحترام بعد وقوع الحادث؟",
+    "question": "في كم من الوقت يجب على الموظف تقديم شكوى مكتوبة إلى مكتب الموارد البشرية بموجب سياسة DE&I بعد وقوع الحادث؟",
     "expected_answer": "Within 14 days after the event or problem occurrence.",
     "must_include": [
       "14 days"
@@ -14,7 +14,7 @@
   {
     "id": "MHR04-2",
     "doc": "MHR04_Diversity_Equality_and_Inclusion_DE_I_Policy.pdf",
-    "question": "كم من الوقت يملك مدير الموارد البشرية لإجراء تحقيق وسماع شهادات بعد تقديم شكوى حول المساواة في العمل والتنوع؟",
+    "question": "كم من الوقت يجب على مُديِّر الموارد البشرية إجراء التحقيق والاستماع بعد تقديم شكوى DE&I؟",
     "expected_answer": "Within 7 days after filing.",
     "must_include": [
       "7 days"
@@ -38,7 +38,7 @@
   {
     "id": "MHR07-2",
     "doc": "MHR07_Wages_Hiring_For_Casual_Labors_Policy.pdf",
-    "question": "ما هو أقصى عدد للعمل الإضافي للعمالة غير المنتظمة غير المباشرة لكل فترة؟",
+    "question": "ما هو الحد الأقصى للعمل الإضافي للعمالة غير المنتظمة غير المباشرة لكل فترة؟",
     "expected_answer": "A maximum of 52 hours per period.",
     "must_include": [
       "52 hours"
@@ -74,7 +74,7 @@
   {
     "id": "MHR10-1",
     "doc": "MHR10_Code_of_Conduct_Policy.pdf",
-    "question": "أي نموذج يسجل خرقًا لسياسة لائحة السلوك؟",
+    "question": "أي نموذج يسجل خرقًا لسياسة قواعد السلوك؟",
     "expected_answer": "The Employee Misconduct Record, F-M-HR-10-02.",
     "must_include": [
       "F-M-HR-10-02"
@@ -123,7 +123,7 @@
   {
     "id": "MHR13-1",
     "doc": "MHR13_C_A_R_E_Policy.pdf",
-    "question": "كم من الوقت يملك مدير الموارد البشرية لمراجعة وموافقة لجنة التوصيات بعد إغلاق التحقيق وفقًا لسياسة C.A.R.E؟",
+    "question": "كم من الوقت يملك مدير الموارد البشرية لمراجعة وموافقة توصيات اللجنة بعد إغلاق التحقيق وفقًا لسياسة C.A.R.E؟",
     "expected_answer": "Within 7 days after closing of the investigation and hearing.",
     "must_include": [
       "7 days"
@@ -207,7 +207,7 @@
   {
     "id": "MHR17-1",
     "doc": "MHR17_KSA_Branch_Policy.pdf",
-    "question": "كم عدد أيام العمرة التي يستحقها الموظفون وفقًا لسياسة فرع المملكة العربية السعودية، وكيف часто؟",
+    "question": "كم عدد أيام العمرة المسموح بها للموظفين وفقًا لسياسة فرع المملكة العربية السعودية، وكيفية تكرارها؟",
     "expected_answer": "Paid leave of 2 days, renewed every 2 years.",
     "must_include": [
       "2 days"
@@ -243,7 +243,7 @@
   {
     "id": "MHR18-2",
     "doc": "MHR18_UAE_Branch_Policy.pdf",
-    "question": "بعد كم من الوقت يمكن للموظفين في دولة الإمارات استخدام رصيد إجازاتهم السنوية؟",
+    "question": "بعد كم من الوقت يمكن للموظفين في دولة الإمارات استخدام رصيد إجازتهم السنوية؟",
     "expected_answer": "After 6 months from joining the company.",
     "must_include": [
       "6 months"
@@ -291,7 +291,7 @@
   {
     "id": "MHR20P-1",
     "doc": "MHR20_Employees_Performance_Policy.pdf",
-    "question": "كم من الوقت يجب أن تُبلغ نتائج الأداء للموظفين عبر HITS بعد إغلاق كل ربع؟",
+    "question": "كم من الوقت يجب أن تُبلغ نتائج الأداء للموظفين عبر HITS بعد إغلاق كل ربع سنة؟",
     "expected_answer": "Within a maximum of one month after the closing of each quarter.",
     "must_include": [
       "one month"
@@ -375,7 +375,7 @@
   {
     "id": "PCN01-2",
     "doc": "PCN01_Subcontract_Agreement_Process.pdf",
-    "question": "كم من الوقت يملك مكتب التقنية لجمع الوثائق المطلوبة لإنهاء اتفاقية التفويض؟",
+    "question": "كم من الوقت يملك مكتب التقنية لجمع الوثائق المطلوبة لإنهاء اتفاقية المقاولة؟",
     "expected_answer": "Within two weeks from the conducted meeting.",
     "must_include": [
       "two weeks"
@@ -387,7 +387,7 @@
   {
     "id": "PCN01-3",
     "doc": "PCN01_Subcontract_Agreement_Process.pdf",
-    "question": "إذا تلقى المدير التنفيذي رسالة تسمية من العميل بعد مرحلة منح الجائزة، كم من الوقت يجب أن يُمرّرها؟",
+    "question": "إذا تلقى مدير المشروع رسالة تسمية من العميل بعد مرحلة منح الجائزة، كم من الوقت يجب أن يتم إرسالها فيه؟",
     "expected_answer": "Within 24 hours, to Contracts, Finance and Procurement/MEP/H.O. TO.",
     "must_include": [
       "24 hours"
@@ -423,7 +423,7 @@
   {
     "id": "PEN01-2",
     "doc": "PEN01_Engineering_Process.pdf",
-    "question": "كم من الوقت يجب أن يصدر قسم الهندسة المخططات النهائية بعد تسليم التجارة؟",
+    "question": "كم من الوقت يجب أن يصدر قسم الهندسة المخطط النهائي بعد تسليم التجارة؟",
     "expected_answer": "Within one month from the trade handover.",
     "must_include": [
       "one month"
@@ -459,7 +459,7 @@
   {
     "id": "PFN01-2",
     "doc": "PFN01_Material_Control_Process.pdf",
-    "question": "كم من الوقت يملك المكتب لتقديم وتوقيع تقرير المخزون الفيزيائي؟",
+    "question": "كم من الوقت يملك المكتب لتقديم وتوقيع تقرير المخزون المادي؟",
     "expected_answer": "Within 48 hours from the physical inventory ending date.",
     "must_include": [
       "48 hours"
@@ -471,7 +471,7 @@
   {
     "id": "PFN01-3",
     "doc": "PFN01_Material_Control_Process.pdf",
-    "question": "ما هي فترة التحضير لتقديم QS للمشاريع العادية مقارنة بالمشاريع السريعة؟",
+    "question": "ما هو مدة إعداد QS للمشاريع العادية مقابل المشاريع السريعة؟",
     "expected_answer": "Within a month for normal projects and two weeks for fast-track projects.",
     "must_include": [
       "two weeks"
@@ -507,7 +507,7 @@
   {
     "id": "PFW01-2",
     "doc": "PFW01_Formwork_Process.pdf",
-    "question": "في كم من الوقت بعد اجتماع تسليم المناقصة يجب أن تفي الأشكال بالمتطلبات الخاصة بالمهندس المشرف/المقاول العام؟",
+    "question": "في كم من الوقت يجب أن يلتقي الشدة الخشبية مع مدير المشروع/مدير الإنشاءات بعد اجتماع تسليم المناقصة؟",
     "expected_answer": "Within two weeks from the tender handover meeting.",
     "must_include": [
       "two weeks"
@@ -519,7 +519,7 @@
   {
     "id": "PHR01-2",
     "doc": "PHR01_Manpower_Planning_and_Talent_Acquisition_Process.pdf",
-    "question": "كم من الوقت يملك المكتب (MPTA) لتقديم مقياس الأجور بعد تلقي خطة موظفي المنظمة؟",
+    "question": "كم من الوقت يملك مكتب المظالم تقديم مقياس الأجور بعد تلقي خطة موظفي المنظمة؟",
     "expected_answer": "After one week from receiving the Organization Staff Plan.",
     "must_include": [
       "one week"
@@ -555,7 +555,7 @@
   {
     "id": "PHR04-2",
     "doc": "PHR04_Overseas_Business_Travel_Process.pdf",
-    "question": "متى يكون للإدارة العليا الحق في رحلات الطيران من الدرجة الأولى؟",
+    "question": "متى يكون للإدارة العليا الحق في رحلات الطائرة من الدرجة الأولى؟",
     "expected_answer": "Only for flights exceeding 5 hours in duration.",
     "must_include": [
       "5 hours"
@@ -591,7 +591,7 @@
   {
     "id": "PHR06-1",
     "doc": "PHR06_Wages_Hiring_For_Casual_Labors_Process.pdf",
-    "question": "بعد كم من الوقت يجب تقييم العمل غير المباشر؟",
+    "question": "بعد كم من الوقت يجب تقييم العمل غير المباشر المؤقت؟",
     "expected_answer": "After 3 months of hiring.",
     "must_include": [
       "3 months"
@@ -664,7 +664,7 @@
   {
     "id": "POP03-1",
     "doc": "POP03_Direct_Award_Projects_Process.pdf",
-    "question": "أي نموذج هو نموذج ميزانية المشروع الأولي للمشاريع التي تُمنح بال直接授标؟",
+    "question": "أي نموذج هو نموذج ميزانية المشروع الأولي للمشاريع التي تُمنح بال直接؟",
     "expected_answer": "F-P-OP-03-01",
     "must_include": [
       "F-P-OP-03-01"
@@ -736,7 +736,7 @@
   {
     "id": "POP09-1",
     "doc": "POP09_Earthmoving_Process.pdf",
-    "question": "أي نموذج هو نموذج EM للوكالة في عملية تفريغ التربة؟",
+    "question": "أي نموذج هو نموذج EM للوكالة في عملية تفريغ الأرض؟",
     "expected_answer": "F-P-OP-09-01",
     "must_include": [
       "F-P-OP-09-01"
@@ -808,7 +808,7 @@
   {
     "id": "PPU01-1",
     "doc": "PPU01_Purchasing_Process.pdf",
-    "question": "أي نموذج هو مصفوفة سلطة الموافقة على الشراء؟",
+    "question": "أي نموذج هو مصفوفة سلطة الموافقة الشراء؟",
     "expected_answer": "F-P-PU-01-07",
     "must_include": [
       "F-P-PU-01-07"
@@ -856,7 +856,7 @@
   {
     "id": "PQD03-1",
     "doc": "PQD03_Control_of_Measuring_Devices_Process.pdf",
-    "question": "أي نموذج هو سجل معايرة معدات القياس؟",
+    "question": "أي نموذج هو سجل معايرة المعدات؟",
     "expected_answer": "F-P-QD-03-01",
     "must_include": [
       "F-P-QD-03-01"
@@ -928,7 +928,7 @@
   {
     "id": "PTN01-2",
     "doc": "PTN01_Project_Initiation_Process.pdf",
-    "question": "ماذا يحدث إذا لم تتم المتابعة بدراسة مشروع؟",
+    "question": "ماذا يحدث إذا قررنا عدم المتابعة بدراسة مشروع؟",
     "expected_answer": "The Commercial department sends a letter of apology to the client who sent the RFP/RFQ.",
     "must_include": [
       "apology"
@@ -964,7 +964,7 @@
   {
     "id": "PVMO02-1",
     "doc": "PVMO02_Procurement_Process.pdf",
-    "question": "أي نموذج هو مصفوفة سلطة الموافقة على المشتريات؟",
+    "question": "أي نموذج هو مصفوفة سلطة الموافقة المشتريات؟",
     "expected_answer": "F-P-VMO-01-07",
     "must_include": [
       "F-P-VMO-01-07"
@@ -988,7 +988,7 @@
   {
     "id": "XDOC-1",
     "doc": "PQD05_Risk_Assessment_Process.pdf",
-    "question": "يقول عدة إجراءات أن المخاطر تُسجَّل على نموذج تحديد المخاطر وتقييمها الذي يُحافظ عليه رئيس القسم. ما هو رقم هذا النموذج؟",
+    "question": "تقول عدة عمليات أن المخاطر تُسجَّل على نموذج تحديد المخاطر وتقييمها يُحافظ عليه رئيس القسم. ما هو رقم هذا النموذج؟",
     "expected_answer": "F-P-QD-05-01, the Risk Register.",
     "must_include": [
       "F-P-QD-05-01"
@@ -1022,7 +1022,7 @@
   {
     "id": "NONE-2",
     "doc": "none",
-    "question": "كم عدد الموظفين الذين لدى روض مودرن إنجينيرينغ حالياً؟",
+    "question": "كم عدد الموظفين الذين لدى روضة موديرن الهندسة حالياً؟",
     "expected_answer": "Not covered by these documents.",
     "must_include": [],
     "type": "unanswerable",
@@ -1042,7 +1042,7 @@
   {
     "id": "NONE-4",
     "doc": "none",
-    "question": "أي علامة تجارية من رافعات البرج تستخدمها RME في مشروع دمياط؟",
+    "question": "أي علامة تجارية من كранات البرج تستخدمها شركة RME في مشروع دمياط؟",
     "expected_answer": "Not covered by these documents.",
     "must_include": [],
     "type": "unanswerable",
@@ -1052,7 +1052,7 @@
   {
     "id": "NONE-5",
     "doc": "none",
-    "question": "ما هو رمز WiFi في مقر المكتب الرئيسي؟",
+    "question": "ما هو رمز ويفي في المكتب الرئيسي؟",
     "expected_answer": "Not covered by these documents.",
     "must_include": [],
     "type": "unanswerable",
@@ -1062,7 +1062,7 @@
   {
     "id": "NONE-6",
     "doc": "none",
-    "question": "من الذي فاز بال tender لخط مترو القاهرة الجديد؟",
+    "question": "من فاز بال tender لخط مترو القاهرة الجديد؟",
     "expected_answer": "Not covered by these documents.",
     "must_include": [],
     "type": "unanswerable",
@@ -1092,7 +1092,7 @@
   {
     "id": "MHR01-1",
     "doc": "MHR01_Main_Head_Office_Policy_Procedures.pdf",
-    "question": "من يجب أن يوافق على أي تغيير في خريطة الجلوس لمكتب المديرية؟",
+    "question": "من يجب أن يوافق على أي تغيير في خريطة الجلوس لمقر المكتب الرئيسي؟",
     "expected_answer": "The Admin department.",
     "must_include": [
       "Admin"
@@ -1104,7 +1104,7 @@
   {
     "id": "MHR03-1",
     "doc": "MHR03_Employee_s_Transportation_Services_Policy_Regulations.pdf",
-    "question": "في أي وقت يجب على المستخدمين أن يكونوا في نقطة الاجتماع قبل وقت استلام الحافلة المخطط له؟",
+    "question": "في أي وقت يجب أن يكون المستخدمون في نقطة الاجتماع قبل وقت استلام الحافلة المخطط له؟",
     "expected_answer": "At least five minutes before the scheduled pick-up time.",
     "must_include": [
       "five minutes"
@@ -1164,7 +1164,7 @@
   {
     "id": "PPC03-1",
     "doc": "PPC03_Projects_Reward_Scheme_Process.pdf",
-    "question": "لمشروع له ظروف خاصة وتحقيق أقل من 70%، ما هو الحد الأقصى للمكافأة التي يمكن إصدارها ومن يقرر ذلك؟",
+    "question": "لمشروع له شروط خاصة تقييمها أقل من 70%، ما هو الحد الأقصى للمكافأة التي يمكن إصدارها ومن يقرر ذلك؟",
     "expected_answer": "A maximum of 0.50-month reward, decided by the OM or COO.",
     "must_include": [
       "70%"
@@ -1176,7 +1176,7 @@
   {
     "id": "PTN02-1",
     "doc": "PTN02_Project_Launching_Process.pdf",
-    "question": "في كم من الوقت من توقيع العقد يجب تعديل قوالب المقاولين الفرعيين وإرسالها إلى التشغيل وVMO؟",
+    "question": "في كم من الوقت من توقيع العقد يجب تعديل قوالب المقاولين الفرعيين وإرسالها إلى التشغيل ومكتب إدارة الموردين؟",
     "expected_answer": "Within 45 days from signing the contract.",
     "must_include": [
       "45 days"

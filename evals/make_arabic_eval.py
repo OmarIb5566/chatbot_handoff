@@ -38,41 +38,44 @@ Two specific defects in the generated set, found by reading it:
     written Egyptian and retrieve correctly - it is just not what these 36
     questions measure.
 
-  * **Domain terms get mistranslated, and RME's abbreviations get mangled.**
-    "PM" becomes رئيس الوزراء (Prime Minister) in PCM02-1 and المدير التنفيذي
-    (executive manager) in PCM01-4. "Commercial dept" becomes قسم التجارة,
-    which returns as "trade department" and is the one retrieval miss in the
-    whole run. A glossary pinning RME's terms would fix the generation side;
-    on the query side it is a real failure mode, not an artifact, because a
-    user may well write قسم التجارة themselves.
+  * **Domain terms used to get mistranslated, and RME's abbreviations mangled.**
+    "PM" used to become رئيس الوزراء (Prime Minister) in PCM02-1 and المدير
+    التنفيذي (executive manager) in PCM01-4. "Commercial dept" used to become
+    قسم التجارة, which returned as "trade department" - the one retrieval miss
+    in the v1 run. `glossary.py` fixes the generation side by pinning RME's
+    terms to their exact corpus spelling (`mask_english_terms` here,
+    `mask_glossary` on the query side in `translate.to_english`); both
+    examples above now round-trip correctly. It does not fix the query side
+    for phrasing outside the enumerated surface-form list - a user typing
+    قسم التجارة themselves is still a real input the glossary has to
+    recognise, not just an artifact of this generator.
 
 Codes are masked during translation (translate.mask_codes), so questions that
 quote F-P-CM-01-01 keep it byte-identical. Verified on the v2 set: 0 of 100
 questions lost a code, and metadata is copied through untouched.
 
-WHAT THE SAME DEFECTS LOOK LIKE IN eval_set_v2_ar.json
+WHAT THE SAME DEFECTS USED TO LOOK LIKE IN eval_set_v2_ar.json
 -------------------------------------------------------
-Neither of the two v1 mistranslations above recurs verbatim - no رئيس الوزراء,
-no قسم التجارة - but the class of failure does, and one item is worse than a
-term swap. Acronym survival across the 100, by whether the model kept the Latin
-form: VMO, MOM, NCR kept; PM (2), HoD, HR (3) and DE&I (2) all rendered into
-Arabic. Most of those are honest translations. Two are not:
+Before glossary.py, neither of the two v1 mistranslations above recurred
+verbatim, but the class of failure did, and one item was worse than a term
+swap:
 
-  * **PCN01-3** turns "the PM" into المدير التنفيذي, executive manager - the
-    same substitution v1 made in PCM01-4.
+  * **PCN01-3** used to turn "the PM" into المدير التنفيذي, executive manager
+    - the same substitution v1 made in PCM01-4.
 
-  * **PFW01-2** is corrupted outright, and this one is not a term swap. The
-    English asks how soon Formwork - a department - must meet the PM/CM. The
-    Arabic reads "how soon must the SHAPES meet the REQUIREMENTS": الأشكال for
-    Formwork, and "meet" re-read as satisfy-a-condition rather than hold-a-
-    meeting. Both content words of the question are gone. It cannot retrieve
-    its gold document, and a score that counts it is measuring the translator,
-    not the retriever.
+  * **PFW01-2** used to be corrupted outright, and that one was not a term
+    swap. The English asks how soon Formwork - a department - must meet the
+    PM/CM. The Arabic used to read "how soon must the SHAPES meet the
+    REQUIREMENTS": الأشكال for Formwork, and "meet" re-read as satisfy-a-
+    condition rather than hold-a-meeting. Both content words of the question
+    were gone, and it could not retrieve its gold document.
 
-So the upper-bound warning above holds for v2 with one addition: the ceiling is
-not only optimistic, it also carries at least one question that is unanswerable
-for reasons no amount of retrieval work would fix. Read PFW01-2 first when
-naturalising this set.
+Both now round-trip correctly (`مدير المشروع` for PM, `الشدة الخشبية` for
+Formwork, in both PCN01-3 and PFW01-2) because `mask_english_terms` pins them
+before the model sees them. The general upper-bound warning above still
+holds - this fixes a specific, enumerated vocabulary, not translation
+quality in general - but regenerate this file (`--source eval_set_v2.json`)
+after any glossary change; a stale copy still carries the old mistranslations.
 
 Needs Ollama up:  ollama serve
 """

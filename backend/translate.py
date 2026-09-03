@@ -37,6 +37,13 @@ from __future__ import annotations
 
 import re
 
+from glossary import (
+    glossary_hint_block,
+    mask_english_terms,
+    mask_glossary,
+    unmask_glossary,
+)
+
 # Arabic, Arabic Supplement/Extended, and the presentation forms blocks.
 AR_RE = re.compile(
     r"[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]"
@@ -146,17 +153,26 @@ EGYPTIAN = "Egyptian Arabic (اللهجة المصرية)"
 
 
 def to_english(text: str, generate_fn) -> str:
-    """Arabic -> English, for the query on its way into the retriever."""
+    """Arabic -> English, for the query on its way into the retriever.
+
+    Codes and RME's own vocabulary are masked before the model ever sees
+    them (see glossary.py) - a term the model never sees cannot come back as
+    a generic synonym like "trade department" for "Commercial Dept.".
+    """
     masked, codes = mask_codes(text)
+    masked, terms = mask_glossary(masked)
     prompt = (
         "Translate the following Arabic text into English. The text may be in "
         "Egyptian dialect rather than Modern Standard Arabic.\n"
         f"{_KEEP_VERBATIM}\n"
-        "Leave any ZQ<number>ZQ marker exactly as it is - it is a placeholder.\n"
+        f"{glossary_hint_block()}\n"
+        "Leave any ZQ<number>ZQ or GZ<number>GZ marker exactly as it is - it is "
+        "a placeholder.\n"
         "Output ONLY the English translation. No preamble, no explanation, no quotes.\n\n"
         f"Arabic text:\n{masked}\n\nEnglish translation:"
     )
-    return unmask_codes(_clean(generate_fn(prompt)), codes)
+    out = unmask_glossary(_clean(generate_fn(prompt)), terms)
+    return unmask_codes(out, codes)
 
 
 def to_arabic(text: str, generate_fn, dialect: str = MSA) -> str:
@@ -170,14 +186,17 @@ def to_arabic(text: str, generate_fn, dialect: str = MSA) -> str:
     eval set in make_arabic_eval.py.
     """
     masked, codes = mask_codes(text)
+    masked, terms = mask_english_terms(masked)
     prompt = (
         f"Translate the following English text into {dialect}.\n"
         f"{_KEEP_VERBATIM}\n"
-        "Leave any ZQ<number>ZQ marker exactly as it is - it is a placeholder.\n"
+        "Leave any ZQ<number>ZQ or GZ<number>GZ marker exactly as it is - it is "
+        "a placeholder.\n"
         "Output ONLY the Arabic translation. No preamble, no explanation, no quotes.\n\n"
         f"English text:\n{masked}\n\nArabic translation:"
     )
-    return unmask_codes(_clean(generate_fn(prompt)), codes)
+    out = unmask_glossary(_clean(generate_fn(prompt)), terms)
+    return unmask_codes(out, codes)
 
 
 # Appended to the answer prompt when the question came in Arabic, so the

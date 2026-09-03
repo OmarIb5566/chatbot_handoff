@@ -14,7 +14,7 @@
   {
     "id": "PCM01-2",
     "doc": "PCM01_Customer_Satisfaction_Process.pdf",
-    "question": "كم مرة يرسل قسم المبيعات استبيان رضا العملاء خلال دورة حياة المشروع؟",
+    "question": "كم مرة يرسل قسم التجارة استبيان رضا العملاء خلال دورة حياة المشروع؟",
     "expected_answer": "Twice during the project's life cycle (mid and end), or at least once a year if the project exceeds 12 months.",
     "must_include": [
       "twice",
@@ -40,7 +40,7 @@
   {
     "id": "PCM01-4",
     "doc": "PCM01_Customer_Satisfaction_Process.pdf",
-    "question": "في كم عدد الساعات يجب على المدير التنفيذي إرسال خطط الإجراءات التصحيحية بعد تقرير فجوة رضا العميل؟",
+    "question": "كم عدد الساعات التي يجب أن يرسلها مدير المشروع لخطة الإجراءات التصحيحية بعد تقرير فجوة رضا العميل؟",
     "expected_answer": "24 hours",
     "must_include": [
       "24"
@@ -52,7 +52,7 @@
   {
     "id": "PCM02-1",
     "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
-    "question": "كم عدد الأيام قبل التنفيذ يجب على رئيس الوزراء تقديم طلب الأنشطة التسويقية؟",
+    "question": "كم عدد الأيام قبل التنفيذ يجب أن يُقدّم مدير المشروع طلب الأنشطة التسويقية؟",
     "expected_answer": "20-30 days before execution",
     "must_include": [
       "20",
@@ -77,7 +77,7 @@
   {
     "id": "PCM02-3",
     "doc": "PCM02_Branding_for_Construction_Sites_Process.pdf",
-    "question": "من يوافق على مواقع التسويق، ومن ينسق معه؟",
+    "question": "من يوافق على مواقع العلامات التجارية، ومن ينسق مع من؟",
     "expected_answer": "PM approves, in coordination with the HSE Officer and Branding team",
     "must_include": [
       "PM",
@@ -114,7 +114,7 @@
   {
     "id": "PCN01-3",
     "doc": "PCN01_Subcontract_Agreement_Process.pdf",
-    "question": "ما النسبة المئوية من سعر عقد تفويض مشابه تُستخدم لعناصر عقود تفويض داخلية تنفذها RME بشكل ذاتي؟",
+    "question": "ما النسبة المئوية من سعر عقد تفويض مشابه تُستخدم لعناصر عقود التفويض الداخلية ذات التنفيذ الذاتي من قبل RME؟",
     "expected_answer": "90%",
     "must_include": [
       "90"
@@ -139,7 +139,7 @@
   {
     "id": "PQD12-1",
     "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
-    "question": "في كم يوم من اجتماع تنسيق العمليات يجب على مدير الجودة إعداد خطة جودة المشروع (PQP)؟",
+    "question": "كم عدد الأيام التي يجب أن يجهز خلالها مدير الجودة خطة المشروع الجودة (PQP) بعد اجتماع تنسيق العمليات؟",
     "expected_answer": "15 days",
     "must_include": [
       "15"
@@ -176,7 +176,7 @@
   {
     "id": "PQD12-4",
     "doc": "PQD12_Quality_Plan_Inspection_and_Testing_Process.pdf",
-    "question": "من يوافق على خطة جودة المشروع (PQP)؟",
+    "question": "من يوافق على خطة مشروع الجودة (PQP)؟",
     "expected_answer": "QC Manager prepares it; approved by QC dept manager and PM",
     "must_include": [
       "QC",
@@ -225,7 +225,7 @@
   {
     "id": "PTN01-1",
     "doc": "PTN01_Project_Initiation_Process.pdf",
-    "question": "كم عدد الأيام قبل التقديم يجب على عقود إرسال تقييم المخاطر التعاقدية إلى المناقصات؟",
+    "question": "كم عدد الأيام قبل التقديم يجب على العقود إرسال تقييم المخاطر التعاقدية إلى المناقصات؟",
     "expected_answer": "7 days before submission",
     "must_include": [
       "7"
@@ -237,7 +237,7 @@
   {
     "id": "PTN01-2",
     "doc": "PTN01_Project_Initiation_Process.pdf",
-    "question": "كم عدد الأيام قبل التقديم يتم عقد الاجتماع الثاني للتوافق؟",
+    "question": "كم عدد الأيام قبل التقديم يتم عقد الاجتماع الثاني للتوافق للمشاريع >=50M دولار أمريكي دولية أو 1 مليار محلي؟",
     "expected_answer": "5 days before submission",
     "must_include": [
       "5"
@@ -287,7 +287,7 @@
   {
     "id": "PTN02-2",
     "doc": "PTN02_Project_Launching_Process.pdf",
-    "question": "كم عدد الأيام التي يجب إعداد برنامج الأساس خلالها من الاجتماع المتعلق بتسليم المناقصة؟",
+    "question": "في كم عدد الأيام من الاجتماع المتعلق بتسليم المناقصة يجب إعداد البرنامج الأساسي؟",
     "expected_answer": "45 days",
     "must_include": [
       "45"
@@ -323,7 +323,7 @@
   {
     "id": "PVMO01-2",
     "doc": "PVMO01_Vendor_selection_and_Bidding_Process.pdf",
-    "question": "كم عدد الأيام من اجتماع تسليم المناقصة يجب أن يجهز VMO قائمة مكونات الميزانية المفصّلة و استراتيجية مصادر المشروع؟",
+    "question": "كم عدد الأيام من اجتماع تسليم المناقصة يجب أن يجهز مكتب إدارة الموردين قائمة مادة الميزانية المفصّلة واستراتيجية مصادر المشروع؟",
     "expected_answer": "7 days",
     "must_include": [
       "7"
@@ -349,7 +349,7 @@
   {
     "id": "PVMO02-1",
     "doc": "PVMO02_Procurement_Process.pdf",
-    "question": "كم عدد أيام العمل التي يجب أن تمر منذ اجتماع تسليم المناقصة حتى يصدر قسم المشتريات استراتيجية المشروع (مجال العمل)؟",
+    "question": "كم عدد أيام العمل من اجتماع تسليم المناقصة يجب أن تصدر بها H.O المشتريات استراتيجية المشروع (مجال العمل)؟",
     "expected_answer": "7 working days",
     "must_include": [
       "7"
@@ -361,7 +361,7 @@
   {
     "id": "PVMO02-2",
     "doc": "PVMO02_Procurement_Process.pdf",
-    "question": "ما هو أقل عدد من عروض الموردين المطلوب لمقارنة تجارية؟",
+    "question": "ما هو أقل عدد من عروض الموردين المطلوب لإجراء مقارنة تجارية؟",
     "expected_answer": "Minimum of three vendors",
     "must_include": [
       "three",
@@ -398,7 +398,7 @@
   {
     "id": "ADV-1",
     "doc": "none",
-    "question": "ما مقدار العقوبة إذا فات مقاول فرعي موعد معلم؟",
+    "question": "ما المبلغ المفروض إذا فات مقاول فرعي موعد معلم؟",
     "expected_answer": "Not specified in these process documents.",
     "must_include": [
       "not specified",
@@ -449,7 +449,7 @@
   {
     "id": "ADV-4",
     "doc": "none",
-    "question": "ما النظام البرمجي المحدد المستخدم لإرسال سجلات مراجع مواد طلب العرض؟",
+    "question": "ما النظام البرمجي المحدد المستخدم لإرسال سجلات مراجع مواد طلب التقدير؟",
     "expected_answer": "Unifier (mentioned in Procurement Process)",
     "must_include": [
       "unifier"

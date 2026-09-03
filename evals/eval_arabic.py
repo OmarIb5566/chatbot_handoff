@@ -15,32 +15,39 @@ Three rows:
     Arabic -> English     the real pipeline: translate, then retrieve
     Arabic (raw, no MT)   straight into the retriever, untranslated
 
-Measured on this corpus:
+Measured on this corpus (36-question v1 set, after glossary.py):
 
-    English (baseline)    32/32 = 100.0%
-    Arabic -> English     31/32 =  96.9%
-    Arabic (raw, no MT)   18/32 =  56.2%
+    English (baseline)    27/32 =  84.4%
+    Arabic -> English     27/32 =  84.4%   <- matches English exactly
+    Arabic (raw, no MT)    9/32 =  28.1%
 
 The third row is the control, and it is more interesting than expected. The
 prediction going in was "near zero": BM25 tokenises `[a-z0-9]+`, so an Arabic
 query yields no tokens at all, and PREFIX_HINTS is an English keyword table
-that never fires. 56% is not near zero.
+that never fires. ~28% is not near zero.
 
 Two things explain it, and neither is the retriever working. With every BM25
 score identical at zero, min-max normalisation gives that channel a constant
 value, so ranking falls entirely to the dense channel - and MiniLM, despite
 being an English model, retains enough cross-lingual signal to beat chance.
-Chance here is not low either: top-3 of 9 documents is ~33% before any signal
-at all. So the honest reading of 56% is "somewhat better than guessing", and
-the 41-point gap to the translated row is what shows the translation step is
-carrying the result. Without this row, "Arabic works" would be an assertion.
+Chance here is not low either: top-3 of a much larger corpus than the original
+9 documents still clears a nontrivial floor. So the honest reading of the
+control is "somewhat better than guessing", and the ~56-point gap to the
+translated row is what shows the translation step is carrying the result.
+Without this row, "Arabic works" would be an assertion.
 
-The single miss is worth reading rather than rounding away. PTN01-3 asks about
-the *Commercial dept*; the Arabic says `قسم التجارة`, which comes back as
-"trade department". That drops the word "commercial" - which is both a BM25
-term and a PREFIX_HINTS routing keyword for PCM. It is a translation failure,
-not a retrieval failure, and it is exactly the silent-miss mode the notebook
-warns about: nothing in the output says a domain term was lost.
+Before `glossary.py` (`backend/glossary.py`), the Arabic row was one miss
+behind English: PTN01-3 asks about the *Commercial dept*; the Arabic says
+`قسم التجارة`, which came back as "trade department". That dropped the word
+"commercial" - which is both a BM25 term and a PREFIX_HINTS routing keyword
+for PCM. It was a translation failure, not a retrieval failure, and exactly
+the silent-miss mode the notebook warns about: nothing in the output said a
+domain term was lost. `mask_glossary`/`unmask_glossary` fix it by pinning
+RME's own vocabulary (department names, unambiguous role abbreviations)
+before the translation model ever sees the Arabic - a masked term cannot come
+back as a synonym. The remaining misses on both rows now (`PTN02-3`,
+`PVMO01-1`, `PVMO01-3`, `PVMO02-3`, `PVMO02-4`) also miss in English, so
+they're pre-existing retrieval gaps, not translation defects.
 
 The numbers above are the 36-question v1 set. The same harness runs the
 100-question v2 set, which covers all 71 indexed documents rather than 9 - a
